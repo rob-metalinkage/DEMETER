@@ -1,0 +1,18 @@
+{
+    "@id": "https://w3id.org/demeter/agri/proxy/foaf",
+    "@context": [
+        {
+            "foaf": "http://xmlns.com/foaf/0.1/",
+            "foaf:Agent": {
+                "@id": "foaf:Agent"
+            },
+            "foaf:Person": {
+                "@id": "foaf:Person"
+            },
+            "foaf:member": {
+                "@id": "foaf:member",
+                "@type": "foaf:Agent"
+            }
+        }
+    ]
+}

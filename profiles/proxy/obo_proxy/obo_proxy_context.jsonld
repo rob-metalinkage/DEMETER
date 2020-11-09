@@ -1,0 +1,9 @@
+{
+    "@id": "https://w3id.org/demeter/agri/proxy/obo",
+    "@context": [
+        "https://w3id.org/demeter/agri/proxy/sobo?_profile=jsoncontext",
+        {
+            "obo": "http://purl.obolibrary.org/obo/"
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "@id": "https://w3id.org/demeter/agri/proxy/cf-feature",
+    "@context": [
+        {
+            "cf-feature": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#"
+        }
+    ]
+}

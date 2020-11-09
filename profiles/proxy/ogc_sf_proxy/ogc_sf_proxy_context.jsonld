@@ -1,0 +1,8 @@
+{
+    "@id": "https://w3id.org/demeter/agri/proxy/ogc-sf",
+    "@context": [
+        {
+            "sf": "http://www.opengis.net/ont/sf#"
+        }
+    ]
+}

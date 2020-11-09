@@ -1,0 +1,14 @@
+{
+    "@id": "https://w3id.org/demeter/agri/proxy/qu",
+    "@context": [
+        {
+            "qu": "http://purl.oclc.org/NET/ssnx/qu/qu#",
+            "qu:QuantityKind": {
+                "@id": "qu:QuantityKind"
+            },
+            "qu:PropertyKind": {
+                "@id": "qu:PropertyKind"
+            }
+        }
+    ]
+}

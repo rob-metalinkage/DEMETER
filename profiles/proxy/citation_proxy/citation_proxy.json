@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://w3id.org/demeter/agri/proxy/citation?_profile=jsonschema",
+    "type": "object",
+    "properties": {
+        "Agent": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "citation": {
+            "type": "object",
+            "properties": {
+                "citation": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "citation"
+            ]
+        }
+    }
+}

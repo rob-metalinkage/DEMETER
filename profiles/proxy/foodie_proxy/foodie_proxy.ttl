@@ -1,0 +1,160 @@
+@prefix foodie: <http://foodie-cloud.com/model/foodie#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+foodie:Alert rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:type ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:int ;
+            owl:onProperty foodie:alertDate ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:int ;
+            owl:onProperty foodie:code ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:alertGeometry ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:description ] ;
+    owl:equivalentClass <https://uri.fiware.org/ns/data-models#Alert> .
+
+foodie:ManagementZone rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:int ;
+            owl:onProperty foodie:notes ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:int ;
+            owl:onProperty <http://www.opengis.net/ont/geosparql#hasGeometry> ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:int ;
+            owl:onProperty prov:generatedAtTime ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:int ;
+            owl:onProperty foodie:code ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty <http://portele.de/ont/inspire/baseInspire#validTo> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty <http://portele.de/ont/inspire/baseInspire#validFrom> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty prov:invalidatedAtTime ] .
+
+foodie:OriginTypeValue rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> .
+
+foodie:Plot rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:int ;
+            owl:onProperty foodie:originType ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:int ;
+            owl:onProperty <http://www.opengis.net/ont/geosparql#hasGeometry> ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:int ;
+            owl:onProperty prov:generatedAtTime ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:int ;
+            owl:onProperty foodie:code ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:int ;
+            owl:onProperty <http://portele.de/ont/inspire/baseInspire#validFrom> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty <http://portele.de/ont/inspire/baseInspire#validTo> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:description ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty prov:invalidatedAtTime ] .
+
+foodie:alertPlot rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> .
+
+foodie:alertSpecies rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> .
+
+foodie:alertZone rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> .
+
+foodie:containsPlot rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
+    rdfs:subPropertyOf <https://w3id.org/def/saref4agri#contains> .
+
+foodie:containsZone rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
+    rdfs:subPropertyOf <https://w3id.org/def/saref4agri#contains> .
+
+foodie:holdingPlot rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
+    rdfs:subPropertyOf <https://w3id.org/def/saref4agri#isContainedIn> .
+
+foodie:holdingSite rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
+    rdfs:subPropertyOf <https://w3id.org/def/saref4agri#isContainedIn> .
+
+foodie:holdingZone rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
+    rdfs:subPropertyOf <https://w3id.org/def/saref4agri#isContainedIn> .
+
+foodie:livestockNumber rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
+    owl:equivalentProperty <https://uri.fiware.org/ns/data-models#legalID> .
+
+foodie:livestockType rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
+    owl:equivalentProperty <https://uri.fiware.org/ns/data-models#species> .
+
+foodie:machine rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> .
+
+foodie:plotAlert rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> .
+
+foodie:speciesAlert rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> .
+
+foodie:tractor rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> .
+
+foodie:zoneAlert rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> .
+
+foodie:alertDate rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
+    rdfs:range xsd:dateTime .
+
+foodie:alertGeometry rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
+    rdfs:subPropertyOf <http://www.opengis.net/ont/geosparql#hasGeometry> .
+
+foodie:originType rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> .
+
+<https://w3id.org/demeter/agri/proxy/foodie> a owl:Ontology,
+        prov:Entity ;
+    owl:imports <http://foodie-cloud.com/model/foodie> ;
+    prof:isProfileOf <https://w3id.org/demeter/agri/proxy/foodie> ;
+    prov:wasDerivedFrom [ a prov:Entity ;
+            rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\profiles\\merge_temp.ttl" ] ;
+    prov:wasGeneratedBy [ a prov:Activity ;
+            rdfs:label "ProfileWiz: Normalisation (source = merge_temp.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
+            prov:endedAtTime "2020-11-09"^^xsd:date ;
+            prov:wasAssociatedWith [ a prov:Agent ;
+                    rdfs:label "ProfileWiz 0.1.5" ] ] .
+
+[] a prov:Entity ;
+    rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriAlert.ttl" .
+
+[] a prov:Entity ;
+    rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\farmAnimal.ttl" .
+
+[] a prov:Entity ;
+    rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriFeature.ttl" .
+
+[] a prov:Activity ;
+    rdfs:label "ProfileWiz: subset of used terms from available ontology" ;
+    prov:endedAtTime "2020-09-30"^^xsd:date ;
+    prov:wasAssociatedWith [ a prov:Agent ;
+            rdfs:label "ProfileWiz 0.1.5" ] .
+
+[] a prov:Activity ;
+    rdfs:label "ProfileWiz: subset of used terms from available ontology" ;
+    prov:endedAtTime "2020-10-01"^^xsd:date ;
+    prov:wasAssociatedWith [ a prov:Agent ;
+            rdfs:label "ProfileWiz 0.1.5" ] .
+
+[] a prov:Activity ;
+    rdfs:label "ProfileWiz: subset of used terms from available ontology" ;
+    prov:endedAtTime "2020-09-29"^^xsd:date ;
+    prov:wasAssociatedWith [ a prov:Agent ;
+            rdfs:label "ProfileWiz 0.1.5" ] .
+

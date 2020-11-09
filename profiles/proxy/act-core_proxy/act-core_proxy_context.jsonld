@@ -1,0 +1,8 @@
+{
+    "@id": "https://w3id.org/demeter/agri/proxy/act-core",
+    "@context": [
+        {
+            "act-inspire": "http://inspire.ec.europa.eu/schemas/act-core/3.0#"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "@id": "https://w3id.org/demeter/agri/proxy/sosa",
+    "@context": [
+        {
+            "sosa": "http://www.w3.org/ns/sosa/",
+            "sosa:FeatureOfInterest": {
+                "@id": "sosa:FeatureOfInterest"
+            }
+        }
+    ]
+}

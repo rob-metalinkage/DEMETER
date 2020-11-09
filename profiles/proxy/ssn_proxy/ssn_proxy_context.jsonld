@@ -1,0 +1,8 @@
+{
+    "@id": "https://w3id.org/demeter/agri/proxy/ssn",
+    "@context": [
+        {
+            "ssn": "http://www.w3.org/ns/ssn/"
+        }
+    ]
+}

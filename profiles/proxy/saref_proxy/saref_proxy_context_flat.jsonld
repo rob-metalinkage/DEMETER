@@ -1,0 +1,12 @@
+{
+    "@id": "https://w3id.org/demeter/agri/proxy/saref",
+    "@context": [
+        {
+            "saref": "https://w3id.org/saref#",
+            "saref:hasDescription": {
+                "@id": "saref:hasDescription",
+                "@type": "xsd:string"
+            }
+        }
+    ]
+}

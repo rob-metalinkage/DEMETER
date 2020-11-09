@@ -1,0 +1,9 @@
+{
+    "@id": "https://w3id.org/demeter/agri/proxy/foaf",
+    "@context": [
+        "https://w3id.org/demeter/agri/proxy/foaf?_profile=jsoncontext",
+        {
+            "foaf": "http://xmlns.com/foaf/0.1/"
+        }
+    ]
+}

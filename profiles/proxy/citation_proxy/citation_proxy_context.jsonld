@@ -1,0 +1,9 @@
+{
+    "@id": "https://w3id.org/demeter/agri/proxy/citation",
+    "@context": [
+        "https://w3id.org/demeter/agri/proxy/foaf?_profile=jsoncontext",
+        {
+            "iso19115-citation": "http://def.seegrid.csiro.au/isotc211/iso19115/2003/citation#"
+        }
+    ]
+}
