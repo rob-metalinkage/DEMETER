@@ -1,15 +1,16 @@
 {
   "@context": [
-    		"https://w3id.org/demeter/agri/agriFeature-context.jsonld",
-			"https://w3id.org/demeter/agri/agriCrop-context.jsonld",
-			"https://w3id.org/demeter/agri/agriCommon-context.jsonld",
-			"https://w3id.org/demeter/agri/agriIntervention-context.jsonld",
-			"https://w3id.org/demeter/agri/agriAlert-context.jsonld",
-			"https://w3id.org/demeter/agri/agriProduct-context.jsonld",
-			"https://w3id.org/demeter/agri/agriProperty-context.jsonld",
-			"https://w3id.org/demeter/agri/agriSystem-context.jsonld",
-			"https://w3id.org/demeter/agri/agriPest-context.jsonld",
-			"https://w3id.org/demeter/agri/farmAnimal-context.jsonld"
+    	"https://w3id.org/demeter/agri/crossDomain-context.jsonld",
+    	"https://w3id.org/demeter/agri/agriCommon-context.jsonld",
+    	"https://w3id.org/demeter/agri/agriFeature-context.jsonld",
+    	"https://w3id.org/demeter/agri/agriCrop-context.jsonld",
+    	"https://w3id.org/demeter/agri/agriIntervention-context.jsonld",
+    	"https://w3id.org/demeter/agri/agriAlert-context.jsonld",
+    	"https://w3id.org/demeter/agri/agriProduct-context.jsonld",
+    	"https://w3id.org/demeter/agri/agriProperty-context.jsonld",
+    	"https://w3id.org/demeter/agri/agriSystem-context.jsonld",
+    	"https://w3id.org/demeter/agri/agriPest-context.jsonld",
+    	"https://w3id.org/demeter/agri/farmAnimal-context.jsonld"
    ],
   "@id": "urn:ngsi-ld:AgriFarm:72d9fb43-53f8-4ec8-a33c-fa931360259a",
   "@type": "AgriFarm",
@@ -25,6 +26,7 @@
       "@id": "urn:ngsi-ld:AgriParcel:72d9fb43-53f8-4ec8-a33c-fa931360259a",
       "@type": "AgriParcel",
       "hasGeometry": {
+        "@id": "urn:ngsi-ld:AgriParcel:geo:72d9fb43-53f8-4ec8-a33c-fa931360259y",
         "@type": "Polygon",
         "asWKT": "POLYGON (100 0, 101 0, 101 1, 100 1, 100 0)"
       },
@@ -40,11 +42,12 @@
         "description": "Spring wheat"
       },
       "cropStatus": "seeded",
-      "lastPlantedAt": "test-bad-pattern"
+      "lastPlantedAt": "2016-08-23T10:18:16Z"
     },{
       "@id": "urn:ngsi-ld:AgriParcel:72d9fb43-53f8-4ec8-a33c-fa931360259b",
       "@type": "AgriParcel",
       "hasGeometry": {
+        "@id": "urn:ngsi-ld:AgriParcel:geo:72d9fb43-53f8-4ec8-a33c-fa931360259z",
         "@type": "Polygon",
         "asWKT": "POLYGON (100 0, 101 0, 101 1, 100 1, 100 1)"
       },
