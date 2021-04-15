@@ -201,7 +201,7 @@
     ],
     "https://schema.org/description": [
       {
-        "@value": "<p>The DEMETER Agriculture Information Model (AIM) is the common vocabulary in DEMETER project providing the basis for semantic interoperability across smart farming solutions</p>"
+        "@value": "<p>The DEMETER AgriProperty is one of the agri profiles of DEMETER AIM. This profile was created by reusing and aligning well-known ontologies and vocabularies</p>"
       }
     ],
     "https://schema.org/name": [
@@ -262,7 +262,7 @@
     </dl>
     <h2>Description</h2>
     <div id="description">
-        <p>The DEMETER Agriculture Information Model (AIM) is the common vocabulary in DEMETER project providing the basis for semantic interoperability across smart farming solutions</p>
+        <p>The DEMETER AgriProperty is one of the agri profiles of DEMETER AIM. This profile was created by reusing and aligning well-known ontologies and vocabularies</p>
     </div>
 </section>
 <section id="toc">
@@ -321,11 +321,11 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="http://foodie-cloud.com/model/foodie#propertyName">foodie:propertyName</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#analysisDate">foodie:analysisDate</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="http://foodie-cloud.com/model/foodie#nonQuantitativeProperty">foodie:nonQuantitativeProperty</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#propertyType">foodie:propertyType</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="http://foodie-cloud.com/model/foodie#quantitativeProperty">foodie:quantitativeProperty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#analysisDate">foodie:analysisDate</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#propertyType">foodie:propertyType</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#propertyName">foodie:propertyName</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
             <tr>
@@ -620,16 +620,16 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/saref#hasProperty">saref:hasProperty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Property">saref:Property</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#isFeatureOfInterestOf">saref:isFeatureOfInterestOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Measurement">saref:Measurement</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/saref#hasProperty">saref:hasProperty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Property">saref:Property</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
                     <a href="https://uri.fiware.org/ns/data-models#WeatherForecast">fiware:WeatherForecast</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/def/saref4agri#Soil">saref4agri:Soil</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://uri.fiware.org/ns/data-models#WeatherObserved">fiware:WeatherObserved</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/def/saref4agri#Soil">saref4agri:Soil</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -683,19 +683,19 @@
             <tr>
                 <th>Alignments</th>
                 <td class="highlight-alignment">
-                    <a href="iso19103:Measure">iso19103:Measure</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="sosa:Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/saref#hasFeatureOfInterest">saref:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#FeatureOfInterest">saref:FeatureOfInterest</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#relatesToProperty">saref:relatesToProperty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Property">saref:Property</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/saref#isMeasuredIn">saref:isMeasuredIn</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#UnitOfMeasure">saref:UnitOfMeasure</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#hasTimestamp">saref:hasTimestamp</a> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#hasValue">saref:hasValue</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="https://w3id.org/saref#relatesToProperty">saref:relatesToProperty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/saref#Property">saref:Property</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#isMeasuredIn">saref:isMeasuredIn</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/saref#UnitOfMeasure">saref:UnitOfMeasure</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/saref#hasFeatureOfInterest">saref:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#FeatureOfInterest">saref:FeatureOfInterest</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/saref#isMeasuredIn">saref:isMeasuredIn</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#UnitOfMeasure">saref:UnitOfMeasure</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#hasValue">saref:hasValue</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
@@ -723,24 +723,24 @@
             <tr>
                 <th>Alignments</th>
                 <td class="highlight-alignment">
-                    <a href="foodie:PropertyType">foodie:PropertyType</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="qu:QuantityKind">qu:QuantityKind</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="foodie:PropertyTypeValue">foodie:PropertyTypeValue</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Restrictions</th>
                 <td>
                     <a href="https://w3id.org/saref#isMeasuredByDevice">saref:isMeasuredByDevice</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Device">saref:Device</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/saref#relatesToMeasurement">saref:relatesToMeasurement</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Measurement">saref:Measurement</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#isPropertyOf">saref:isPropertyOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#FeatureOfInterest">saref:FeatureOfInterest</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/saref#relatesToMeasurement">saref:relatesToMeasurement</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Measurement">saref:Measurement</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#isControlledByDevice">saref:isControlledByDevice</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Device">saref:Device</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/saref#Temperature">saref:Temperature</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#Humidity">saref:Humidity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/saref#Temperature">saref:Temperature</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -788,13 +788,19 @@
             <tr class="importeddef">
                 <th>Is Defined By</th>
                 <td>
-                    http://www.wurvoc.org/vocabularies/om-1.6/Unit_of_measure
+                    https://w3id.org/saref#
                 </td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called "watt". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of SAREF, but this list can be extended, also using some other ontologies rather than the Ontology of units of Measure (OM).</p>
+                    <p>The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called "watt". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Alignments</th>
+                <td class="highlight-alignment">
+                    <a href="qudt:Unit">qudt:Unit</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -839,12 +845,6 @@
                 </td>
             </tr>
             <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="https://w3id.org/saref#hasProperty">saref:hasProperty</a><sup class="sup-op" title="object property">op</sup>
-                </td>
-            </tr>
-            <tr>
                 <th>Range(s)</th>
                 <td>
                     <a href="http://foodie-cloud.com/model/foodie#PropertyType">foodie:PropertyType</a><sup class="sup-c" title="class">c</sup>
@@ -863,6 +863,12 @@
                 <th>Is Defined By</th>
                 <td>
                     http://foodie-cloud.com/model/foodie
+                </td>
+            </tr>
+            <tr>
+                <th>Equivalent properties</th>
+                <td class="highlight-alignment">
+                    <a href="https://w3id.org/saref#relatesToProperty">saref:relatesToProperty</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
@@ -887,9 +893,9 @@
                 </td>
             </tr>
             <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="https://w3id.org/saref#relatesToMeasurement">saref:relatesToMeasurement</a><sup class="sup-op" title="object property">op</sup>
+                <th>Equivalent properties</th>
+                <td class="highlight-alignment">
+                    <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a>
                 </td>
             </tr>
             <tr>
@@ -911,12 +917,6 @@
                 <th>Is Defined By</th>
                 <td>
                     http://foodie-cloud.com/model/foodie
-                </td>
-            </tr>
-            <tr>
-                <th>Super-properties</th>
-                <td>
-                    <a href="https://w3id.org/saref#hasProperty">saref:hasProperty</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
             <tr>
@@ -1052,6 +1052,12 @@
                 </td>
             </tr>
             <tr>
+                <th>Equivalent properties</th>
+                <td class="highlight-alignment">
+                    <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a>
+                </td>
+            </tr>
+            <tr>
                 <th>Inverse properties</th>
                 <td>
                     <a href="https://w3id.org/saref#isFeatureOfInterestOf">saref:isFeatureOfInterestOf</a><sup class="sup-op" title="object property">op</sup>
@@ -1120,6 +1126,12 @@
                     Relation betwwen a feature of interest and the measurments that are about it.
                 </td>
             </tr>
+            <tr>
+                <th>Equivalent properties</th>
+                <td class="highlight-alignment">
+                    <a href="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">sosa:isFeatureOfInterestOf</a>
+                </td>
+            </tr>
         </table>
     </div>
     <div class="entity property" id="ismeasuredbydevice">
@@ -1148,6 +1160,12 @@
                 <th>Is Defined By</th>
                 <td>
                     https://w3id.org/saref#
+                </td>
+            </tr>
+            <tr>
+                <th>Equivalent properties</th>
+                <td class="highlight-alignment">
+                    <a href="http://qudt.org/schema/qudt/unit">qudt:unit</a>
                 </td>
             </tr>
         </table>
@@ -1187,6 +1205,12 @@
                 </td>
             </tr>
             <tr>
+                <th>Equivalent properties</th>
+                <td class="highlight-alignment">
+                    <a href="http://www.w3.org/ns/sosa/madeObservation">sosa:madeObservation</a>
+                </td>
+            </tr>
+            <tr>
                 <th>Inverse properties</th>
                 <td>
                     <a href="https://w3id.org/saref#measurementMadeBy">saref:measurementMadeBy</a><sup class="sup-op" title="object property">op</sup>
@@ -1211,6 +1235,12 @@
                 <th>Description</th>
                 <td>
                     Relation between a measurement and the device that made it.
+                </td>
+            </tr>
+            <tr>
+                <th>Equivalent properties</th>
+                <td class="highlight-alignment">
+                    <a href="http://www.w3.org/ns/sosa/madeBySensor">sosa:madeBySensor</a>
                 </td>
             </tr>
         </table>
@@ -1256,6 +1286,12 @@
                 <th>Is Defined By</th>
                 <td>
                     https://w3id.org/saref#
+                </td>
+            </tr>
+            <tr>
+                <th>Equivalent properties</th>
+                <td class="highlight-alignment">
+                    <a href="http://www.w3.org/ns/sosa/observedProperty">sosa:observedProperty</a>
                 </td>
             </tr>
         </table>
@@ -1930,6 +1966,12 @@
                     https://w3id.org/saref#
                 </td>
             </tr>
+            <tr>
+                <th>Equivalent properties</th>
+                <td class="highlight-alignment">
+                    <a href="http://www.w3.org/ns/sosa/hasSimpleResult">sosa:hasSimpleResult</a>
+                </td>
+            </tr>
         </table>
     </div>
 </section>
@@ -1946,6 +1988,7 @@
         <li><a href="#Soilmoisture">Soil moisture</a></li>
         <li><a href="#Soiltemperature">Soil temperature</a></li>
         <li><a href="#airdensity">air density</a></li>
+        <li><a href="#airtemperature">air temperature</a></li>
         <li><a href="#atmospheremasscontentofcarbondioxide">atmosphere mass content of carbon dioxide</a></li>
         <li><a href="#atmospheremasscontentofcarbonmonoxide">atmosphere mass content of carbon monoxide</a></li>
         <li><a href="#atmospherewatervaporcontent">atmosphere water vapor content</a></li>
@@ -1974,6 +2017,7 @@
         <li><a href="#moisturecontentofsoillayer">moisture content of soil layer</a></li>
         <li><a href="#moisturecontentofsoillayeratfieldcapacity">moisture content of soil layer at field capacity</a></li>
         <li><a href="#normalizeddifferencevegetationindex">normalized difference vegetation index</a></li>
+        <li><a href="#precipitationamount">precipitation amount</a></li>
         <li><a href="#snowdensity">snow density</a></li>
         <li><a href="#snowgrainsize">snow grain size</a></li>
         <li><a href="#snowsootcontent">snow soot content</a></li>
@@ -2018,6 +2062,7 @@
         <li><a href="#volumefractionofsiltinsoil">volume fraction of silt in soil</a></li>
         <li><a href="#water">water</a></li>
         <li><a href="#waterevaporationfluxfromsoil">water evaporation flux from soil</a></li>
+        <li><a href="#windspeed">wind speed</a></li>
     </ul>
     <div class="entity named_individual" id="decibel-milliwatts">
         <h3>decibel-milliwatts<sup title="named individual" class="sup-ni">ni</sup></h3>
@@ -2201,6 +2246,36 @@
                 <th>Is Defined By</th>
                 <td>
                     http://purl.oclc.org/NET/ssnx/cf/cf-property
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity named_individual" id="airtemperature">
+        <h3>air temperature<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.oclc.org/NET/ssnx/cf/cf-property#air_temperature
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://purl.oclc.org/NET/ssnx/qu/dim#Temperature">dim:Temperature</a><br/>
+            </dd>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    http://purl.oclc.org/NET/ssnx/cf/cf-property
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Air temperature is the bulk temperature of the air, not the surface (skin) temperature.
                 </td>
             </tr>
         </table>
@@ -2753,6 +2828,36 @@
                 <th>Is Defined By</th>
                 <td>
                     http://purl.oclc.org/NET/ssnx/cf/cf-property
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity named_individual" id="precipitationamount">
+        <h3>precipitation amount<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.oclc.org/NET/ssnx/cf/cf-property#precipitation_amount
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://purl.oclc.org/NET/ssnx/qu/dim#SurfaceDensity">dim:SurfaceDensity</a><br/>
+            </dd>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    http://purl.oclc.org/NET/ssnx/cf/cf-property
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Amount means mass per unit area
                 </td>
             </tr>
         </table>
@@ -3669,6 +3774,36 @@
             </tr>
         </table>
     </div>
+    <div class="entity named_individual" id="windspeed">
+        <h3>wind speed<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.oclc.org/NET/ssnx/cf/cf-property#wind_speed
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeed">dim:VelocityOrSpeed</a><br/>
+            </dd>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    http://purl.oclc.org/NET/ssnx/cf/cf-property
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Speed is the magnitude of velocity. Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) The wind speed is the magnitude of the wind velocity.
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity named_individual" id="degreeCelsius">
         <h3>degree Celsius<sup title="named individual" class="sup-ni">ni</sup></h3>
         <table>
@@ -4004,6 +4139,8 @@
         <dd><code>http://purl.oclc.org/NET/ssnx/qu/qu#</code></dd>
         <dt>quantity</dt>
         <dd><code>http://purl.oclc.org/NET/ssnx/qu/quantity#</code></dd>
+        <dt>qudt</dt>
+        <dd><code>http://qudt.org/schema/qudt/</code></dd>
         <dt>rdf</dt>
         <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
         <dt>rdfs</dt>

@@ -1,5 +1,6 @@
-@prefix :      <https://w3id.org/saref#> .
 @prefix schema: <http://schema.org/> .
+@prefix :      <https://w3id.org/saref#> .
+@prefix qudt:  <http://qudt.org/schema/qudt/> .
 @prefix iso19150-2: <http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix prefix: <http://purl.oclc.org/NET/ssnx/qu/prefix#> .
@@ -550,6 +551,7 @@
         a               sh:PropertyShape ;
         rdfs:label      "is measured in" , "A relationship identifying the unit of measure used for a certain entity." ;
         sh:description  "A relationship identifying the unit of measure used for a certain entity." ;
+        sh:equals       qudt:unit ;
         sh:name         "is measured in" ;
         sh:nodeKind     sh:BlankNodeOrIRI ;
         sh:path         saref:isMeasuredIn .
@@ -875,6 +877,7 @@
         a                 sh:PropertyShape ;
         rdfs:isDefinedBy  <http://foodie-cloud.com/model/foodie> ;
         sh:class          foodie:PropertyTypeValue ;
+        sh:equals         saref:relatesToProperty ;
         sh:nodeKind       sh:BlankNodeOrIRI ;
         sh:path           foodie:propertyType .
 
@@ -947,12 +950,6 @@
         sh:qualifiedMinCount    "1"^^xsd:nonNegativeInteger ;
         sh:qualifiedValueShape  [ sh:class  <https://saref.etsi.org/core/Property> ] .
 
-<https://astrea.linkeddata.es/shapes#c0999a39d1d16e852d05c72afa7d1f48>
-        a            sh:PropertyShape ;
-        sh:maxCount  "1"^^xsd:nonNegativeInteger ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      saref:hasModel .
-
 <https://astrea.linkeddata.es/shapes#7cb02de225e7c6c4da322063085b69c8>
         a               sh:NodeShape ;
         rdfs:label      "ID"@en ;
@@ -960,6 +957,12 @@
         sh:name         "ID"@en ;
         sh:nodeKind     sh:IRI ;
         sh:targetClass  s4agri:ID .
+
+<https://astrea.linkeddata.es/shapes#c0999a39d1d16e852d05c72afa7d1f48>
+        a            sh:PropertyShape ;
+        sh:maxCount  "1"^^xsd:nonNegativeInteger ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      saref:hasModel .
 
 <https://astrea.linkeddata.es/shapes#4808aa6a5fec224bbb79201d761f6908>
         a               sh:NodeShape ;
@@ -1478,14 +1481,6 @@
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      saref:consistsOf .
 
-<https://astrea.linkeddata.es/shapes#d5106b5a978d899fb1d6d2c91a36ddfa>
-        a                 sh:PropertyShape ;
-        rdfs:isDefinedBy  <http://foodie-cloud.com/model/foodie> ;
-        sh:datatype       xsd:string ;
-        sh:nodeKind       sh:Literal ;
-        sh:path           foodie:nonQuantitativeProperty ;
-        sh:pattern        ".*" .
-
 <https://astrea.linkeddata.es/shapes#580659d3d4d3c9974e9dc36d00e6e6e8>
         a            sh:PropertyShape ;
         rdfs:label   "member"@en ;
@@ -1500,13 +1495,13 @@
         sh:qualifiedMinCount    "1"^^xsd:nonNegativeInteger ;
         sh:qualifiedValueShape  [ sh:class  <https://saref.etsi.org/core/Function> ] .
 
-<https://astrea.linkeddata.es/shapes#2b02ceb19d3b7559e94106abe410df11>
-        a               sh:PropertyShape ;
-        rdfs:label      "has sensor type" , "A relationship identifying the sensing type of a sensor detection (i.e., Temperature, Occupancy, Humidity, Motion , Smoke, Pressure, etc.) " ;
-        sh:description  "A relationship identifying the sensing type of a sensor detection (i.e., Temperature, Occupancy, Humidity, Motion , Smoke, Pressure, etc.) " ;
-        sh:name         "has sensor type" ;
-        sh:nodeKind     sh:BlankNodeOrIRI ;
-        sh:path         saref:hasSensorType .
+<https://astrea.linkeddata.es/shapes#d5106b5a978d899fb1d6d2c91a36ddfa>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <http://foodie-cloud.com/model/foodie> ;
+        sh:datatype       xsd:string ;
+        sh:nodeKind       sh:Literal ;
+        sh:path           foodie:nonQuantitativeProperty ;
+        sh:pattern        ".*" .
 
 <https://astrea.linkeddata.es/shapes#f1ed01ff4ad7e0110c28d4231cd9616c>
         a                 sh:NodeShape ;
@@ -1524,14 +1519,6 @@
         sh:name           "Deployment"@en ;
         sh:nodeKind       sh:IRI ;
         sh:targetClass    <http://www.w3.org/ns/ssn/Deployment> .
-
-<https://astrea.linkeddata.es/shapes#61831577bcbf4588767fc1545d94c2bd>
-        a               sh:PropertyShape ;
-        rdfs:label      "controls property"@en , "A relationship specifying the Property that can be controlled by a certain Device"@en ;
-        sh:description  "A relationship specifying the Property that can be controlled by a certain Device"@en ;
-        sh:name         "controls property"@en ;
-        sh:nodeKind     sh:BlankNodeOrIRI ;
-        sh:path         saref:controlsProperty .
 
 <https://astrea.linkeddata.es/shapes#9f265900343a6e84c3746dab5f1aa56e>
         a               sh:NodeShape ;
@@ -1556,6 +1543,22 @@
         sh:nodeKind       sh:BlankNodeOrIRI ;
         sh:path           <http://www.w3.org/ns/ssn/inDeployment> .
 
+<https://astrea.linkeddata.es/shapes#2b02ceb19d3b7559e94106abe410df11>
+        a               sh:PropertyShape ;
+        rdfs:label      "has sensor type" , "A relationship identifying the sensing type of a sensor detection (i.e., Temperature, Occupancy, Humidity, Motion , Smoke, Pressure, etc.) " ;
+        sh:description  "A relationship identifying the sensing type of a sensor detection (i.e., Temperature, Occupancy, Humidity, Motion , Smoke, Pressure, etc.) " ;
+        sh:name         "has sensor type" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         saref:hasSensorType .
+
+<https://astrea.linkeddata.es/shapes#61831577bcbf4588767fc1545d94c2bd>
+        a               sh:PropertyShape ;
+        rdfs:label      "controls property"@en , "A relationship specifying the Property that can be controlled by a certain Device"@en ;
+        sh:description  "A relationship specifying the Property that can be controlled by a certain Device"@en ;
+        sh:name         "controls property"@en ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         saref:controlsProperty .
+
 <https://astrea.linkeddata.es/shapes#28652149370937211205956d2ff50fee>
         a               sh:NodeShape ;
         rdfs:label      "Toggle command" ;
@@ -1563,6 +1566,12 @@
         sh:name         "Toggle command" ;
         sh:nodeKind     sh:IRI ;
         sh:targetClass  saref:ToggleCommand .
+
+<https://astrea.linkeddata.es/shapes#e7b516b5764ab14aac9d4b2dcbe92e80>
+        a            sh:PropertyShape ;
+        sh:class     geo:SpatialObject ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      geo:sfContains .
 
 <https://astrea.linkeddata.es/shapes#2fd289bcdf3043cdc841e996d97871e5>
         a               sh:PropertyShape ;
@@ -1577,12 +1586,6 @@
         sh:class     saref:MultiLevelState ;
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      saref:actsUpon .
-
-<https://astrea.linkeddata.es/shapes#e7b516b5764ab14aac9d4b2dcbe92e80>
-        a            sh:PropertyShape ;
-        sh:class     geo:SpatialObject ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      geo:sfContains .
 
 <https://astrea.linkeddata.es/shapes#baa935fdb8881cab00a1fe1787fcc35e>
         a            sh:PropertyShape ;
@@ -1665,17 +1668,17 @@
         sh:nodeKind     sh:IRI ;
         sh:targetClass  cf-feature:SurfaceSurface .
 
-<https://astrea.linkeddata.es/shapes#3adb57e2d654b433129a5a2a98216730>
-        a            sh:PropertyShape ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      saref:hasFunction .
-
 <https://astrea.linkeddata.es/shapes#2ffaad051bf28b701754c72052aefb82>
         a                       sh:PropertyShape ;
         sh:nodeKind             sh:IRIOrLiteral ;
         sh:path                 <https://saref.etsi.org/core/isAccomplishedBy> ;
         sh:qualifiedMinCount    "1"^^xsd:nonNegativeInteger ;
         sh:qualifiedValueShape  [ sh:class  <https://saref.etsi.org/core/Device> ] .
+
+<https://astrea.linkeddata.es/shapes#3adb57e2d654b433129a5a2a98216730>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      saref:hasFunction .
 
 <https://astrea.linkeddata.es/shapes#8c9f0a3ef50fe390869f7c693885d425>
         a                 sh:NodeShape ;
@@ -2107,18 +2110,13 @@
         sh:nodeKind       sh:Literal ;
         sh:path           fiware:visibility .
 
-<https://astrea.linkeddata.es/shapes#c088fd6854acbca9eecaf9b9dec3d43c>
-        a                 sh:PropertyShape ;
-        rdfs:isDefinedBy  <https://saref.etsi.org/core/> ;
-        rdfs:label        "has value"@en ;
-        sh:name           "has value"@en ;
-        sh:nodeKind       sh:Literal ;
-        sh:path           <https://saref.etsi.org/core/hasValue> .
-
-<https://astrea.linkeddata.es/shapes#6ace7559c09873d57bb26d2909a563c6>
-        a               sh:NodeShape ;
-        sh:nodeKind     sh:IRI ;
-        sh:targetClass  wgs84:SpatialThing .
+<https://astrea.linkeddata.es/shapes#2b2890d59075f54bc73193c9d2a1c211>
+        a               sh:PropertyShape ;
+        rdfs:label      "consists of" , "A relationship indicating a composite entity that consists of other entities (e.g., a temperature/humidity sensor that consists of a temperature sensor and a humidity sensor)" ;
+        sh:description  "A relationship indicating a composite entity that consists of other entities (e.g., a temperature/humidity sensor that consists of a temperature sensor and a humidity sensor)" ;
+        sh:name         "consists of" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         saref:consistsOf .
 
 <https://astrea.linkeddata.es/shapes#f1ae3fa4ffe533f93b1ba23ec8571eba>
         a               sh:NodeShape ;
@@ -2143,13 +2141,18 @@
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      <https://saref.etsi.org/core/isMeasurementOf> .
 
-<https://astrea.linkeddata.es/shapes#2b2890d59075f54bc73193c9d2a1c211>
-        a               sh:PropertyShape ;
-        rdfs:label      "consists of" , "A relationship indicating a composite entity that consists of other entities (e.g., a temperature/humidity sensor that consists of a temperature sensor and a humidity sensor)" ;
-        sh:description  "A relationship indicating a composite entity that consists of other entities (e.g., a temperature/humidity sensor that consists of a temperature sensor and a humidity sensor)" ;
-        sh:name         "consists of" ;
-        sh:nodeKind     sh:BlankNodeOrIRI ;
-        sh:path         saref:consistsOf .
+<https://astrea.linkeddata.es/shapes#6ace7559c09873d57bb26d2909a563c6>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  wgs84:SpatialThing .
+
+<https://astrea.linkeddata.es/shapes#c088fd6854acbca9eecaf9b9dec3d43c>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/core/> ;
+        rdfs:label        "has value"@en ;
+        sh:name           "has value"@en ;
+        sh:nodeKind       sh:Literal ;
+        sh:path           <https://saref.etsi.org/core/hasValue> .
 
 <https://astrea.linkeddata.es/shapes#8902e106a5e9663e690199331d695f9a>
         a               sh:NodeShape ;
@@ -2264,6 +2267,7 @@
         a                 sh:PropertyShape ;
         rdfs:isDefinedBy  <http://foodie-cloud.com/model/foodie> ;
         sh:class          iso19103:Measure ;
+        sh:equals         sosa:hasResult ;
         sh:nodeKind       sh:BlankNodeOrIRI ;
         sh:path           foodie:quantitativeProperty .
 
@@ -2337,6 +2341,7 @@
         a               sh:PropertyShape ;
         rdfs:label      "makes measurement"@en , "A relation between a device and the measurements it makes. Such measurement will link together the value of the measurement, its unit of measure and the property to which it relates."@en ;
         sh:description  "A relation between a device and the measurements it makes. Such measurement will link together the value of the measurement, its unit of measure and the property to which it relates."@en ;
+        sh:equals       sosa:madeObservation ;
         sh:name         "makes measurement"@en ;
         sh:nodeKind     sh:BlankNodeOrIRI ;
         sh:path         saref:makesMeasurement .
@@ -2390,11 +2395,6 @@
         <https://w3id.org/def/astrea#statusCode>
                 "200"^^xsd:int .
 
-<https://astrea.linkeddata.es/shapes#898de55fa6d29ad1ab177d8f13569e87>
-        a            sh:PropertyShape ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      saref:hasFunction .
-
 <https://astrea.linkeddata.es/shapes#30df6b1dbb766688d020b40f9baf3fdf>
         a               sh:NodeShape ;
         rdfs:label      "On off state" ;
@@ -2402,6 +2402,11 @@
         sh:name         "On off state" ;
         sh:nodeKind     sh:IRI ;
         sh:targetClass  saref:OnOffState .
+
+<https://astrea.linkeddata.es/shapes#898de55fa6d29ad1ab177d8f13569e87>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      saref:hasFunction .
 
 <https://astrea.linkeddata.es/shapes#a8f649af6278cf191aa3b5b2e20bdeb3>
         a               sh:NodeShape ;
@@ -2456,9 +2461,9 @@
         rdfs:isDefinedBy  <http://www.wurvoc.org/vocabularies/om-1.6/Unit_of_measure> , saref: ;
         rdfs:label        "Unit of measure"@en , "Unit of measure" ;
         sh:description    "The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of SAREF, but this list can be extended, also using some other ontologies rather than the Ontology of units of Measure (OM)." , "The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended."@en ;
-        sh:name           "Unit of measure"@en , "Unit of measure" ;
+        sh:name           "Unit of measure" , "Unit of measure"@en ;
         sh:nodeKind       sh:IRI ;
-        sh:targetClass    saref:UnitOfMeasure .
+        sh:targetClass    saref:UnitOfMeasure , qudt:Unit .
 
 <https://astrea.linkeddata.es/shapes#68157bd564db99247d6d7857297bf60e>
         a               sh:PropertyShape ;
@@ -2746,7 +2751,7 @@
         sh:nodeKind       sh:IRI ;
         sh:not            <https://astrea.linkeddata.es/shapes#d7ebf345df8fe1eee1b1baae1be67bf2> , <https://astrea.linkeddata.es/shapes#156af31e954042e340f8709a0253518d> ;
         sh:property       <https://astrea.linkeddata.es/shapes#58f226d8030285c0185e857469910d61> , <https://astrea.linkeddata.es/shapes#7b722600669ba01f596047cf2001951f> , <https://astrea.linkeddata.es/shapes#f5964a49119d177c39d3573f1ede7cad> , <https://astrea.linkeddata.es/shapes#38a7f272cc51d62974ed68d2627832e4> , <https://astrea.linkeddata.es/shapes#ac9b01412b3f8f24a9c3c7a9428ef6f2> ;
-        sh:targetClass    iso19103:Measure , saref:Measurement .
+        sh:targetClass    sosa:Observation , saref:Measurement .
 
 <https://astrea.linkeddata.es/shapes#c985da888f5f0369e41b1db2efe3b7b8>
         a            sh:PropertyShape ;
@@ -2958,6 +2963,7 @@
         a               sh:PropertyShape ;
         rdfs:label      "has value" , "A relationship defining the value of a certain property, e.g., energy or power" ;
         sh:description  "A relationship defining the value of a certain property, e.g., energy or power" ;
+        sh:equals       sosa:hasSimpleResult ;
         sh:name         "has value" ;
         sh:nodeKind     sh:Literal ;
         sh:path         saref:hasValue .
@@ -2999,7 +3005,7 @@
         sh:nodeKind       sh:IRI ;
         sh:not            <https://astrea.linkeddata.es/shapes#156af31e954042e340f8709a0253518d> ;
         sh:property       <https://astrea.linkeddata.es/shapes#df4ae458b4e554c080717d9bdb48e778> , <https://astrea.linkeddata.es/shapes#40cac3f9a1397b5ef47c697cccc0d6b8> , <https://astrea.linkeddata.es/shapes#a0152b516031df77da267c5973fceb3d> , <https://astrea.linkeddata.es/shapes#65c715d5d2f2d31d44acef9806b5664e> ;
-        sh:targetClass    saref:Property , foodie:PropertyType , qu:QuantityKind .
+        sh:targetClass    foodie:PropertyTypeValue , saref:Property , qu:QuantityKind .
 
 <https://astrea.linkeddata.es/shapes#a8b5dd334c033d865f3d1bf9e694e39c>
         a            sh:PropertyShape ;
@@ -3032,14 +3038,6 @@
         sh:property     <https://astrea.linkeddata.es/shapes#593914c6c80394105ded60f6c73481ff> , <https://astrea.linkeddata.es/shapes#f5addb547b3f2fe1dfa9922db1f760b8> , <https://astrea.linkeddata.es/shapes#cf809be9586ae5c4cfb787151dde76ed> , <https://astrea.linkeddata.es/shapes#648de9d6c441730aa0cd0828108e1f39> , <https://astrea.linkeddata.es/shapes#0cd4758f32bf620f37d9159629982d50> , <https://astrea.linkeddata.es/shapes#7151936560e790620785f59721133f20> , <https://astrea.linkeddata.es/shapes#01c89cc501dcba3124b973ac2cd266a7> ;
         sh:targetClass  s4agri:Animal .
 
-<https://astrea.linkeddata.es/shapes#466029394f8f44718cce25b40440d323>
-        a                 sh:NodeShape ;
-        rdfs:isDefinedBy  <http://purl.oclc.org/NET/ssnx/cf/cf-feature> ;
-        rdfs:label        "Layer" ;
-        sh:name           "Layer" ;
-        sh:nodeKind       sh:IRI ;
-        sh:targetClass    cf-feature:Layer .
-
 <https://astrea.linkeddata.es/shapes#6fe7446209c7d0657bea56e0dd818d93>
         a                 sh:PropertyShape ;
         rdfs:isDefinedBy  sosa: ;
@@ -3048,6 +3046,14 @@
         sh:name           "is hosted by"@en ;
         sh:nodeKind       sh:BlankNodeOrIRI ;
         sh:path           sosa:isHostedBy .
+
+<https://astrea.linkeddata.es/shapes#466029394f8f44718cce25b40440d323>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <http://purl.oclc.org/NET/ssnx/cf/cf-feature> ;
+        rdfs:label        "Layer" ;
+        sh:name           "Layer" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    cf-feature:Layer .
 
 <https://astrea.linkeddata.es/shapes#96c5445ce9eb6c581ca247628a9b99fa>
         a               sh:NodeShape ;
@@ -3302,6 +3308,7 @@
         a               sh:PropertyShape ;
         rdfs:label      "has timestamp"@en , "A relationship stating the timestamp of an entity (e.g. a measurement)."@en ;
         sh:description  "A relationship stating the timestamp of an entity (e.g. a measurement)."@en ;
+        sh:equals       sosa:resultTime ;
         sh:name         "has timestamp"@en ;
         sh:nodeKind     sh:Literal ;
         sh:path         saref:hasTimestamp .
@@ -3662,6 +3669,11 @@
         <https://w3id.org/def/astrea#statusCode>
                 "400"^^xsd:int .
 
+<https://astrea.linkeddata.es/shapes#56487261d280b09314be009f40dc4ade>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      saref:hasState .
+
 <https://astrea.linkeddata.es/shapes#85c44987c5a267f42ccb0356a1dc5eec>
         a                 sh:PropertyShape ;
         rdfs:isDefinedBy  <https://saref.etsi.org/core/> ;
@@ -3672,11 +3684,6 @@
         sh:nodeKind       sh:Literal ;
         sh:path           <https://saref.etsi.org/core/hasDescription> ;
         sh:pattern        ".*" .
-
-<https://astrea.linkeddata.es/shapes#56487261d280b09314be009f40dc4ade>
-        a            sh:PropertyShape ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      saref:hasState .
 
 <https://astrea.linkeddata.es/shapes#61fb9b5ac3e189a73816fd32363d0c7b>
         a            sh:PropertyShape ;
@@ -3736,6 +3743,7 @@
         a               sh:PropertyShape ;
         rdfs:label      "relates to property"@en , "A relationship between a measurement and the property it relates to" ;
         sh:description  "A relationship between a measurement and the property it relates to" ;
+        sh:equals       sosa:observedProperty ;
         sh:name         "relates to property"@en ;
         sh:nodeKind     sh:BlankNodeOrIRI ;
         sh:path         saref:relatesToProperty .

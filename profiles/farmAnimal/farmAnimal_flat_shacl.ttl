@@ -368,7 +368,7 @@
         rdfs:isDefinedBy  af-inspire: ;
         sh:nodeKind       sh:IRI ;
         sh:property       <https://astrea.linkeddata.es/shapes#95c322184613a1662d48949c2a46829e> , <https://astrea.linkeddata.es/shapes#242c53465f77ee16942577018a5d99b3> ;
-        sh:targetClass    af-inspire:FarmAnimalSpecies .
+        sh:targetClass    af-inspire:FarmAnimalSpecies , saref4agri:Animal .
 
 <https://astrea.linkeddata.es/shapes#3e18b0f9fac2d3bdcd51a2fdadcbda53>
         a                 sh:NodeShape ;
@@ -955,6 +955,12 @@
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      s4agri:hasPlantDate .
 
+<https://astrea.linkeddata.es/shapes#eb47bba04f59dfa4446ff67663f33e76>
+        a            sh:PropertyShape ;
+        sh:class     geo:SpatialObject ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      geo:sfWithin .
+
 <https://astrea.linkeddata.es/shapes#8355820918b8f052e2489eb782a08ab2>
         a                 sh:PropertyShape ;
         rdfs:isDefinedBy  <http://www.opengis.net/spec/geosparql/1.0> , <http://www.opengis.net/ont/geosparql> ;
@@ -964,12 +970,6 @@
         sh:name           "contains"@en ;
         sh:nodeKind       sh:BlankNodeOrIRI ;
         sh:path           geo:sfContains .
-
-<https://astrea.linkeddata.es/shapes#eb47bba04f59dfa4446ff67663f33e76>
-        a            sh:PropertyShape ;
-        sh:class     geo:SpatialObject ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      geo:sfWithin .
 
 <https://astrea.linkeddata.es/shapes#9e81a8547fd8cabc79752e243c8d2b67>
         a                 sh:NodeShape ;
@@ -1090,17 +1090,17 @@
         sh:nodeKind       sh:IRI ;
         sh:targetClass    saref:Actuator .
 
+<https://astrea.linkeddata.es/shapes#cf809be9586ae5c4cfb787151dde76ed>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      s4agri:isLocatedIn .
+
 <https://astrea.linkeddata.es/shapes#95c322184613a1662d48949c2a46829e>
         a            sh:PropertyShape ;
         sh:maxCount  "1"^^xsd:int ;
         sh:minCount  "1"^^xsd:int ;
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      foodie:livestockNumber .
-
-<https://astrea.linkeddata.es/shapes#cf809be9586ae5c4cfb787151dde76ed>
-        a            sh:PropertyShape ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      s4agri:isLocatedIn .
 
 <https://astrea.linkeddata.es/shapes#3fa7d19a4912e3306f7209cb475e0272>
         a                 sh:PropertyShape ;
@@ -1111,14 +1111,6 @@
         sh:nodeKind       sh:BlankNodeOrIRI ;
         sh:path           saref:hasCommand .
 
-<https://astrea.linkeddata.es/shapes#ee1bb8ccf767b89f8e9b7a7df2b4e749>
-        a                 sh:PropertyShape ;
-        rdfs:isDefinedBy  saref: ;
-        rdfs:label        "has state"@en ;
-        sh:name           "has state"@en ;
-        sh:nodeKind       sh:BlankNodeOrIRI ;
-        sh:path           saref:hasState .
-
 <https://astrea.linkeddata.es/shapes#9207fef9fa9b243a4ee1bf06b90c17b8>
         a            sh:PropertyShape ;
         sh:nodeKind  sh:IRIOrLiteral ;
@@ -1128,6 +1120,14 @@
         a            sh:PropertyShape ;
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      s4agri:hasHarvestDate .
+
+<https://astrea.linkeddata.es/shapes#ee1bb8ccf767b89f8e9b7a7df2b4e749>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  saref: ;
+        rdfs:label        "has state"@en ;
+        sh:name           "has state"@en ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           saref:hasState .
 
 <https://astrea.linkeddata.es/shapes#df40098fb648431a7a497556e4b0842b>
         a               sh:NodeShape ;

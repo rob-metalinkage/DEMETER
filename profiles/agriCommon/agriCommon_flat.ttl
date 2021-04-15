@@ -5,7 +5,6 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix foodie: <http://foodie-cloud.com/model/foodie#> .
 @prefix iso19115-citation: <http://def.seegrid.csiro.au/isotc211/iso19115/2003/citation#> .
-@prefix iso19150-2: <http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#> .
 @prefix ns1: <http://www.w3.org/ns/dx/prof/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -17,30 +16,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-iso19115-citation:ResponsibleParty a owl:Class ;
-    rdfs:label "Responsible party"^^xsd:string ;
-    rdfs:isDefinedBy <http://def.seegrid.csiro.au/isotc211/iso19115/2003/citation> ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom iso19115-citation:RoleCode ;
-            owl:onProperty iso19115-citation:role ],
-        [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty iso19115-citation:role ],
-        [ a owl:Restriction ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty iso19115-citation:individualName ],
-        [ a owl:Restriction ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty iso19115-citation:organisationName ],
-        [ a owl:Restriction ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty iso19115-citation:positionName ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass iso19115-citation:Contact ;
-            owl:onProperty iso19115-citation:contactInfo ],
-        foaf:Agent ;
-    skos:notation "CI_ResponsibleParty"^^iso19150-2:ISOClassName .
+iso19115-citation:ResponsibleParty owl:equivalentClass foaf:Agent .
 
 foodie:code a owl:DatatypeProperty ;
     rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
@@ -101,9 +77,9 @@ prov:invalidatedAtTime a owl:DatatypeProperty ;
     prov:qualifiedForm prov:Invalidation,
         prov:atTime .
 
-fiware:agroVocConcept a owl:DatatypeProperty ;
+fiware:agroVocConcept a owl:ObjectProperty ;
     rdfs:label "agroVocConcept"@en ;
-    rdfs:comment "URL of the FAO details of the [entity]" ;
+    rdfs:comment "URL of the FAO entity" ;
     rdfs:isDefinedBy <https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriCrop/schema.json> .
 
 fiware:alternateName a owl:DatatypeProperty ;
@@ -196,7 +172,6 @@ saref4agri:Farmer a owl:Class ;
     dct:title "DEMETER AgriCommon"@en ;
     rdfs:comment "The DEMETER Agriculture Information Model (AIM) is the common vocabulary in DEMETER project providing the basis for semantic interoperability across smart farming solutions"@en ;
     owl:imports <http://foodie-cloud.com/model/foodie>,
-        <http://portele.de/ont/inspire/baseInspire>,
         <http://purl.obolibrary.org/obo>,
         <http://www.w3.org/ns/prov>,
         <https://w3id.org/def/saref4agri>,
@@ -204,8 +179,7 @@ saref4agri:Farmer a owl:Class ;
         <https://w3id.org/saref> ;
     owl:versionIRI <https://w3id.org/demeter/agri/agriCommon/2.0> ;
     owl:versionInfo "2.0" ;
-    ns1:isProfileOf <https://w3id.org/demeter/agri/proxy/baseInspire>,
-        <https://w3id.org/demeter/agri/proxy/foodie>,
+    ns1:isProfileOf <https://w3id.org/demeter/agri/proxy/foodie>,
         <https://w3id.org/demeter/agri/proxy/obo>,
         <https://w3id.org/demeter/agri/proxy/prov>,
         <https://w3id.org/demeter/agri/proxy/saref>,
@@ -214,11 +188,16 @@ saref4agri:Farmer a owl:Class ;
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriCommon.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = ../models\\agriCommon.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            prov:endedAtTime "2020-10-29"^^xsd:date ;
+            prov:endedAtTime "2021-04-14"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:maker [ foaf:homepage <https://h2020-demeter.eu/> ;
             foaf:name "DEMETER project" ] .
+
+demeterAgriCommon:eppoConcept a owl:ObjectProperty ;
+    rdfs:label "eppoConcept"@en ;
+    rdfs:comment "URL of the EPPO entity" ;
+    rdfs:isDefinedBy demeterAgriCommon: .
 
 demeterAgriCommon:password a owl:DatatypeProperty ;
     rdfs:label "Password" ;
@@ -233,8 +212,8 @@ demeterAgriCommon:userName a owl:DatatypeProperty ;
 saref:hasDescription a owl:DatatypeProperty ;
     rdfs:label "has description"^^xsd:string,
         "has description"@en ;
-    rdfs:comment "A relationship providing a description of an entity (e.g., device)",
-        "A relationship providing a description of an entity (e.g., device)"^^xsd:string ;
+    rdfs:comment "A relationship providing a description of an entity (e.g., device)"^^xsd:string,
+        "A relationship providing a description of an entity (e.g., device)" ;
     rdfs:isDefinedBy saref: ;
     rdfs:range xsd:string ;
     owl:equivalentProperty foodie:description,

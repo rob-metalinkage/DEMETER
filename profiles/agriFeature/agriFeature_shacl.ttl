@@ -1058,6 +1058,12 @@
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      geo:sfContains .
 
+<https://astrea.linkeddata.es/shapes#3f6891594ac2d163a004bec00f8db48a>
+        a            sh:PropertyShape ;
+        sh:class     geo:Geometry ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      geo:hasGeometry .
+
 <https://astrea.linkeddata.es/report/1486927977>
         a       <https://w3id.org/def/astrea#ReportEntry> ;
         <https://w3id.org/def/astrea#message>
@@ -1066,12 +1072,6 @@
                 "https://w3id.org/def/saref4agri" ;
         <https://w3id.org/def/astrea#statusCode>
                 "200"^^xsd:int .
-
-<https://astrea.linkeddata.es/shapes#3f6891594ac2d163a004bec00f8db48a>
-        a            sh:PropertyShape ;
-        sh:class     geo:Geometry ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      geo:hasGeometry .
 
 <https://astrea.linkeddata.es/shapes#356b5c12716bacd05f9e43896197c2ae>
         a                 sh:NodeShape ;

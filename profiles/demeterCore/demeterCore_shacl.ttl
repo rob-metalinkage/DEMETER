@@ -11,14 +11,14 @@
 @prefix prov:  <http://www.w3.org/ns/prov#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 
+<https://astrea.linkeddata.es/shapes#c77654dc7d225e9b11cb0e2206c52715>
+        a         sh:PropertyShape ;
+        sh:class  ngsi-ld:Value .
+
 <https://astrea.linkeddata.es/shapes#3b9939ceb46b5921e39565390a00cb17>
         a            sh:PropertyShape ;
         sh:nodeKind  sh:Literal ;
         sh:path      ngsi-ld:hasValue .
-
-<https://astrea.linkeddata.es/shapes#c77654dc7d225e9b11cb0e2206c52715>
-        a         sh:PropertyShape ;
-        sh:class  ngsi-ld:Value .
 
 <https://astrea.linkeddata.es/shapes#be1c6bcec411d57176afa44ebe0ffa44>
         a               sh:NodeShape , sh:PropertyShape ;

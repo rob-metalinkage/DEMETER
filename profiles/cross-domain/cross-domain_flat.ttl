@@ -2,19 +2,21 @@
 @prefix dim: <http://purl.oclc.org/NET/ssnx/qu/dim#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix iso19103: <http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#> .
 @prefix iso19156_GFI: <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#> .
 @prefix iso19156_OB: <http://def.isotc211.org/iso19156/2011/Observation#> .
 @prefix iso19156_SF: <http://def.isotc211.org/iso19156/2011/SamplingFeature#> .
 @prefix ngsi-ld: <https://uri.etsi.org/ngsi-ld/v1/ontology#> .
-@prefix ns1: <http://purl.org/dc/elements/1.1/> .
-@prefix ns2: <http://schema.org/> .
-@prefix ns3: <http://www.w3.org/ns/dx/prof/> .
-@prefix ns4: <http://www.w3.org/ns/prov#> .
-@prefix ns5: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://purl.org/dc/elements/1.1/> .
+@prefix ns3: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix ns4: <http://www.w3.org/ns/dx/prof/> .
+@prefix ns5: <http://www.w3.org/ns/prov#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix qb: <http://purl.org/linked-data/cube#> .
 @prefix qu: <http://purl.oclc.org/NET/ssnx/qu/qu#> .
 @prefix quantity: <http://purl.oclc.org/NET/ssnx/qu/quantity#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
@@ -22,6 +24,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix ssn-ext: <http://www.w3.org/ns/ssn/ext/> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -451,6 +455,25 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
     rdfs:subClassOf geo:Geometry,
         wgs84_pos:SpatialThing .
 
+sosa:Procedure a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Procedure"@en ;
+    rdfs:comment "A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world (via an Actuator). A Procedure is re-usable, and might be involved in many Observations, Samplings, or Actuations. It explains the steps to be carried out to arrive at reproducible results."@en ;
+    rdfs:isDefinedBy sosa: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom ssn:Output ;
+            owl:onProperty ssn:hasOutput ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom ssn:System ;
+            owl:onProperty ssn:implementedBy ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom ssn:Input ;
+            owl:onProperty ssn:hasInput ],
+        ngsi-ld:Entity ;
+    skos:definition "A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world (via an Actuator). A Procedure is re-usable, and might be involved in many Observations, Samplings, or Actuations. It explains the steps to be carried out to arrive at reproducible results."@en ;
+    skos:example "The measured wind speed differs depending on the height of the sensor above the surface, e.g., due to friction. Consequently, procedures for measuring wind speed define a standard height for anemometers above ground, typically 10m for meteorological measures and 2m in Agrometeorology. This definition of height, sensor placement, and so forth are defined by the Procedure."@en ;
+    skos:note "Many observations may be created via the same Procedure, the same way as many tables are assembled using the same instructions (as information objects, not their concrete realization)."@en .
+
 foaf:Agent a rdfs:Class,
         owl:Class ;
     rdfs:label "Agent",
@@ -462,7 +485,7 @@ foaf:Agent a rdfs:Class,
             owl:someValuesFrom foaf:Agent ],
         ngsi-ld:Entity ;
     owl:equivalentClass dct:Agent ;
-    ns5:term_status "stable" .
+    ns3:term_status "stable" .
 
 foaf:Person a rdfs:Class,
         owl:Class ;
@@ -474,17 +497,17 @@ foaf:Person a rdfs:Class,
         foaf:Agent ;
     owl:disjointWith foaf:Organization,
         foaf:Project ;
-    owl:equivalentClass ns2:Person,
+    owl:equivalentClass ns1:Person,
         <http://www.w3.org/2000/10/swap/pim/contact#Person>,
         schema:Person ;
-    ns5:term_status "stable" .
+    ns3:term_status "stable" .
 
 schema:Organization a rdfs:Class,
         owl:Class ;
     rdfs:label "Organization"@en ;
     rdfs:comment ""@en,
         "An organization such as a school, NGO, corporation, club, etc."@en ;
-    rdfs:isDefinedBy ns2:Organization,
+    rdfs:isDefinedBy ns1:Organization,
         schema:Organization ;
     rdfs:subClassOf foaf:Agent,
         schema:Thing .
@@ -494,10 +517,15 @@ schema:Person a rdfs:Class,
     rdfs:label "Person"@en ;
     rdfs:comment ""@en,
         "A person (alive, dead, undead, or fictional)."@en ;
-    rdfs:isDefinedBy ns2:Person,
+    rdfs:isDefinedBy ns1:Person,
         schema:Person ;
     rdfs:subClassOf schema:Thing,
         ngsi-ld:Entity .
+
+iso19103:Measure a owl:Class ;
+    rdfs:subClassOf ngsi-ld:Entity ;
+    owl:deprecated true ;
+    owl:equivalentClass qudt:QuantityValue .
 
 dim:Dimensionless a owl:Class ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/qu/qu-rec20> ;
@@ -811,12 +839,40 @@ qb:sliceStructure a rdf:Property,
     rdfs:range qb:SliceKey ;
     rdfs:subPropertyOf ngsi-ld:Relationship .
 
+qudt:Quantity a owl:Class ;
+    rdfs:label "Quantity" ;
+    qudt:dbpediaMatch "http://dbpedia.org/resource/Quantity"^^xsd:anyURI ;
+    rdfs:comment """<p class="lm-para">A <b>quantity</b> is the measurement of an observable property of a particular object, event, or physical system. A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the underlying <b>quantity kind</b> is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as the speed of light in a vacuum, Planck's constant, the electric permittivity of free space, and the fine structure constant. </p>
+
+<p class="lm-para">In other words, quantities are quantifiable aspects of the world, such as the duration of a movie, the distance between two points, velocity of a car, the pressure of the atmosphere, and a person's weight; and units are used to describe their numerical measure. 
+
+<p class="lm-para">Many <b>quantity kinds</b> are related to each other by various physical laws, and as a result, the associated units of some quantity kinds can be expressed as products (or ratios) of powers of other quantity kinds (e.g., momentum is mass times velocity and velocity is defined as distance divided by time). In this way, some quantities can be calculated from other measured quantities using their associations to the quantity kinds in these expressions. These quantity kind relationships are also discussed in dimensional analysis. Those that cannot be so expressed can be regarded as "fundamental" in this sense.</p>
+<p class="lm-para">A quantity is distinguished from a "quantity kind" in that the former carries a value and the latter is a type specifier.</p>"""^^rdf:HTML ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt>,
+        <http://qudt.org/schema/qudt> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            dct:description "a reference to the dimension that quantifies the property"^^rdf:HTML ;
+            owl:allValuesFrom qudt:QuantityValue ;
+            owl:onProperty qudt:quantityValue ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKind ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:boolean ;
+            owl:onProperty qudt:isDeltaQuantity ],
+        [ a owl:Restriction ;
+            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:hasQuantityKind ],
+        qudt:Concept,
+        qudt:Quantifiable,
+        ngsi-ld:Entity .
+
 geo:asWKT a owl:DatatypeProperty ;
     rdfs:label "asWKT"@en ;
-    ns1:contributor "Matthew Perry" ;
-    ns1:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-    ns1:date "2011-06-16"^^xsd:date ;
-    ns1:description """
+    ns2:contributor "Matthew Perry" ;
+    ns2:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+    ns2:date "2011-06-16"^^xsd:date ;
+    ns2:description """
       The WKT serialization of a geometry
     """@en ;
     rdfs:comment """
@@ -833,24 +889,81 @@ geo:asWKT a owl:DatatypeProperty ;
     """@en ;
     skos:prefLabel "asWKT"@en .
 
+wgs84_pos:alt a owl:DatatypeProperty ;
+    rdfs:comment "The WGS84 altitude of a SpatialThing (decimal meters above the local reference ellipsoid)." ;
+    rdfs:isDefinedBy wgs84_pos: .
+
+wgs84_pos:lat a owl:DatatypeProperty ;
+    rdfs:isDefinedBy wgs84_pos: .
+
+wgs84_pos:location a rdf:Property,
+        owl:ObjectProperty ;
+    rdfs:label "location" ;
+    rdfs:comment """The relation between something and the point, 
+ or other geometrical thing in space, where it is.  For example, the realtionship between
+ a radio tower and a Point with a given lat and long.
+ Or a relationship between a park and its outline as a closed arc of points, or a road and
+ its location as a arc (a sequence of points).
+ Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
+ an accuracy appropriate for the size of the object and uses such as mapping .
+ """,
+        "The relation between something and the point, or other geometrical thing in space, where it is." ;
+    rdfs:isDefinedBy wgs84_pos: ;
+    rdfs:range wgs84_pos:SpatialThing ;
+    rdfs:subPropertyOf foaf:based_near,
+        ngsi-ld:Relationship .
+
+wgs84_pos:long a owl:DatatypeProperty ;
+    rdfs:isDefinedBy wgs84_pos: .
+
 skos:inScheme a owl:AnnotationProperty .
 
-sosa:ActuatableProperty a owl:Class ;
-    rdfs:label "Actuatable Property"@en ;
-    rdfs:comment "An actuatable quality (property, characteristic) of a FeatureOfInterest."@en ;
-    rdfs:isDefinedBy sosa: ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom sosa:Actuation ;
-            owl:onProperty sosa:isActedOnBy ],
-        ssn:Property,
-        ngsi-ld:Entity ;
-    skos:definition "An actuatable quality (property, characteristic) of a FeatureOfInterest."@en ;
-    skos:example "A window actuator acts by changing the state between a frame and a window. The ability of the window to be opened and closed is its ActuatableProperty."@en .
+time:hasBeginning a owl:ObjectProperty ;
+    rdfs:label "has beginning"@en ;
+    rdfs:comment "Beginning of a temporal entity"@en ;
+    rdfs:domain time:TemporalEntity ;
+    rdfs:range time:Instant ;
+    rdfs:subPropertyOf time:hasTime ;
+    skos:definition "Beginning of a temporal entity."@en .
+
+time:hasEnd a owl:ObjectProperty ;
+    rdfs:label "has end"@en ;
+    rdfs:comment "End of a temporal entity."@en ;
+    rdfs:domain time:TemporalEntity ;
+    rdfs:range time:Instant ;
+    rdfs:subPropertyOf time:hasTime ;
+    skos:definition "End of a temporal entity."@en .
+
+time:inXSDDate a owl:DatatypeProperty ;
+    rdfs:label "in XSD date"@en ;
+    rdfs:comment "Position of an instant, expressed using xsd:date"@en ;
+    rdfs:domain time:Instant ;
+    rdfs:range xsd:date ;
+    skos:definition "Position of an instant, expressed using xsd:date"@en .
+
+time:inXSDDateTimeStamp a owl:DatatypeProperty ;
+    rdfs:label "in XSD Date-Time-Stamp"@en ;
+    rdfs:comment "Position of an instant, expressed using xsd:dateTimeStamp"@en ;
+    rdfs:domain time:Instant ;
+    rdfs:range xsd:dateTimeStamp ;
+    skos:definition "Position of an instant, expressed using xsd:dateTimeStamp"@en .
 
 sosa:hasSimpleResult rdfs:comment "The simple value of an Observation or Actuation."@en ;
     skos:definition "The simple value of an Observation or Actuation."@en ;
     schema:domainIncludes sosa:Actuation,
         sosa:Observation .
+
+sosa:hasUltimateFeatureOfInterest a owl:ObjectProperty ;
+    rdfs:label "has ultimate feature of interest" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( sosa:Observation sosa:Sampling sosa:Actuation ) ] ;
+    rdfs:isDefinedBy ssn-ext: ;
+    rdfs:range sosa:FeatureOfInterest ;
+    rdfs:subPropertyOf ngsi-ld:Relationship ;
+    schema:domainIncludes sosa:Actuation,
+        sosa:Observation,
+        sosa:Sampling ;
+    schema:rangeIncludes sosa:FeatureOfInterest .
 
 foaf:depiction a owl:AnnotationProperty .
 
@@ -867,14 +980,14 @@ schema:affiliation a rdf:Property ;
     rdfs:label "Affiliation"@en ;
     rdfs:comment "An organization that this person is affiliated with. For example, a school/university, a club, or a team."@en ;
     rdfs:domain schema:Person ;
-    rdfs:isDefinedBy ns2:Person ;
+    rdfs:isDefinedBy ns1:Person ;
     rdfs:range schema:Organization .
 
 schema:domainIncludes a rdf:Property ;
     rdfs:label "Domain Includes"@en ;
     rdfs:comment "Relates a property to a class that is (one of) the type(s) the property is expected to be used on."@en ;
     rdfs:domain schema:Property ;
-    rdfs:isDefinedBy ns2:Property ;
+    rdfs:isDefinedBy ns1:Property ;
     rdfs:range schema:Class .
 
 schema:name a rdf:Property ;
@@ -883,14 +996,14 @@ schema:name a rdf:Property ;
     rdfs:comment "The name of the item.",
         "The name of the item."@en ;
     rdfs:domain schema:Thing ;
-    rdfs:isDefinedBy ns2:Thing ;
+    rdfs:isDefinedBy ns1:Thing ;
     rdfs:range xsd:string .
 
 schema:rangeIncludes a rdf:Property ;
     rdfs:label "Range Includes"@en ;
     rdfs:comment "Relates a property to a class that constitutes (one of) the expected type(s) for values of the property."@en ;
     rdfs:domain schema:Property ;
-    rdfs:isDefinedBy ns2:Property ;
+    rdfs:isDefinedBy ns1:Property ;
     rdfs:range schema:Class .
 
 schema:telephone a rdf:Property ;
@@ -900,49 +1013,53 @@ schema:telephone a rdf:Property ;
         "The telephone number."@en ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( schema:Person schema:ContactPoint schema:Place schema:Organization ) ] ;
-    rdfs:isDefinedBy ns2:ContactPoint,
-        ns2:Organization,
-        ns2:Person,
-        ns2:Place ;
+    rdfs:isDefinedBy ns1:ContactPoint,
+        ns1:Organization,
+        ns1:Person,
+        ns1:Place ;
     rdfs:range xsd:string .
 
 <https://w3id.org/demeter/crossDomain> a owl:Ontology,
-        ns4:Entity ;
-    dct:contributor [ rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+        ns5:Entity ;
+    dct:contributor [ foaf:name "Ioanna Roussaki" ;
+            schema:affiliation [ foaf:name "ICCS" ] ],
+        [ rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
             foaf:name "Raul Palma" ;
             schema:affiliation [ foaf:name "PSNC" ] ],
-        [ foaf:name "Ioanna Roussaki" ;
-            schema:affiliation [ foaf:name "ICCS" ] ],
         [ foaf:name "Rob Atkinson" ;
             schema:affiliation [ foaf:name "OGC" ] ] ;
     dct:creator [ foaf:name "Till Döhmen" ;
             schema:affiliation [ foaf:name "Fraunhofer FIT" ] ] ;
-    dct:description "The DEMETER AgriCrop is one of the agri profiles of DEMETER AIM. This profile was created by reusing and aligning well-known ontologies and vocabularies"@en ;
+    dct:description "The DEMETER cross domain ontology i) defines concepts and terms that are generic and applicable to various domains; ii) avoids conflicting or redundant definitions of the same concept in different domain specific models; iii) provides the basis for interoperability. The ontology is specified by reusing concepts and terms from a number of standard ontologies and vocabularies including OGC/W3C SOSA/SSN, OGC GeoSparql, W3C RDF data cube, QUDT, FOAF, schema.org and others. It includes alignment to ISO standards and with DEMETER core meta-model (NGSI-LD)."@en ;
     dct:rights "This vocabulary is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en ;
     dct:title "DEMETER Cross-Domain"@en ;
     rdfs:comment "The DEMETER Agriculture Information Model (AIM) is the common vocabulary in DEMETER project providing the basis for semantic interoperability across smart farming solutions"@en ;
     owl:imports <http://purl.oclc.org/NET/ssnx/qu/qu>,
+        <http://qudt.org/schema/qudt>,
         <http://www.opengis.net/ont/geosparql>,
         <http://www.opengis.net/ont/sf>,
+        <http://www.w3.org/2006/time>,
         <http://www.w3.org/ns/sosa>,
         <http://www.w3.org/ns/ssn>,
         <http://xmlns.com/foaf/0.1>,
         <https://schema.org> ;
     owl:versionIRI <https://w3id.org/demeter/crossDomain/1.0> ;
     owl:versionInfo "1.0" ;
-    ns3:isProfileOf <http://purl.oclc.org/NET/ssnx/qu/qu>,
-        <http://www.opengis.net/ont/geosparql>,
+    ns4:isProfileOf <http://purl.oclc.org/NET/ssnx/qu/qu>,
+        <http://qudt.org/schema/qudt>,
         <http://www.opengis.net/ont/sf>,
+        <http://www.w3.org/2006/time>,
         <http://www.w3.org/ns/sosa>,
         <http://www.w3.org/ns/ssn>,
         <https://schema.org>,
-        <https://w3id.org/demeter/agri/proxy/foaf> ;
-    ns4:wasDerivedFrom [ a ns4:Entity ;
+        <https://w3id.org/demeter/agri/proxy/foaf>,
+        <https://w3id.org/demeter/agri/proxy/geosparql> ;
+    ns5:wasDerivedFrom [ a ns5:Entity ;
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\cross-domain.ttl" ] ;
-    ns4:wasGeneratedBy [ a ns4:Activity ;
+    ns5:wasGeneratedBy [ a ns5:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = ../models\\cross-domain.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            ns4:endedAtTime "2020-10-29"^^xsd:date ;
-            ns4:wasAssociatedWith [ a ns4:Agent ;
+            ns5:endedAtTime "2021-04-14"^^xsd:date ;
+            ns5:wasAssociatedWith [ a ns5:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:maker [ foaf:homepage <https://h2020-demeter.eu/> ;
             foaf:name "DEMETER project" ] .
@@ -950,6 +1067,7 @@ schema:telephone a rdf:Property ;
 iso19156_OB:OM_Observation a owl:Class ;
     rdfs:label "Observation" ;
     rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+    rdfs:subClassOf ngsi-ld:Entity ;
     skos:definition "Observation process is a subtype of OM_Process. It is a process used to generate the result of the observation." .
 
 iso19156_SF:SF_SamplingFeature.sampledFeature a owl:ObjectProperty ;
@@ -1011,12 +1129,96 @@ qb:observationGroup a rdf:Property,
     rdfs:range qb:ObservationGroup ;
     rdfs:subPropertyOf ngsi-ld:Relationship .
 
+qudt:Unit a owl:Class ;
+    rdfs:label "Unit" ;
+    qudt:informativeReference "http://dbpedia.org/resource/Category:Units_of_measure"^^xsd:anyURI,
+        "http://www.allmeasures.com/Fullconversion.asp"^^xsd:anyURI ;
+    rdfs:comment "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\(Q = nU\\)."^^rdf:HTML ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt>,
+        <http://qudt.org/schema/qudt> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKind ;
+            owl:onProperty qudt:hasQuantityKind ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKindDimensionVector ;
+            owl:onProperty qudt:denominatorDimensionVector ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKindDimensionVector ;
+            owl:onProperty qudt:hasDimensionVector ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKindDimensionVector ;
+            owl:onProperty qudt:numeratorDimensionVector ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:SystemOfUnits ;
+            owl:onProperty qudt:unitOfSystem ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:UCUMcs ;
+            owl:onProperty qudt:ucumCode ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty qudt:iec61360Code ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty qudt:abbreviation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty qudt:conversionMultiplier ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty qudt:conversionOffset ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:denominatorDimensionVector ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:hasDimensionVector ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:mathMLdefinition ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:numeratorDimensionVector ],
+        [ a owl:Restriction ;
+            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:expression ],
+        [ a owl:Restriction ;
+            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:latexDefinition ],
+        [ a owl:Restriction ;
+            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:latexSymbol ],
+        [ a owl:Restriction ;
+            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:siUnitsExpression ],
+        [ a owl:Restriction ;
+            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:symbol ],
+        qudt:Concept,
+        qudt:Verifiable,
+        ngsi-ld:Entity .
+
+qudt:quantityValue a owl:ObjectProperty ;
+    rdfs:label "quantity value" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt>,
+        <http://qudt.org/schema/qudt> ;
+    rdfs:range qudt:QuantityValue ;
+    rdfs:subPropertyOf ngsi-ld:Relationship .
+
+qudt:unit a owl:ObjectProperty ;
+    rdfs:label "unit" ;
+    dct:description "A reference to the unit of measure of a quantity (variable or constant) of interest."^^rdf:HTML ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt>,
+        <http://qudt.org/schema/qudt> ;
+    rdfs:range qudt:Unit ;
+    rdfs:subPropertyOf ngsi-ld:Relationship ;
+    owl:inverseOf qudt:unitFor .
+
 geo:hasSerialization a owl:DatatypeProperty ;
     rdfs:label "has serialization"@en ;
-    ns1:contributor "Matthew Perry" ;
-    ns1:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-    ns1:date "2011-06-16"^^xsd:date ;
-    ns1:description """
+    ns2:contributor "Matthew Perry" ;
+    ns2:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+    ns2:date "2011-06-16"^^xsd:date ;
+    ns2:description """
       Connects a geometry object with its text-based serialization.
     """@en ;
     rdfs:comment """
@@ -1034,10 +1236,10 @@ geo:hasSerialization a owl:DatatypeProperty ;
 
 geo:sfContains a owl:ObjectProperty ;
     rdfs:label "contains"@en ;
-    ns1:contributor "Matthew Perry" ;
-    ns1:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-    ns1:date "2011-06-16"^^xsd:date ;
-    ns1:description """
+    ns2:contributor "Matthew Perry" ;
+    ns2:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+    ns2:date "2011-06-16"^^xsd:date ;
+    ns2:description """
       Exists if the subject SpatialObject spatially contains the 
       object SpatialObject. DE-9IM: T*****FF*
     """@en ;
@@ -1059,10 +1261,10 @@ geo:sfContains a owl:ObjectProperty ;
 
 geo:sfWithin a owl:ObjectProperty ;
     rdfs:label "within"@en ;
-    ns1:contributor "Matthew Perry" ;
-    ns1:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-    ns1:date "2011-06-16"^^xsd:date ;
-    ns1:description """
+    ns2:contributor "Matthew Perry" ;
+    ns2:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+    ns2:date "2011-06-16"^^xsd:date ;
+    ns2:description """
       Exists if the subject SpatialObject is spatially within the 
       object SpatialObject. DE-9IM: T*F**F***
     """@en ;
@@ -1084,28 +1286,69 @@ geo:sfWithin a owl:ObjectProperty ;
 
 geo:wktLiteral rdfs:comment "A Well-known Text serialization of a geometry object."@en .
 
-wgs84_pos:location a rdf:Property,
-        owl:ObjectProperty ;
-    rdfs:label "location" ;
-    rdfs:comment """The relation between something and the point, 
- or other geometrical thing in space, where it is.  For example, the realtionship between
- a radio tower and a Point with a given lat and long.
- Or a relationship between a park and its outline as a closed arc of points, or a road and
- its location as a arc (a sequence of points).
- Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
- an accuracy appropriate for the size of the object and uses such as mapping .
- """,
-        "The relation between something and the point, or other geometrical thing in space, where it is." ;
-    rdfs:isDefinedBy wgs84_pos: ;
-    rdfs:range wgs84_pos:SpatialThing ;
-    rdfs:subPropertyOf foaf:based_near,
-        ngsi-ld:Relationship .
+time:TemporalUnit a owl:Class ;
+    rdfs:label "Temporal unit"@en ;
+    rdfs:comment "A standard duration, which provides a scale factor for a time extent, or the granularity or precision for a time position."@en ;
+    rdfs:subClassOf time:TemporalDuration ;
+    skos:changeNote """Remove enumeration from definition, in order to allow other units to be used when required in other coordinate systems. 
+NOTE: existing units are still present as members of the class, but the class membership is now open. 
+
+In the original OWL-Time the following constraint appeared: 
+  owl:oneOf (
+      time:unitSecond
+      time:unitMinute
+      time:unitHour
+      time:unitDay
+      time:unitWeek
+      time:unitMonth
+      time:unitYear
+    ) ;"""@en ;
+    skos:definition "A standard duration, which provides a scale factor for a time extent, or the granularity or precision for a time position."@en ;
+    skos:note "Membership of the class TemporalUnit is open, to allow for other temporal units used in some technical applications (e.g. millions of years, Baha'i month)."@en .
+
+time:numericDuration a owl:DatatypeProperty ;
+    rdfs:label "Numeric value of temporal duration"@en ;
+    rdfs:comment "Value of a temporal extent expressed as a decimal number scaled by a temporal unit"@en ;
+    rdfs:domain time:Duration ;
+    rdfs:range xsd:decimal ;
+    skos:definition "Value of a temporal extent expressed as a decimal number scaled by a temporal unit"@en .
+
+time:unitType a owl:ObjectProperty ;
+    rdfs:label "temporal unit type"@en ;
+    rdfs:comment "The temporal unit which provides the precision of a date-time value or scale of a temporal extent"@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( time:GeneralDateTimeDescription time:Duration ) ] ;
+    rdfs:range time:TemporalUnit .
+
+sosa:ActuatableProperty a owl:Class ;
+    rdfs:label "Actuatable Property"@en ;
+    rdfs:comment "An actuatable quality (property, characteristic) of a FeatureOfInterest."@en ;
+    rdfs:isDefinedBy sosa: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom sosa:Actuation ;
+            owl:onProperty sosa:isActedOnBy ],
+        ssn:Property,
+        ngsi-ld:Entity ;
+    skos:definition "An actuatable quality (property, characteristic) of a FeatureOfInterest."@en ;
+    skos:example "A window actuator acts by changing the state between a frame and a window. The ability of the window to be opened and closed is its ActuatableProperty."@en .
+
+sosa:hasMember a owl:ObjectProperty ;
+    rdfs:label "member observation" ;
+    rdfs:comment "Link to a member within a collection of (observations) or (collections of observations) that share the same value for one or more of the characteristic properties" ;
+    rdfs:domain sosa:ObservationCollection ;
+    rdfs:isDefinedBy ssn-ext: ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( sosa:Observation sosa:ObservationCollection ) ] ;
+    rdfs:subPropertyOf ngsi-ld:Relationship ;
+    schema:domainIncludes sosa:ObservationCollection ;
+    schema:rangeIncludes sosa:Observation,
+        sosa:ObservationCollection .
 
 sosa:hosts a owl:ObjectProperty ;
     rdfs:label "host"@en,
         "hosts"@en ;
-    ns2:domainIncludes sosa:Platform ;
-    ns2:rangeIncludes sosa:Actuator,
+    ns1:domainIncludes sosa:Platform ;
+    ns1:rangeIncludes sosa:Actuator,
         sosa:Platform,
         sosa:Sampler,
         sosa:Sensor ;
@@ -1119,9 +1362,9 @@ sosa:hosts a owl:ObjectProperty ;
 
 sosa:isFeatureOfInterestOf a owl:ObjectProperty ;
     rdfs:label "is feature of interest of"@en ;
-    ns2:domainIncludes sosa:FeatureOfInterest,
+    ns1:domainIncludes sosa:FeatureOfInterest,
         sosa:Sample ;
-    ns2:rangeIncludes sosa:Actuation,
+    ns1:rangeIncludes sosa:Actuation,
         sosa:Observation,
         sosa:Sampling ;
     rdfs:comment "A relation between a FeatureOfInterest and an Observation about it, an Actuation acting on it, or an act of Sampling that sampled it."@en ;
@@ -1134,27 +1377,31 @@ sosa:isFeatureOfInterestOf a owl:ObjectProperty ;
         sosa:Observation,
         sosa:Sampling .
 
-sosa:madeObservation a owl:ObjectProperty ;
-    rdfs:label "made observation"@en ;
-    ns2:domainIncludes sosa:Sensor ;
-    ns2:rangeIncludes sosa:Observation ;
-    rdfs:comment "Relation between a Sensor and an Observation made by the Sensor."@en ;
+sosa:observes a owl:ObjectProperty ;
+    rdfs:label "observes"@en ;
+    ns1:domainIncludes sosa:Sensor ;
+    ns1:rangeIncludes sosa:ObservableProperty ;
+    rdfs:comment "Relation between a Sensor and an ObservableProperty that it is capable of sensing."@en ;
     rdfs:isDefinedBy sosa: ;
-    rdfs:subPropertyOf ngsi-ld:Relationship ;
-    skos:definition "Relation between a Sensor and an Observation made by the Sensor."@en ;
-    schema:rangeIncludes sosa:Observation .
+    rdfs:subPropertyOf ssn:forProperty,
+        ngsi-ld:Relationship ;
+    skos:definition "Relation between a Sensor and an ObservableProperty that it is capable of sensing."@en ;
+    schema:domainIncludes sosa:Sensor ;
+    schema:rangeIncludes sosa:ObservableProperty .
 
-sosa:resultTime a owl:DatatypeProperty ;
-    rdfs:label "result time"@en ;
-    ns2:domainIncludes sosa:Actuation,
+sosa:phenomenonTime a owl:ObjectProperty ;
+    rdfs:label "phenomenon time"@en ;
+    ns1:domainIncludes sosa:Actuation,
         sosa:Observation,
         sosa:Sampling ;
-    rdfs:comment "The result time is the instant of time when the Observation, Actuation or Sampling activity was completed."@en ;
+    ns1:rangeIncludes time:TemporalEntity ;
+    rdfs:comment "The time that the Result of an Observation, Actuation or Sampling applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an Interval or an Instant, or some other compound TemporalEntity."@en ;
     rdfs:isDefinedBy sosa: ;
-    rdfs:range xsd:dateTime ;
-    skos:definition "The result time is the instant of time when the Observation, Actuation or Sampling activity was completed."@en ;
+    rdfs:subPropertyOf ngsi-ld:Relationship ;
+    skos:definition "The time that the Result of an Observation, Actuation or Sampling applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an Interval or an Instant, or some other compound TemporalEntity."@en ;
     schema:domainIncludes sosa:Actuation,
         sosa:Observation,
+        sosa:ObservationCollection,
         sosa:Sampling .
 
 ssn:deployedOnPlatform a owl:ObjectProperty ;
@@ -1166,13 +1413,28 @@ ssn:deployedOnPlatform a owl:ObjectProperty ;
     owl:inverseOf ssn:inDeployment ;
     skos:definition "Relation between a Deployment and the Platform on which the Systems are deployed."@en .
 
-ssn:implements a owl:ObjectProperty ;
-    rdfs:label "implements"@en ;
-    rdfs:comment "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method)."@en ;
+ssn:hasInput a owl:ObjectProperty ;
+    rdfs:label "has input"@en ;
+    rdfs:comment "Relation between a Procedure and an Input to it."@en ;
     rdfs:isDefinedBy ssn: ;
     rdfs:subPropertyOf ngsi-ld:Relationship ;
-    skos:definition "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method)."@en ;
-    skos:example "For example, the relationship between a sensor and the scientific measuring Procedure via which it senses."@en .
+    skos:definition "Relation between a Procedure and an Input to it."@en .
+
+ssn:hasOutput a owl:ObjectProperty ;
+    rdfs:label "has output"@en ;
+    rdfs:comment "Relation between a Procedure and an Output of it."@en ;
+    rdfs:isDefinedBy ssn: ;
+    rdfs:subPropertyOf ngsi-ld:Relationship ;
+    skos:definition "Relation between a Procedure and an Output of it."@en .
+
+ssn:implementedBy a owl:ObjectProperty ;
+    rdfs:label "implemented by"@en ;
+    rdfs:comment "Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way."@en ;
+    rdfs:isDefinedBy ssn: ;
+    rdfs:subPropertyOf ngsi-ld:Relationship ;
+    owl:inverseOf ssn:implements ;
+    skos:definition "Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way."@en ;
+    skos:example "For example, the relationship between a scientific measuring Procedure and a sensor that senses via that Procedure."@en .
 
 foaf:member a rdf:Property,
         owl:ObjectProperty ;
@@ -1182,7 +1444,7 @@ foaf:member a rdf:Property,
     rdfs:isDefinedBy foaf: ;
     rdfs:range foaf:Agent ;
     rdfs:subPropertyOf ngsi-ld:Relationship ;
-    ns5:term_status "stable" .
+    ns3:term_status "stable" .
 
 iso19156_GFI:GFI_DomainFeature a owl:Class ;
     rdfs:label "GFI_DomainFeature" ;
@@ -1231,10 +1493,10 @@ qb:componentProperty a rdf:Property,
 
 geo:Feature a owl:Class ;
     rdfs:label "Feature"@en ;
-    ns1:contributor "Matthew Perry" ;
-    ns1:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-    ns1:date "2011-06-16"^^xsd:date ;
-    ns1:description """
+    ns2:contributor "Matthew Perry" ;
+    ns2:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+    ns2:date "2011-06-16"^^xsd:date ;
+    ns2:description """
       This class represents the top-level feature type. This class is 
       equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
       superclass of all feature types.
@@ -1279,10 +1541,10 @@ geo:Feature a owl:Class ;
 
 geo:hasGeometry a owl:ObjectProperty ;
     rdfs:label "hasGeometry"@en ;
-    ns1:contributor "Matthew Perry" ;
-    ns1:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-    ns1:date "2011-06-16"^^xsd:date ;
-    ns1:description """
+    ns2:contributor "Matthew Perry" ;
+    ns2:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+    ns2:date "2011-06-16"^^xsd:date ;
+    ns2:description """
       A spatial representation for a given feature.
     """@en ;
     dct:contributor "Matthew Perry" ;
@@ -1310,58 +1572,46 @@ geo:hasGeometry a owl:ObjectProperty ;
     """@en ;
     skos:prefLabel "hasGeometry"@en .
 
-sosa:ObservableProperty a owl:Class ;
-    rdfs:label "Observable Property"@en ;
-    rdfs:comment "An observable quality (property, characteristic) of a FeatureOfInterest."@en ;
-    rdfs:isDefinedBy sosa: ;
+time:Duration a owl:Class ;
+    rdfs:label "duración de tiempo",
+        "Time duration"@en ;
+    rdfs:comment "Duration of a temporal extent expressed as a number scaled by a temporal unit"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom sosa:Observation ;
-            owl:onProperty [ owl:inverseOf sosa:observedProperty ] ],
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty time:unitType ],
         [ a owl:Restriction ;
-            owl:allValuesFrom sosa:Sensor ;
-            owl:onProperty sosa:isObservedBy ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom ssn:Stimulus ;
-            owl:onProperty [ owl:inverseOf ssn:isProxyFor ] ],
-        ssn:Property,
-        ngsi-ld:Entity ;
-    skos:definition "An observable quality (property, characteristic) of a FeatureOfInterest."@en ;
-    skos:example "The height of a tree, the depth of a water body, or the temperature of a surface are examples of observable properties, while the value of a classic car is not (directly) observable but asserted."@en .
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty time:numericDuration ],
+        time:TemporalDuration ;
+    skos:definition "Duration of a temporal extent expressed as a number scaled by a temporal unit"@en ;
+    skos:note "Alternative to time:DurationDescription to support description of a temporal duration other than using a calendar/clock system."@en .
 
-sosa:hasFeatureOfInterest a owl:ObjectProperty ;
-    rdfs:label "has feature of interest"@en ;
-    ns2:domainIncludes sosa:Actuation,
-        sosa:Observation,
-        sosa:Sampling ;
-    ns2:rangeIncludes sosa:FeatureOfInterest,
-        sosa:Sample ;
-    rdfs:comment "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."@en ;
-    rdfs:isDefinedBy sosa: ;
-    rdfs:subPropertyOf ngsi-ld:Relationship ;
-    owl:inverseOf sosa:isFeatureOfInterestOf ;
-    skos:definition "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."@en ;
-    skos:example "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight."@en ;
-    schema:domainIncludes sosa:Actuation,
-        sosa:Observation,
-        sosa:Sampling ;
-    schema:rangeIncludes sosa:FeatureOfInterest,
-        sosa:Sample .
+time:Interval a owl:Class ;
+    rdfs:label "Time interval"@en ;
+    rdfs:comment "A temporal entity with an extent or duration"@en ;
+    rdfs:subClassOf time:TemporalEntity ;
+    skos:definition "A temporal entity with an extent or duration"@en .
 
-sosa:hasResult rdfs:comment "Relation linking an Observation or Actuation or act of Sampling and a Result."@en ;
-    skos:definition "Relation linking an Observation or Actuation or act of Sampling and a Result."@en ;
-    schema:domainIncludes sosa:Actuation,
-        sosa:Observation,
-        sosa:Sampling ;
-    schema:rangeIncludes sosa:Result,
-        sosa:Sample .
+time:TemporalDuration a owl:Class ;
+    rdfs:label "Temporal duration"@en ;
+    rdfs:comment "Time extent; duration of a time interval separate from its particular start position"@en ;
+    rdfs:subClassOf ngsi-ld:Entity ;
+    skos:definition "Time extent; duration of a time interval separate from its particular start position"@en .
+
+time:hasTime a owl:ObjectProperty ;
+    rdfs:label "has time"@en ;
+    rdfs:comment "Supports the association of a temporal entity (instant or interval) to any thing"@en ;
+    rdfs:range time:TemporalEntity ;
+    skos:definition "Supports the association of a temporal entity (instant or interval) to any thing"@en ;
+    skos:editorialNote "Feature at risk - added in 2017 revision, and not yet widely used. "@en .
 
 sosa:isHostedBy a owl:ObjectProperty ;
     rdfs:label "is hosted by"@en ;
-    ns2:domainIncludes sosa:Actuator,
+    ns1:domainIncludes sosa:Actuator,
         sosa:Platform,
         sosa:Sampler,
         sosa:Sensor ;
-    ns2:rangeIncludes sosa:Platform ;
+    ns1:rangeIncludes sosa:Platform ;
     rdfs:comment "Relation between a Sensor, Actuator, Sampler, or Platform, and the Platform that it is mounted on or hosted by."@en,
         "Relation between a system and its hosting platform."@en ;
     rdfs:isDefinedBy sosa: ;
@@ -1370,15 +1620,15 @@ sosa:isHostedBy a owl:ObjectProperty ;
 
 sosa:isSampleOf owl:equivalentProperty iso19156_SF:SF_SamplingFeature.sampledFeature .
 
-sosa:madeBySensor a owl:ObjectProperty ;
-    rdfs:label "made by sensor"@en ;
-    ns2:domainIncludes sosa:Observation ;
-    ns2:rangeIncludes sosa:Sensor ;
-    rdfs:comment "Relation between an Observation and the Sensor which made the Observation."@en ;
+sosa:madeObservation a owl:ObjectProperty ;
+    rdfs:label "made observation"@en ;
+    ns1:domainIncludes sosa:Sensor ;
+    ns1:rangeIncludes sosa:Observation ;
+    rdfs:comment "Relation between a Sensor and an Observation made by the Sensor."@en ;
     rdfs:isDefinedBy sosa: ;
     rdfs:subPropertyOf ngsi-ld:Relationship ;
-    owl:inverseOf sosa:madeObservation ;
-    skos:definition "Relation between an Observation and the Sensor which made the Observation."@en .
+    skos:definition "Relation between a Sensor and an Observation made by the Sensor."@en ;
+    schema:rangeIncludes sosa:Observation .
 
 ssn:Deployment a owl:Class ;
     rdfs:label "Deployment"@en ;
@@ -1447,25 +1697,84 @@ dim:StressOrPressure a owl:Class ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/qu/qu-rec20> ;
     rdfs:subClassOf qu:QuantityKind .
 
-sosa:Result a owl:Class ;
-    rdfs:label "Result"@en ;
-    rdfs:comment "The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property."@en ;
-    rdfs:isDefinedBy sosa: ;
+qudt:QuantityValue a owl:Class ;
+    rdfs:label "Quantity value" ;
+    rdfs:comment "A <i>Quantity Value</i> expresses the magnitude and kind of a quantity and is given by the product of a numerical value <code>n</code> and a unit of measure <code>U</code>. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to <a href=\"http://physics.nist.gov/Pubs/SP811/sec07.html\">NIST SP 811 section 7</a> for more on quantity values."^^rdf:HTML ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt>,
+        <http://qudt.org/schema/qudt> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty sosa:isResultOf ] ;
-    skos:definition "The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property."@en ;
-    skos:example "The value 20 as the height of a certain tree together with the unit, e.g., Meter."@en .
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:unit ],
+        qudt:Concept,
+        qudt:Quantifiable,
+        ngsi-ld:Entity .
+
+qudt:hasQuantityKind a owl:ObjectProperty ;
+    rdfs:label "has quantity kind" ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt>,
+        <http://qudt.org/schema/qudt> ;
+    rdfs:range qudt:QuantityKind ;
+    rdfs:subPropertyOf ngsi-ld:Relationship ;
+    owl:inverseOf qudt:isQuantityKindOf .
+
+sosa:madeBySensor a owl:ObjectProperty ;
+    rdfs:label "made by sensor"@en ;
+    ns1:domainIncludes sosa:Observation ;
+    ns1:rangeIncludes sosa:Sensor ;
+    rdfs:comment "Relation between an Observation and the Sensor which made the Observation."@en ;
+    rdfs:isDefinedBy sosa: ;
+    rdfs:subPropertyOf ngsi-ld:Relationship ;
+    owl:inverseOf sosa:madeObservation ;
+    skos:definition "Relation between an Observation and the Sensor which made the Observation."@en ;
+    schema:domainIncludes sosa:Observation,
+        sosa:ObservationCollection ;
+    schema:rangeIncludes sosa:Sensor .
 
 sosa:observedProperty a owl:ObjectProperty ;
     rdfs:label "observed property"@en ;
     dct:description "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation." ;
-    ns2:domainIncludes sosa:Observation ;
-    ns2:rangeIncludes sosa:ObservableProperty ;
+    ns1:domainIncludes sosa:Observation ;
+    ns1:rangeIncludes sosa:ObservableProperty ;
     rdfs:comment "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."@en ;
     rdfs:isDefinedBy sosa: ;
     rdfs:subPropertyOf ngsi-ld:Relationship ;
-    skos:definition "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."@en .
+    skos:definition "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."@en ;
+    schema:domainIncludes sosa:Observation,
+        sosa:ObservationCollection ;
+    schema:rangeIncludes sosa:ObservableProperty .
+
+sosa:resultTime a owl:DatatypeProperty ;
+    rdfs:label "result time"@en ;
+    ns1:domainIncludes sosa:Actuation,
+        sosa:Observation,
+        sosa:Sampling ;
+    rdfs:comment "The result time is the instant of time when the Observation, Actuation or Sampling activity was completed."@en ;
+    rdfs:isDefinedBy sosa: ;
+    rdfs:range xsd:dateTime ;
+    skos:definition "The result time is the instant of time when the Observation, Actuation or Sampling activity was completed."@en ;
+    schema:domainIncludes sosa:Actuation,
+        sosa:Observation,
+        sosa:ObservationCollection,
+        sosa:Sampling .
+
+sosa:usedProcedure a owl:ObjectProperty ;
+    rdfs:label "used procedure"@en ;
+    ns1:domainIncludes sosa:Actuation,
+        sosa:Observation,
+        sosa:Sampling ;
+    ns1:rangeIncludes sosa:Procedure ;
+    rdfs:comment "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."@en ;
+    rdfs:isDefinedBy sosa: ;
+    rdfs:subPropertyOf ngsi-ld:Relationship ;
+    owl:propertyChainAxiom ( sosa:madeBySampler ssn:implements ),
+        ( sosa:madeBySensor ssn:implements ),
+        ( sosa:madeByActuator ssn:implements ) ;
+    skos:definition "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."@en ;
+    schema:domainIncludes sosa:Actuation,
+        sosa:Observation,
+        sosa:ObservationCollection,
+        sosa:Sampling ;
+    schema:rangeIncludes sosa:Procedure .
 
 ssn:inDeployment a owl:ObjectProperty ;
     rdfs:label "in deployment"@en ;
@@ -1479,11 +1788,105 @@ ssn:inDeployment a owl:ObjectProperty ;
 iso19156_GFI:GFI_Feature a owl:Class ;
     rdfs:label "GFI_Feature" ;
     rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
+    rdfs:subClassOf ngsi-ld:Entity ;
     skos:definition "The class GFI_Feature (Figure 2) is an instance of the .og.metaclass.cg. GF_FeatureType (ISO 19109). It represents the set of all classes which are feature types. NOTE	GFI_Feature is implemented in GML (ISO 19136:2007) by the element gml:AbstractFeature and type gml:AbstractFeatureType. In an implementation this abstract class shall be substituted by a concrete class representing a feature type from an application schema associated with a domain of discourse (ISO 19109, ISO 19101). Sampling Features (Clause 8) are a class of feature-types whose role is primarily associated with observations. " .
 
 dim:PhysicalChemistryAndMolecularPhysicsScheme a owl:NamedIndividual,
         skos:Scheme ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/qu/qu-rec20> .
+
+qudt:QuantityKind a owl:Class ;
+    rdfs:label "Quantity Kind" ;
+    qudt:informativeReference "http://www.electropedia.org/iev/iev.nsf/display?openform&ievref=112-01-04"^^xsd:anyURI ;
+    rdfs:comment "A <b>Quantity Kind</b> is any observable property that can be  measured and quantified numerically. Familiar examples include physical properties such as length, mass, time, force, energy, power, electric charge, etc. Less familiar examples include currency, interest rate, price to earning ratio, and information capacity."^^rdf:HTML ;
+    rdfs:isDefinedBy <http://qudt.org/2.1/schema/qudt>,
+        <http://qudt.org/schema/qudt> ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKind ;
+            owl:onProperty qudt:generalization ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKindDimensionVector ;
+            owl:onProperty qudt:hasDimensionVector ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:QuantityKindDimensionVector_SI ;
+            owl:onProperty qudt:dimensionVectorForSI ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom qudt:SystemOfQuantityKinds ;
+            owl:onProperty qudt:isQuantityKindOf ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty qudt:generalization ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:baseCGSUnitDimensions ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:baseISOUnitDimensions ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:baseImperialUnitDimensions ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:baseSIUnitDimensions ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:baseUSCustomaryUnitDimensions ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:dimensionVectorForSI ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:latexDefinition ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:mathMLdefinition ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "4"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:baseUnitDimensions ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass qudt:QuantityKindDimensionVector ;
+            owl:onProperty qudt:qkdvDenominator ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass qudt:QuantityKindDimensionVector ;
+            owl:onProperty qudt:qkdvNumerator ],
+        [ a owl:Restriction ;
+            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:applicableCGSUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:applicableISOUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:applicableImperialUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:applicableSIUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:applicableUSCustomaryUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:applicableUnit ],
+        [ a owl:Restriction ;
+            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+            owl:onProperty qudt:expression ],
+        qudt:AbstractQuantityKind,
+        qudt:Verifiable,
+        ngsi-ld:Entity ;
+    owl:equivalentClass qu:QuantityKind .
+
+sosa:Result a owl:Class ;
+    rdfs:label "Result"@en ;
+    rdfs:comment "The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property."@en ;
+    rdfs:isDefinedBy sosa: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty sosa:isResultOf ],
+        ngsi-ld:Entity ;
+    skos:definition "The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property."@en ;
+    skos:example "The value 20 as the height of a certain tree together with the unit, e.g., Meter."@en .
 
 ssn:Property a owl:Class ;
     rdfs:label "Property"@en ;
@@ -1494,6 +1897,101 @@ ssn:Property a owl:Class ;
             owl:onProperty ssn:isPropertyOf ],
         ngsi-ld:Entity ;
     skos:definition "A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity."@en .
+
+dim:PeriodicAndRelatedPhenomenaScheme a owl:NamedIndividual,
+        skos:Scheme ;
+    rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/qu/qu-rec20> .
+
+dim:RotationalSpeed a owl:Class ;
+    rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/qu/qu-rec20> ;
+    rdfs:subClassOf qu:QuantityKind .
+
+dim:SpaceAndTimeScheme a owl:NamedIndividual,
+        skos:Scheme ;
+    rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/qu/qu-rec20> .
+
+time:Instant a owl:Class ;
+    rdfs:label "Time instant"@en ;
+    rdfs:comment "A temporal entity with zero extent or duration"@en ;
+    rdfs:subClassOf time:TemporalEntity ;
+    skos:definition "A temporal entity with zero extent or duration"@en .
+
+qu:PropertyKind a owl:Class ;
+    rdfs:label "PropertyKind",
+        "PropertyKind " ;
+    rdfs:comment "A PropertyKind  is a meta-property which helps to characterise categories of properties e.g. scalar, vector" ;
+    rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/qu/qu-rec20>,
+        "http://purl.oclc.org/NET/ssnx/qu" ;
+    rdfs:seeAlso "http://www.omgsysml.org/qudv#Quantity" ;
+    rdfs:subClassOf ngsi-ld:Entity .
+
+time:TemporalEntity a owl:Class ;
+    rdfs:label "Temporal entity"@en ;
+    rdfs:comment "A temporal interval or instant."@en ;
+    rdfs:subClassOf owl:Thing,
+        ngsi-ld:Entity ;
+    owl:unionOf ( time:Instant time:Interval ) ;
+    skos:definition "A temporal interval or instant."@en .
+
+sosa:ObservableProperty a owl:Class ;
+    rdfs:label "Observable Property"@en ;
+    rdfs:comment "An observable quality (property, characteristic) of a FeatureOfInterest."@en ;
+    rdfs:isDefinedBy sosa: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom sosa:Observation ;
+            owl:onProperty [ owl:inverseOf sosa:observedProperty ] ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom sosa:Sensor ;
+            owl:onProperty sosa:isObservedBy ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom ssn:Stimulus ;
+            owl:onProperty [ owl:inverseOf ssn:isProxyFor ] ],
+        ssn:Property ;
+    skos:definition "An observable quality (property, characteristic) of a FeatureOfInterest."@en ;
+    skos:example "The height of a tree, the depth of a water body, or the temperature of a surface are examples of observable properties, while the value of a classic car is not (directly) observable but asserted."@en .
+
+sosa:Platform a owl:Class ;
+    rdfs:label "Platform"@en ;
+    rdfs:comment "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms (definition taken from http://www.w3.org/ns/sosa/Platform)"@en,
+        "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms."@en ;
+    rdfs:isDefinedBy sosa: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom ssn:Deployment ;
+            owl:onProperty ssn:inDeployment ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom ssn:System ;
+            owl:onProperty sosa:hosts ],
+        ngsi-ld:Entity ;
+    skos:definition "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms."@en ;
+    skos:example "A post, buoy, vehicle, ship, aircraft, satellite, cell-phone, human or animal may act as platforms for (technical or biological) sensors or actuators."@en .
+
+sosa:hasFeatureOfInterest a owl:ObjectProperty ;
+    rdfs:label "has feature of interest"@en ;
+    ns1:domainIncludes sosa:Actuation,
+        sosa:Observation,
+        sosa:Sampling ;
+    ns1:rangeIncludes sosa:FeatureOfInterest,
+        sosa:Sample ;
+    rdfs:comment "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."@en ;
+    rdfs:isDefinedBy sosa: ;
+    rdfs:subPropertyOf ngsi-ld:Relationship ;
+    owl:inverseOf sosa:isFeatureOfInterestOf ;
+    skos:definition "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."@en ;
+    skos:example "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight."@en ;
+    schema:domainIncludes sosa:Actuation,
+        sosa:Observation,
+        sosa:ObservationCollection,
+        sosa:Sampling ;
+    schema:rangeIncludes sosa:FeatureOfInterest,
+        sosa:Sample .
+
+sosa:hasResult rdfs:comment "Relation linking an Observation or Actuation or act of Sampling and a Result."@en ;
+    skos:definition "Relation linking an Observation or Actuation or act of Sampling and a Result."@en ;
+    schema:domainIncludes sosa:Actuation,
+        sosa:Observation,
+        sosa:Sampling ;
+    schema:rangeIncludes sosa:Result,
+        sosa:Sample .
 
 ssn:System a owl:Class ;
     rdfs:label "System"@en ;
@@ -1518,41 +2016,13 @@ ssn:System a owl:Class ;
         ngsi-ld:Entity ;
     skos:definition "System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other systems."@en .
 
-dim:PeriodicAndRelatedPhenomenaScheme a owl:NamedIndividual,
-        skos:Scheme ;
-    rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/qu/qu-rec20> .
-
-dim:RotationalSpeed a owl:Class ;
-    rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/qu/qu-rec20> ;
-    rdfs:subClassOf qu:QuantityKind .
-
-dim:SpaceAndTimeScheme a owl:NamedIndividual,
-        skos:Scheme ;
-    rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/qu/qu-rec20> .
-
-qu:PropertyKind a owl:Class ;
-    rdfs:label "PropertyKind",
-        "PropertyKind " ;
-    rdfs:comment "A PropertyKind  is a meta-property which helps to characterise categories of properties e.g. scalar, vector" ;
-    rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/qu/qu-rec20>,
-        "http://purl.oclc.org/NET/ssnx/qu" ;
-    rdfs:seeAlso "http://www.omgsysml.org/qudv#Quantity" ;
-    rdfs:subClassOf ngsi-ld:Entity .
-
-sosa:Platform a owl:Class ;
-    rdfs:label "Platform"@en ;
-    rdfs:comment "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms (definition taken from http://www.w3.org/ns/sosa/Platform)"@en,
-        "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms."@en ;
-    rdfs:isDefinedBy sosa: ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom ssn:Deployment ;
-            owl:onProperty ssn:inDeployment ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom ssn:System ;
-            owl:onProperty sosa:hosts ],
-        ngsi-ld:Entity ;
-    skos:definition "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms."@en ;
-    skos:example "A post, buoy, vehicle, ship, aircraft, satellite, cell-phone, human or animal may act as platforms for (technical or biological) sensors or actuators."@en .
+ssn:implements a owl:ObjectProperty ;
+    rdfs:label "implements"@en ;
+    rdfs:comment "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method)."@en ;
+    rdfs:isDefinedBy ssn: ;
+    rdfs:subPropertyOf ngsi-ld:Relationship ;
+    skos:definition "Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method)."@en ;
+    skos:example "For example, the relationship between a sensor and the scientific measuring Procedure via which it senses."@en .
 
 sosa:Sample a owl:Class ;
     rdfs:label "Sample"@en ;
@@ -1577,7 +2047,8 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty sosa:isSampleOf ],
         sosa:FeatureOfInterest,
-        sosa:Result ;
+        sosa:Result,
+        ngsi-ld:Entity ;
     owl:equivalentClass iso19156_SF:SF_SamplingFeature ;
     skos:definition "Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made."@en ;
     skos:example "A 'station' is essentially an identifiable locality where a sensor system or Procedure may be deployed and an observation made. In the context of the observation model, it connotes the 'world in the vicinity of the station', so the observed properties relate to the physical medium at the station, and not to any physical artifact such as a mooring, buoy, benchmark, monument, well, etc."@en,
@@ -1587,10 +2058,10 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
 
 geo:Geometry a owl:Class ;
     rdfs:label "Geometry"@en ;
-    ns1:contributor "Matthew Perry" ;
-    ns1:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-    ns1:date "2011-06-16"^^xsd:date ;
-    ns1:description """
+    ns2:contributor "Matthew Perry" ;
+    ns2:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+    ns2:date "2011-06-16"^^xsd:date ;
+    ns2:description """
       The class represents the top-level geometry type. This class is 
       equivalent to the UML class GM_Object defined in ISO 19107, and 
       it is superclass of all geometry types.
@@ -1631,10 +2102,10 @@ geo:Geometry a owl:Class ;
 
 geo:SpatialObject a owl:Class ;
     rdfs:label "SpatialObject"@en ;
-    ns1:contributor "Matthew Perry" ;
-    ns1:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-    ns1:date "2011-06-16"^^xsd:date ;
-    ns1:description """
+    ns2:contributor "Matthew Perry" ;
+    ns2:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+    ns2:date "2011-06-16"^^xsd:date ;
+    ns2:description """
       The class spatial-object represents everything that can have 
       a spatial representation. It is superclass of feature and geometry.
     """@en ;
@@ -1654,15 +2125,53 @@ geo:SpatialObject a owl:Class ;
         [ a owl:Restriction ;
             owl:allValuesFrom geo:SpatialObject ;
             owl:onProperty geo:sfContains ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom wgs84_pos:Point ;
-            owl:onProperty wgs84_pos:location ],
         ngsi-ld:Entity ;
     skos:definition """
       The class spatial-object represents everything that can have 
       a spatial representation. It is superclass of feature and geometry.
     """@en ;
     skos:prefLabel "SpatialObject"@en .
+
+skos:Scheme a owl:Class ;
+    rdfs:subClassOf ngsi-ld:Entity .
+
+sosa:Sensor a owl:Class ;
+    rdfs:label "Sensor"@en ;
+    rdfs:comment "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en ;
+    rdfs:isDefinedBy sosa: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty ssn:implements ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom sosa:Observation ;
+            owl:onProperty sosa:madeObservation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom sosa:ObservableProperty ;
+            owl:onProperty sosa:observes ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom ssn:Stimulus ;
+            owl:onProperty ssn:detects ],
+        ssn:System,
+        ngsi-ld:Entity ;
+    skos:definition "Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms."@en ;
+    skos:example "Accelerometers, gyroscopes, barometers, magnetometers, and so forth are Sensors that are typically mounted on a modern smart phone (which acts as Platform). Other examples of sensors include the human eyes."@en .
+
+dim:AcousticsScheme a owl:NamedIndividual,
+        skos:Scheme ;
+    rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/qu/qu-rec20> .
+
+dim:MechanicsScheme a owl:NamedIndividual,
+        skos:Scheme ;
+    rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/qu/qu-rec20> .
+
+sosa:ObservationCollection a owl:Class ;
+    rdfs:label "Collection of observations" ;
+    rdfs:comment "Collection of observations, typically with one or more property shared by all of its members" ;
+    rdfs:isDefinedBy ssn-ext: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty sosa:hasMember ],
+        ngsi-ld:Entity .
 
 sosa:FeatureOfInterest a owl:Class ;
     rdfs:label "Feature Of Interest"@en ;
@@ -1682,20 +2191,126 @@ sosa:FeatureOfInterest a owl:Class ;
     skos:definition "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en ;
     skos:example "When measuring the height of a tree, the height is the observed ObservableProperty, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuator."@en .
 
-dim:AcousticsScheme a owl:NamedIndividual,
-        skos:Scheme ;
-    rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/qu/qu-rec20> .
+sosa:Sampling a owl:Class ;
+    rdfs:label "Sampling"@en ;
+    rdfs:comment "An act of Sampling carries out a sampling Procedure to create or transform one or more samples."@en ;
+    rdfs:isDefinedBy sosa: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom sosa:Sample ;
+            owl:onProperty sosa:hasResult ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom sosa:Procedure ;
+            owl:onProperty sosa:usedProcedure ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty sosa:hasFeatureOfInterest ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty sosa:madeBySampler ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty sosa:resultTime ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom sosa:FeatureOfInterest ;
+            owl:onProperty sosa:hasFeatureOfInterest ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom sosa:Sampler ;
+            owl:onProperty sosa:madeBySampler ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty sosa:hasResult ],
+        ngsi-ld:Entity ;
+    skos:definition "An act of Sampling carries out a sampling Procedure to create or transform one or more samples."@en ;
+    skos:example "Crushing a rock sample in a ball mill."@en,
+        "Digging a pit through a soil sequence."@en,
+        "Dividing a field site into quadrants."@en,
+        "Drawing blood from a patient."@en,
+        "Drilling an observation well."@en,
+        "Establishing a station for environmental monitoring."@en,
+        "Registering an image of the landscape."@en,
+        "Selecting a subset of a population."@en,
+        "Sieving a powder to separate the subset finer than 100-mesh."@en,
+        "Splitting a piece of drill-core to create two new samples."@en,
+        "Taking a diamond-drill core from a rock outcrop."@en .
 
-dim:MechanicsScheme a owl:NamedIndividual,
-        skos:Scheme ;
-    rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/qu/qu-rec20> .
+sosa:Actuation a owl:Class ;
+    rdfs:label "Actuation"@en ;
+    rdfs:comment "An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator."@en ;
+    rdfs:isDefinedBy sosa: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom sosa:ActuatableProperty ;
+            owl:onProperty sosa:actsOnProperty ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom sosa:FeatureOfInterest ;
+            owl:onProperty sosa:hasFeatureOfInterest ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom sosa:Result ;
+            owl:onProperty sosa:hasResult ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty sosa:resultTime ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty sosa:actsOnProperty ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty sosa:madeByActuator ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty sosa:hasFeatureOfInterest ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom sosa:Procedure ;
+            owl:onProperty sosa:usedProcedure ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty sosa:hasResult ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom sosa:Actuator ;
+            owl:onProperty sosa:madeByActuator ],
+        ngsi-ld:Entity ;
+    skos:definition "An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator."@en ;
+    skos:example "The activity of automatically closing a window if the temperature in a room drops below 20 degree Celsius. The activity is the Actuation and the device that closes the window is the Actuator. The Procedure is the rule, plan, or specification that defines the conditions that triggers the Actuation, here a drop in temperature. "@en .
 
-skos:Scheme a owl:Class ;
-    rdfs:subClassOf ngsi-ld:Entity .
+qu:QuantityKind a owl:Class ;
+    rdfs:label "QuantityKind" ;
+    ns2:source "skos:exactMatch 'QuantityKind' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv" ;
+    rdfs:comment """A QuantityKind is an abstract classifier that represents the [VIM] concept of "kind of quantity" that is defined as "aspect
+common to mutually comparable quantities." A QuantityKind represents the essence of a quantity without any numerical
+value or unit. Quantities of the same kind within a given system of quantities have the same quantity dimension. However,
+quantities of the same dimension are not necessarily of the same kind.""" ;
+    rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/qu/qu-rec20>,
+        "http://purl.oclc.org/NET/ssnx/qu" ;
+    rdfs:seeAlso "http://www.omgsysml.org/qudv#Quantity" ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass qu:Scale ;
+                        owl:onProperty qu:scale ] [ a owl:Restriction ;
+                        owl:onDataRange xsd:string ;
+                        owl:onProperty qu:name ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:onDataRange xsd:string ;
+                        owl:onProperty qu:symbol ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:string ;
+                        owl:onProperty qu:definitionURI ] [ a owl:Restriction ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:string ;
+                        owl:onProperty qu:description ] ) ],
+        ngsi-ld:Entity .
 
 sosa:Observation a owl:Class ;
     rdfs:label "Observation"@en ;
-    rdfs:comment "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."@en ;
+    rdfs:comment """If values are not provided for the following Observation properties, they may be provided by the ObservationCollection of which it is a member:\r
+- hasFeatureOfInterest\r
+- hasUltimateFeatureOfInterest\r
+- madeBySensor\r
+- observedProperty\r
+- phenomenonTime\r
+- resultTime\r
+- usedProcedure""",
+        "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."@en ;
     rdfs:isDefinedBy sosa: ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom sosa:Result ;
@@ -1741,36 +2356,9 @@ sosa:Observation a owl:Class ;
     skos:definition "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."@en ;
     skos:example "The activity of estimating the intensity of an Earthquake using the Mercalli intensity scale is an Observation as is measuring the moment magnitude, i.e., the energy released by said earthquake."@en .
 
-qu:QuantityKind a owl:Class ;
-    rdfs:label "QuantityKind" ;
-    ns1:source "skos:exactMatch 'QuantityKind' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv" ;
-    rdfs:comment """A QuantityKind is an abstract classifier that represents the [VIM] concept of "kind of quantity" that is defined as "aspect
-common to mutually comparable quantities." A QuantityKind represents the essence of a quantity without any numerical
-value or unit. Quantities of the same kind within a given system of quantities have the same quantity dimension. However,
-quantities of the same dimension are not necessarily of the same kind.""" ;
-    rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/qu/qu-rec20>,
-        "http://purl.oclc.org/NET/ssnx/qu" ;
-    rdfs:seeAlso "http://www.omgsysml.org/qudv#Quantity" ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onClass qu:Scale ;
-                        owl:onProperty qu:scale ] [ a owl:Restriction ;
-                        owl:onDataRange xsd:string ;
-                        owl:onProperty qu:name ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
-                        owl:onDataRange xsd:string ;
-                        owl:onProperty qu:symbol ;
-                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] [ a owl:Restriction ;
-                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onDataRange xsd:string ;
-                        owl:onProperty qu:definitionURI ] [ a owl:Restriction ;
-                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onDataRange xsd:string ;
-                        owl:onProperty qu:description ] ) ],
-        skos:Scheme .
-
 ngsi-ld:Entity a owl:Class .
 
 ngsi-ld:Relationship a owl:ObjectProperty .
+
+[] rdf:rest ( time:Interval ) .
 

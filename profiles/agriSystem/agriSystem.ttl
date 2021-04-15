@@ -5,6 +5,7 @@
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix saref: <https://w3id.org/saref#> .
 @prefix saref4agri: <https://w3id.org/def/saref4agri#> .
 @prefix schema: <https://schema.org/> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
@@ -66,9 +67,11 @@ saref4agri:WeightSensor rdfs:isDefinedBy saref4agri: .
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriSystem.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = ../models\\agriSystem.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            prov:endedAtTime "2020-10-29"^^xsd:date ;
+            prov:endedAtTime "2021-04-14"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:maker [ foaf:homepage <https://h2020-demeter.eu/> ;
             foaf:name "DEMETER project" ] .
+
+saref:Sensor owl:equivalentClass sosa:Sensor .
 

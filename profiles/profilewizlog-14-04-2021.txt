@@ -1,0 +1,151 @@
+C:\repos\misc\profilewiz\venv\Scripts\python.exe -m profilewiz -n -q -a -p=lib/profile_cat.ttl --profilebase https://w3id.org/demeter/agri/proxy/ ../models/*.ttl
+Profiling ../models\agriAlert.ttl to agriAlert.ttl
+
+Loaded http://foodie-cloud.com/model/foodie from lib/foodie.ttl
+Loaded https://uri.fiware.org/ns/data-models from lib/fiware.ttl
+True
+https://w3id.org/demeter/agri/agriAlert
+True
+https://w3id.org/demeter/agri/agriAlert
+Accessing SHACL generator service
+Accessing SHACL generator service
+Profiling ../models\agriCommon.ttl to agriCommon.ttl
+
+Loaded https://w3id.org/def/saref4agri from lib/saref4agri.ttl
+failed to access or parse http://purl.obolibrary.org/obo 
+Loaded http://www.w3.org/ns/prov from cache/prov.ttl
+Loaded https://w3id.org/saref from cache/saref.ttl
+failed to access or parse http://portele.de/ont/inspire/baseInspire 
+True
+https://w3id.org/demeter/agri/agriCommon
+True
+https://w3id.org/demeter/agri/agriCommon
+Accessing SHACL generator service
+Accessing SHACL generator service
+Profiling ../models\agriCrop.ttl to agriCrop.ttl
+
+True
+https://w3id.org/demeter/agri/agriCrop
+True
+https://w3id.org/demeter/agri/agriCrop
+Accessing SHACL generator service
+Accessing SHACL generator service
+Profiling ../models\agriFeature.ttl to agriFeature.ttl
+
+failed to access or parse http://inspire.ec.europa.eu/schemas/act-core/3.0 
+failed to access or parse http://inspire.ec.europa.eu/schemas/af/3.0 
+True
+https://w3id.org/demeter/agri/agriFeature
+True
+https://w3id.org/demeter/agri/agriFeature
+Cannot locate jsonld context for http://inspire.ec.europa.eu/schemas/act-core/3.0
+Cannot locate jsonld context for http://inspire.ec.europa.eu/schemas/af/3.0
+Accessing SHACL generator service
+Accessing SHACL generator service
+Profiling ../models\agriIntervention.ttl to agriIntervention.ttl
+
+True
+https://w3id.org/demeter/agri/agriIntervention
+True
+https://w3id.org/demeter/agri/agriIntervention
+Accessing SHACL generator service
+Accessing SHACL generator service
+Profiling ../models\agriPest.ttl to agriPest.ttl
+
+True
+https://w3id.org/demeter/agri/agriPest
+True
+https://w3id.org/demeter/agri/agriPest
+Accessing SHACL generator service
+Accessing SHACL generator service
+Profiling ../models\agriProduct.ttl to agriProduct.ttl
+
+True
+https://w3id.org/demeter/agri/agriProduct
+True
+https://w3id.org/demeter/agri/agriProduct
+Accessing SHACL generator service
+Accessing SHACL generator service
+Profiling ../models\agriProperty.ttl to agriProperty.ttl
+
+Loaded http://purl.oclc.org/NET/ssnx/cf/cf-feature from cache/cf-feature.ttl
+True
+https://w3id.org/demeter/agri/agriProperty
+True
+https://w3id.org/demeter/agri/agriProperty
+Cannot locate jsonld context for http://purl.oclc.org/NET/ssnx/cf/cf-feature
+Accessing SHACL generator service
+Accessing SHACL generator service
+Profiling ../models\agriSystem.ttl to agriSystem.ttl
+
+True
+https://w3id.org/demeter/agri/agriSystem
+True
+https://w3id.org/demeter/agri/agriSystem
+Accessing SHACL generator service
+Accessing SHACL generator service
+Profiling ../models\cross-domain.ttl to cross-domain.ttl
+
+failed to access or parse http://purl.org/linked-data/cube 
+Loaded http://www.opengis.net/ont/sf from lib/ogc_sf.rdf
+Loaded http://www.w3.org/ns/ssn from cache/ssn.ttl
+failed to access or parse http://purl.oclc.org/NET/ssnx/qu/dim 
+failed to access or parse http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic 
+failed to access or parse http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance 
+Loaded http://www.w3.org/ns/sosa from cache/sosa.ttl
+Loaded http://xmlns.com/foaf/0.1 from cache/foaf.ttl
+Loaded http://www.w3.org/2006/time from cache/time.ttl
+Loaded http://www.opengis.net/ont/geosparql from lib/geosparql.ttl
+Loaded https://schema.org from lib/schemaorg_https.ttl
+Loaded http://www.w3.org/2003/01/geo/wgs84_pos from cache/wgs84_pos.ttl
+Loaded http://purl.oclc.org/NET/ssnx/qu/qu from cache/qu.ttl
+failed to access or parse http://def.isotc211.org/iso19156/2011/SamplingFeature 
+failed to access or parse http://def.isotc211.org/iso19156/2011/Observation 
+Loaded http://www.w3.org/2004/02/skos/core from cache/skos.ttl
+failed to access or parse https://uri.etsi.org/ngsi-ld/v1/ontology 
+True
+https://w3id.org/demeter/crossDomain
+True
+https://w3id.org/demeter/crossDomain
+Cannot locate jsonld context for http://purl.org/linked-data/cube
+Cannot locate jsonld context for http://www.opengis.net/ont/sf
+Cannot locate jsonld context for http://www.w3.org/ns/ssn
+Cannot locate jsonld context for http://purl.oclc.org/NET/ssnx/qu/dim
+Cannot locate jsonld context for http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic
+Cannot locate jsonld context for http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance
+Cannot locate jsonld context for http://www.w3.org/ns/sosa
+Cannot locate jsonld context for http://qudt.org/schema/qudt
+Cannot locate jsonld context for http://www.w3.org/2006/time
+Cannot locate jsonld context for http://www.w3.org/2003/01/geo/wgs84_pos
+Cannot locate jsonld context for http://purl.oclc.org/NET/ssnx/qu/qu
+Cannot locate jsonld context for http://www.w3.org/2004/02/skos/core
+Cannot locate jsonld context for https://uri.etsi.org/ngsi-ld/v1/ontology
+Accessing SHACL generator service
+Accessing SHACL generator service
+Profiling ../models\demeterAgriProfile.ttl to demeterAgriProfile.ttl
+
+True
+https://w3id.org/demeter/agri
+True
+https://w3id.org/demeter/agri
+Accessing SHACL generator service
+Accessing SHACL generator service
+Profiling ../models\demeterCore.ttl to demeterCore.ttl
+
+True
+https://w3id.org/demeter/core
+True
+https://w3id.org/demeter/core
+Cannot locate jsonld context for https://uri.etsi.org/ngsi-ld/v1/ontology
+Accessing SHACL generator service
+Accessing SHACL generator service
+Profiling ../models\farmAnimal.ttl to farmAnimal.ttl
+
+True
+https://w3id.org/demeter/agri/farmAnimal
+True
+https://w3id.org/demeter/agri/farmAnimal
+Accessing SHACL generator service
+Accessing SHACL generator service
+
+Process finished with exit code 0

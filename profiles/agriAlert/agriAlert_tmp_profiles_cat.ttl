@@ -1,25 +1,12 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix jsoncontext: <http://www.opengis.net/def/metamodel/profiles/json_ld_context> .
+@prefix ogcproxy: <https://w3id.org/demeter/agri/proxy/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix profrole: <http://www.w3.org/ns/dx/prof/role/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix proxy: <https://w3id.org/demeter/agri/proxy/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-
-<http://www.opengis.net/ont/geosparql> a prof:Profile ;
-    rdfs:label "GeoSPARQL"@en ;
-    prof:hasResource [ dct:conformsTo rdfs:,
-                owl: ;
-            dct:format "text/turtle" ;
-            prof:hasArtifact "lib/geosparql.ttl" ;
-            prof:hasRole profrole:cachedCopy ],
-        [ dct:conformsTo rdfs:,
-                owl: ;
-            dct:format "application/rdf+xml" ;
-            prof:hasArtifact <http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf> ;
-            prof:hasRole profrole:source ] .
 
 <http://www.opengis.net/ont/sf> a prof:Profile ;
     rdfs:label "OGC Simple Features"@en ;
@@ -53,12 +40,12 @@
         "The DEMETER Agriculture Information Model (AIM) is the common vocabulary in DEMETER project providing the basis for semantic interoperability across smart farming solutions"@en ;
     skos:historyNote "Ontology profile normalised using ProfileWiz" ;
     prof:hasResource [ a prof:ResourceDescriptor ;
-            rdfs:label "SHACL for minimal profile" ;
-            dct:conformsTo <http://www.w3.org/ns/shacl#> ;
-            dct:format "text/turtle" ;
-            rdfs:comment "SHACL validation constraints for profile specific declarations" ;
-            prof:hasArtifact "agriAlert\\agriAlert_shacl.ttl" ;
-            prof:hasRole profrole:validation ],
+            rdfs:label "OWL documentation as HTML" ;
+            dct:conformsTo prof: ;
+            dct:format "text/html" ;
+            rdfs:comment "Based on the OWL flat view of the profile, a HTML rendering of key elements of the model." ;
+            prof:hasArtifact "agriAlert\\agriAlert.html" ;
+            prof:hasRole profrole:profile ],
         [ a prof:ResourceDescriptor ;
             rdfs:label "Normalised OWL with imports" ;
             dct:conformsTo owl: ;
@@ -67,31 +54,30 @@
             prof:hasArtifact "agriAlert\\agriAlert.ttl" ;
             prof:hasRole profrole:vocabulary ],
         [ a prof:ResourceDescriptor ;
-            rdfs:label "JSON-LD Context" ;
-            dct:conformsTo jsoncontext: ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact "https://w3id.org/demeter/agri/agriAlert?_profile=jsoncontext" ;
-            prof:hasRole profrole:context ],
-        [ a prof:ResourceDescriptor ;
             rdfs:label "JSON Schema" ;
             dct:conformsTo <http://www.opengis.net/def/metamodel/profiles/json_schema> ;
             dct:format "application/json" ;
             prof:hasArtifact "agriAlert\\agriAlert.json" ;
             prof:hasRole profrole:schema ],
         [ a prof:ResourceDescriptor ;
-            rdfs:label "SHACL constraints for profile" ;
-            dct:conformsTo <http://www.w3.org/ns/shacl#> ;
-            dct:format "text/turtle" ;
-            rdfs:comment "SHACL validation constraints for all declarations relevant to profile including imports" ;
-            prof:hasArtifact "agriAlert\\agriAlert_flat_shacl.ttl" ;
-            prof:hasRole profrole:validation ],
+            rdfs:label "Flattened JSON-LD context" ;
+            dct:conformsTo jsoncontext: ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact "agriAlert\\agriAlert_context_flat.jsonld" ;
+            prof:hasRole profrole:contextflat ],
         [ a prof:ResourceDescriptor ;
-            rdfs:label "Profile description as HTML" ;
-            dct:conformsTo prof: ;
-            dct:format "text/html" ;
-            rdfs:comment "Original source OWL file as HTML - for comparison and review purposes" ;
-            prof:hasArtifact "agriAlert\\agriAlert_source.html" ;
-            prof:hasRole profrole:profile ],
+            rdfs:label "JSON-LD Context" ;
+            dct:conformsTo jsoncontext: ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact "https://w3id.org/demeter/agri/agriAlert?_profile=jsoncontext" ;
+            prof:hasRole profrole:context ],
+        [ a prof:ResourceDescriptor ;
+            rdfs:label "Original Source OWL model" ;
+            dct:conformsTo owl: ;
+            dct:format "text/turtle" ;
+            rdfs:comment "Source OWL model used to derive normalised profile views." ;
+            prof:hasArtifact "../models\\agriAlert.ttl" ;
+            prof:hasRole profrole:source ],
         [ a prof:ResourceDescriptor ;
             rdfs:label "Profile description as HTML" ;
             dct:conformsTo prof: ;
@@ -100,17 +86,25 @@
             prof:hasArtifact "agriAlert\\agriAlert_prof.html" ;
             prof:hasRole profrole:profile ],
         [ a prof:ResourceDescriptor ;
-            rdfs:label "Flattened JSON-LD context" ;
-            dct:conformsTo jsoncontext: ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact "agriAlert\\agriAlert_context_flat.jsonld" ;
-            prof:hasRole profrole:contextflat ],
-        [ a prof:ResourceDescriptor ;
             rdfs:label "JSON-LD Context - local file link" ;
             dct:conformsTo jsoncontext: ;
             dct:format "application/ld+json" ;
             prof:hasArtifact "agriAlert\\agriAlert_context.jsonld" ;
             prof:hasRole profrole:contextlocal ],
+        [ a prof:ResourceDescriptor ;
+            rdfs:label "SHACL constraints for profile" ;
+            dct:conformsTo <http://www.w3.org/ns/shacl#> ;
+            dct:format "text/turtle" ;
+            rdfs:comment "SHACL validation constraints for all declarations relevant to profile including imports" ;
+            prof:hasArtifact "agriAlert\\agriAlert_flat_shacl.ttl" ;
+            prof:hasRole profrole:validation ],
+        [ a prof:ResourceDescriptor ;
+            rdfs:label "SHACL for minimal profile" ;
+            dct:conformsTo <http://www.w3.org/ns/shacl#> ;
+            dct:format "text/turtle" ;
+            rdfs:comment "SHACL validation constraints for profile specific declarations" ;
+            prof:hasArtifact "agriAlert\\agriAlert_shacl.ttl" ;
+            prof:hasRole profrole:validation ],
         [ a prof:ResourceDescriptor ;
             rdfs:label "OWL with definition details from imports" ;
             dct:conformsTo owl: ;
@@ -119,24 +113,17 @@
             prof:hasArtifact "agriAlert\\agriAlert_flat.ttl" ;
             prof:hasRole profrole:vocabulary ],
         [ a prof:ResourceDescriptor ;
-            rdfs:label "OWL documentation as HTML" ;
+            rdfs:label "Profile description as HTML" ;
             dct:conformsTo prof: ;
             dct:format "text/html" ;
-            rdfs:comment "Based on the OWL flat view of the profile, a HTML rendering of key elements of the model." ;
-            prof:hasArtifact "agriAlert\\agriAlert.html" ;
-            prof:hasRole profrole:profile ],
-        [ a prof:ResourceDescriptor ;
-            rdfs:label "Original Source OWL model" ;
-            dct:conformsTo owl: ;
-            dct:format "text/turtle" ;
-            rdfs:comment "Source OWL model used to derive normalised profile views." ;
-            prof:hasArtifact "../models\\agriAlert.ttl" ;
-            prof:hasRole profrole:source ] ;
+            rdfs:comment "Original source OWL file as HTML - for comparison and review purposes" ;
+            prof:hasArtifact "agriAlert\\agriAlert_source.html" ;
+            prof:hasRole profrole:profile ] ;
     prof:isProfileOf <https://uri.fiware.org/ns/data-models>,
-        proxy:foodie ;
+        ogcproxy:foodie ;
     prov:wasDerivedFrom "../models\\agriAlert.ttl" .
 
-proxy:baseInspire a prof:Profile ;
+ogcproxy:baseInspire a prof:Profile ;
     rdfs:label "DEMETER profile of OBO"@en ;
     rdfs:comment "This profile also provides for content negotatiation behaviour to access a valid JSON-LD context" ;
     prof:hasResource [ dct:conformsTo jsoncontext: ;
@@ -146,7 +133,7 @@ proxy:baseInspire a prof:Profile ;
             prof:hasRole profrole:context ] ;
     prof:isProfileOf <http://portele.de/ont/inspire/baseInspire> .
 
-proxy:citation a prof:Profile ;
+ogcproxy:citation a prof:Profile ;
     rdfs:label "DEMETER profile of ISO19115 citation model"@en ;
     rdfs:comment "This profile also provides for content negotatiation behaviour to access a valid JSON-LD context" ;
     prof:hasResource [ dct:conformsTo jsoncontext: ;
@@ -156,7 +143,7 @@ proxy:citation a prof:Profile ;
             prof:hasRole profrole:context ] ;
     prof:isProfileOf <http://def.seegrid.csiro.au/isotc211/iso19115/2003/citation> .
 
-proxy:foaf a prof:Profile ;
+ogcproxy:foaf a prof:Profile ;
     rdfs:label "DEMETER profile of FOAF"@en ;
     rdfs:comment "This profile also provides for content negotatiation behaviour to access a valid JSON-LD context" ;
     prof:hasResource [ dct:conformsTo jsoncontext: ;
@@ -166,7 +153,17 @@ proxy:foaf a prof:Profile ;
             prof:hasRole profrole:context ] ;
     prof:isProfileOf <http://xmlns.com/foaf/0.1> .
 
-proxy:obo a prof:Profile ;
+ogcproxy:geosparql a prof:Profile ;
+    rdfs:label "Proxy for Geosparql"@en ;
+    rdfs:comment "This profile  provides for content negotatiation behaviour to access a valid JSON-LD context" ;
+    prof:hasResource [ dct:conformsTo jsoncontext: ;
+            dct:format "application/ld+json" ;
+            rdfs:comment "Provides json-ld context representation pending ISO provision" ;
+            prof:hasArtifact <https://w3id.org/demeter/agri/proxy/geosparql?_profile=jsoncontext> ;
+            prof:hasRole profrole:context ] ;
+    prof:isProfileOf <http://www.opengis.net/ont/geosparql> .
+
+ogcproxy:obo a prof:Profile ;
     rdfs:label "DEMETER profile of OBO"@en ;
     rdfs:comment "This profile also provides for content negotatiation behaviour to access a valid JSON-LD context" ;
     prof:hasResource [ dct:conformsTo jsoncontext: ;
@@ -176,7 +173,17 @@ proxy:obo a prof:Profile ;
             prof:hasRole profrole:context ] ;
     prof:isProfileOf <http://purl.obolibrary.org/obo> .
 
-proxy:prov a prof:Profile ;
+ogcproxy:observation a prof:Profile ;
+    rdfs:label "Proxy for ISO1956 Observation"@en ;
+    rdfs:comment "This profile  provides for content negotatiation behaviour to access a valid JSON-LD context" ;
+    prof:hasResource [ dct:conformsTo jsoncontext: ;
+            dct:format "application/ld+json" ;
+            rdfs:comment "Provides json-ld context representation pending ISO provision" ;
+            prof:hasArtifact <https://w3id.org/demeter/agri/proxy/observation?_profile=jsoncontext> ;
+            prof:hasRole profrole:context ] ;
+    prof:isProfileOf <http://def.isotc211.org/iso19156/2011/Observation> .
+
+ogcproxy:prov a prof:Profile ;
     rdfs:label "DEMETER profile of PROV"@en ;
     rdfs:comment "This profile also provides for content negotatiation behaviour to access a valid JSON-LD context" ;
     prof:hasResource [ dct:conformsTo jsoncontext: ;
@@ -186,7 +193,17 @@ proxy:prov a prof:Profile ;
             prof:hasRole profrole:context ] ;
     prof:isProfileOf <http://www.w3.org/ns/prov> .
 
-proxy:saref a prof:Profile ;
+ogcproxy:samplingfeature a prof:Profile ;
+    rdfs:label "Proxy for ISO1956 SamplingFeature"@en ;
+    rdfs:comment "This profile  provides for content negotatiation behaviour to access a valid JSON-LD context" ;
+    prof:hasResource [ dct:conformsTo jsoncontext: ;
+            dct:format "application/ld+json" ;
+            rdfs:comment "Provides json-ld context representation pending ISO provision" ;
+            prof:hasArtifact <https://w3id.org/demeter/agri/proxy/samplingfeature?_profile=jsoncontext> ;
+            prof:hasRole profrole:context ] ;
+    prof:isProfileOf <http://def.isotc211.org/iso19156/2011/SamplingFeature> .
+
+ogcproxy:saref a prof:Profile ;
     rdfs:label "DEMETER profile of SAREF"@en ;
     rdfs:comment "This profile also provides for content negotatiation behaviour to access a valid JSON-LD context" ;
     prof:hasResource [ dct:conformsTo jsoncontext: ;
@@ -196,7 +213,7 @@ proxy:saref a prof:Profile ;
             prof:hasRole profrole:context ] ;
     prof:isProfileOf <https://w3id.org/saref> .
 
-proxy:saref4agri a prof:Profile ;
+ogcproxy:saref4agri a prof:Profile ;
     rdfs:label "DEMETER profile of SAREF extension for Agriculture"@en ;
     rdfs:comment "This profile also provides for content negotatiation behaviour to access a valid JSON-LD context" ;
     prof:hasResource [ dct:conformsTo jsoncontext: ;
@@ -205,6 +222,32 @@ proxy:saref4agri a prof:Profile ;
             prof:hasArtifact <https://w3id.org/demeter/agri/proxy/saref4agri?_profile=jsoncontext> ;
             prof:hasRole profrole:context ] ;
     prof:isProfileOf <https://w3id.org/def/saref4agri> .
+
+<http://def.isotc211.org/iso19156/2011/Observation> a prof:Profile ;
+    rdfs:label "ISO 19156 Observation"@en ;
+    prof:hasResource [ dct:conformsTo rdfs:,
+                owl: ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact "lib/iso19156observation.ttl" ;
+            prof:hasRole profrole:cachedCopy ],
+        [ dct:conformsTo rdfs:,
+                owl: ;
+            dct:format "application/rdf+xml" ;
+            prof:hasArtifact <https://def.isotc211.org/ontologies/iso19156/2011/Observation.rdf> ;
+            prof:hasRole profrole:source ] .
+
+<http://def.isotc211.org/iso19156/2011/SamplingFeature> a prof:Profile ;
+    rdfs:label "ISO 19156 SamplingFeaturen"@en ;
+    prof:hasResource [ dct:conformsTo rdfs:,
+                owl: ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact "lib/iso19156sf.ttl" ;
+            prof:hasRole profrole:cachedCopy ],
+        [ dct:conformsTo rdfs:,
+                owl: ;
+            dct:format "application/rdf+xml" ;
+            prof:hasArtifact <https://def.isotc211.org/ontologies/iso19156/2011/SamplingFeature.rdf> ;
+            prof:hasRole profrole:source ] .
 
 <http://def.seegrid.csiro.au/isotc211/iso19115/2003/citation> a prof:Profile ;
     rdfs:label "ISO 19115 citation"@en ;
@@ -247,6 +290,19 @@ proxy:saref4agri a prof:Profile ;
             prof:hasArtifact "proxy/obo_proxy.ttl" ;
             prof:hasRole profrole:cachedCopy ] .
 
+<http://www.opengis.net/ont/geosparql> a prof:Profile ;
+    rdfs:label "GeoSPARQL"@en ;
+    prof:hasResource [ dct:conformsTo rdfs:,
+                owl: ;
+            dct:format "text/turtle" ;
+            prof:hasArtifact "lib/geosparql.ttl" ;
+            prof:hasRole profrole:cachedCopy ],
+        [ dct:conformsTo rdfs:,
+                owl: ;
+            dct:format "application/rdf+xml" ;
+            prof:hasArtifact <http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf> ;
+            prof:hasRole profrole:source ] .
+
 <http://xmlns.com/foaf/0.1> a prof:Profile ;
     rdfs:label "FOAF" .
 
@@ -283,7 +339,7 @@ proxy:saref4agri a prof:Profile ;
             prof:hasArtifact <https://mariapoveda.github.io/saref-ext/OnToology/SAREF4AGRI/ontology/saref4agri.ttl/documentation/ontology.ttl> ;
             prof:hasRole profrole:source ] .
 
-proxy:foodie a prof:Profile ;
+ogcproxy:foodie a prof:Profile ;
     rdfs:label "Foodie Ontology" ;
     prof:hasResource [ dct:conformsTo jsoncontext: ;
             dct:format "application/ld+json" ;

@@ -3,101 +3,101 @@
     "@context": [
         {
             "saref4agri": "https://w3id.org/def/saref4agri#",
-            "foodie": "http://foodie-cloud.com/model/foodie#",
-            "af-inspire": "http://inspire.ec.europa.eu/schemas/af/3.0#",
             "fiware": "https://uri.fiware.org/ns/data-models#",
+            "af-inspire": "http://inspire.ec.europa.eu/schemas/af/3.0#",
+            "foodie": "http://foodie-cloud.com/model/foodie#",
             "AnimalEntity": {
                 "@id": "https://uri.fiware.org/ns/data-models#Animal"
-            },
-            "FarmAnimalSpecies": {
-                "@id": "af-inspire:FarmAnimalSpecies"
             },
             "Animal": {
                 "@id": "saref4agri:Animal"
             },
-            "AnimalGroup": {
-                "@id": "saref4agri:AnimalGroup"
-            },
             "ID": {
                 "@id": "saref4agri:ID"
             },
-            "locatedAt": {
-                "@id": "fiware:locatedAt",
-                "@type": "@id"
+            "FarmAnimalSpecies": {
+                "@id": "af-inspire:FarmAnimalSpecies"
             },
-            "siredBy": {
-                "@id": "fiware:siredBy",
-                "@type": "@id"
+            "AnimalGroup": {
+                "@id": "saref4agri:AnimalGroup"
             },
             "includesAnimal": {
                 "@id": "af-inspire:includesAnimal",
-                "@type": "@id"
-            },
-            "hasID": {
-                "@id": "saref4agri:hasID",
-                "@type": "@id"
-            },
-            "ownedBy": {
-                "@id": "fiware:ownedBy",
-                "@type": "@id"
-            },
-            "fedWith": {
-                "@id": "fiware:fedWith",
                 "@type": "@id"
             },
             "calvedBy": {
                 "@id": "fiware:calvedBy",
                 "@type": "@id"
             },
-            "birthdate": {
-                "@id": "fiware:birthdate",
-                "@type": "xsd:dateTime"
+            "fedWith": {
+                "@id": "fiware:fedWith",
+                "@type": "@id"
             },
-            "phenologicalCondition": {
-                "@id": "fiware:phenologicalCondition"
+            "locatedAt": {
+                "@id": "fiware:locatedAt",
+                "@type": "@id"
             },
-            "animalSpecies": {
-                "@id": "https://uri.fiware.org/ns/data-models#species"
+            "ownedBy": {
+                "@id": "fiware:ownedBy",
+                "@type": "@id"
             },
-            "healthCondition": {
-                "@id": "fiware:healthCondition"
+            "siredBy": {
+                "@id": "fiware:siredBy",
+                "@type": "@id"
             },
-            "sex": {
-                "@id": "fiware:sex"
-            },
-            "livestockNumber": {
-                "@id": "foodie:livestockNumber",
-                "@type": "xsd:decimal"
-            },
-            "reproductiveCondition": {
-                "@id": "fiware:reproductiveCondition"
+            "hasID": {
+                "@id": "saref4agri:hasID",
+                "@type": "@id"
             },
             "hasBirthDate": {
                 "@id": "saref4agri:hasBirthDate",
                 "@type": "xsd:dateTime"
             },
-            "weight": {
-                "@id": "fiware:weight"
+            "animalSpecies": {
+                "@id": "https://uri.fiware.org/ns/data-models#species"
             },
-            "relatedSource": {
-                "@id": "fiware:relatedSource"
+            "welfareCondition": {
+                "@id": "fiware:welfareCondition"
             },
             "legalID": {
                 "@id": "fiware:legalID"
+            },
+            "healthCondition": {
+                "@id": "fiware:healthCondition"
+            },
+            "breed": {
+                "@id": "fiware:breed"
+            },
+            "livestockNumber": {
+                "@id": "foodie:livestockNumber",
+                "@type": "xsd:decimal"
+            },
+            "phenologicalCondition": {
+                "@id": "fiware:phenologicalCondition"
+            },
+            "weight": {
+                "@id": "fiware:weight"
+            },
+            "livestockType": {
+                "@id": "foodie:livestockType",
+                "@type": "xsd:string"
+            },
+            "relatedSource": {
+                "@id": "fiware:relatedSource"
             },
             "hasDeathDate": {
                 "@id": "saref4agri:hasDeathDate",
                 "@type": "xsd:dateTime"
             },
-            "breed": {
-                "@id": "fiware:breed"
+            "birthdate": {
+                "@id": "fiware:birthdate",
+                "@type": "xsd:dateTime"
             },
-            "welfareCondition": {
-                "@id": "fiware:welfareCondition"
+            "reproductiveCondition": {
+                "@id": "fiware:reproductiveCondition"
             },
-            "livestockType": {
-                "@id": "foodie:livestockType",
-                "@type": "xsd:string"
+            "sex": {
+                "@id": "fiware:sex"
             }
         }
     ]

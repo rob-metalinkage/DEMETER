@@ -35,7 +35,7 @@ ngsi-ld:hasValue a owl:DatatypeProperty ;
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\demeterCore.ttl" ] ;
     ns1:wasGeneratedBy [ a ns1:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = ../models\\demeterCore.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            ns1:endedAtTime "2020-10-29"^^xsd:date ;
+            ns1:endedAtTime "2021-04-14"^^xsd:date ;
             ns1:wasAssociatedWith [ a ns1:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:maker [ foaf:homepage <https://h2020-demeter.eu/> ;

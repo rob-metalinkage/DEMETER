@@ -11,6 +11,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix qu: <http://purl.oclc.org/NET/ssnx/qu/qu#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix saref: <https://w3id.org/saref#> .
 @prefix saref4agri: <https://w3id.org/def/saref4agri#> .
@@ -22,19 +23,17 @@
 
 foodie:productionAmount a owl:ObjectProperty ;
     rdfs:range iso19103:Measure ;
-    rdfs:subPropertyOf saref:relatesToMeasurement ;
+    rdfs:subPropertyOf sosa:hasResult ;
     skos:prefLabel "productionAmount"@en .
 
 foodie:productionProperty a owl:ObjectProperty ;
     rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
     rdfs:range foodie:PropertyType ;
-    rdfs:subPropertyOf saref:hasProperty ;
     skos:prefLabel "productionProperty"@en .
 
 foodie:soilProperty a owl:ObjectProperty ;
     rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
     rdfs:range foodie:PropertyType ;
-    rdfs:subPropertyOf saref:hasProperty ;
     skos:prefLabel "soilProperty"@en .
 
 <http://foodie-cloud.com/model/foodie/code/PropertyTypeValue/electricConductivity> a saref:Property ;
@@ -158,6 +157,11 @@ cf:air_density a owl:NamedIndividual ;
     rdfs:label "air density" ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/cf/cf-property> .
 
+cf:air_temperature a owl:NamedIndividual ;
+    rdfs:label "air temperature" ;
+    rdfs:comment "Air temperature is the bulk temperature of the air, not the surface (skin) temperature." ;
+    rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/cf/cf-property> .
+
 cf:atmosphere_mass_content_of_carbon_dioxide a owl:NamedIndividual ;
     rdfs:label "atmosphere mass content of carbon dioxide" ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/cf/cf-property> .
@@ -173,6 +177,12 @@ cf:atmosphere_water_vapor_content a owl:NamedIndividual ;
 cf:normalized_difference_vegetation_index a dim:Dimensionless,
         owl:NamedIndividual ;
     rdfs:label "normalized difference vegetation index" ;
+    rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/cf/cf-property> .
+
+cf:precipitation_amount a dim:SurfaceDensity,
+        owl:NamedIndividual ;
+    rdfs:label "precipitation amount" ;
+    rdfs:comment "Amount means mass per unit area" ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/cf/cf-property> .
 
 cf:snow_density a dim:Density,
@@ -216,7 +226,16 @@ cf:thickness_of_rainfall_amount a owl:NamedIndividual ;
     rdfs:label "thickness of rainfall amount" ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/cf/cf-property> .
 
+cf:wind_speed a owl:NamedIndividual ;
+    rdfs:label "wind speed" ;
+    rdfs:comment "Speed is the magnitude of velocity. Wind is defined as a two-dimensional (horizontal) air velocity vector, with no vertical component. (Vertical motion in the atmosphere has the standard name upward_air_velocity.) The wind speed is the magnitude of the wind velocity." ;
+    rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/cf/cf-property> .
+
+ssn:Property owl:equivalentClass saref:Property .
+
 ssn:hasProperty owl:equivalentProperty saref:hasProperty .
+
+ssn:isPropertyOf owl:equivalentProperty saref:isPropertyOf .
 
 fiware:AgriParcelRecord a owl:Class ;
     rdfs:label "AgriParcelRecord" ;
@@ -434,7 +453,7 @@ saref4agri:SoilTemperature rdfs:isDefinedBy saref4agri: ;
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriProperty.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = ../models\\agriProperty.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            prov:endedAtTime "2020-10-29"^^xsd:date ;
+            prov:endedAtTime "2021-04-14"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:maker [ foaf:homepage <https://h2020-demeter.eu/> ;
@@ -445,14 +464,14 @@ saref:Humidity a owl:Class ;
         "Humidity",
         "Humidity"@en,
         "Humidiy"@en ;
-    rdfs:comment "A saref:Property related to some measurements that are characterized by a certain value that is measured in a humidity unit"^^xsd:string,
-        "A saref:Property related to some measurements that are characterized by a certain value that is measured in a humidity unit" ;
+    rdfs:comment "A saref:Property related to some measurements that are characterized by a certain value that is measured in a humidity unit",
+        "A saref:Property related to some measurements that are characterized by a certain value that is measured in a humidity unit"^^xsd:string ;
     rdfs:isDefinedBy saref: ;
     rdfs:subClassOf saref:Property .
 
 saref:Temperature a owl:Class ;
-    rdfs:label "Temperature",
-        "Temperature"^^xsd:string,
+    rdfs:label "Temperature"^^xsd:string,
+        "Temperature",
         "Temperature"@en ;
     rdfs:comment "A saref:Property related to some measurements that are characterized by a certain value that is measured in a temperature unit (degree_Celsius, degree_Fahrenheit, or degree_kelvin)",
         "A saref:Property related to some measurements that are characterized by a certain value that is measured in a temperature unit (degree_Celsius, degree_Fahrenheit, or degree_kelvin)"^^xsd:string ;
@@ -460,11 +479,7 @@ saref:Temperature a owl:Class ;
     rdfs:subClassOf saref:Property ;
     owl:equivalentClass dim:Temperature .
 
-foodie:PropertyTypeValue a owl:Class ;
-    rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
-    rdfs:subClassOf iso19150-2:Codelist,
-        skos:Concept ;
-    skos:prefLabel "PropertyTypeValue"@en .
+saref:makesMeasurement owl:equivalentProperty sosa:madeObservation .
 
 foodie:analysisDate a owl:DatatypeProperty ;
     rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
@@ -488,12 +503,13 @@ foodie:propertyName a owl:DatatypeProperty ;
 foodie:propertyType a owl:ObjectProperty ;
     rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
     rdfs:range foodie:PropertyTypeValue ;
+    owl:equivalentProperty saref:relatesToProperty ;
     skos:prefLabel "propertyType"@en .
 
 foodie:quantitativeProperty a owl:ObjectProperty ;
     rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
     rdfs:range iso19103:Measure ;
-    rdfs:subPropertyOf saref:relatesToMeasurement ;
+    owl:equivalentProperty sosa:hasResult ;
     skos:prefLabel "quantitativeProperty"@en .
 
 cf:convective_snowfall_amount a owl:NamedIndividual ;
@@ -684,9 +700,11 @@ cf:water_evaporation_flux_from_soil a owl:NamedIndividual ;
     rdfs:label "water evaporation flux from soil" ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/cf/cf-property> .
 
-cf:soil_temperature a owl:NamedIndividual ;
-    rdfs:label "soil temperature" ;
-    rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/cf/cf-property> .
+saref:hasFeatureOfInterest owl:equivalentProperty sosa:hasFeatureOfInterest .
+
+saref:isFeatureOfInterestOf owl:equivalentProperty sosa:isFeatureOfInterestOf .
+
+saref:measurementMadeBy owl:equivalentProperty sosa:madeBySensor .
 
 foodie:PropertyType a owl:Class ;
     rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
@@ -707,6 +725,16 @@ foodie:PropertyType a owl:Class ;
             owl:onProperty foodie:analysisDate ],
         iso19150-2:Datatype ;
     skos:prefLabel "PropertyType"@en .
+
+foodie:PropertyTypeValue a owl:Class ;
+    rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
+    rdfs:subClassOf iso19150-2:Codelist,
+        skos:Concept ;
+    skos:prefLabel "PropertyTypeValue"@en .
+
+cf:soil_temperature a owl:NamedIndividual ;
+    rdfs:label "soil temperature" ;
+    rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/cf/cf-property> .
 
 saref:Measurement a owl:Class ;
     rdfs:label "Measurement"@en ;
@@ -762,7 +790,9 @@ saref:Measurement a owl:Class ;
             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] ;
     owl:disjointWith saref:Property,
         saref:UnitOfMeasure ;
-    owl:equivalentClass iso19103:Measure .
+    owl:equivalentClass sosa:Observation .
+
+saref:isMeasuredIn owl:equivalentProperty qudt:unit .
 
 saref:FeatureOfInterest a owl:Class ;
     rdfs:label "Feature of interest"@en ;
@@ -776,6 +806,10 @@ saref:FeatureOfInterest a owl:Class ;
             owl:onProperty saref:isFeatureOfInterestOf ] ;
     owl:equivalentClass sosa:FeatureOfInterest .
 
+saref:hasTimestamp owl:equivalentProperty sosa:resultTime .
+
+saref:relatesToProperty owl:equivalentProperty sosa:observedProperty .
+
 saref:UnitOfMeasure a owl:Class ;
     rdfs:label "Unit of measure"^^xsd:string,
         "Unit of measure"@en ;
@@ -783,11 +817,12 @@ saref:UnitOfMeasure a owl:Class ;
         "The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of SAREF, but this list can be extended, also using some other ontologies rather than the Ontology of units of Measure (OM).",
         "The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended."@en ;
     rdfs:isDefinedBy <http://www.wurvoc.org/vocabularies/om-1.6/Unit_of_measure>,
-        saref: .
+        saref: ;
+    owl:equivalentClass qudt:Unit .
 
 saref:Property a owl:Class ;
-    rdfs:label "Property"^^xsd:string,
-        "Property",
+    rdfs:label "Property",
+        "Property"^^xsd:string,
         "Property"@en ;
     rdfs:comment "Anything that can be sensed, measured or controlled in households, common public buildings or offices. We propose here a list of properties that are relevant for the purpose of SAREF, but this list can be extended.",
         "Anything that can be sensed, measured or controlled in households, common public buildings or offices. We propose here a list of properties that are relevant for the purpose of SAREF, but this list can be extended."^^xsd:string,
@@ -815,6 +850,8 @@ saref:Property a owl:Class ;
             owl:allValuesFrom saref:Measurement ;
             owl:onProperty saref:relatesToMeasurement ] ;
     owl:disjointWith saref:UnitOfMeasure ;
-    owl:equivalentClass foodie:PropertyType,
+    owl:equivalentClass foodie:PropertyTypeValue,
         qu:QuantityKind .
+
+saref:hasValue owl:equivalentProperty sosa:hasSimpleResult .
 

@@ -285,12 +285,6 @@
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      saref:relatesToMeasurement .
 
-<https://astrea.linkeddata.es/shapes#67aa80a88bab9ce4563e3d9f9a4f65ab>
-        a            sh:PropertyShape ;
-        sh:class     <https://saref.etsi.org/core/Measurement> ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      <https://saref.etsi.org/core/hasMeasurement> .
-
 <https://astrea.linkeddata.es/shapes#01cd7d2131ee5eb82729b1f2702a634e>
         a                       sh:PropertyShape ;
         sh:nodeKind             sh:IRIOrLiteral ;
@@ -325,6 +319,12 @@
         sh:class     saref:Commodity ;
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      saref:isUsedFor .
+
+<https://astrea.linkeddata.es/shapes#67aa80a88bab9ce4563e3d9f9a4f65ab>
+        a            sh:PropertyShape ;
+        sh:class     <https://saref.etsi.org/core/Measurement> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <https://saref.etsi.org/core/hasMeasurement> .
 
 <https://astrea.linkeddata.es/shapes#56e7c85c8d659331447f841c28306ba0>
         a                 sh:PropertyShape ;
@@ -1363,17 +1363,17 @@
         sh:property     <https://astrea.linkeddata.es/shapes#d4eb42a3214d2e6288bf7e4ed9acc398> , <https://astrea.linkeddata.es/shapes#54d78d2ef08bbece51ef04d5edd58ffe> , <https://astrea.linkeddata.es/shapes#3bf1ed481b0d98867f9c7ad060c9301b> ;
         sh:targetClass  saref:MeteringFunction .
 
-<https://astrea.linkeddata.es/shapes#3adb57e2d654b433129a5a2a98216730>
-        a            sh:PropertyShape ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      saref:hasFunction .
-
 <https://astrea.linkeddata.es/shapes#2ffaad051bf28b701754c72052aefb82>
         a                       sh:PropertyShape ;
         sh:nodeKind             sh:IRIOrLiteral ;
         sh:path                 <https://saref.etsi.org/core/isAccomplishedBy> ;
         sh:qualifiedMinCount    "1"^^xsd:nonNegativeInteger ;
         sh:qualifiedValueShape  [ sh:class  <https://saref.etsi.org/core/Device> ] .
+
+<https://astrea.linkeddata.es/shapes#3adb57e2d654b433129a5a2a98216730>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      saref:hasFunction .
 
 <https://astrea.linkeddata.es/shapes#8c9f0a3ef50fe390869f7c693885d425>
         a                 sh:NodeShape ;
@@ -1707,12 +1707,6 @@
         sh:nodeKind       sh:Literal ;
         sh:path           <https://saref.etsi.org/core/hasValue> .
 
-<https://astrea.linkeddata.es/shapes#d12f4d5879159c35c9440ab64921c949>
-        a            sh:PropertyShape ;
-        sh:class     <https://saref.etsi.org/core/FeatureOfInterest> ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      <https://saref.etsi.org/core/isMeasurementOf> .
-
 <https://astrea.linkeddata.es/shapes#f1ae3fa4ffe533f93b1ba23ec8571eba>
         a               sh:NodeShape ;
         rdfs:label      "Smoke" ;
@@ -1720,6 +1714,12 @@
         sh:name         "Smoke" ;
         sh:nodeKind     sh:IRI ;
         sh:targetClass  saref:Smoke .
+
+<https://astrea.linkeddata.es/shapes#d12f4d5879159c35c9440ab64921c949>
+        a            sh:PropertyShape ;
+        sh:class     <https://saref.etsi.org/core/FeatureOfInterest> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <https://saref.etsi.org/core/isMeasurementOf> .
 
 <https://astrea.linkeddata.es/shapes#378884c9a8a498df70f2e193093df0af>
         a                 sh:NodeShape ;
@@ -1775,7 +1775,7 @@
         sh:name         "Sensor" ;
         sh:nodeKind     sh:IRI ;
         sh:property     <https://astrea.linkeddata.es/shapes#3adb57e2d654b433129a5a2a98216730> ;
-        sh:targetClass  saref:Sensor .
+        sh:targetClass  saref:Sensor , sosa:Sensor .
 
 <https://astrea.linkeddata.es/shapes#fdab135e5e2ec74649a756159a8bbc93>
         a               sh:NodeShape ;
@@ -2282,6 +2282,11 @@
         sh:nodeKind     sh:IRI ;
         sh:targetClass  saref:OpenState .
 
+<https://astrea.linkeddata.es/shapes#636d1bfe1946c777bf2e0fe2fbaac905>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      saref:hasFunction .
+
 <https://astrea.linkeddata.es/shapes#3b1fed4016ea3410e7b39f0cf0331513>
         a               sh:NodeShape ;
         rdfs:label      "Agent"@en ;
@@ -2289,11 +2294,6 @@
         sh:nodeKind     sh:IRI ;
         sh:property     <https://astrea.linkeddata.es/shapes#67887954de7f456192f7a2bbf8e8241c> ;
         sh:targetClass  foaf:Agent .
-
-<https://astrea.linkeddata.es/shapes#636d1bfe1946c777bf2e0fe2fbaac905>
-        a            sh:PropertyShape ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      saref:hasFunction .
 
 <https://astrea.linkeddata.es/shapes#e6e6154c2f0e3fe47bbdafd881aa55fd>
         a               sh:NodeShape ;
@@ -2327,27 +2327,10 @@
         sh:qualifiedMinCount    "1"^^xsd:nonNegativeInteger ;
         sh:qualifiedValueShape  [ sh:class  saref:Measurement ] .
 
-<https://astrea.linkeddata.es/report/01163512728>
-        a       <https://w3id.org/def/astrea#ReportEntry> ;
-        <https://w3id.org/def/astrea#message>
-                "Provided content belongs to no ontology (maybe check that it contains the mandatory statement rdf:type owl:Ontology)" ;
-        <https://w3id.org/def/astrea#source>
-                "http://foodie-cloud.com/model/foodie" ;
-        <https://w3id.org/def/astrea#statusCode>
-                "400"^^xsd:int .
-
 <https://astrea.linkeddata.es/shapes#5f8e1e862d26021410f9dbfe65685f66>
         a            sh:PropertyShape ;
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      saref:hasFunction .
-
-<https://astrea.linkeddata.es/shapes#f47f83cfc80f60f1cbef92d413b7fac3>
-        a               sh:NodeShape ;
-        rdfs:label      "Illuminance unit" ;
-        sh:description  "The unit of measure for light" ;
-        sh:name         "Illuminance unit" ;
-        sh:nodeKind     sh:IRI ;
-        sh:targetClass  saref:IlluminanceUnit .
 
 <https://astrea.linkeddata.es/shapes#f8d39a8571f65103be4266433a282cd5>
         a                 sh:PropertyShape ;
@@ -2358,6 +2341,15 @@
         sh:nodeKind       sh:BlankNodeOrIRI ;
         sh:path           ssn:deployedOnPlatform .
 
+<https://astrea.linkeddata.es/report/01163512728>
+        a       <https://w3id.org/def/astrea#ReportEntry> ;
+        <https://w3id.org/def/astrea#message>
+                "Provided content belongs to no ontology (maybe check that it contains the mandatory statement rdf:type owl:Ontology)" ;
+        <https://w3id.org/def/astrea#source>
+                "http://foodie-cloud.com/model/foodie" ;
+        <https://w3id.org/def/astrea#statusCode>
+                "400"^^xsd:int .
+
 <https://astrea.linkeddata.es/shapes#9e81a8547fd8cabc79752e243c8d2b67>
         a                 sh:NodeShape ;
         rdfs:isDefinedBy  <http://www.opengis.net/ont/geosparql> ;
@@ -2366,6 +2358,14 @@
         sh:name           "Geometry"@en ;
         sh:nodeKind       sh:IRI ;
         sh:targetClass    geo:Geometry .
+
+<https://astrea.linkeddata.es/shapes#f47f83cfc80f60f1cbef92d413b7fac3>
+        a               sh:NodeShape ;
+        rdfs:label      "Illuminance unit" ;
+        sh:description  "The unit of measure for light" ;
+        sh:name         "Illuminance unit" ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  saref:IlluminanceUnit .
 
 <https://astrea.linkeddata.es/shapes#84dabe1f51bdcdab8668ef404bc51bf9>
         a               sh:NodeShape ;
@@ -2977,6 +2977,11 @@
         <https://w3id.org/def/astrea#statusCode>
                 "400"^^xsd:int .
 
+<https://astrea.linkeddata.es/shapes#56487261d280b09314be009f40dc4ade>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      saref:hasState .
+
 <https://astrea.linkeddata.es/shapes#85c44987c5a267f42ccb0356a1dc5eec>
         a                 sh:PropertyShape ;
         rdfs:isDefinedBy  <https://saref.etsi.org/core/> ;
@@ -2987,11 +2992,6 @@
         sh:nodeKind       sh:Literal ;
         sh:path           <https://saref.etsi.org/core/hasDescription> ;
         sh:pattern        ".*" .
-
-<https://astrea.linkeddata.es/shapes#56487261d280b09314be009f40dc4ade>
-        a            sh:PropertyShape ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      saref:hasState .
 
 <https://astrea.linkeddata.es/shapes#61fb9b5ac3e189a73816fd32363d0c7b>
         a            sh:PropertyShape ;

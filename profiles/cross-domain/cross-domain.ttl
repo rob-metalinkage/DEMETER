@@ -2,6 +2,7 @@
 @prefix dim: <http://purl.oclc.org/NET/ssnx/qu/dim#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix iso19103: <http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#> .
 @prefix iso19156_GFI: <http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#> .
 @prefix iso19156_OB: <http://def.isotc211.org/iso19156/2011/Observation#> .
 @prefix iso19156_SF: <http://def.isotc211.org/iso19156/2011/SamplingFeature#> .
@@ -12,6 +13,7 @@
 @prefix qb: <http://purl.org/linked-data/cube#> .
 @prefix qu: <http://purl.oclc.org/NET/ssnx/qu/qu#> .
 @prefix quantity: <http://purl.oclc.org/NET/ssnx/qu/quantity#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
@@ -19,6 +21,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix ssn-ext: <http://www.w3.org/ns/ssn/ext/> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -126,6 +130,14 @@ qb:SliceKey a rdfs:Class,
     rdfs:comment "Denotes a subset of the component properties of a DataSet which are fixed in the corresponding slices"@en ;
     rdfs:isDefinedBy <http://purl.org/linked-data/cube> ;
     rdfs:subClassOf qb:ComponentSet .
+
+sosa:Procedure a rdfs:Class ;
+    rdfs:subClassOf ngsi-ld:Entity .
+
+iso19103:Measure a owl:Class ;
+    rdfs:subClassOf ngsi-ld:Entity ;
+    owl:deprecated true ;
+    owl:equivalentClass qudt:QuantityValue .
 
 dim:Dimensionless a owl:Class ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/qu/qu-rec20> ;
@@ -439,6 +451,19 @@ qb:sliceStructure a rdf:Property,
     rdfs:range qb:SliceKey ;
     rdfs:subPropertyOf ngsi-ld:Relationship .
 
+qudt:Quantity rdfs:subClassOf ngsi-ld:Entity .
+
+qudt:QuantityKind rdfs:subClassOf ngsi-ld:Entity ;
+    owl:equivalentClass qu:QuantityKind .
+
+qudt:Unit rdfs:subClassOf ngsi-ld:Entity .
+
+qudt:hasQuantityKind rdfs:subPropertyOf ngsi-ld:Relationship .
+
+qudt:quantityValue rdfs:subPropertyOf ngsi-ld:Relationship .
+
+qudt:unit rdfs:subPropertyOf ngsi-ld:Relationship .
+
 geo:Feature dcterms:contributor "Matthew Perry" ;
     dcterms:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
     dcterms:date "2011-06-16"^^xsd:date ;
@@ -581,11 +606,42 @@ sf:Triangle rdfs:comment """\r
  A Triangle is a polygon with 3 distinct, non-collinear vertices and no interior boundary.\r
     """@en .
 
+wgs84_pos:Point a owl:Class ;
+    rdfs:label "Point"@en ;
+    rdfs:comment """ \r
+Uniquely identified by lat/long/alt. i.e.\r
+\r
+spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),\r
+  lat(P2, LAT), long(P2, LONG), alt(P2, ALT).\r
+\r
+sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).\r
+  """,
+        "A point, typically described using a coordinate system relative to Earth, such as WGS84." ;
+    rdfs:isDefinedBy wgs84_pos: ;
+    rdfs:subClassOf geo:Geometry .
+
+wgs84_pos:alt a owl:DatatypeProperty ;
+    rdfs:comment "The WGS84 altitude of a SpatialThing (decimal meters above the local reference ellipsoid)." ;
+    rdfs:isDefinedBy wgs84_pos: .
+
+wgs84_pos:lat a owl:DatatypeProperty ;
+    rdfs:isDefinedBy wgs84_pos: .
+
+wgs84_pos:location a owl:ObjectProperty ;
+    rdfs:comment "The relation between something and the point, or other geometrical thing in space, where it is." ;
+    rdfs:isDefinedBy wgs84_pos: ;
+    rdfs:subPropertyOf ngsi-ld:Relationship .
+
+wgs84_pos:long a owl:DatatypeProperty ;
+    rdfs:isDefinedBy wgs84_pos: .
+
 skos:inScheme a owl:AnnotationProperty .
 
-sosa:ActuatableProperty rdfs:subClassOf ngsi-ld:Entity .
+time:TemporalDuration rdfs:subClassOf ngsi-ld:Entity .
 
-sosa:ObservableProperty rdfs:subClassOf ngsi-ld:Entity .
+time:TemporalEntity rdfs:subClassOf ngsi-ld:Entity .
+
+sosa:ActuatableProperty rdfs:subClassOf ngsi-ld:Entity .
 
 sosa:Platform rdfs:comment "A Platform is an entity that hosts other entities, particularly Sensors, Actuators, Samplers, and other Platforms (definition taken from http://www.w3.org/ns/sosa/Platform)"@en ;
     rdfs:subClassOf ngsi-ld:Entity .
@@ -593,6 +649,7 @@ sosa:Platform rdfs:comment "A Platform is an entity that hosts other entities, p
 sosa:hasFeatureOfInterest rdfs:subPropertyOf ngsi-ld:Relationship ;
     schema:domainIncludes sosa:Actuation,
         sosa:Observation,
+        sosa:ObservationCollection,
         sosa:Sampling ;
     schema:rangeIncludes sosa:FeatureOfInterest,
         sosa:Sample .
@@ -610,6 +667,18 @@ sosa:hasSimpleResult rdfs:comment "The simple value of an Observation or Actuati
     schema:domainIncludes sosa:Actuation,
         sosa:Observation .
 
+sosa:hasUltimateFeatureOfInterest a owl:ObjectProperty ;
+    rdfs:label "has ultimate feature of interest" ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( sosa:Observation sosa:Sampling sosa:Actuation ) ] ;
+    rdfs:isDefinedBy ssn-ext: ;
+    rdfs:range sosa:FeatureOfInterest ;
+    rdfs:subPropertyOf ngsi-ld:Relationship ;
+    schema:domainIncludes sosa:Actuation,
+        sosa:Observation,
+        sosa:Sampling ;
+    schema:rangeIncludes sosa:FeatureOfInterest .
+
 sosa:hosts rdfs:label "host"@en ;
     rdfs:comment "Relation between a platform and the systems it hosts."@en ;
     rdfs:subPropertyOf ngsi-ld:Relationship .
@@ -626,17 +695,41 @@ sosa:isHostedBy rdfs:comment "Relation between a system and its hosting platform
 
 sosa:isSampleOf owl:equivalentProperty iso19156_SF:SF_SamplingFeature.sampledFeature .
 
-sosa:madeBySensor rdfs:subPropertyOf ngsi-ld:Relationship .
+sosa:madeBySensor rdfs:subPropertyOf ngsi-ld:Relationship ;
+    schema:domainIncludes sosa:Observation,
+        sosa:ObservationCollection ;
+    schema:rangeIncludes sosa:Sensor .
 
 sosa:madeObservation rdfs:subPropertyOf ngsi-ld:Relationship ;
     schema:rangeIncludes sosa:Observation .
 
 sosa:observedProperty dcterms:description "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation." ;
-    rdfs:subPropertyOf ngsi-ld:Relationship .
+    rdfs:subPropertyOf ngsi-ld:Relationship ;
+    schema:domainIncludes sosa:Observation,
+        sosa:ObservationCollection ;
+    schema:rangeIncludes sosa:ObservableProperty .
+
+sosa:observes rdfs:subPropertyOf ngsi-ld:Relationship ;
+    schema:domainIncludes sosa:Sensor ;
+    schema:rangeIncludes sosa:ObservableProperty .
+
+sosa:phenomenonTime rdfs:subPropertyOf ngsi-ld:Relationship ;
+    schema:domainIncludes sosa:Actuation,
+        sosa:Observation,
+        sosa:ObservationCollection,
+        sosa:Sampling .
 
 sosa:resultTime schema:domainIncludes sosa:Actuation,
         sosa:Observation,
+        sosa:ObservationCollection,
         sosa:Sampling .
+
+sosa:usedProcedure rdfs:subPropertyOf ngsi-ld:Relationship ;
+    schema:domainIncludes sosa:Actuation,
+        sosa:Observation,
+        sosa:ObservationCollection,
+        sosa:Sampling ;
+    schema:rangeIncludes sosa:Procedure .
 
 ssn:Deployment rdfs:subClassOf ngsi-ld:Entity .
 
@@ -653,11 +746,17 @@ ssn:deployedSystem rdfs:comment "Relation between a deployment and the system de
 
 ssn:hasDeployment rdfs:subPropertyOf ngsi-ld:Relationship .
 
+ssn:hasInput rdfs:subPropertyOf ngsi-ld:Relationship .
+
+ssn:hasOutput rdfs:subPropertyOf ngsi-ld:Relationship .
+
 ssn:hasProperty rdfs:comment "A relation between a FeatureOfInterest and a Property of that feature." ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/ssn> ;
     rdfs:subPropertyOf ngsi-ld:Relationship .
 
 ssn:hasSubSystem rdfs:subPropertyOf ngsi-ld:Relationship .
+
+ssn:implementedBy rdfs:subPropertyOf ngsi-ld:Relationship .
 
 ssn:implements rdfs:subPropertyOf ngsi-ld:Relationship .
 
@@ -688,22 +787,24 @@ schema:telephone rdfs:label "telephone"@en ;
 
 <https://w3id.org/demeter/crossDomain> a owl:Ontology,
         prov:Entity ;
-    dcterms:contributor [ rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+    dcterms:contributor [ foaf:name "Ioanna Roussaki" ;
+            schema:affiliation [ foaf:name "ICCS" ] ],
+        [ rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
             foaf:name "Raul Palma" ;
             schema:affiliation [ foaf:name "PSNC" ] ],
-        [ foaf:name "Ioanna Roussaki" ;
-            schema:affiliation [ foaf:name "ICCS" ] ],
         [ foaf:name "Rob Atkinson" ;
             schema:affiliation [ foaf:name "OGC" ] ] ;
     dcterms:creator [ foaf:name "Till Döhmen" ;
             schema:affiliation [ foaf:name "Fraunhofer FIT" ] ] ;
-    dcterms:description "The DEMETER AgriCrop is one of the agri profiles of DEMETER AIM. This profile was created by reusing and aligning well-known ontologies and vocabularies"@en ;
+    dcterms:description "The DEMETER cross domain ontology i) defines concepts and terms that are generic and applicable to various domains; ii) avoids conflicting or redundant definitions of the same concept in different domain specific models; iii) provides the basis for interoperability. The ontology is specified by reusing concepts and terms from a number of standard ontologies and vocabularies including OGC/W3C SOSA/SSN, OGC GeoSparql, W3C RDF data cube, QUDT, FOAF, schema.org and others. It includes alignment to ISO standards and with DEMETER core meta-model (NGSI-LD)."@en ;
     dcterms:rights "This vocabulary is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en ;
     dcterms:title "DEMETER Cross-Domain"@en ;
     rdfs:comment "The DEMETER Agriculture Information Model (AIM) is the common vocabulary in DEMETER project providing the basis for semantic interoperability across smart farming solutions"@en ;
     owl:imports <http://purl.oclc.org/NET/ssnx/qu/qu>,
+        <http://qudt.org/schema/qudt>,
         <http://www.opengis.net/ont/geosparql>,
         <http://www.opengis.net/ont/sf>,
+        <http://www.w3.org/2006/time>,
         <http://www.w3.org/ns/sosa>,
         <http://www.w3.org/ns/ssn>,
         <http://xmlns.com/foaf/0.1>,
@@ -711,17 +812,19 @@ schema:telephone rdfs:label "telephone"@en ;
     owl:versionIRI <https://w3id.org/demeter/crossDomain/1.0> ;
     owl:versionInfo "1.0" ;
     prof:isProfileOf <http://purl.oclc.org/NET/ssnx/qu/qu>,
-        <http://www.opengis.net/ont/geosparql>,
+        <http://qudt.org/schema/qudt>,
         <http://www.opengis.net/ont/sf>,
+        <http://www.w3.org/2006/time>,
         <http://www.w3.org/ns/sosa>,
         <http://www.w3.org/ns/ssn>,
         <https://schema.org>,
-        <https://w3id.org/demeter/agri/proxy/foaf> ;
+        <https://w3id.org/demeter/agri/proxy/foaf>,
+        <https://w3id.org/demeter/agri/proxy/geosparql> ;
     prov:wasDerivedFrom [ a prov:Entity ;
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\cross-domain.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = ../models\\cross-domain.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            prov:endedAtTime "2020-10-29"^^xsd:date ;
+            prov:endedAtTime "2021-04-14"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:maker [ foaf:homepage <https://h2020-demeter.eu/> ;
@@ -730,6 +833,7 @@ schema:telephone rdfs:label "telephone"@en ;
 iso19156_OB:OM_Observation a owl:Class ;
     rdfs:label "Observation" ;
     rdfs:isDefinedBy <https://www.iso.org/standard/44595.html> ;
+    rdfs:subClassOf ngsi-ld:Entity ;
     skos:definition "Observation process is a subtype of OM_Process. It is a process used to generate the result of the observation." .
 
 iso19156_SF:SF_SamplingFeature.sampledFeature a owl:ObjectProperty ;
@@ -791,30 +895,27 @@ qb:observationGroup a rdf:Property,
     rdfs:range qb:ObservationGroup ;
     rdfs:subPropertyOf ngsi-ld:Relationship .
 
+qudt:QuantityValue rdfs:subClassOf ngsi-ld:Entity .
+
 geo:sfContains rdfs:comment "Exists if the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*"@en ;
     rdfs:subPropertyOf ngsi-ld:Property .
 
 geo:sfWithin rdfs:comment "Exists if the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***"@en ;
     rdfs:subPropertyOf ngsi-ld:Property .
 
-wgs84_pos:Point a owl:Class ;
-    rdfs:label "Point"@en ;
-    rdfs:comment """ \r
-Uniquely identified by lat/long/alt. i.e.\r
-\r
-spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),\r
-  lat(P2, LAT), long(P2, LONG), alt(P2, ALT).\r
-\r
-sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).\r
-  """,
-        "A point, typically described using a coordinate system relative to Earth, such as WGS84." ;
-    rdfs:isDefinedBy wgs84_pos: ;
-    rdfs:subClassOf geo:Geometry .
+sosa:Result rdfs:subClassOf ngsi-ld:Entity .
 
-wgs84_pos:location a owl:ObjectProperty ;
-    rdfs:comment "The relation between something and the point, or other geometrical thing in space, where it is." ;
-    rdfs:isDefinedBy wgs84_pos: ;
-    rdfs:subPropertyOf ngsi-ld:Relationship .
+sosa:hasMember a owl:ObjectProperty ;
+    rdfs:label "member observation" ;
+    rdfs:comment "Link to a member within a collection of (observations) or (collections of observations) that share the same value for one or more of the characteristic properties" ;
+    rdfs:domain sosa:ObservationCollection ;
+    rdfs:isDefinedBy ssn-ext: ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( sosa:Observation sosa:ObservationCollection ) ] ;
+    rdfs:subPropertyOf ngsi-ld:Relationship ;
+    schema:domainIncludes sosa:ObservationCollection ;
+    schema:rangeIncludes sosa:Observation,
+        sosa:ObservationCollection .
 
 foaf:member rdfs:subPropertyOf ngsi-ld:Relationship .
 
@@ -878,9 +979,6 @@ geo:SpatialObject rdfs:comment "The class spatial-object represents everything t
         [ a owl:Restriction ;
             owl:allValuesFrom geo:SpatialObject ;
             owl:onProperty geo:sfContains ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom wgs84_pos:Point ;
-            owl:onProperty wgs84_pos:location ],
         ngsi-ld:Entity .
 
 geo:hasGeometry dcterms:contributor "Matthew Perry" ;
@@ -897,8 +995,7 @@ geo:hasGeometry dcterms:contributor "Matthew Perry" ;
       A spatial representation for a given feature.\r
     """@en .
 
-sosa:FeatureOfInterest rdfs:subClassOf iso19156_GFI:GFI_DomainFeature,
-        ngsi-ld:Entity .
+sosa:Sensor rdfs:subClassOf ngsi-ld:Entity .
 
 foaf:Agent rdfs:label "Agent"@en ;
     rdfs:isDefinedBy foaf: ;
@@ -942,17 +1039,22 @@ geo:Geometry dcterms:contributor "Matthew Perry" ;
     """@en .
 
 sosa:Sample rdfs:comment "Feature on which Observations may be made, which is intended to be representative of a FeatureOfInterest that is not fully accessible."@en ;
+    rdfs:subClassOf ngsi-ld:Entity ;
     owl:equivalentClass iso19156_SF:SF_SamplingFeature ;
     skos:example "A 'station' is essentially an identifiable locality where a sensor system or Process may be deployed and an observation made. In the context of the observation model, it connotes the 'world in the vicinity of the station', so the observed properties relate to the physical medium at the station, and not to any physical artifact such as a mooring, buoy, benchmark, monument, well, etc."@en .
 
 iso19156_GFI:GFI_Feature a owl:Class ;
     rdfs:label "GFI_Feature" ;
     rdfs:isDefinedBy <http://standards.iso.org/iso/19156/ed-1/en/> ;
+    rdfs:subClassOf ngsi-ld:Entity ;
     skos:definition "The class GFI_Feature (Figure 2) is an instance of the .og.metaclass.cg. GF_FeatureType (ISO 19109). It represents the set of all classes which are feature types. NOTE	GFI_Feature is implemented in GML (ISO 19136:2007) by the element gml:AbstractFeature and type gml:AbstractFeatureType. In an implementation this abstract class shall be substituted by a concrete class representing a feature type from an application schema associated with a domain of discourse (ISO 19109, ISO 19101). Sampling Features (Clause 8) are a class of feature-types whose role is primarily associated with observations. " .
 
 dim:PhysicalChemistryAndMolecularPhysicsScheme a owl:NamedIndividual,
         skos:Scheme ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/qu/qu-rec20> .
+
+sosa:FeatureOfInterest rdfs:subClassOf iso19156_GFI:GFI_DomainFeature,
+        ngsi-ld:Entity .
 
 dim:PeriodicAndRelatedPhenomenaScheme a owl:NamedIndividual,
         skos:Scheme ;
@@ -970,8 +1072,12 @@ qu:PropertyKind rdfs:label "PropertyKind" ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/qu/qu-rec20> ;
     rdfs:subClassOf ngsi-ld:Entity .
 
-sosa:Observation rdfs:subClassOf ngsi-ld:Entity ;
-    owl:equivalentClass iso19156_OB:OM_Observation .
+sosa:Sampling rdfs:subClassOf ngsi-ld:Entity .
+
+skos:Scheme a owl:Class ;
+    rdfs:subClassOf ngsi-ld:Entity .
+
+sosa:Actuation rdfs:subClassOf ngsi-ld:Entity .
 
 dim:AcousticsScheme a owl:NamedIndividual,
         skos:Scheme ;
@@ -981,13 +1087,32 @@ dim:MechanicsScheme a owl:NamedIndividual,
         skos:Scheme ;
     rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/qu/qu-rec20> .
 
-skos:Scheme a owl:Class ;
-    rdfs:subClassOf ngsi-ld:Entity .
+sosa:ObservationCollection a owl:Class ;
+    rdfs:label "Collection of observations" ;
+    rdfs:comment "Collection of observations, typically with one or more property shared by all of its members" ;
+    rdfs:isDefinedBy ssn-ext: ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty sosa:hasMember ],
+        ngsi-ld:Entity .
+
+sosa:Observation rdfs:comment """If values are not provided for the following Observation properties, they may be provided by the ObservationCollection of which it is a member:\r
+- hasFeatureOfInterest\r
+- hasUltimateFeatureOfInterest\r
+- madeBySensor\r
+- observedProperty\r
+- phenomenonTime\r
+- resultTime\r
+- usedProcedure""" ;
+    rdfs:subClassOf ngsi-ld:Entity ;
+    owl:equivalentClass iso19156_OB:OM_Observation .
 
 qu:QuantityKind rdfs:isDefinedBy <http://purl.oclc.org/NET/ssnx/qu/qu-rec20> ;
-    rdfs:subClassOf skos:Scheme .
+    rdfs:subClassOf ngsi-ld:Entity .
 
 ngsi-ld:Entity a owl:Class .
 
 ngsi-ld:Relationship a owl:ObjectProperty .
+
+[] rdf:rest ( time:Interval ) .
 

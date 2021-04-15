@@ -10,6 +10,7 @@
 @prefix jsonld:  <https://www.w3.org/TR/json-ld/> .
 @prefix jsoncontext: <http://www.opengis.net/def/metamodel/profiles/json_ld_context> .
 @prefix proxy: <https://w3id.org/demeter/agri/proxy/> .
+@prefix ogcproxy: <https://w3id.org/demeter/agri/proxy/> .
 
 <http://foodie-cloud.com/model/foodie> a prof:Profile ;
 	rdfs:label "Foodie Ontology" ;
@@ -215,6 +216,78 @@ proxy:citation a prof:Profile ;
 		] ;
 .
 
+proxy:geosparql a prof:Profile ;
+	prof:isProfileOf <http://www.opengis.net/ont/geosparql> ;
+	rdfs:label  "Proxy for Geosparql"@en ;
+	rdfs:comment "This profile  provides for content negotatiation behaviour to access a valid JSON-LD context" ;
+	prof:hasResource  [ 
+			prof:hasRole profrole:context ;
+			prof:hasArtifact <https://w3id.org/demeter/agri/proxy/geosparql?_profile=jsoncontext> ;
+			rdfs:comment "Provides json-ld context representation pending ISO provision" ;
+			dct:conformsTo jsoncontext: ;
+            dct:format "application/ld+json" ;
+		] ;
+.
+
+<http://def.isotc211.org/iso19156/2011/Observation>  a prof:Profile ;
+	rdfs:label  "ISO 19156 Observation"@en ;
+	prof:hasResource 	[
+			prof:hasRole profrole:cachedCopy ;
+			prof:hasArtifact "lib/iso19156observation.ttl" ;
+			dct:conformsTo owl:, rdfs: ;
+            dct:format "text/turtle" ;
+		] ;
+		prof:hasResource 	[
+			prof:hasRole profrole:source ;
+			prof:hasArtifact <https://def.isotc211.org/ontologies/iso19156/2011/Observation.rdf> ;
+			dct:conformsTo owl: , rdfs: ;
+            dct:format "application/rdf+xml" ;
+		] ;
+.
+
+proxy:observation a prof:Profile ;
+	prof:isProfileOf <http://def.isotc211.org/iso19156/2011/Observation> ;
+	rdfs:label  "Proxy for ISO1956 Observation"@en ;
+	rdfs:comment "This profile  provides for content negotatiation behaviour to access a valid JSON-LD context" ;
+	prof:hasResource  [ 
+			prof:hasRole profrole:context ;
+			prof:hasArtifact <https://w3id.org/demeter/agri/proxy/observation?_profile=jsoncontext> ;
+			rdfs:comment "Provides json-ld context representation pending ISO provision" ;
+			dct:conformsTo jsoncontext: ;
+            dct:format "application/ld+json" ;
+		] ;
+.
+
+<http://def.isotc211.org/iso19156/2011/SamplingFeature>  a prof:Profile ;
+	rdfs:label  "ISO 19156 SamplingFeaturen"@en ;
+	prof:hasResource 	[
+			prof:hasRole profrole:cachedCopy ;
+			prof:hasArtifact "lib/iso19156sf.ttl" ;
+			dct:conformsTo owl:, rdfs: ;
+            dct:format "text/turtle" ;
+		] ;
+		prof:hasResource 	[
+			prof:hasRole profrole:source ;
+			prof:hasArtifact <https://def.isotc211.org/ontologies/iso19156/2011/SamplingFeature.rdf> ;
+			dct:conformsTo owl: , rdfs: ;
+            dct:format "application/rdf+xml" ;
+		] ;
+.
+
+proxy:samplingfeature a prof:Profile ;
+	prof:isProfileOf <http://def.isotc211.org/iso19156/2011/SamplingFeature> ;
+	rdfs:label  "Proxy for ISO1956 SamplingFeature"@en ;
+	rdfs:comment "This profile  provides for content negotatiation behaviour to access a valid JSON-LD context" ;
+	prof:hasResource  [ 
+			prof:hasRole profrole:context ;
+			prof:hasArtifact <https://w3id.org/demeter/agri/proxy/samplingfeature?_profile=jsoncontext> ;
+			rdfs:comment "Provides json-ld context representation pending ISO provision" ;
+			dct:conformsTo jsoncontext: ;
+            dct:format "application/ld+json" ;
+		] ;
+.
+
+
 <http://www.opengis.net/ont/sf>  a prof:Profile ;
 	rdfs:label  "OGC Simple Features"@en ;
 	prof:hasResource 	[
@@ -230,6 +303,8 @@ proxy:citation a prof:Profile ;
             dct:format "application/rdf+xml" ;
 		] ;
 .
+
+
 
 <http://purl.obolibrary.org/obo> 
     a prof:Profile ;

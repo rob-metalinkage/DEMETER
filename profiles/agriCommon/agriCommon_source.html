@@ -201,7 +201,7 @@
     ],
     "https://schema.org/description": [
       {
-        "@value": "<p>The DEMETER Agriculture Information Model (AIM) is the common vocabulary in DEMETER project providing the basis for semantic interoperability across smart farming solutions</p>"
+        "@value": "<p>The DEMETER AgriCommon is one of the agri profiles of DEMETER AIM. This profile was created by reusing and aligning well-known ontologies and vocabularies</p>"
       }
     ],
     "https://schema.org/name": [
@@ -259,7 +259,7 @@
     </dl>
     <h2>Description</h2>
     <div id="description">
-        <p>The DEMETER Agriculture Information Model (AIM) is the common vocabulary in DEMETER project providing the basis for semantic interoperability across smart farming solutions</p>
+        <p>The DEMETER AgriCommon is one of the agri profiles of DEMETER AIM. This profile was created by reusing and aligning well-known ontologies and vocabularies</p>
     </div>
 </section>
 <section id="toc">
@@ -362,14 +362,58 @@
 <section id="objectproperties">
     <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
+        <li><a href="#agroVocConcept">agroVocConcept</a></li>
         <li><a href="#managesfarm">manages farm</a></li>
+        <li><a href="#eppoConcept">eppoConcept</a></li>
     </ul>
+    <div class="entity property" id="agroVocConcept">
+        <h3>agroVocConcept<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://uri.fiware.org/ns/data-models#agroVocConcept</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriCrop/schema.json
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    URL of the FAO entity
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity property" id="managesfarm">
         <h3>manages farm<sup title="object property" class="sup-op">op</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
                 <td><code>https://w3id.org/def/saref4agri#managesFarm</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="eppoConcept">
+        <h3>eppoConcept<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/demeter/agri/agriCommon#eppoConcept</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/demeter/agri/agriCommon#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    URL of the EPPO entity
+                </td>
             </tr>
         </table>
     </div>
@@ -387,7 +431,6 @@
         <li><a href="#validTo">validTo</a></li>
         <li><a href="#generatedAtTime">generatedAtTime</a></li>
         <li><a href="#invalidatedAtTime">invalidatedAtTime</a></li>
-        <li><a href="#agroVocConcept">agroVocConcept</a></li>
         <li><a href="#alternateName">alternateName</a></li>
         <li><a href="#category">category</a></li>
         <li><a href="#createdAt">createdAt</a></li>
@@ -397,7 +440,7 @@
         <li><a href="#modifiedAt">modifiedAt</a></li>
         <li><a href="#name">name</a></li>
         <li><a href="#source">source</a></li>
-        <li><a href="#hasname">has name</a></li>
+        <li><a href="#Arelationtoexpressthenameofanentity(e.g.,animal).">A relation to express the name of an entity (e.g.,animal).</a></li>
         <li><a href="#Password">Password</a></li>
         <li><a href="#UserName">User Name</a></li>
         <li><a href="#hasdescription">has description</a></li>
@@ -616,27 +659,6 @@
             </tr>
         </table>
     </div>
-    <div class="entity property" id="agroVocConcept">
-        <h3>agroVocConcept<sup title="datatype property" class="sup-dp">dp</sup></h3>
-        <table>
-            <tr>
-                <th>URI</th>
-                <td><code>https://uri.fiware.org/ns/data-models#agroVocConcept</code></td>
-            </tr>
-            <tr class="importeddef">
-                <th>Is Defined By</th>
-                <td>
-                    https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriCrop/schema.json
-                </td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    URL of the FAO details of the [entity]
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity property" id="alternateName">
         <h3>alternateName<sup title="datatype property" class="sup-dp">dp</sup></h3>
         <table>
@@ -755,7 +777,7 @@
             <tr class="importeddef">
                 <th>Is Defined By</th>
                 <td>
-                    https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Parcel.md
+                    https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Crop.md
                 </td>
             </tr>
             <tr>
@@ -824,7 +846,7 @@
             <tr class="importeddef">
                 <th>Is Defined By</th>
                 <td>
-                    https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Product-Type.md
+                    https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Parcel.md
                 </td>
             </tr>
             <tr>
@@ -862,8 +884,8 @@
             </tr>
         </table>
     </div>
-    <div class="entity property" id="hasname">
-        <h3>has name<sup title="datatype property" class="sup-dp">dp</sup></h3>
+    <div class="entity property" id="Arelationtoexpressthenameofanentity(e.g.,animal).">
+        <h3>A relation to express the name of an entity (e.g.,animal).<sup title="datatype property" class="sup-dp">dp</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
@@ -1058,6 +1080,8 @@
         <dd><code>http://www.w3.org/ns/prov#</code></dd>
         <dt>qb</dt>
         <dd><code>http://purl.org/linked-data/cube#</code></dd>
+        <dt>qudt</dt>
+        <dd><code>http://qudt.org/schema/qudt/</code></dd>
         <dt>rdf</dt>
         <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
         <dt>rdfs</dt>

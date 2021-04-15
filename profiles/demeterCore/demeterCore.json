@@ -27,6 +27,11 @@
             },
             "required": []
         },
+        "ngsi-ld:Value": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
         "ngsi-ld:Property": {
             "type": "object",
             "properties": {
@@ -37,11 +42,6 @@
                     }
                 }
             },
-            "required": []
-        },
-        "ngsi-ld:Value": {
-            "type": "object",
-            "properties": {},
             "required": []
         }
     }

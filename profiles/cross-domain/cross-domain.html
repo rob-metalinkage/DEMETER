@@ -254,8 +254,10 @@
         <dt>Imports</dt>
         <dd>
             <a href="http://purl.oclc.org/NET/ssnx/qu/qu">http://purl.oclc.org/NET/ssnx/qu/qu</a><br/>
+            <a href="http://qudt.org/schema/qudt">http://qudt.org/schema/qudt</a><br/>
             <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a><br/>
             <a href="http://www.opengis.net/ont/sf">http://www.opengis.net/ont/sf</a><br/>
+            <a href="http://www.w3.org/2006/time">http://www.w3.org/2006/time</a><br/>
             <a href="http://www.w3.org/ns/sosa">http://www.w3.org/ns/sosa</a><br/>
             <a href="http://www.w3.org/ns/ssn">http://www.w3.org/ns/ssn</a><br/>
             <a href="http://xmlns.com/foaf/0.1">http://xmlns.com/foaf/0.1</a><br/>
@@ -296,10 +298,12 @@
     <ul class="hlist">
         <li><a href="#Acceleration">Acceleration</a></li>
         <li><a href="#ActuatableProperty">Actuatable Property</a></li>
+        <li><a href="#Actuation">Actuation</a></li>
         <li><a href="#Agent">Agent</a></li>
         <li><a href="#Attachable(abstract)">Attachable (abstract)</a></li>
         <li><a href="#Attributeproperty">Attribute property</a></li>
         <li><a href="#Codedproperty">Coded property</a></li>
+        <li><a href="#Collectionofobservations">Collection of observations</a></li>
         <li><a href="#Componentproperty(abstract)">Component property (abstract)</a></li>
         <li><a href="#Componentset">Component set</a></li>
         <li><a href="#Componentspecification">Component specification</a></li>
@@ -328,6 +332,7 @@
         <li><a href="#LineString">Line String</a></li>
         <li><a href="#LinearRing">Linear Ring</a></li>
         <li><a href="#MassPerTimePerArea">MassPerTimePerArea</a></li>
+        <li><a href="#Measure">Measure</a></li>
         <li><a href="#Measureproperty">Measure property</a></li>
         <li><a href="#MultiCurve">Multi Curve</a></li>
         <li><a href="#MultiLineString">Multi Line String</a></li>
@@ -347,8 +352,12 @@
         <li><a href="#Polygon">Polygon</a></li>
         <li><a href="#PolyhedralSurface">Polyhedral Surface</a></li>
         <li><a href="#Power">Power</a></li>
+        <li><a href="#Procedure">Procedure</a></li>
         <li><a href="#Property1">Property</a></li>
-        <li><a href="#PropertyKind">PropertyKind</a></li>
+        <li><a href="#PropertyKind">PropertyKind </a></li>
+        <li><a href="#Quantity">Quantity</a></li>
+        <li><a href="#QuantityKind1">Quantity Kind</a></li>
+        <li><a href="#Quantityvalue">Quantity value</a></li>
         <li><a href="#QuantityKind">QuantityKind</a></li>
         <li><a href="#RadianceExposure">RadianceExposure</a></li>
         <li><a href="#Result">Result</a></li>
@@ -356,7 +365,9 @@
         <li><a href="#RotationalSpeed">RotationalSpeed</a></li>
         <li><a href="#SF_SamplingFeature">SF_SamplingFeature</a></li>
         <li><a href="#Sample">Sample</a></li>
+        <li><a href="#Sampling">Sampling</a></li>
         <li><a href="#Scheme">Scheme</a></li>
+        <li><a href="#Sensor">Sensor</a></li>
         <li><a href="#Slice">Slice</a></li>
         <li><a href="#Slicekey">Slice key</a></li>
         <li><a href="#SpatialObject">SpatialObject</a></li>
@@ -366,10 +377,17 @@
         <li><a href="#SurfaceDensity">SurfaceDensity</a></li>
         <li><a href="#System">System</a></li>
         <li><a href="#Temperature">Temperature</a></li>
+        <li><a href="#Temporalduration">Temporal duration</a></li>
+        <li><a href="#Temporalentity">Temporal entity</a></li>
+        <li><a href="#Temporalunit">Temporal unit</a></li>
         <li><a href="#ThermalConductivity">ThermalConductivity</a></li>
+        <li><a href="#Timeinstant">Time instant</a></li>
+        <li><a href="#Timeinterval">Time interval</a></li>
         <li><a href="#Triangle">Triangle</a></li>
         <li><a href="#TriangulatedIrregularNetwork">Triangulated Irregular Network</a></li>
+        <li><a href="#Unit">Unit</a></li>
         <li><a href="#VelocityOrSpeed">VelocityOrSpeed</a></li>
+        <li><a href="#duracindetiempo">duración de tiempo</a></li>
         <li><a href="#point">point</a></li>
     </ul>
     <div class="entity class" id="GFI_DomainFeature">
@@ -431,10 +449,16 @@
                 </td>
             </tr>
             <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Entity">ngsi-ld:Entity</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature">iso19156_SF:SF_SamplingFeature</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature">iso19156_GFI:GFI_DomainFeature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature">iso19156_SF:SF_SamplingFeature</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -462,6 +486,12 @@
                 <th>Description</th>
                 <td>
                     <p>Observation process is a subtype of OM_Process. It is a process used to generate the result of the observation.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Entity">ngsi-ld:Entity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -495,6 +525,27 @@
                 <th>In domain of</th>
                 <td>
                     <a href="http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature">iso19156_SF:SF_SamplingFeature.sampledFeature</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Measure">
+        <h3>Measure<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#Measure</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Entity">ngsi-ld:Entity</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Alignments</th>
+                <td class="highlight-alignment">
+                    <a href="qudt:QuantityValue">qudt:QuantityValue</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -899,7 +950,7 @@
         </table>
     </div>
     <div class="entity class" id="PropertyKind">
-        <h3>PropertyKind<sup title="class" class="sup-c">c</sup></h3>
+        <h3>PropertyKind <sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
@@ -956,32 +1007,32 @@ quantities of the same dimension are not necessarily of the same kind.</p>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    (<a href="ub24bL710C34">ub24bL710C34</a><sup class="sup-c" title="class">c</sup> and <a href="ub24bL713C51">ub24bL713C51</a><sup class="sup-c" title="class">c</sup> and <a href="ub24bL716C80">ub24bL716C80</a><sup class="sup-c" title="class">c</sup> and <a href="ub24bL719C80">ub24bL719C80</a><sup class="sup-c" title="class">c</sup> and <a href="ub24bL722C59">ub24bL722C59</a><sup class="sup-c" title="class">c</sup>)<br/>
-                    <a href="http://www.w3.org/2004/02/skos/core#Scheme">skos:Scheme</a><sup class="sup-c" title="class">c</sup><br/>
+                    (<a href="ub26bL710C34">ub26bL710C34</a><sup class="sup-c" title="class">c</sup> and <a href="ub26bL713C51">ub26bL713C51</a><sup class="sup-c" title="class">c</sup> and <a href="ub26bL716C80">ub26bL716C80</a><sup class="sup-c" title="class">c</sup> and <a href="ub26bL719C80">ub26bL719C80</a><sup class="sup-c" title="class">c</sup> and <a href="ub26bL722C59">ub26bL722C59</a><sup class="sup-c" title="class">c</sup>)<br/>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Entity">ngsi-ld:Entity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#MassPerTimePerArea">dim:MassPerTimePerArea</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#Concentration">dim:Concentration</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.oclc.org/NET/ssnx/qu/dim#Temperature">dim:Temperature</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#Distance">dim:Distance</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#RadianceExposure">dim:RadianceExposure</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.oclc.org/NET/ssnx/qu/dim#EnergyDensity">dim:EnergyDensity</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#StressOrPressure">dim:StressOrPressure</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#EnergyFlux">dim:EnergyFlux</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#Acceleration">dim:Acceleration</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#SpecificEntropy">dim:SpecificEntropy</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#RotationalSpeed">dim:RotationalSpeed</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity">dim:ThermalConductivity</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#Density">dim:Density</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#Compressibility">dim:Compressibility</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeed">dim:VelocityOrSpeed</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#Dimensionless">dim:Dimensionless</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#Compressibility">dim:Compressibility</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.oclc.org/NET/ssnx/qu/dim#Energy">dim:Energy</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#Density">dim:Density</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#ThermalConductivity">dim:ThermalConductivity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#Acceleration">dim:Acceleration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#RotationalSpeed">dim:RotationalSpeed</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#Concentration">dim:Concentration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#Distance">dim:Distance</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#Dimensionless">dim:Dimensionless</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#SpecificEntropy">dim:SpecificEntropy</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#StressOrPressure">dim:StressOrPressure</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.oclc.org/NET/ssnx/qu/dim#Power">dim:Power</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.oclc.org/NET/ssnx/qu/dim#SurfaceDensity">dim:SurfaceDensity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#EnergyFlux">dim:EnergyFlux</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#MassPerTimePerArea">dim:MassPerTimePerArea</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.oclc.org/NET/ssnx/qu/dim#RadianceExposure">dim:RadianceExposure</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1014,8 +1065,8 @@ quantities of the same dimension are not necessarily of the same kind.</p>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://purl.org/linked-data/cube#Observation">qb:Observation</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.org/linked-data/cube#Slice">qb:Slice</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/linked-data/cube#Observation">qb:Observation</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1109,9 +1160,9 @@ quantities of the same dimension are not necessarily of the same kind.</p>
             <tr>
                 <th>Sub-classes</th>
                 <td>
+                    <a href="http://purl.org/linked-data/cube#CodedProperty">qb:CodedProperty</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.org/linked-data/cube#AttributeProperty">qb:AttributeProperty</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.org/linked-data/cube#MeasureProperty">qb:MeasureProperty</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.org/linked-data/cube#CodedProperty">qb:CodedProperty</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.org/linked-data/cube#DimensionProperty">qb:DimensionProperty</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
@@ -1157,9 +1208,9 @@ quantities of the same dimension are not necessarily of the same kind.</p>
             <tr>
                 <th>Sub-classes</th>
                 <td>
+                    <a href="http://purl.org/linked-data/cube#ComponentSpecification">qb:ComponentSpecification</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.org/linked-data/cube#DataStructureDefinition">qb:DataStructureDefinition</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.org/linked-data/cube#SliceKey">qb:SliceKey</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.org/linked-data/cube#ComponentSpecification">qb:ComponentSpecification</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -1198,8 +1249,8 @@ quantities of the same dimension are not necessarily of the same kind.</p>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://purl.org/linked-data/cube#order">qb:order</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="http://purl.org/linked-data/cube#componentAttachment">qb:componentAttachment</a><br/>
+                    <a href="http://purl.org/linked-data/cube#order">qb:order</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -1277,8 +1328,8 @@ quantities of the same dimension are not necessarily of the same kind.</p>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://purl.org/linked-data/cube#component">qb:component</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://purl.org/linked-data/cube#sliceKey">qb:sliceKey</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://purl.org/linked-data/cube#component">qb:component</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1508,6 +1559,218 @@ quantities of the same dimension are not necessarily of the same kind.</p>
             </tr>
         </table>
     </div>
+    <div class="entity class" id="Quantity">
+        <h3>Quantity<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://qudt.org/schema/qudt/Quantity</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    http://qudt.org/2.1/schema/qudt
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p class="lm-para">A <b>quantity</b> is the measurement of an observable property of a particular object, event, or physical system. A quantity is always associated with the context of measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the underlying <b>quantity kind</b> is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific quantity of length; its magnitude that may be expressed in meters, feet, inches, etc. Examples of physical quantities include physical constants, such as the speed of light in a vacuum, Planck's constant, the electric permittivity of free space, and the fine structure constant. </p>
+
+<p class="lm-para">In other words, quantities are quantifiable aspects of the world, such as the duration of a movie, the distance between two points, velocity of a car, the pressure of the atmosphere, and a person's weight; and units are used to describe their numerical measure.
+
+<p class="lm-para">Many <b>quantity kinds</b> are related to each other by various physical laws, and as a result, the associated units of some quantity kinds can be expressed as products (or ratios) of powers of other quantity kinds (e.g., momentum is mass times velocity and velocity is defined as distance divided by time). In this way, some quantities can be calculated from other measured quantities using their associations to the quantity kinds in these expressions. These quantity kind relationships are also discussed in dimensional analysis. Those that cannot be so expressed can be regarded as "fundamental" in this sense.</p>
+<p class="lm-para">A quantity is distinguished from a "quantity kind" in that the former carries a value and the latter is a type specifier.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://qudt.org/schema/qudt/Concept">qudt:Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Entity">ngsi-ld:Entity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://qudt.org/schema/qudt/Quantifiable">qudt:Quantifiable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://qudt.org/schema/qudt/hasQuantityKind">qudt:hasQuantityKind</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 0<br/>
+                    <a href="http://qudt.org/schema/qudt/isDeltaQuantity">qudt:isDeltaQuantity</a> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#boolean">xsd:boolean</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://qudt.org/schema/qudt/hasQuantityKind">qudt:hasQuantityKind</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://qudt.org/schema/qudt/QuantityKind">qudt:QuantityKind</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://qudt.org/schema/qudt/quantityValue">qudt:quantityValue</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://qudt.org/schema/qudt/QuantityValue">qudt:QuantityValue</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="QuantityKind1">
+        <h3>Quantity Kind<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://qudt.org/schema/qudt/QuantityKind</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    http://qudt.org/schema/qudt
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A <b>Quantity Kind</b> is any observable property that can be  measured and quantified numerically. Familiar examples include physical properties such as length, mass, time, force, energy, power, electric charge, etc. Less familiar examples include currency, interest rate, price to earning ratio, and information capacity.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://qudt.org/schema/qudt/Verifiable">qudt:Verifiable</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Entity">ngsi-ld:Entity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://qudt.org/schema/qudt/AbstractQuantityKind">qudt:AbstractQuantityKind</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Alignments</th>
+                <td class="highlight-alignment">
+                    <a href="qu:QuantityKind">qu:QuantityKind</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://qudt.org/schema/qudt/baseUSCustomaryUnitDimensions">qudt:baseUSCustomaryUnitDimensions</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://qudt.org/schema/qudt/baseSIUnitDimensions">qudt:baseSIUnitDimensions</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://qudt.org/schema/qudt/dimensionVectorForSI">qudt:dimensionVectorForSI</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://qudt.org/schema/qudt/qkdvNumerator">qudt:qkdvNumerator</a> <span class="cardinality">max</span> 1 <a href="http://qudt.org/schema/qudt/QuantityKindDimensionVector">qudt:QuantityKindDimensionVector</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://qudt.org/schema/qudt/hasDimensionVector">qudt:hasDimensionVector</a> <span class="cardinality">only</span> <a href="http://qudt.org/schema/qudt/QuantityKindDimensionVector">qudt:QuantityKindDimensionVector</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://qudt.org/schema/qudt/dimensionVectorForSI">qudt:dimensionVectorForSI</a> <span class="cardinality">only</span> <a href="http://qudt.org/schema/qudt/QuantityKindDimensionVector_SI">qudt:QuantityKindDimensionVector_SI</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://qudt.org/schema/qudt/baseImperialUnitDimensions">qudt:baseImperialUnitDimensions</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://qudt.org/schema/qudt/applicableCGSUnit">qudt:applicableCGSUnit</a> <span class="cardinality">min</span> 0<br/>
+                    <a href="http://qudt.org/schema/qudt/baseCGSUnitDimensions">qudt:baseCGSUnitDimensions</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://qudt.org/schema/qudt/baseISOUnitDimensions">qudt:baseISOUnitDimensions</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://qudt.org/schema/qudt/expression">qudt:expression</a> <span class="cardinality">min</span> 0<br/>
+                    <a href="http://qudt.org/schema/qudt/isQuantityKindOf">qudt:isQuantityKindOf</a> <span class="cardinality">only</span> <a href="http://qudt.org/schema/qudt/SystemOfQuantityKinds">qudt:SystemOfQuantityKinds</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://qudt.org/schema/qudt/generalization">qudt:generalization</a> <span class="cardinality">only</span> <a href="http://qudt.org/schema/qudt/QuantityKind">qudt:QuantityKind</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://qudt.org/schema/qudt/applicableImperialUnit">qudt:applicableImperialUnit</a> <span class="cardinality">min</span> 0<br/>
+                    <a href="http://qudt.org/schema/qudt/applicableUSCustomaryUnit">qudt:applicableUSCustomaryUnit</a> <span class="cardinality">min</span> 0<br/>
+                    <a href="http://qudt.org/schema/qudt/applicableSIUnit">qudt:applicableSIUnit</a> <span class="cardinality">min</span> 0<br/>
+                    <a href="http://qudt.org/schema/qudt/mathMLdefinition">qudt:mathMLdefinition</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://qudt.org/schema/qudt/latexDefinition">qudt:latexDefinition</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://qudt.org/schema/qudt/qkdvDenominator">qudt:qkdvDenominator</a> <span class="cardinality">max</span> 1 <a href="http://qudt.org/schema/qudt/QuantityKindDimensionVector">qudt:QuantityKindDimensionVector</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://qudt.org/schema/qudt/applicableISOUnit">qudt:applicableISOUnit</a> <span class="cardinality">min</span> 0<br/>
+                    <a href="http://qudt.org/schema/qudt/applicableUnit">qudt:applicableUnit</a> <span class="cardinality">min</span> 0<br/>
+                    <a href="http://qudt.org/schema/qudt/baseUnitDimensions">qudt:baseUnitDimensions</a> <span class="cardinality">max</span> 4<br/>
+                    <a href="http://qudt.org/schema/qudt/generalization">qudt:generalization</a> <span class="cardinality">max</span> 1<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://qudt.org/schema/qudt/hasQuantityKind">qudt:hasQuantityKind</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Quantityvalue">
+        <h3>Quantity value<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://qudt.org/schema/qudt/QuantityValue</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    http://qudt.org/schema/qudt
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A <i>Quantity Value</i> expresses the magnitude and kind of a quantity and is given by the product of a numerical value <code>n</code> and a unit of measure <code>U</code>. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to <a href="http://physics.nist.gov/Pubs/SP811/sec07.html">NIST SP 811 section 7</a> for more on quantity values.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://qudt.org/schema/qudt/Concept">qudt:Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Entity">ngsi-ld:Entity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://qudt.org/schema/qudt/Quantifiable">qudt:Quantifiable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://qudt.org/schema/qudt/unit">qudt:unit</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://qudt.org/schema/qudt/quantityValue">qudt:quantityValue</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Unit">
+        <h3>Unit<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://qudt.org/schema/qudt/Unit</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    http://qudt.org/2.1/schema/qudt
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  (Q = nU).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://qudt.org/schema/qudt/Concept">qudt:Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Entity">ngsi-ld:Entity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://qudt.org/schema/qudt/Verifiable">qudt:Verifiable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://qudt.org/schema/qudt/numeratorDimensionVector">qudt:numeratorDimensionVector</a> <span class="cardinality">only</span> <a href="http://qudt.org/schema/qudt/QuantityKindDimensionVector">qudt:QuantityKindDimensionVector</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://qudt.org/schema/qudt/numeratorDimensionVector">qudt:numeratorDimensionVector</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://qudt.org/schema/qudt/expression">qudt:expression</a> <span class="cardinality">min</span> 0<br/>
+                    <a href="http://qudt.org/schema/qudt/hasQuantityKind">qudt:hasQuantityKind</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://qudt.org/schema/qudt/QuantityKind">qudt:QuantityKind</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://qudt.org/schema/qudt/siUnitsExpression">qudt:siUnitsExpression</a> <span class="cardinality">min</span> 0<br/>
+                    <a href="http://qudt.org/schema/qudt/unitOfSystem">qudt:unitOfSystem</a> <span class="cardinality">only</span> <a href="http://qudt.org/schema/qudt/SystemOfUnits">qudt:SystemOfUnits</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://qudt.org/schema/qudt/latexSymbol">qudt:latexSymbol</a> <span class="cardinality">min</span> 0<br/>
+                    <a href="http://qudt.org/schema/qudt/conversionMultiplier">qudt:conversionMultiplier</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://qudt.org/schema/qudt/mathMLdefinition">qudt:mathMLdefinition</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://qudt.org/schema/qudt/symbol">qudt:symbol</a> <span class="cardinality">min</span> 0<br/>
+                    <a href="http://qudt.org/schema/qudt/hasDimensionVector">qudt:hasDimensionVector</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://qudt.org/schema/qudt/denominatorDimensionVector">qudt:denominatorDimensionVector</a> <span class="cardinality">only</span> <a href="http://qudt.org/schema/qudt/QuantityKindDimensionVector">qudt:QuantityKindDimensionVector</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://qudt.org/schema/qudt/iec61360Code">qudt:iec61360Code</a> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://qudt.org/schema/qudt/ucumCode">qudt:ucumCode</a> <span class="cardinality">only</span> <a href="http://qudt.org/schema/qudt/UCUMcs">qudt:UCUMcs</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://qudt.org/schema/qudt/hasDimensionVector">qudt:hasDimensionVector</a> <span class="cardinality">only</span> <a href="http://qudt.org/schema/qudt/QuantityKindDimensionVector">qudt:QuantityKindDimensionVector</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://qudt.org/schema/qudt/denominatorDimensionVector">qudt:denominatorDimensionVector</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://qudt.org/schema/qudt/latexDefinition">qudt:latexDefinition</a> <span class="cardinality">min</span> 0<br/>
+                    <a href="http://qudt.org/schema/qudt/conversionOffset">qudt:conversionOffset</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://qudt.org/schema/qudt/abbreviation">qudt:abbreviation</a> <span class="cardinality">max</span> 1<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://qudt.org/schema/qudt/unit">qudt:unit</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity class" id="Feature">
         <h3>Feature<sup title="class" class="sup-c">c</sup></h3>
         <table>
@@ -1566,7 +1829,7 @@ quantities of the same dimension are not necessarily of the same kind.</p>
             <tr class="importeddef">
                 <th>Is Defined By</th>
                 <td>
-                    http://www.opengis.net/ont/geosparql
+                    http://www.opengis.net/spec/geosparql/1.0
                 </td>
             </tr>
             <tr>
@@ -1587,15 +1850,15 @@ quantities of the same dimension are not necessarily of the same kind.</p>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://www.opengis.net/ont/sf#Geometry">sf:Geometry</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/2003/01/geo/wgs84_pos#Point">wgs84_pos:Point</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.opengis.net/ont/sf#Geometry">sf:Geometry</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.opengis.net/ont/geosparql#asWKT">geo:asWKT</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="http://www.opengis.net/ont/geosparql#hasSerialization">geo:hasSerialization</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="http://www.opengis.net/ont/geosparql#asWKT">geo:asWKT</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -1616,13 +1879,15 @@ quantities of the same dimension are not necessarily of the same kind.</p>
             <tr class="importeddef">
                 <th>Is Defined By</th>
                 <td>
-                    http://www.opengis.net/ont/geosparql
+                    http://www.opengis.net/spec/geosparql/1.0
                 </td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>The class spatial-object represents everything that can have a spatial representation. It is superclass of feature and geometry.</p>
+                    <pre><code>  The class spatial-object represents everything that can have 
+  a spatial representation. It is superclass of feature and geometry.
+</code></pre>
                 </td>
             </tr>
             <tr>
@@ -1634,24 +1899,23 @@ quantities of the same dimension are not necessarily of the same kind.</p>
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="http://www.opengis.net/ont/geosparql#sfContains">geo:sfContains</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.opengis.net/ont/geosparql#SpatialObject">geo:SpatialObject</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.opengis.net/ont/geosparql#hasGeometry">geo:hasGeometry</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.opengis.net/ont/geosparql#Geometry">geo:Geometry</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.w3.org/2003/01/geo/wgs84_pos#location">wgs84_pos:location</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2003/01/geo/wgs84_pos#Point">wgs84_pos:Point</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.opengis.net/ont/geosparql#sfWithin">geo:sfWithin</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.opengis.net/ont/geosparql#SpatialObject">geo:SpatialObject</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.opengis.net/ont/geosparql#sfContains">geo:sfContains</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.opengis.net/ont/geosparql#SpatialObject">geo:SpatialObject</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.opengis.net/ont/geosparql#Geometry">geo:Geometry</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="http://www.opengis.net/ont/geosparql#sfContains">geo:sfContains</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.opengis.net/ont/geosparql#sfWithin">geo:sfWithin</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.opengis.net/ont/geosparql#sfContains">geo:sfContains</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -1735,10 +1999,10 @@ All Geometry classes described in this specification are defined so that instanc
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://www.opengis.net/ont/sf#Surface">sf:Surface</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.opengis.net/ont/sf#Point">sf:Point</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.opengis.net/ont/sf#GeometryCollection">sf:GeometryCollection</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.opengis.net/ont/sf#Surface">sf:Surface</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.opengis.net/ont/sf#Curve">sf:Curve</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.opengis.net/ont/sf#Point">sf:Point</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1774,8 +2038,8 @@ GeometryCollection places no other constraints on its elements. Subclasses of Ge
                 <th>Sub-classes</th>
                 <td>
                     <a href="http://www.opengis.net/ont/sf#MultiSurface">sf:MultiSurface</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.opengis.net/ont/sf#MultiPoint">sf:MultiPoint</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.opengis.net/ont/sf#MultiCurve">sf:MultiCurve</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.opengis.net/ont/sf#MultiPoint">sf:MultiPoint</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2168,8 +2432,8 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://www.opengis.net/ont/sf#PolyhedralSurface">sf:PolyhedralSurface</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.opengis.net/ont/sf#Polygon">sf:Polygon</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.opengis.net/ont/sf#PolyhedralSurface">sf:PolyhedralSurface</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2244,14 +2508,17 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>A point, typically described using a coordinate system relative to Earth, such as WGS84.</p>
+                    <p>Uniquely identified by lat/long/alt. i.e.</p>
+<p>spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),
+  lat(P2, LAT), long(P2, LONG), alt(P2, ALT).</p>
+<p>sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">wgs84_pos:SpatialThing</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.opengis.net/ont/geosparql#Geometry">geo:Geometry</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">wgs84_pos:SpatialThing</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2269,10 +2536,191 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
                     <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Entity">ngsi-ld:Entity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
+        </table>
+    </div>
+    <div class="entity class" id="duracindetiempo">
+        <h3>duración de tiempo<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2006/time#Duration</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Duration of a temporal extent expressed as a number scaled by a temporal unit</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#TemporalDuration">time:TemporalDuration</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#unitType">time:unitType</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://www.w3.org/2006/time#numericDuration">time:numericDuration</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#numericDuration">time:numericDuration</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Timeinstant">
+        <h3>Time instant<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2006/time#Instant</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A temporal entity with zero extent or duration</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#TemporalEntity">time:TemporalEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#inXSDDate">time:inXSDDate</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="http://www.w3.org/2006/time#inXSDDateTimeStamp">time:inXSDDateTimeStamp</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#hasEnd">time:hasEnd</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/2006/time#hasBeginning">time:hasBeginning</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Timeinterval">
+        <h3>Time interval<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2006/time#Interval</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A temporal entity with an extent or duration</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#TemporalEntity">time:TemporalEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Temporalduration">
+        <h3>Temporal duration<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2006/time#TemporalDuration</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Time extent; duration of a time interval separate from its particular start position</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Entity">ngsi-ld:Entity</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind">qu:QuantityKind</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/2006/time#TemporalUnit">time:TemporalUnit</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/2006/time#Duration">time:Duration</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Temporalentity">
+        <h3>Temporal entity<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2006/time#TemporalEntity</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A temporal interval or instant.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Entity">ngsi-ld:Entity</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#Interval">time:Interval</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/2006/time#Instant">time:Instant</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#hasEnd">time:hasEnd</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/2006/time#hasBeginning">time:hasBeginning</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#hasTime">time:hasTime</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Temporalunit">
+        <h3>Temporal unit<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2006/time#TemporalUnit</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A standard duration, which provides a scale factor for a time extent, or the granularity or precision for a time position.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#TemporalDuration">time:TemporalDuration</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#unitType">time:unitType</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2319,6 +2767,74 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             </tr>
         </table>
     </div>
+    <div class="entity class" id="Actuation">
+        <h3>Actuation<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/sosa/Actuation</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    http://www.w3.org/ns/sosa/
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>An Actuation carries out an (Actuation) Procedure to change the state of the world using an Actuator.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Example</th>
+                <td>
+                    <pre>
+                      The activity of automatically closing a window if the temperature in a room drops below 20 degree Celsius. The activity is the Actuation and the device that closes the window is the Actuator. The Procedure is the rule, plan, or specification that defines the conditions that triggers the Actuation, here a drop in temperature. 
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Entity">ngsi-ld:Entity</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/usedProcedure">sosa:usedProcedure</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Procedure">sosa:Procedure</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/madeByActuator">sosa:madeByActuator</a> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a> <span class="cardinality">min</span> 1<br/>
+                    <a href="http://www.w3.org/ns/sosa/madeByActuator">sosa:madeByActuator</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Actuator">sosa:Actuator</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Result">sosa:Result</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/resultTime">sosa:resultTime</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://www.w3.org/ns/sosa/actsOnProperty">sosa:actsOnProperty</a> <span class="cardinality">min</span> 1<br/>
+                    <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/FeatureOfInterest">sosa:FeatureOfInterest</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/actsOnProperty">sosa:actsOnProperty</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/ActuatableProperty">sosa:ActuatableProperty</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domainIncludes of</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/hasSimpleResult">sosa:hasSimpleResult</a><br/>
+                    <a href="http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest">sosa:hasUltimateFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/resultTime">sosa:resultTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/phenomenonTime">sosa:phenomenonTime</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/usedProcedure">sosa:usedProcedure</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In rangeIncludes of</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">sosa:isFeatureOfInterestOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity class" id="FeatureOfInterest">
         <h3>Feature Of Interest<sup title="class" class="sup-c">c</sup></h3>
         <table>
@@ -2349,16 +2865,16 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature">iso19156_GFI:GFI_DomainFeature</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Entity">ngsi-ld:Entity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature">iso19156_GFI:GFI_DomainFeature</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="http://www.w3.org/ns/ssn/hasProperty">ssn:hasProperty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/ssn/Property">ssn:Property</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/ns/ssn/hasProperty">ssn:hasProperty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
                     <a href="http://www.w3.org/ns/sosa/hasSample">sosa:hasSample</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Sample">sosa:Sample</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/ssn/hasProperty">ssn:hasProperty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/ssn/Property">ssn:Property</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -2374,8 +2890,15 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
                 </td>
             </tr>
             <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest">sosa:hasUltimateFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
                 <th>In rangeIncludes of</th>
                 <td>
+                    <a href="http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest">sosa:hasUltimateFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
@@ -2412,15 +2935,21 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
                 <th>Super-classes</th>
                 <td>
                     <a href="http://www.w3.org/ns/ssn/Property">ssn:Property</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Entity">ngsi-ld:Entity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Restrictions</th>
                 <td>
+                    <a href="ub18bL291C28">ub18bL291C28</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/ssn/Stimulus">ssn:Stimulus</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/isObservedBy">sosa:isObservedBy</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Sensor">sosa:Sensor</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="ub22bL291C28">ub22bL291C28</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/ssn/Stimulus">ssn:Stimulus</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="ub22bL285C28">ub22bL285C28</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="ub18bL285C28">ub18bL285C28</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In rangeIncludes of</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/observedProperty">sosa:observedProperty</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/observes">sosa:observes</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2467,28 +2996,33 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Result">sosa:Result</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a> <span class="cardinality">min</span> 1<br/>
-                    <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/FeatureOfInterest">sosa:FeatureOfInterest</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/madeBySensor">sosa:madeBySensor</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="http://www.w3.org/ns/sosa/madeBySensor">sosa:madeBySensor</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Sensor">sosa:Sensor</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.w3.org/ns/sosa/observedProperty">sosa:observedProperty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="http://www.w3.org/ns/sosa/observedProperty">sosa:observedProperty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/ObservableProperty">sosa:ObservableProperty</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.w3.org/ns/ssn/wasOriginatedBy">ssn:wasOriginatedBy</a> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="http://www.w3.org/ns/sosa/usedProcedure">sosa:usedProcedure</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Procedure">sosa:Procedure</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.w3.org/ns/sosa/phenomenonTime">sosa:phenomenonTime</a> <span class="cardinality">exactly</span> 1<br/>
                     <a href="http://www.w3.org/ns/ssn/wasOriginatedBy">ssn:wasOriginatedBy</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/ssn/Stimulus">ssn:Stimulus</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="http://www.w3.org/ns/sosa/resultTime">sosa:resultTime</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://www.w3.org/ns/sosa/phenomenonTime">sosa:phenomenonTime</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://www.w3.org/ns/sosa/observedProperty">sosa:observedProperty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Result">sosa:Result</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/observedProperty">sosa:observedProperty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/ObservableProperty">sosa:ObservableProperty</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a> <span class="cardinality">min</span> 1<br/>
+                    <a href="http://www.w3.org/ns/sosa/madeBySensor">sosa:madeBySensor</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Sensor">sosa:Sensor</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/FeatureOfInterest">sosa:FeatureOfInterest</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/usedProcedure">sosa:usedProcedure</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Procedure">sosa:Procedure</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/ssn/wasOriginatedBy">ssn:wasOriginatedBy</a> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
             <tr>
                 <th>In domainIncludes of</th>
                 <td>
+                    <a href="http://www.w3.org/ns/sosa/phenomenonTime">sosa:phenomenonTime</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a><br/>
+                    <a href="http://www.w3.org/ns/sosa/usedProcedure">sosa:usedProcedure</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/hasSimpleResult">sosa:hasSimpleResult</a><br/>
+                    <a href="http://www.w3.org/ns/sosa/madeBySensor">sosa:madeBySensor</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/resultTime">sosa:resultTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup><br/>
-                    <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a><br/>
-                    <a href="http://www.w3.org/ns/sosa/hasSimpleResult">sosa:hasSimpleResult</a><br/>
+                    <a href="http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest">sosa:hasUltimateFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/observedProperty">sosa:observedProperty</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -2496,6 +3030,64 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
                 <td>
                     <a href="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">sosa:isFeatureOfInterestOf</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/madeObservation">sosa:madeObservation</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/hasMember">sosa:hasMember</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Collectionofobservations">
+        <h3>Collection of observations<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/sosa/ObservationCollection</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    http://www.w3.org/ns/ssn/ext/
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Collection of observations, typically with one or more property shared by all of its members</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Entity">ngsi-ld:Entity</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/hasMember">sosa:hasMember</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/hasMember">sosa:hasMember</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domainIncludes of</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/usedProcedure">sosa:usedProcedure</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/phenomenonTime">sosa:phenomenonTime</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/madeBySensor">sosa:madeBySensor</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/observedProperty">sosa:observedProperty</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/resultTime">sosa:resultTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/hasMember">sosa:hasMember</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In rangeIncludes of</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/hasMember">sosa:hasMember</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2536,8 +3128,57 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="http://www.w3.org/ns/sosa/hosts">sosa:hosts</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/ssn/System">ssn:System</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/ns/ssn/inDeployment">ssn:inDeployment</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/ssn/Deployment">ssn:Deployment</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/hosts">sosa:hosts</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/ssn/System">ssn:System</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Procedure">
+        <h3>Procedure<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/sosa/Procedure</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    http://www.w3.org/ns/sosa/
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world (via an Actuator). A Procedure is re-usable, and might be involved in many Observations, Samplings, or Actuations. It explains the steps to be carried out to arrive at reproducible results.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Example</th>
+                <td>
+                    <pre>
+                      The measured wind speed differs depending on the height of the sensor above the surface, e.g., due to friction. Consequently, procedures for measuring wind speed define a standard height for anemometers above ground, typically 10m for meteorological measures and 2m in Agrometeorology. This definition of height, sensor placement, and so forth are defined by the Procedure.
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Entity">ngsi-ld:Entity</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://www.w3.org/ns/ssn/hasInput">ssn:hasInput</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/ssn/Input">ssn:Input</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/ssn/implementedBy">ssn:implementedBy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/ssn/System">ssn:System</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/ssn/hasOutput">ssn:hasOutput</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/ssn/Output">ssn:Output</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In rangeIncludes of</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/usedProcedure">sosa:usedProcedure</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2567,6 +3208,12 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
                     <pre>
                       The value 20 as the height of a certain tree together with the unit, e.g., Meter.
                     </pre>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Entity">ngsi-ld:Entity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -2605,7 +3252,7 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             <tr>
                 <th>Description</th>
                 <td>
-                    <p>A Sample is the result from an act of Sampling.</p>
+                    <p>Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made.</p>
                 </td>
             </tr>
             <tr>
@@ -2619,6 +3266,7 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             <tr>
                 <th>Super-classes</th>
                 <td>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Entity">ngsi-ld:Entity</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/Result">sosa:Result</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/FeatureOfInterest">sosa:FeatureOfInterest</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
@@ -2649,6 +3297,128 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
                 <td>
                     <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Sampling">
+        <h3>Sampling<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/sosa/Sampling</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    http://www.w3.org/ns/sosa/
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>An act of Sampling carries out a sampling Procedure to create or transform one or more samples.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Example</th>
+                <td>
+                    <pre>
+                      Splitting a piece of drill-core to create two new samples.
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Entity">ngsi-ld:Entity</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://www.w3.org/ns/sosa/resultTime">sosa:resultTime</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://www.w3.org/ns/sosa/madeBySampler">sosa:madeBySampler</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Sampler">sosa:Sampler</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/usedProcedure">sosa:usedProcedure</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Procedure">sosa:Procedure</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/madeBySampler">sosa:madeBySampler</a> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a> <span class="cardinality">min</span> 1<br/>
+                    <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Sample">sosa:Sample</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/FeatureOfInterest">sosa:FeatureOfInterest</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domainIncludes of</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest">sosa:hasUltimateFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/resultTime">sosa:resultTime</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">sosa:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/phenomenonTime">sosa:phenomenonTime</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/usedProcedure">sosa:usedProcedure</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/hasResult">sosa:hasResult</a><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In rangeIncludes of</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">sosa:isFeatureOfInterestOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Sensor">
+        <h3>Sensor<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/sosa/Sensor</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    http://www.w3.org/ns/sosa/
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations, and generate a Result. Sensors can be hosted by Platforms.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Example</th>
+                <td>
+                    <pre>
+                      Accelerometers, gyroscopes, barometers, magnetometers, and so forth are Sensors that are typically mounted on a modern smart phone (which acts as Platform). Other examples of sensors include the human eyes.
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/ns/ssn/System">ssn:System</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Entity">ngsi-ld:Entity</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://www.w3.org/ns/ssn/implements">ssn:implements</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
+                    <a href="http://www.w3.org/ns/sosa/observes">sosa:observes</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/ObservableProperty">sosa:ObservableProperty</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/ssn/detects">ssn:detects</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/ssn/Stimulus">ssn:Stimulus</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/madeObservation">sosa:madeObservation</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domainIncludes of</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/observes">sosa:observes</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In rangeIncludes of</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/madeBySensor">sosa:madeBySensor</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2690,8 +3460,8 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
                 <th>Restrictions</th>
                 <td>
                     <a href="http://www.w3.org/ns/ssn/forProperty">ssn:forProperty</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/ssn/Property">ssn:Property</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.w3.org/ns/ssn/deployedSystem">ssn:deployedSystem</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/ssn/System">ssn:System</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/ns/ssn/deployedOnPlatform">ssn:deployedOnPlatform</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Platform">sosa:Platform</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/ssn/deployedSystem">ssn:deployedSystem</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/ssn/System">ssn:System</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2730,8 +3500,8 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="http://www.w3.org/ns/sosa/ActuatableProperty">sosa:ActuatableProperty</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/ObservableProperty">sosa:ObservableProperty</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/ActuatableProperty">sosa:ActuatableProperty</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2764,11 +3534,17 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="http://www.w3.org/ns/ssn/hasSubSystem">ssn:hasSubSystem</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/ssn/System">ssn:System</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/ns/ssn/hasDeployment">ssn:hasDeployment</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/ssn/Deployment">ssn:Deployment</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="ub22bL474C28">ub22bL474C28</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/ssn/System">ssn:System</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="ub18bL474C28">ub18bL474C28</a> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/ssn/System">ssn:System</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/isHostedBy">sosa:isHostedBy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Platform">sosa:Platform</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/ssn/hasSubSystem">ssn:hasSubSystem</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/ssn/System">ssn:System</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/ns/ssn/implements">ssn:implements</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/ns/sosa/Procedure">sosa:Procedure</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/Sensor">sosa:Sensor</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2813,8 +3589,8 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://schema.org/Organization">sdo:Organization</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://xmlns.com/foaf/0.1/Person">foaf:Person</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://schema.org/Organization">sdo:Organization</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -2847,16 +3623,16 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">wgs84_pos:SpatialThing</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://xmlns.com/foaf/0.1/Agent">foaf:Agent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">wgs84_pos:SpatialThing</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Alignments</th>
                 <td class="highlight-alignment">
-                    <a href="sdo:Person">sdo:Person</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="ns1:Person">ns1:Person</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/2000/10/swap/pim/contact#Person">http://www.w3.org/2000/10/swap/pim/contact#Person</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="ns2:Person">ns2:Person</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="sdo:Person">sdo:Person</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2868,23 +3644,23 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
                 <th>URI</th>
                 <td><code>https://schema.org/Organization</code></td>
             </tr>
-            <tr class="importeddef">
+            <tr>
                 <th>Is Defined By</th>
                 <td>
-                    http://schema.org/Organization
+                    https://schema.org/Organization
                 </td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    
+                    <p>An organization such as a school, NGO, corporation, club, etc.</p>
                 </td>
             </tr>
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://xmlns.com/foaf/0.1/Agent">foaf:Agent</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://schema.org/Thing">sdo:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://xmlns.com/foaf/0.1/Agent">foaf:Agent</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -2960,25 +3736,41 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://schema.org/Role">sdo:Role</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.org/linked-data/cube#ComponentProperty">qb:ComponentProperty</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.org/linked-data/cube#ObservationGroup">qb:ObservationGroup</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.org/linked-data/cube#Attachable">qb:Attachable</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.w3.org/ns/ssn/Deployment">ssn:Deployment</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.org/linked-data/cube#DataSet">qb:DataSet</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.w3.org/ns/sosa/Platform">sosa:Platform</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.w3.org/2004/02/skos/core#Scheme">skos:Scheme</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/2006/time#TemporalDuration">time:TemporalDuration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/Sampling">sosa:Sampling</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/Result">sosa:Result</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://purl.org/linked-data/cube#ComponentSet">qb:ComponentSet</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://schema.org/Person">sdo:Person</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.w3.org/ns/sosa/FeatureOfInterest">sosa:FeatureOfInterest</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/Platform">sosa:Platform</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/ns/ssn/Property">ssn:Property</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://xmlns.com/foaf/0.1/Agent">foaf:Agent</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind">qu:PropertyKind</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.w3.org/ns/sosa/ObservableProperty">sosa:ObservableProperty</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/Sample">sosa:Sample</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/linked-data/cube#ComponentProperty">qb:ComponentProperty</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/ActuatableProperty">sosa:ActuatableProperty</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/2006/time#TemporalEntity">time:TemporalEntity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://xmlns.com/foaf/0.1/Agent">foaf:Agent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/linked-data/cube#Attachable">qb:Attachable</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/linked-data/cube#DataSet">qb:DataSet</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://qudt.org/schema/qudt/Unit">qudt:Unit</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#Measure">iso19103:Measure</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/2004/02/skos/core#Scheme">skos:Scheme</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind">qu:QuantityKind</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/ssn/Deployment">ssn:Deployment</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.opengis.net/ont/geosparql#SpatialObject">geo:SpatialObject</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/FeatureOfInterest">sosa:FeatureOfInterest</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://qudt.org/schema/qudt/QuantityKind">qudt:QuantityKind</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/ObservationCollection">sosa:ObservationCollection</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.org/linked-data/cube#ObservationGroup">qb:ObservationGroup</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind">qu:PropertyKind</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://qudt.org/schema/qudt/Quantity">qudt:Quantity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://def.isotc211.org/iso19156/2011/Observation#OM_Observation">iso19156_OB:OM_Observation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature">iso19156_GFI:GFI_Feature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/Procedure">sosa:Procedure</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/Actuation">sosa:Actuation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://schema.org/Person">sdo:Person</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/sosa/Sensor">sosa:Sensor</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://qudt.org/schema/qudt/QuantityValue">qudt:QuantityValue</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/ns/ssn/System">ssn:System</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://schema.org/Role">sdo:Role</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -2999,22 +3791,37 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
         <li><a href="#slice">slice</a></li>
         <li><a href="#slicekey">slice key</a></li>
         <li><a href="#slicestructure">slice structure</a></li>
+        <li><a href="#hasquantitykind">has quantity kind</a></li>
+        <li><a href="#quantityvalue">quantity value</a></li>
+        <li><a href="#unit">unit</a></li>
         <li><a href="#hasGeometry">hasGeometry</a></li>
         <li><a href="#contains">contains</a></li>
         <li><a href="#within">within</a></li>
         <li><a href="#location">location</a></li>
+        <li><a href="#hasbeginning">has beginning</a></li>
+        <li><a href="#hasend">has end</a></li>
+        <li><a href="#hastime">has time</a></li>
+        <li><a href="#temporalunittype">temporal unit type</a></li>
         <li><a href="#hasfeatureofinterest">has feature of interest</a></li>
+        <li><a href="#memberobservation">member observation</a></li>
+        <li><a href="#hasultimatefeatureofinterest">has ultimate feature of interest</a></li>
         <li><a href="#hosts">hosts</a></li>
         <li><a href="#isfeatureofinterestof">is feature of interest of</a></li>
         <li><a href="#ishostedby">is hosted by</a></li>
         <li><a href="#madebysensor">made by sensor</a></li>
         <li><a href="#madeobservation">made observation</a></li>
         <li><a href="#observedproperty">observed property</a></li>
+        <li><a href="#observes">observes</a></li>
+        <li><a href="#phenomenontime">phenomenon time</a></li>
+        <li><a href="#usedprocedure">used procedure</a></li>
         <li><a href="#deployedonplatform">deployed on platform</a></li>
         <li><a href="#deployedsystem">deployed system</a></li>
         <li><a href="#hasdeployment">has deployment</a></li>
+        <li><a href="#hasinput">has input</a></li>
+        <li><a href="#hasoutput">has output</a></li>
         <li><a href="#hasproperty">has property</a></li>
         <li><a href="#hassubsystem">has subsystem</a></li>
+        <li><a href="#implementedby">implemented by</a></li>
         <li><a href="#implements">implements</a></li>
         <li><a href="#indeployment">in deployment</a></li>
         <li><a href="#ispropertyof">is property of</a></li>
@@ -3044,8 +3851,8 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             <tr>
                 <th>Range(s)</th>
                 <td>
-                    <a href="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature">iso19156_GFI:GFI_Feature</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_DomainFeature">iso19156_GFI:GFI_DomainFeature</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature">iso19156_GFI:GFI_Feature</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -3461,6 +4268,99 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             </tr>
         </table>
     </div>
+    <div class="entity property" id="hasquantitykind">
+        <h3>has quantity kind<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://qudt.org/schema/qudt/hasQuantityKind</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    http://qudt.org/schema/qudt
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Relationship">ngsi-ld:Relationship</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://qudt.org/schema/qudt/isQuantityKindOf">qudt:isQuantityKindOf</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://qudt.org/schema/qudt/QuantityKind">qudt:QuantityKind</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="quantityvalue">
+        <h3>quantity value<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://qudt.org/schema/qudt/quantityValue</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    http://qudt.org/schema/qudt
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Relationship">ngsi-ld:Relationship</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://qudt.org/schema/qudt/QuantityValue">qudt:QuantityValue</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="unit">
+        <h3>unit<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://qudt.org/schema/qudt/unit</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    http://qudt.org/2.1/schema/qudt
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Relationship">ngsi-ld:Relationship</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://qudt.org/schema/qudt/unitFor">qudt:unitFor</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://qudt.org/schema/qudt/Unit">qudt:Unit</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity property" id="hasGeometry">
         <h3>hasGeometry<sup title="object property" class="sup-op">op</sup></h3>
         <table>
@@ -3471,7 +4371,7 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             <tr class="importeddef">
                 <th>Is Defined By</th>
                 <td>
-                    http://www.opengis.net/ont/geosparql
+                    http://www.opengis.net/spec/geosparql/1.0
                 </td>
             </tr>
             <tr>
@@ -3518,10 +4418,7 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             <tr>
                 <th>Description</th>
                 <td>
-                    
-      Exists if the subject SpatialObject spatially contains the 
-      object SpatialObject. DE-9IM: T*****FF*
-    
+                    Exists if the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*
                 </td>
             </tr>
             <tr>
@@ -3554,7 +4451,7 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             <tr class="importeddef">
                 <th>Is Defined By</th>
                 <td>
-                    http://www.opengis.net/spec/geosparql/1.0
+                    http://www.opengis.net/ont/geosparql
                 </td>
             </tr>
             <tr>
@@ -3617,6 +4514,120 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             </tr>
         </table>
     </div>
+    <div class="entity property" id="hasbeginning">
+        <h3>has beginning<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2006/time#hasBeginning</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Beginning of a temporal entity
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#hasTime">time:hasTime</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#TemporalEntity">time:TemporalEntity</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#Instant">time:Instant</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasend">
+        <h3>has end<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2006/time#hasEnd</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    End of a temporal entity.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#hasTime">time:hasTime</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#TemporalEntity">time:TemporalEntity</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#Instant">time:Instant</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hastime">
+        <h3>has time<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2006/time#hasTime</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Supports the association of a temporal entity (instant or interval) to any thing
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#TemporalEntity">time:TemporalEntity</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="temporalunittype">
+        <h3>temporal unit type<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2006/time#unitType</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The temporal unit which provides the precision of a date-time value or scale of a temporal extent
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="http://www.w3.org/2006/time#GeneralDateTimeDescription">time:GeneralDateTimeDescription</a><sup class="sup-c" title="class">c</sup> or <a href="http://www.w3.org/2006/time#Duration">time:Duration</a><sup class="sup-c" title="class">c</sup>)
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#TemporalUnit">time:TemporalUnit</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity property" id="hasfeatureofinterest">
         <h3>has feature of interest<sup title="object property" class="sup-op">op</sup></h3>
         <table>
@@ -3661,8 +4672,9 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
                 <td>
                     (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
                     <a href="http://www.w3.org/ns/sosa/Actuation">sosa:Actuation</a><sup class="sup-c" title="class">c</sup>
-                    <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/ObservationCollection">sosa:ObservationCollection</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://www.w3.org/ns/sosa/Sampling">sosa:Sampling</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -3670,6 +4682,90 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
                 <td>
                     (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
                     <a href="http://www.w3.org/ns/sosa/Sample">sosa:Sample</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/FeatureOfInterest">sosa:FeatureOfInterest</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="memberobservation">
+        <h3>member observation<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/sosa/hasMember</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    http://www.w3.org/ns/ssn/ext/
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Link to a member within a collection of (observations) or (collections of observations) that share the same value for one or more of the characteristic properties
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Relationship">ngsi-ld:Relationship</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/ObservationCollection">sosa:ObservationCollection</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://www.w3.org/ns/sosa/ObservationCollection">sosa:ObservationCollection</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/ObservationCollection">sosa:ObservationCollection</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/ObservationCollection">sosa:ObservationCollection</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasultimatefeatureofinterest">
+        <h3>has ultimate feature of interest<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    http://www.w3.org/ns/ssn/ext/
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Relationship">ngsi-ld:Relationship</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup> or <a href="http://www.w3.org/ns/sosa/Sampling">sosa:Sampling</a><sup class="sup-c" title="class">c</sup> or <a href="http://www.w3.org/ns/sosa/Actuation">sosa:Actuation</a><sup class="sup-c" title="class">c</sup>)
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/Actuation">sosa:Actuation</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/Sampling">sosa:Sampling</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/ns/sosa/FeatureOfInterest">sosa:FeatureOfInterest</a><sup class="sup-c" title="class">c</sup>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
                     <a href="http://www.w3.org/ns/sosa/FeatureOfInterest">sosa:FeatureOfInterest</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
@@ -3691,7 +4787,7 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             <tr>
                 <th>Description</th>
                 <td>
-                    Relation between a platform and the systems it hosts.
+                    Relation between a Platform and a Sensor, Actuator, Sampler, or Platform, hosted or mounted on it.
                 </td>
             </tr>
             <tr>
@@ -3746,8 +4842,8 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
                 <td>
                     (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
                     <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup>
-                    <a href="http://www.w3.org/ns/sosa/Actuation">sosa:Actuation</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://www.w3.org/ns/sosa/Sampling">sosa:Sampling</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/Actuation">sosa:Actuation</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -3768,7 +4864,7 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             <tr>
                 <th>Description</th>
                 <td>
-                    Relation between a Sensor, Actuator, Sampler, or Platform, and the Platform that it is mounted on or hosted by.
+                    Relation between a system and its hosting platform.
                 </td>
             </tr>
             <tr>
@@ -3808,6 +4904,21 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
                 <th>Inverse properties</th>
                 <td>
                     <a href="http://www.w3.org/ns/sosa/madeObservation">sosa:madeObservation</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/ObservationCollection">sosa:ObservationCollection</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://www.w3.org/ns/sosa/Sensor">sosa:Sensor</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -3869,6 +4980,144 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
                 <th>Super-properties</th>
                 <td>
                     <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Relationship">ngsi-ld:Relationship</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://www.w3.org/ns/sosa/ObservationCollection">sosa:ObservationCollection</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://www.w3.org/ns/sosa/ObservableProperty">sosa:ObservableProperty</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="observes">
+        <h3>observes<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/sosa/observes</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    http://www.w3.org/ns/sosa/
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Relation between a Sensor and an ObservableProperty that it is capable of sensing.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/ns/ssn/forProperty">ssn:forProperty</a>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Relationship">ngsi-ld:Relationship</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://www.w3.org/ns/sosa/Sensor">sosa:Sensor</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://www.w3.org/ns/sosa/ObservableProperty">sosa:ObservableProperty</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="phenomenontime">
+        <h3>phenomenon time<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/sosa/phenomenonTime</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    http://www.w3.org/ns/sosa/
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The time that the Result of an Observation, Actuation or Sampling applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an Interval or an Instant, or some other compound TemporalEntity.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Relationship">ngsi-ld:Relationship</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://www.w3.org/ns/sosa/ObservationCollection">sosa:ObservationCollection</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/Sampling">sosa:Sampling</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/Actuation">sosa:Actuation</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="usedprocedure">
+        <h3>used procedure<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/sosa/usedProcedure</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    http://www.w3.org/ns/sosa/
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Relationship">ngsi-ld:Relationship</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/ObservationCollection">sosa:ObservationCollection</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/Actuation">sosa:Actuation</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/Sampling">sosa:Sampling</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    (<a href="https://schema.org/domainIncludes">sdo:rangeIncludes</a>)
+                    <a href="http://www.w3.org/ns/sosa/Procedure">sosa:Procedure</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -3966,12 +5215,12 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             </tr>
         </table>
     </div>
-    <div class="entity property" id="hasproperty">
-        <h3>has property<sup title="object property" class="sup-op">op</sup></h3>
+    <div class="entity property" id="hasinput">
+        <h3>has input<sup title="object property" class="sup-op">op</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
-                <td><code>http://www.w3.org/ns/ssn/hasProperty</code></td>
+                <td><code>http://www.w3.org/ns/ssn/hasInput</code></td>
             </tr>
             <tr class="importeddef">
                 <th>Is Defined By</th>
@@ -3982,7 +5231,61 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             <tr>
                 <th>Description</th>
                 <td>
-                    A relation between a FeatureOfInterest and a Property of that feature.
+                    Relation between a Procedure and an Input to it.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Relationship">ngsi-ld:Relationship</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasoutput">
+        <h3>has output<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/ssn/hasOutput</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    http://www.w3.org/ns/ssn/
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Relation between a Procedure and an Output of it.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Relationship">ngsi-ld:Relationship</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasproperty">
+        <h3>has property<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/ssn/hasProperty</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    http://purl.oclc.org/NET/ssnx/ssn
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Relation between an entity and a Property of that entity.
                 </td>
             </tr>
             <tr>
@@ -4022,6 +5325,47 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
                 <th>Super-properties</th>
                 <td>
                     <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Relationship">ngsi-ld:Relationship</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="implementedby">
+        <h3>implemented by<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/ns/ssn/implementedBy</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    http://www.w3.org/ns/ssn/
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way.
+                </td>
+            </tr>
+            <tr>
+                <th>Example</th>
+                <td>
+                    <pre>
+                      For example, the relationship between a scientific measuring Procedure and a sensor that senses via that Procedure.
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://uri.etsi.org/ngsi-ld/v1/ontology#Relationship">ngsi-ld:Relationship</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://www.w3.org/ns/ssn/implements">ssn:implements</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
         </table>
@@ -4077,7 +5421,7 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             <tr>
                 <th>Description</th>
                 <td>
-                    Relation between a platform and the deployment(s) that takes place in the platform.
+                    Relation between a Platform and a Deployment, meaning that the deployedSystems of the Deployment are hosted on the Platform.
                 </td>
             </tr>
             <tr>
@@ -4188,6 +5532,12 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
         <li><a href="#order">order</a></li>
         <li><a href="#asWKT">asWKT</a></li>
         <li><a href="#hasserialization">has serialization</a></li>
+        <li><a href="#alt">alt</a></li>
+        <li><a href="#lat">lat</a></li>
+        <li><a href="#long">long</a></li>
+        <li><a href="#inXSDdate">in XSD date</a></li>
+        <li><a href="#inXSDDate-Time-Stamp">in XSD Date-Time-Stamp</a></li>
+        <li><a href="#Numericvalueoftemporalduration">Numeric value of temporal duration</a></li>
         <li><a href="#resulttime">result time</a></li>
     </ul>
     <div class="entity property" id="order">
@@ -4233,7 +5583,7 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             <tr class="importeddef">
                 <th>Is Defined By</th>
                 <td>
-                    http://www.opengis.net/spec/geosparql/1.0
+                    http://www.opengis.net/ont/geosparql
                 </td>
             </tr>
             <tr>
@@ -4274,13 +5624,15 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             <tr class="importeddef">
                 <th>Is Defined By</th>
                 <td>
-                    http://www.opengis.net/spec/geosparql/1.0
+                    http://www.opengis.net/ont/geosparql
                 </td>
             </tr>
             <tr>
                 <th>Description</th>
                 <td>
-                    Connects a geometry object with its text-based serialization
+                    
+      Connects a geometry object with its text-based serialization.
+    
                 </td>
             </tr>
             <tr>
@@ -4293,6 +5645,138 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
                 <th>Range(s)</th>
                 <td>
                     <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="alt">
+        <h3>alt<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2003/01/geo/wgs84_pos#alt</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    http://www.w3.org/2003/01/geo/wgs84_pos#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The WGS84 altitude of a SpatialThing (decimal meters above the local reference ellipsoid).
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="lat">
+        <h3>lat<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2003/01/geo/wgs84_pos#lat</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    http://www.w3.org/2003/01/geo/wgs84_pos#
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="long">
+        <h3>long<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2003/01/geo/wgs84_pos#long</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    http://www.w3.org/2003/01/geo/wgs84_pos#
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="inXSDdate">
+        <h3>in XSD date<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2006/time#inXSDDate</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Position of an instant, expressed using xsd:date
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#Instant">time:Instant</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="inXSDDate-Time-Stamp">
+        <h3>in XSD Date-Time-Stamp<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2006/time#inXSDDateTimeStamp</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Position of an instant, expressed using xsd:dateTimeStamp
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#Instant">time:Instant</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#dateTimeStamp">xsd:dateTimeStamp</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="Numericvalueoftemporalduration">
+        <h3>Numeric value of temporal duration<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2006/time#numericDuration</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Value of a temporal extent expressed as a decimal number scaled by a temporal unit
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2006/time#Duration">time:Duration</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>
@@ -4320,9 +5804,10 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
                 <th>Domain(s)</th>
                 <td>
                     (<a href="https://schema.org/domainIncludes">sdo:domainIncludes</a>)
+                    <a href="http://www.w3.org/ns/sosa/Sampling">sosa:Sampling</a><sup class="sup-c" title="class">c</sup>
+                    <a href="http://www.w3.org/ns/sosa/ObservationCollection">sosa:ObservationCollection</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://www.w3.org/ns/sosa/Observation">sosa:Observation</a><sup class="sup-c" title="class">c</sup>
                     <a href="http://www.w3.org/ns/sosa/Actuation">sosa:Actuation</a><sup class="sup-c" title="class">c</sup>
-                    <a href="http://www.w3.org/ns/sosa/Sampling">sosa:Sampling</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
             <tr>
@@ -4417,9 +5902,9 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
         <li><a href="#componentattachment">component attachment</a></li>
         <li><a href="#Affiliation">Affiliation</a></li>
         <li><a href="#DomainIncludes">Domain Includes</a></li>
-        <li><a href="#name">name</a></li>
+        <li><a href="#Name">Name</a></li>
         <li><a href="#RangeIncludes">Range Includes</a></li>
-        <li><a href="#telephone">telephone</a></li>
+        <li><a href="#Telephone">Telephone</a></li>
     </ul>
     <div class="entity property" id="componentattachment">
         <h3>component attachment<sup title="property" class="sup-p">p</sup></h3>
@@ -4526,8 +6011,8 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             </tr>
         </table>
     </div>
-    <div class="entity property" id="name">
-        <h3>name<sup title="property" class="sup-p">p</sup></h3>
+    <div class="entity property" id="Name">
+        <h3>Name<sup title="property" class="sup-p">p</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
@@ -4592,8 +6077,8 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             </tr>
         </table>
     </div>
-    <div class="entity property" id="telephone">
-        <h3>telephone<sup title="property" class="sup-p">p</sup></h3>
+    <div class="entity property" id="Telephone">
+        <h3>Telephone<sup title="property" class="sup-p">p</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
@@ -4602,7 +6087,7 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
             <tr class="importeddef">
                 <th>Is Defined By</th>
                 <td>
-                    http://schema.org/Person
+                    http://schema.org/Organization
                 </td>
             </tr>
             <tr>
@@ -5699,6 +7184,8 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
         <dd><code>http://xmlns.com/foaf/0.1/</code></dd>
         <dt>geo</dt>
         <dd><code>http://www.opengis.net/ont/geosparql#</code></dd>
+        <dt>iso19103</dt>
+        <dd><code>http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#</code></dd>
         <dt>iso19109</dt>
         <dd><code>http://def.seegrid.csiro.au/isotc211/iso19109/2005/feature#</code></dd>
         <dt>iso19150-2</dt>
@@ -5712,13 +7199,13 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
         <dt>ngsi-ld</dt>
         <dd><code>https://uri.etsi.org/ngsi-ld/v1/ontology#</code></dd>
         <dt>ns1</dt>
-        <dd><code>http://purl.org/dc/elements/1.1/</code></dd>
-        <dt>ns2</dt>
         <dd><code>http://schema.org/</code></dd>
+        <dt>ns2</dt>
+        <dd><code>http://purl.org/dc/elements/1.1/</code></dd>
         <dt>ns3</dt>
-        <dd><code>http://www.w3.org/ns/dx/prof/</code></dd>
-        <dt>ns5</dt>
         <dd><code>http://www.w3.org/2003/06/sw-vocab-status/ns#</code></dd>
+        <dt>ns4</dt>
+        <dd><code>http://www.w3.org/ns/dx/prof/</code></dd>
         <dt>owl</dt>
         <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
         <dt>prov</dt>
@@ -5730,7 +7217,7 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
         <dt>quantity</dt>
         <dd><code>http://purl.oclc.org/NET/ssnx/qu/quantity#</code></dd>
         <dt>qudt</dt>
-        <dd><code>http://qudt.org/2.0/schema/qudt</code></dd>
+        <dd><code>http://qudt.org/schema/qudt/</code></dd>
         <dt>rdf</dt>
         <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
         <dt>rdfs</dt>
@@ -5745,6 +7232,8 @@ A Polygon is a simple Surface that is planar. A PolyhedralSurface is a simple su
         <dd><code>http://www.w3.org/ns/sosa/</code></dd>
         <dt>ssn</dt>
         <dd><code>http://www.w3.org/ns/ssn/</code></dd>
+        <dt>ssn-ext</dt>
+        <dd><code>http://www.w3.org/ns/ssn/ext/</code></dd>
         <dt>time</dt>
         <dd><code>http://www.w3.org/2006/time#</code></dd>
         <dt>wgs84_pos</dt>

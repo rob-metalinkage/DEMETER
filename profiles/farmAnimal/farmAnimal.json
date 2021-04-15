@@ -3,33 +3,50 @@
     "$id": "https://w3id.org/demeter/agri/farmAnimal?_profile=jsonschema",
     "type": "object",
     "properties": {
+        "saref4agri:ID": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
         "saref:FeatureOfInterest": {
             "type": "object",
             "properties": {},
             "required": []
         },
+        "saref4agri:AnimalGroup": {
+            "type": "object",
+            "properties": {
+                "saref4agri:isLocatedIn": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "saref4agri:hasName": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "saref4agri:hasMember": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
         "saref4agri:Animal": {
             "type": "object",
             "properties": {
-                "saref4agri:hasDeathDate": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "saref4agri:hasBirthDate": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
                 "saref4agri:hasID": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
-                "saref4agri:isLocatedIn": {
+                "saref4agri:hasName": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -41,7 +58,19 @@
                         "type": "string"
                     }
                 },
-                "saref4agri:hasName": {
+                "saref4agri:hasBirthDate": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "saref4agri:isLocatedIn": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "saref4agri:hasDeathDate": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -56,31 +85,7 @@
             },
             "required": []
         },
-        "saref4agri:AnimalGroup": {
-            "type": "object",
-            "properties": {
-                "saref4agri:hasMember": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "saref4agri:isLocatedIn": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "saref4agri:hasName": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "saref4agri:ID": {
+        "fiware:Animal": {
             "type": "object",
             "properties": {},
             "required": []
@@ -93,22 +98,17 @@
         "af-inspire:FarmAnimalSpecies": {
             "type": "object",
             "properties": {
-                "foodie:livestockNumber": {
+                "foodie:livestockType": {
                     "type": "string"
                 },
-                "foodie:livestockType": {
+                "foodie:livestockNumber": {
                     "type": "string"
                 }
             },
             "required": [
-                "foodie:livestockNumber",
-                "foodie:livestockType"
+                "foodie:livestockType",
+                "foodie:livestockNumber"
             ]
-        },
-        "fiware:Animal": {
-            "type": "object",
-            "properties": {},
-            "required": []
         }
     }
 }

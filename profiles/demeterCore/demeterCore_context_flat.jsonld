@@ -3,6 +3,9 @@
     "@context": [
         {
             "ngsi-ld": "https://uri.etsi.org/ngsi-ld/v1/ontology#",
+            "Entity": {
+                "@id": "ngsi-ld:Entity"
+            },
             "Value": {
                 "@id": "ngsi-ld:Value"
             },
@@ -13,9 +16,6 @@
             "Property": {
                 "@id": "ngsi-ld:Property",
                 "@type": "@id"
-            },
-            "Entity": {
-                "@id": "ngsi-ld:Entity"
             },
             "hasObject": {
                 "@id": "ngsi-ld:hasObject",
