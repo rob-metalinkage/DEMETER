@@ -355,14 +355,6 @@
         sh:nodeKind     sh:IRI ;
         sh:targetClass  saref:State .
 
-<https://astrea.linkeddata.es/shapes#6d6adebc3adfc48442d9fb6df3ec2254>
-        a                 sh:PropertyShape ;
-        rdfs:isDefinedBy  saref: ;
-        rdfs:label        "controls property"@en ;
-        sh:name           "controls property"@en ;
-        sh:nodeKind       sh:BlankNodeOrIRI ;
-        sh:path           saref:controlsProperty .
-
 <https://astrea.linkeddata.es/shapes#3e18b0f9fac2d3bdcd51a2fdadcbda53>
         a                 sh:NodeShape ;
         rdfs:isDefinedBy  time: ;
@@ -371,6 +363,14 @@
         sh:name           "Temporal entity"@en ;
         sh:nodeKind       sh:IRI ;
         sh:targetClass    time:TemporalEntity .
+
+<https://astrea.linkeddata.es/shapes#6d6adebc3adfc48442d9fb6df3ec2254>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  saref: ;
+        rdfs:label        "controls property"@en ;
+        sh:name           "controls property"@en ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           saref:controlsProperty .
 
 <https://astrea.linkeddata.es/shapes#e92dc0050e023e468e3715d138b27130>
         a               sh:NodeShape ;

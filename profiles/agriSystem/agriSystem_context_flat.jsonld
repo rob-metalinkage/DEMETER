@@ -8,39 +8,6 @@
             "Thermometer": {
                 "@id": "saref4agri:Thermometer"
             },
-            "MachineType": {
-                "@id": "foodie:MachineType"
-            },
-            "SoilTensiometer": {
-                "@id": "saref4agri:SoilTensiometer"
-            },
-            "WateringGun": {
-                "@id": "saref4agri:WateringGun"
-            },
-            "Actuator": {
-                "@id": "saref:Actuator"
-            },
-            "WeatherStation": {
-                "@id": "saref4agri:WeatherStation"
-            },
-            "TractorType": {
-                "@id": "foodie:TractorType"
-            },
-            "WateringValve": {
-                "@id": "saref4agri:WateringValve"
-            },
-            "WateringSystem": {
-                "@id": "saref4agri:WateringSystem"
-            },
-            "MilkingSensor": {
-                "@id": "saref4agri:MilkingSensor"
-            },
-            "Sensor": {
-                "@id": "saref:Sensor"
-            },
-            "EatingActivitySensor": {
-                "@id": "saref4agri:EatingActivitySensor"
-            },
             "MovementActivitySensor": {
                 "@id": "saref4agri:MovementActivitySensor"
             },
@@ -50,8 +17,41 @@
             "WeightSensor": {
                 "@id": "saref4agri:WeightSensor"
             },
+            "WateringValve": {
+                "@id": "saref4agri:WateringValve"
+            },
+            "WateringGun": {
+                "@id": "saref4agri:WateringGun"
+            },
+            "WeatherStation": {
+                "@id": "saref4agri:WeatherStation"
+            },
+            "Sensor": {
+                "@id": "saref:Sensor"
+            },
+            "EatingActivitySensor": {
+                "@id": "saref4agri:EatingActivitySensor"
+            },
             "Device": {
                 "@id": "saref:Device"
+            },
+            "WateringSystem": {
+                "@id": "saref4agri:WateringSystem"
+            },
+            "Actuator": {
+                "@id": "saref:Actuator"
+            },
+            "TractorType": {
+                "@id": "foodie:TractorType"
+            },
+            "MachineType": {
+                "@id": "foodie:MachineType"
+            },
+            "MilkingSensor": {
+                "@id": "saref4agri:MilkingSensor"
+            },
+            "SoilTensiometer": {
+                "@id": "saref4agri:SoilTensiometer"
             }
         }
     ]

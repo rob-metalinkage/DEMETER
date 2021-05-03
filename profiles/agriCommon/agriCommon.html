@@ -290,6 +290,7 @@
     <ul class="hlist">
         <li><a href="#Farmholding">Farm holding</a></li>
         <li><a href="#Farmer">Farmer</a></li>
+        <li><a href="#Image">Image</a></li>
         <li><a href="#Taxonrank">Taxon rank</a></li>
     </ul>
     <div class="entity class" id="Taxonrank">
@@ -331,8 +332,8 @@
                 <td>
                     <a href="https://w3id.org/def/saref4agri#managesFarm">saref4agri:managesFarm</a> <span class="cardinality">some</span> <a href="https://w3id.org/def/saref4agri#Farm">saref4agri:Farm</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/def/saref4agri#hasName">saref4agri:hasName</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/def/saref4agri#hasName">saref4agri:hasName</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/def/saref4agri#managesFarm">saref4agri:managesFarm</a> <span class="cardinality">some</span> <a href="https://w3id.org/def/saref4agri#Farm">saref4agri:Farm</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/def/saref4agri#hasName">saref4agri:hasName</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -359,10 +360,47 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/def/saref4agri#hasName">saref4agri:hasName</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/def/saref4agri#managesFarm">saref4agri:managesFarm</a> <span class="cardinality">some</span> <a href="https://w3id.org/def/saref4agri#Farm">saref4agri:Farm</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/def/saref4agri#hasName">saref4agri:hasName</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/def/saref4agri#managesFarm">saref4agri:managesFarm</a> <span class="cardinality">some</span> <a href="https://w3id.org/def/saref4agri#Farm">saref4agri:Farm</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/def/saref4agri#managesFarm">saref4agri:managesFarm</a> <span class="cardinality">some</span> <a href="https://w3id.org/def/saref4agri#Farm">saref4agri:Farm</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/def/saref4agri#hasName">saref4agri:hasName</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Image">
+        <h3>Image<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/demeter/agri/agriCommon#Image</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/demeter/agri/agriCommon#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>An image object</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://schema.org/ImageObject">sdo:ImageObject</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="#imageWidth">demeterAgriCommon:imageWidth</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#imageURL">demeterAgriCommon:imageURL</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#imageHeight">demeterAgriCommon:imageHeight</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#imageFormat">demeterAgriCommon:imageFormat</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#imageDataType">demeterAgriCommon:imageDataType</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
         </table>
@@ -439,7 +477,12 @@
         <li><a href="#modifiedAt">modifiedAt</a></li>
         <li><a href="#name">name</a></li>
         <li><a href="#source">source</a></li>
-        <li><a href="#Arelationtoexpressthenameofanentity(e.g.,animal).">A relation to express the name of an entity (e.g.,animal).</a></li>
+        <li><a href="#hasname">has name</a></li>
+        <li><a href="#imageDataType">imageDataType</a></li>
+        <li><a href="#imageFormat">imageFormat</a></li>
+        <li><a href="#imageHeight">imageHeight</a></li>
+        <li><a href="#imageURL">imageURL</a></li>
+        <li><a href="#imageWidth">imageWidth</a></li>
         <li><a href="#Password">Password</a></li>
         <li><a href="#UserName">User Name</a></li>
         <li><a href="#hasdescription">has description</a></li>
@@ -734,7 +777,7 @@
             <tr class="importeddef">
                 <th>Is Defined By</th>
                 <td>
-                    https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Crop.md
+                    https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Parcel.md
                 </td>
             </tr>
             <tr>
@@ -788,7 +831,7 @@
             <tr class="importeddef">
                 <th>Is Defined By</th>
                 <td>
-                    https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Parcel.md
+                    https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Crop.md
                 </td>
             </tr>
             <tr>
@@ -895,8 +938,8 @@
             </tr>
         </table>
     </div>
-    <div class="entity property" id="Arelationtoexpressthenameofanentity(e.g.,animal).">
-        <h3>A relation to express the name of an entity (e.g.,animal).<sup title="datatype property" class="sup-dp">dp</sup></h3>
+    <div class="entity property" id="hasname">
+        <h3>has name<sup title="datatype property" class="sup-dp">dp</sup></h3>
         <table>
             <tr>
                 <th>URI</th>
@@ -918,6 +961,173 @@
                 <th>Range(s)</th>
                 <td>
                     <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="imageDataType">
+        <h3>imageDataType<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/demeter/agri/agriCommon#imageDataType</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/demeter/agri/agriCommon#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The data type of the image, e.g., NDVI
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Image">demeterAgriCommon:Image</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="imageFormat">
+        <h3>imageFormat<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/demeter/agri/agriCommon#imageFormat</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/demeter/agri/agriCommon#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The format of the image, e.g., tiff, jpg
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://schema.org/encodingFormat">sdo:encodingFormat</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Image">demeterAgriCommon:Image</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="imageHeight">
+        <h3>imageHeight<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/demeter/agri/agriCommon#imageHeight</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/demeter/agri/agriCommon#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The height of the image, e.g., 3 or 3 cm^^cdt:ucum
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/saref#hasValue">saref:hasValue</a>
+                    <a href="https://schema.org/height">sdo:height</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Image">demeterAgriCommon:Image</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="imageURL">
+        <h3>imageURL<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/demeter/agri/agriCommon#imageURL</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/demeter/agri/agriCommon#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Actual bytes of the image object, i.e., image file
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://schema.org/contentUrl">sdo:contentUrl</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Image">demeterAgriCommon:Image</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#anyURI">xsd:anyURI</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="imageWidth">
+        <h3>imageWidth<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>https://w3id.org/demeter/agri/agriCommon#imageWidth</code></td>
+            </tr>
+            <tr class="importeddef">
+                <th>Is Defined By</th>
+                <td>
+                    https://w3id.org/demeter/agri/agriCommon#
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The width of the image, e.g., 3 or 3 cm^^cdt:ucum
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="https://w3id.org/saref#hasValue">saref:hasValue</a>
+                    <a href="https://schema.org/width">sdo:width</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="#Image">demeterAgriCommon:Image</a><sup class="sup-c" title="class">c</sup>
                 </td>
             </tr>
         </table>

@@ -3,7 +3,7 @@
     "$id": "https://w3id.org/demeter/agri/agriAlert?_profile=jsonschema",
     "type": "object",
     "properties": {
-        "iso19109:AnyFeature": {
+        "geo:Feature": {
             "type": "object",
             "properties": {},
             "required": []
@@ -13,7 +13,7 @@
             "properties": {},
             "required": []
         },
-        "geo:Feature": {
+        "iso19109:AnyFeature": {
             "type": "object",
             "properties": {},
             "required": []
@@ -21,33 +21,33 @@
         "foodie:Alert": {
             "type": "object",
             "properties": {
-                "foodie:code": {
-                    "type": "string"
-                },
                 "foodie:alertGeometry": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
-                "foodie:alertDate": {
-                    "type": "string"
-                },
-                "foodie:description": {
-                    "type": "string"
-                },
                 "foodie:type": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
+                },
+                "foodie:description": {
+                    "type": "string"
+                },
+                "foodie:code": {
+                    "type": "string"
+                },
+                "foodie:alertDate": {
+                    "type": "string"
                 }
             },
             "required": [
-                "foodie:code",
                 "foodie:alertGeometry",
-                "foodie:alertDate",
-                "foodie:type"
+                "foodie:type",
+                "foodie:code",
+                "foodie:alertDate"
             ]
         },
         "fiware:Alert": {

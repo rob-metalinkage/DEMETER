@@ -10,16 +10,20 @@
             "Alert": {
                 "@id": "foodie:Alert"
             },
-            "plotAlert": {
-                "@id": "foodie:plotAlert",
-                "@type": "@id"
-            },
             "alertSpecies": {
                 "@id": "foodie:alertSpecies",
                 "@type": "@id"
             },
-            "alertZone": {
-                "@id": "foodie:alertZone",
+            "plotAlert": {
+                "@id": "foodie:plotAlert",
+                "@type": "@id"
+            },
+            "alertPlot": {
+                "@id": "foodie:alertPlot",
+                "@type": "@id"
+            },
+            "zoneAlert": {
+                "@id": "foodie:zoneAlert",
                 "@type": "@id"
             },
             "alertGeometry": {
@@ -30,28 +34,24 @@
                 "@id": "foodie:speciesAlert",
                 "@type": "@id"
             },
-            "zoneAlert": {
-                "@id": "foodie:zoneAlert",
-                "@type": "@id"
-            },
-            "alertPlot": {
-                "@id": "foodie:alertPlot",
+            "alertZone": {
+                "@id": "foodie:alertZone",
                 "@type": "@id"
             },
             "alertDate": {
                 "@id": "foodie:alertDate",
-                "@type": "xsd:date"
+                "@type": "xsd:dateTime"
             },
             "alertValidTo": {
                 "@id": "https://uri.fiware.org/ns/data-models#validTo",
                 "@type": "xsd:dateTime"
             },
-            "dateIssued": {
-                "@id": "fiware:dateIssued",
-                "@type": "xsd:dateTime"
-            },
             "alertValidFrom": {
                 "@id": "https://uri.fiware.org/ns/data-models#validFrom",
+                "@type": "xsd:dateTime"
+            },
+            "dateIssued": {
+                "@id": "fiware:dateIssued",
                 "@type": "xsd:dateTime"
             }
         }

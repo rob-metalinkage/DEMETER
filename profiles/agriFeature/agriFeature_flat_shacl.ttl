@@ -588,7 +588,7 @@
         a                 sh:NodeShape ;
         rdfs:isDefinedBy  af-inspire: ;
         sh:nodeKind       sh:IRI ;
-        sh:property       <https://astrea.linkeddata.es/shapes#fb6ad8adb7d8a01a70d9054da4fb24de> , <https://astrea.linkeddata.es/shapes#ffa228fbe9acf17ea0b9d1fa1bf85040> , <https://astrea.linkeddata.es/shapes#79f9049ac8c7b059d503662569e881fe> ;
+        sh:property       <https://astrea.linkeddata.es/shapes#ffa228fbe9acf17ea0b9d1fa1bf85040> , <https://astrea.linkeddata.es/shapes#fb6ad8adb7d8a01a70d9054da4fb24de> , <https://astrea.linkeddata.es/shapes#79f9049ac8c7b059d503662569e881fe> ;
         sh:targetClass    af-inspire:Holding .
 
 <https://astrea.linkeddata.es/shapes#ae7764cd65829f14d512c65b1ea0076f>
@@ -1147,12 +1147,6 @@
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      geo:hasGeometry .
 
-<https://astrea.linkeddata.es/shapes#27856ac1645ff04192890704b3d6e478>
-        a            sh:PropertyShape ;
-        sh:class     saref:State ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      saref:actsUpon .
-
 <https://astrea.linkeddata.es/shapes#8661dcd9ee54db004f23ae5cc74f9889>
         a                 sh:PropertyShape ;
         rdfs:isDefinedBy  saref: ;
@@ -1161,6 +1155,12 @@
         sh:name           "is property of"@en ;
         sh:nodeKind       sh:BlankNodeOrIRI ;
         sh:path           saref:isPropertyOf .
+
+<https://astrea.linkeddata.es/shapes#27856ac1645ff04192890704b3d6e478>
+        a            sh:PropertyShape ;
+        sh:class     saref:State ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      saref:actsUpon .
 
 <https://astrea.linkeddata.es/report/01163512728>
         a       <https://w3id.org/def/astrea#ReportEntry> ;
@@ -1235,15 +1235,6 @@
         sh:nodeKind       sh:BlankNodeOrIRI ;
         sh:path           saref:hasMeasurement .
 
-<https://astrea.linkeddata.es/shapes#3fa7d19a4912e3306f7209cb475e0272>
-        a                 sh:PropertyShape ;
-        rdfs:isDefinedBy  saref: ;
-        rdfs:label        "has command"@en , "A relationship between an entity (such as a function) and a command"@en ;
-        sh:description    "A relationship between an entity (such as a function) and a command"@en ;
-        sh:name           "has command"@en ;
-        sh:nodeKind       sh:BlankNodeOrIRI ;
-        sh:path           saref:hasCommand .
-
 <https://astrea.linkeddata.es/shapes#0ac542fe05bf1e2555a2cb0118d23dc8>
         a                 sh:NodeShape ;
         rdfs:isDefinedBy  saref: ;
@@ -1263,6 +1254,15 @@
         sh:minCount  "1"^^xsd:int ;
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      prov:generatedAtTime .
+
+<https://astrea.linkeddata.es/shapes#3fa7d19a4912e3306f7209cb475e0272>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  saref: ;
+        rdfs:label        "has command"@en , "A relationship between an entity (such as a function) and a command"@en ;
+        sh:description    "A relationship between an entity (such as a function) and a command"@en ;
+        sh:name           "has command"@en ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           saref:hasCommand .
 
 <https://astrea.linkeddata.es/shapes#9207fef9fa9b243a4ee1bf06b90c17b8>
         a            sh:PropertyShape ;

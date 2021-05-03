@@ -6,9 +6,9 @@
         "https://fiware.github.io/data-models/full-context.jsonld",
         {
             "foodie": "http://foodie-cloud.com/model/foodie#",
-            "demeterAgriCrop": "https://w3id.org/demeter/agri/agriCrop#",
             "saref4agri": "https://w3id.org/def/saref4agri#",
-            "fiware": "https://uri.fiware.org/ns/data-models#"
+            "fiware": "https://uri.fiware.org/ns/data-models#",
+            "demeterAgriCrop": "https://w3id.org/demeter/agri/agriCrop#"
         }
     ]
 }

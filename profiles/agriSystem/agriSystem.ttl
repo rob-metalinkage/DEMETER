@@ -67,7 +67,7 @@ saref4agri:WeightSensor rdfs:isDefinedBy saref4agri: .
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriSystem.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = ../models\\agriSystem.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            prov:endedAtTime "2021-04-14"^^xsd:date ;
+            prov:endedAtTime "2021-05-02"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:maker [ foaf:homepage <https://h2020-demeter.eu/> ;

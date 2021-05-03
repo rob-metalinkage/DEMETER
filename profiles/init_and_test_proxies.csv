@@ -1,0 +1,35 @@
+action,path,context
+# need to init demeter repository as RDF SPIN and init the app schema entailment suite first..
+PUT,proxy/act-core_proxy/act-core_proxy.ttl,https://w3id.org/demeter/agri/proxy/act-core
+PUT,proxy/foaf_proxy/foaf_proxy.ttl,https://w3id.org/demeter/agri/proxy/foaf
+PUT,proxy/saref4agri_proxy/saref4agri_proxy.ttl,https://w3id.org/demeter/agri/proxy/saref4agri
+PUT,proxy/baseInspire_proxy/baseInspire_proxy.ttl,https://w3id.org/demeter/agri/proxy/baseInspire
+PUT,proxy/foodie_proxy/foodie_proxy.ttl,https://w3id.org/demeter/agri/proxy/foodie
+PUT,proxy/saref_proxy/saref_proxy.ttl,https://w3id.org/demeter/agri/proxy/saref
+PUT,proxy/cf-feature_proxy/cf-feature_proxy.ttl,https://w3id.org/demeter/agri/proxy/cf-feature
+PUT,proxy/obo_proxy/obo_proxy.ttl,https://w3id.org/demeter/agri/proxy/obo
+PUT,proxy/sosa_proxy/sosa_proxy.ttl,https://w3id.org/demeter/agri/proxy/sosa
+PUT,proxy/citation_proxy/citation_proxy.ttl,https://w3id.org/demeter/agri/proxy/citation
+PUT,proxy/ogc_sf_proxy/ogc_sf_proxy.ttl,https://w3id.org/demeter/agri/proxy/ogc_sf
+PUT,proxy/ssn_proxy/ssn_proxy.ttl,https://w3id.org/demeter/agri/proxy/ssn
+PUT,proxy/dim_proxy/dim_proxy.ttl,https://w3id.org/demeter/agri/proxy/dim
+PUT,proxy/prov_proxy/prov_proxy.ttl,https://w3id.org/demeter/agri/proxy/prov
+PUT,proxy/fiware_proxy/fiware_proxy.ttl,https://w3id.org/demeter/agri/proxy/fiware
+PUT,proxy/qu_proxy/qu_proxy.ttl,https://w3id.org/demeter/agri/proxy/qu
+# need to init demeter repository as RDF SPIN and init the app schema entailment suite first..
+PUT,proxy/act-core_proxy/act-core_proxy_prof.ttl,https://w3id.org/demeter/agri/proxy/act-core?_profile=prof
+PUT,proxy/foaf_proxy/foaf_proxy_prof.ttl,https://w3id.org/demeter/agri/proxy/foaf?_profile=prof
+PUT,proxy/saref4agri_proxy/saref4agri_proxy_prof.ttl,https://w3id.org/demeter/agri/proxy/saref4agri?_profile=prof
+PUT,proxy/baseInspire_proxy/baseInspire_proxy_prof.ttl,https://w3id.org/demeter/agri/proxy/baseInspire?_profile=prof
+PUT,proxy/foodie_proxy/foodie_proxy_prof.ttl,https://w3id.org/demeter/agri/proxy/foodie?_profile=prof
+PUT,proxy/saref_proxy/saref_proxy_prof.ttl,https://w3id.org/demeter/agri/proxy/saref?_profile=prof
+PUT,proxy/cf-feature_proxy/cf-feature_proxy_prof.ttl,https://w3id.org/demeter/agri/proxy/cf-feature?_profile=prof
+PUT,proxy/obo_proxy/obo_proxy_prof.ttl,https://w3id.org/demeter/agri/proxy/obo?_profile=prof
+PUT,proxy/sosa_proxy/sosa_proxy_prof.ttl,https://w3id.org/demeter/agri/proxy/sosa?_profile=prof
+PUT,proxy/citation_proxy/citation_proxy_prof.ttl,https://w3id.org/demeter/agri/proxy/citation?_profile=prof
+PUT,proxy/ogc_sf_proxy/ogc_sf_proxy_prof.ttl,https://w3id.org/demeter/agri/proxy/ogc_sf?_profile=prof
+PUT,proxy/ssn_proxy/ssn_proxy_prof.ttl,https://w3id.org/demeter/agri/proxy/ssn?_profile=prof
+PUT,proxy/dim_proxy/dim_proxy_prof.ttl,https://w3id.org/demeter/agri/proxy/dim?_profile=prof
+PUT,proxy/prov_proxy/prov_proxy_prof.ttl,https://w3id.org/demeter/agri/proxy/prov?_profile=prof
+PUT,proxy/fiware_proxy/fiware_proxy_prof.ttl,https://w3id.org/demeter/agri/proxy/fiware?_profile=prof
+PUT,proxy/qu_proxy/qu_proxy_prof.ttl,https://w3id.org/demeter/agri/proxy/qu?_profile=prof

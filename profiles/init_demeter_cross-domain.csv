@@ -1,0 +1,21 @@
+action,path,context
+# need to init demeter repository as RDF + SPIN and init the app schema entailment suite first..
+PUT,lib/citation.ttl,http://def.seegrid.csiro.au/isotc211/iso19115/2003/citation
+PUT,lib/fiware.ttl,https://uri.fiware.org/ns/data-models
+PUT,lib/foodie.ttl,http://foodie-cloud.com/model/foodie
+PUT,lib/geosparql.ttl,http://www.opengis.net/ont/geosparql
+PUT,lib/profile_cat.ttl,https://w3id.org/demeter/agri/profilecat
+PUT,lib/saref4agri.ttl,https://w3id.org/def/saref4agri
+#PUT,lib/schemaorg.ttl,http://schema.org
+#PUT,lib/schemaorg_https.ttl,https://schema.org
+#cachable online resources
+PUT,cache/cf-feature.ttl,http://purl.oclc.org/NET/ssnx/cf/cf-feature
+PUT,cache/profiles_cat.ttl,https://w3id.org/demeter/cache/profilecat
+PUT,cache/qu.ttl,http://purl.oclc.org/NET/ssnx/qu/qu
+PUT,cache/saref.ttl,https://w3id.org/saref
+PUT,cache/sosa.ttl,http://www.w3.org/ns/sosa
+PUT,cache/wgs84_pos.ttl,http://www.w3.org/2003/01/geo/wgs84_pos
+PUT,cache/foaf.ttl,http://xmlns.com/foaf/0.1
+PUT,cache/prov.ttl,http://www.w3.org/ns/prov
+PUT,cache/qudt.ttl,http://purl.oclc.org/NET/ssnx/qu/qu
+PUT,cache/ssn.ttl,http://www.w3.org/ns/ssn

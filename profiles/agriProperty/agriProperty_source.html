@@ -321,18 +321,18 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="http://foodie-cloud.com/model/foodie#nonQuantitativeProperty">foodie:nonQuantitativeProperty</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="http://foodie-cloud.com/model/foodie#quantitativeProperty">foodie:quantitativeProperty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#analysisDate">foodie:analysisDate</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#propertyType">foodie:propertyType</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="http://foodie-cloud.com/model/foodie#propertyName">foodie:propertyName</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#analysisDate">foodie:analysisDate</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#nonQuantitativeProperty">foodie:nonQuantitativeProperty</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#propertyType">foodie:propertyType</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://foodie-cloud.com/model/foodie#productionProperty">foodie:productionProperty</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://foodie-cloud.com/model/foodie#soilProperty">foodie:soilProperty</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://foodie-cloud.com/model/foodie#productionProperty">foodie:productionProperty</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -689,14 +689,14 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/saref#relatesToProperty">saref:relatesToProperty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Property">saref:Property</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/saref#hasTimestamp">saref:hasTimestamp</a> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#hasValue">saref:hasValue</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="https://w3id.org/saref#relatesToProperty">saref:relatesToProperty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/saref#Property">saref:Property</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#isMeasuredIn">saref:isMeasuredIn</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/saref#UnitOfMeasure">saref:UnitOfMeasure</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/saref#hasFeatureOfInterest">saref:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#FeatureOfInterest">saref:FeatureOfInterest</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#isMeasuredIn">saref:isMeasuredIn</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#UnitOfMeasure">saref:UnitOfMeasure</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/saref#relatesToProperty">saref:relatesToProperty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="https://w3id.org/saref#Property">saref:Property</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/saref#relatesToProperty">saref:relatesToProperty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Property">saref:Property</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#hasValue">saref:hasValue</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="https://w3id.org/saref#hasTimestamp">saref:hasTimestamp</a> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/saref#hasFeatureOfInterest">saref:hasFeatureOfInterest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#FeatureOfInterest">saref:FeatureOfInterest</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -730,17 +730,17 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/saref#isMeasuredByDevice">saref:isMeasuredByDevice</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Device">saref:Device</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/saref#isPropertyOf">saref:isPropertyOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#FeatureOfInterest">saref:FeatureOfInterest</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#relatesToMeasurement">saref:relatesToMeasurement</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Measurement">saref:Measurement</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/saref#isMeasuredByDevice">saref:isMeasuredByDevice</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Device">saref:Device</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#isControlledByDevice">saref:isControlledByDevice</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Device">saref:Device</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/saref#isPropertyOf">saref:isPropertyOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="https://w3id.org/saref#FeatureOfInterest">saref:FeatureOfInterest</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/saref#Humidity">saref:Humidity</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#Temperature">saref:Temperature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/saref#Humidity">saref:Humidity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -788,7 +788,7 @@
             <tr class="importeddef">
                 <th>Is Defined By</th>
                 <td>
-                    https://w3id.org/saref#
+                    http://www.wurvoc.org/vocabularies/om-1.6/Unit_of_measure
                 </td>
             </tr>
             <tr>
@@ -1645,7 +1645,7 @@
             <tr class="importeddef">
                 <th>Is Defined By</th>
                 <td>
-                    https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Parcel-Record.md
+                    https://fiware.github.io/data-models/specs/Weather/WeatherObserved/doc/spec.html
                 </td>
             </tr>
             <tr>

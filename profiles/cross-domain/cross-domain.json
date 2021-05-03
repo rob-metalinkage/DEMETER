@@ -3,265 +3,10 @@
     "$id": "https://w3id.org/demeter/crossDomain?_profile=jsonschema",
     "type": "object",
     "properties": {
-        "qb:ComponentProperty": {
-            "type": "object",
-            "properties": {
-                "qb:concept": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "ngsi-ld:Entity": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "rdf:Property": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "qb:AttributeProperty": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "qb:ComponentSet": {
-            "type": "object",
-            "properties": {
-                "qb:componentProperty": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "qb:SliceKey": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "qb:DataSet": {
-            "type": "object",
-            "properties": {
-                "qb:slice": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "qb:ObservationGroup": {
-            "type": "object",
-            "properties": {
-                "qb:observation": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "qb:Attachable": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "qb:Slice": {
-            "type": "object",
-            "properties": {
-                "qb:sliceStructure": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "qb:ComponentSpecification": {
-            "type": "object",
-            "properties": {
-                "qb:componentAttachment": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qb:order": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "qb:CodedProperty": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "qb:DimensionProperty": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "qb:DataStructureDefinition": {
-            "type": "object",
-            "properties": {
-                "qb:component": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qb:sliceKey": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "qb:Observation": {
-            "type": "object",
-            "properties": {
-                "qb:dataSet": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "qb:MeasureProperty": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "sf:Geometry": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "geo:Geometry": {
-            "type": "object",
-            "properties": {
-                "geo:isSimple": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "geo:asGML": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "geo:hasSerialization": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "geo:asWKT": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "geo:isEmpty": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "geo:dimension": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "geo:coordinateDimension": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "geo:spatialDimension": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
         "geo:SpatialObject": {
             "type": "object",
             "properties": {
-                "geo:rcc8tpp": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "geo:sfWithin": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "geo:sfDisjoint": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "geo:rcc8dc": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "geo:ehInside": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "geo:rcc8ec": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "geo:ehOverlap": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "geo:rcc8po": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "geo:ehMeet": {
+                "geo:ehContains": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -273,13 +18,7 @@
                         "type": "string"
                     }
                 },
-                "geo:rcc8tppi": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "geo:sfEquals": {
+                "geo:sfTouches": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -291,43 +30,31 @@
                         "type": "string"
                     }
                 },
-                "geo:ehCovers": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "geo:sfOverlaps": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
                 "geo:ehDisjoint": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
-                "geo:ehCoveredBy": {
+                "geo:sfCrosses": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
-                "geo:sfTouches": {
+                "geo:rcc8dc": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
-                "geo:ehEquals": {
+                "geo:ehOverlap": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
-                "geo:rcc8eq": {
+                "geo:rcc8tpp": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -339,7 +66,13 @@
                         "type": "string"
                     }
                 },
-                "geo:ehContains": {
+                "geo:sfOverlaps": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "geo:rcc8po": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -351,7 +84,67 @@
                         "type": "string"
                     }
                 },
-                "geo:sfCrosses": {
+                "geo:sfDisjoint": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "geo:rcc8eq": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "geo:sfWithin": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "geo:sfEquals": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "geo:ehCovers": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "geo:rcc8ec": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "geo:ehMeet": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "geo:ehEquals": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "geo:ehInside": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "geo:ehCoveredBy": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "geo:rcc8tppi": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -366,12 +159,94 @@
             },
             "required": []
         },
-        "sf:GeometryCollection": {
+        "ngsi-ld:Entity": {
             "type": "object",
             "properties": {},
             "required": []
         },
-        "sf:Polygon": {
+        "geo:Feature": {
+            "type": "object",
+            "properties": {
+                "geo:hasGeometry": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "geo:defaultGeometry": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "geo:Geometry": {
+            "type": "object",
+            "properties": {
+                "geo:isEmpty": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "geo:dimension": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "geo:hasSerialization": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "geo:spatialDimension": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "geo:isSimple": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "geo:asGML": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "geo:coordinateDimension": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "geo:asWKT": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "sf:Curve": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "sf:Geometry": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "sf:LineString": {
             "type": "object",
             "properties": {},
             "required": []
@@ -381,7 +256,27 @@
             "properties": {},
             "required": []
         },
-        "sf:Triangle": {
+        "sf:Polygon": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "sf:Point": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "sf:GeometryCollection": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "sf:MultiPoint": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "sf:PolyhedralSurface": {
             "type": "object",
             "properties": {},
             "required": []
@@ -396,17 +291,7 @@
             "properties": {},
             "required": []
         },
-        "sf:Curve": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "sf:LineString": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "sf:LinearRing": {
+        "sf:Triangle": {
             "type": "object",
             "properties": {},
             "required": []
@@ -421,22 +306,12 @@
             "properties": {},
             "required": []
         },
-        "sf:Point": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "sf:MultiPoint": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
         "sf:Line": {
             "type": "object",
             "properties": {},
             "required": []
         },
-        "sf:PolyhedralSurface": {
+        "sf:LinearRing": {
             "type": "object",
             "properties": {},
             "required": []
@@ -444,18 +319,6 @@
         "sf:TIN": {
             "type": "object",
             "properties": {},
-            "required": []
-        },
-        "ssn:Property": {
-            "type": "object",
-            "properties": {
-                "ssn:isPropertyOf": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
             "required": []
         },
         "ssn:System": {
@@ -473,13 +336,75 @@
                         "type": "string"
                     }
                 },
-                "ssn:hasDeployment": {
+                "sosa:isHostedBy": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
-                "sosa:isHostedBy": {
+                "dummy": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "ssn:hasDeployment": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "sosa:Sensor": {
+            "type": "object",
+            "properties": {
+                "sosa:observes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "sosa:madeObservation": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "ssn:detects": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "ssn:implements": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "ssn:implements"
+            ]
+        },
+        "ssn:Property": {
+            "type": "object",
+            "properties": {
+                "ssn:isPropertyOf": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "sosa:ObservableProperty": {
+            "type": "object",
+            "properties": {
+                "sosa:isObservedBy": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -494,155 +419,10 @@
             },
             "required": []
         },
-        "ssn:Deployment": {
+        "sosa:ObservationCollection": {
             "type": "object",
             "properties": {
-                "ssn:deployedSystem": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "ssn:forProperty": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "ssn:deployedOnPlatform": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "qu:QuantityKind": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dim:EnergyDensity": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dim:Concentration": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dim:Density": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dim:Temperature": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dim:MassPerTimePerArea": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dim:Energy": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dim:ThermalConductivity": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dim:Acceleration": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dim:Distance": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dim:VelocityOrSpeed": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dim:SurfaceDensity": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dim:RotationalSpeed": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dim:Power": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dim:Compressibility": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dim:EnergyFlux": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dim:Dimensionless": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dim:RadianceExposure": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dim:SpecificEntropy": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "dim:StressOrPressure": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "iso19103:Measure": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "iso19156_GFI:GFI_Feature": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "iso19156_GFI:GFI_DomainFeature": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "sosa:FeatureOfInterest": {
-            "type": "object",
-            "properties": {
-                "sosa:hasSample": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "ssn:hasProperty": {
+                "sosa:hasMember": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -650,19 +430,19 @@
                 }
             },
             "required": [
-                "ssn:hasProperty"
+                "sosa:hasMember"
             ]
         },
         "sosa:Procedure": {
             "type": "object",
             "properties": {
-                "ssn:implementedBy": {
+                "ssn:hasOutput": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
-                "ssn:hasOutput": {
+                "ssn:implementedBy": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -691,6 +471,36 @@
                 "sosa:isResultOf"
             ]
         },
+        "sosa:FeatureOfInterest": {
+            "type": "object",
+            "properties": {
+                "sosa:hasSample": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "ssn:hasProperty": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "ssn:hasProperty"
+            ]
+        },
+        "iso19156_GFI:GFI_DomainFeature": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "iso19156_GFI:GFI_Feature": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
         "sosa:Sample": {
             "type": "object",
             "properties": {
@@ -712,16 +522,16 @@
                 "sosa:isResultOf"
             ]
         },
-        "sosa:ObservableProperty": {
+        "sosa:Platform": {
             "type": "object",
             "properties": {
-                "sosa:isObservedBy": {
+                "sosa:hosts": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
-                "dummy": {
+                "ssn:inDeployment": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -730,45 +540,28 @@
             },
             "required": []
         },
-        "sosa:Sampling": {
+        "sosa:Observation": {
             "type": "object",
             "properties": {
+                "sosa:madeBySensor": {
+                    "type": "string"
+                },
+                "sosa:observedProperty": {
+                    "type": "string"
+                },
                 "sosa:hasResult": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
-                "sosa:usedProcedure": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
+                "sosa:hasFeatureOfInterest": {
+                    "type": "string"
+                },
+                "ssn:wasOriginatedBy": {
+                    "type": "string"
                 },
                 "sosa:resultTime": {
-                    "type": "string"
-                },
-                "sosa:madeBySampler": {
-                    "type": "string"
-                },
-                "sosa:hasFeatureOfInterest": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "sosa:hasResult",
-                "sosa:resultTime",
-                "sosa:madeBySampler",
-                "sosa:hasFeatureOfInterest"
-            ]
-        },
-        "sosa:Observation": {
-            "type": "object",
-            "properties": {
-                "sosa:observedProperty": {
-                    "type": "string"
-                },
-                "sosa:hasFeatureOfInterest": {
                     "type": "string"
                 },
                 "sosa:usedProcedure": {
@@ -779,6 +572,26 @@
                 },
                 "sosa:phenomenonTime": {
                     "type": "string"
+                }
+            },
+            "required": [
+                "sosa:madeBySensor",
+                "sosa:observedProperty",
+                "sosa:hasResult",
+                "sosa:hasFeatureOfInterest",
+                "ssn:wasOriginatedBy",
+                "sosa:resultTime",
+                "sosa:phenomenonTime"
+            ]
+        },
+        "sosa:Sampling": {
+            "type": "object",
+            "properties": {
+                "sosa:usedProcedure": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
                 },
                 "sosa:hasResult": {
                     "type": "array",
@@ -786,45 +599,39 @@
                         "type": "string"
                     }
                 },
-                "ssn:wasOriginatedBy": {
-                    "type": "string"
-                },
-                "sosa:resultTime": {
-                    "type": "string"
-                },
-                "sosa:madeBySensor": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "sosa:observedProperty",
-                "sosa:hasFeatureOfInterest",
-                "sosa:phenomenonTime",
-                "sosa:hasResult",
-                "ssn:wasOriginatedBy",
-                "sosa:resultTime",
-                "sosa:madeBySensor"
-            ]
-        },
-        "sosa:Actuation": {
-            "type": "object",
-            "properties": {
-                "sosa:madeByActuator": {
-                    "type": "string"
-                },
-                "sosa:resultTime": {
+                "sosa:madeBySampler": {
                     "type": "string"
                 },
                 "sosa:hasFeatureOfInterest": {
                     "type": "string"
                 },
-                "sosa:actsOnProperty": {
+                "sosa:resultTime": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "sosa:hasResult",
+                "sosa:madeBySampler",
+                "sosa:hasFeatureOfInterest",
+                "sosa:resultTime"
+            ]
+        },
+        "sosa:Actuation": {
+            "type": "object",
+            "properties": {
+                "sosa:hasResult": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
-                "sosa:hasResult": {
+                "sosa:hasFeatureOfInterest": {
+                    "type": "string"
+                },
+                "sosa:madeByActuator": {
+                    "type": "string"
+                },
+                "sosa:actsOnProperty": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -835,78 +642,17 @@
                     "items": {
                         "type": "string"
                     }
+                },
+                "sosa:resultTime": {
+                    "type": "string"
                 }
             },
             "required": [
-                "sosa:madeByActuator",
-                "sosa:resultTime",
+                "sosa:hasResult",
                 "sosa:hasFeatureOfInterest",
+                "sosa:madeByActuator",
                 "sosa:actsOnProperty",
-                "sosa:hasResult"
-            ]
-        },
-        "sosa:Sensor": {
-            "type": "object",
-            "properties": {
-                "ssn:detects": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "sosa:observes": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "ssn:implements": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "sosa:madeObservation": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": [
-                "ssn:implements"
-            ]
-        },
-        "sosa:Platform": {
-            "type": "object",
-            "properties": {
-                "ssn:inDeployment": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "sosa:hosts": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "sosa:ObservationCollection": {
-            "type": "object",
-            "properties": {
-                "sosa:hasMember": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": [
-                "sosa:hasMember"
+                "sosa:resultTime"
             ]
         },
         "sosa:ActuatableProperty": {
@@ -921,14 +667,46 @@
             },
             "required": []
         },
-        "qudt:Quantifiable": {
+        "time:TemporalEntity": {
             "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "qudt:Aspect": {
-            "type": "object",
-            "properties": {},
+            "properties": {
+                "time:hasBeginning": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "time:after": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "time:hasTemporalDuration": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "time:hasXSDDuration": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "time:hasEnd": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "time:before": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
             "required": []
         },
         "owl:Thing": {
@@ -940,7 +718,19 @@
                         "type": "string"
                     }
                 },
-                "foaf:logo": {
+                "foaf:depiction": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:name": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:theme": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -958,616 +748,19 @@
                         "type": "string"
                     }
                 },
-                "foaf:theme": {
+                "foaf:fundedBy": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
-                "foaf:name": {
+                "foaf:logo": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
                 "foaf:isPrimaryTopicOf": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:depiction": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:fundedBy": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "qudt:Concept": {
-            "type": "object",
-            "properties": {
-                "qudt:id": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:code": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:guidance": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "qudt:QuantityValue": {
-            "type": "object",
-            "properties": {
-                "qudt:unit": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "qudt:unit"
-            ]
-        },
-        "qudt:Quantity": {
-            "type": "object",
-            "properties": {
-                "qudt:hasQuantityKind": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:quantityValue": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:isDeltaQuantity": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "qudt:AbstractQuantityKind": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "qudt:Verifiable": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "qudt:QuantityKind": {
-            "type": "object",
-            "properties": {
-                "qudt:belongsToSystemOfQuantities": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:applicableUnit": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:isQuantityKindOf": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:applicableCGSUnit": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:baseSIUnitDimensions": {
-                    "type": "string"
-                },
-                "qudt:applicableSIUnit": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:mathMLdefinition": {
-                    "type": "string"
-                },
-                "qudt:baseImperialUnitDimensions": {
-                    "type": "string"
-                },
-                "qudt:qkdvNumerator": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:baseCGSUnitDimensions": {
-                    "type": "string"
-                },
-                "qudt:hasDimensionVector": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:expression": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:latexDefinition": {
-                    "type": "string"
-                },
-                "qudt:baseUnitDimensions": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:qkdvDenominator": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:applicableUSCustomaryUnit": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:generalization": {
-                    "type": "string"
-                },
-                "qudt:applicableISOUnit": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:baseISOUnitDimensions": {
-                    "type": "string"
-                },
-                "qudt:applicableImperialUnit": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:dimensionVectorForSI": {
-                    "type": "string"
-                },
-                "qudt:baseUSCustomaryUnitDimensions": {
-                    "type": "string"
-                }
-            },
-            "required": []
-        },
-        "qudt:Unit": {
-            "type": "object",
-            "properties": {
-                "qudt:unitOfSystem": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:omUnit": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:numeratorDimensionVector": {
-                    "type": "string"
-                },
-                "qudt:expression": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:abbreviation": {
-                    "type": "string"
-                },
-                "qudt:hasDimensionVector": {
-                    "type": "string"
-                },
-                "qudt:latexSymbol": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:mathMLdefinition": {
-                    "type": "string"
-                },
-                "qudt:siUnitsExpression": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:conversionMultiplier": {
-                    "type": "string"
-                },
-                "qudt:latexDefinition": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:iec61360Code": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:hasQuantityKind": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:denominatorDimensionVector": {
-                    "type": "string"
-                },
-                "qudt:conversionOffset": {
-                    "type": "string"
-                },
-                "qudt:symbol": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qudt:ucumCode": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "foaf:Agent": {
-            "type": "object",
-            "properties": {
-                "foaf:weblog": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:aimChatID": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:tipjar": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:made": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:age": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:account": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:openid": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:holdsAccount": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:topic_interest": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:birthday": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:mbox": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:icqChatID": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:status": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:interest": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:gender": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:skypeID": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:yahooChatID": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:msnChatID": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:mbox_sha1sum": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:jabberID": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:member": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "wgs84_pos:SpatialThing": {
-            "type": "object",
-            "properties": {
-                "wgs84_pos:alt": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:based_near": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "wgs84_pos:lat": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "wgs84_pos:long": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "foaf:Person": {
-            "type": "object",
-            "properties": {
-                "foaf:lastName": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:myersBriggs": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:knows": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:surname": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:plan": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:firstName": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:publications": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:pastProject": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:img": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:schoolHomepage": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:family_name": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:currentProject": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:geekcode": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:workplaceHomepage": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:familyName": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foaf:workInfoHomepage": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "time:TemporalEntity": {
-            "type": "object",
-            "properties": {
-                "time:hasTemporalDuration": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "time:hasBeginning": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "time:after": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "time:hasEnd": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "time:hasXSDDuration": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "time:before": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "time:Interval": {
-            "type": "object",
-            "properties": {
-                "time:inside": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -1579,7 +772,37 @@
         "time:Instant": {
             "type": "object",
             "properties": {
+                "time:inTemporalPosition": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
                 "time:inXSDDateTime": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "time:inXSDDate": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "time:inDateTime": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "time:inTimePosition": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "time:inXSDgYearMonth": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -1592,36 +815,6 @@
                     }
                 },
                 "time:inXSDgYear": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "time:inTemporalPosition": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "time:inTimePosition": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "time:inDateTime": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "time:inXSDgYearMonth": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "time:inXSDDate": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -1655,16 +848,419 @@
                 "time:unitType"
             ]
         },
-        "geo:Feature": {
+        "time:Interval": {
             "type": "object",
             "properties": {
-                "geo:hasGeometry": {
+                "time:inside": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "qb:Attachable": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "qb:Observation": {
+            "type": "object",
+            "properties": {
+                "qb:dataSet": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "qb:ComponentProperty": {
+            "type": "object",
+            "properties": {
+                "qb:concept": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "rdf:Property": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "qb:CodedProperty": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "qb:ComponentSet": {
+            "type": "object",
+            "properties": {
+                "qb:componentProperty": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "qb:DimensionProperty": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "qb:DataSet": {
+            "type": "object",
+            "properties": {
+                "qb:slice": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "qb:SliceKey": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "qb:ComponentSpecification": {
+            "type": "object",
+            "properties": {
+                "qb:componentAttachment": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
-                "geo:defaultGeometry": {
+                "qb:order": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "qb:ObservationGroup": {
+            "type": "object",
+            "properties": {
+                "qb:observation": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "qb:AttributeProperty": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "qb:DataStructureDefinition": {
+            "type": "object",
+            "properties": {
+                "qb:sliceKey": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qb:component": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "qb:MeasureProperty": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "qb:Slice": {
+            "type": "object",
+            "properties": {
+                "qb:sliceStructure": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "qu:QuantityKind": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dim:Energy": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dim:RotationalSpeed": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dim:Dimensionless": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dim:EnergyDensity": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dim:Compressibility": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dim:Power": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dim:SpecificEntropy": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dim:Density": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dim:EnergyFlux": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dim:Concentration": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dim:Distance": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dim:RadianceExposure": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dim:Acceleration": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dim:SurfaceDensity": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dim:StressOrPressure": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dim:VelocityOrSpeed": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dim:ThermalConductivity": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dim:Temperature": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "dim:MassPerTimePerArea": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "iso19103:Measure": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "ssn:Deployment": {
+            "type": "object",
+            "properties": {
+                "ssn:deployedSystem": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "ssn:deployedOnPlatform": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "ssn:forProperty": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "qu:PropertyKind": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "foaf:Agent": {
+            "type": "object",
+            "properties": {
+                "foaf:tipjar": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:status": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:gender": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:mbox_sha1sum": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:openid": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:jabberID": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:aimChatID": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:msnChatID": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:icqChatID": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:birthday": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:holdsAccount": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:interest": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:weblog": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:age": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:mbox": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:made": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:account": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:yahooChatID": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:skypeID": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:topic_interest": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:member": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -1676,18 +1272,6 @@
         "schema:Thing": {
             "type": "object",
             "properties": {
-                "schema:name": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:image": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
                 "schema:additionalType": {
                     "type": "array",
                     "items": {
@@ -1700,13 +1284,25 @@
                         "type": "string"
                     }
                 },
-                "schema:alternateName": {
+                "schema:name": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
                 "schema:description": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:image": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:alternateName": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -1724,31 +1320,7 @@
         "schema:Organization": {
             "type": "object",
             "properties": {
-                "schema:department": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
                 "schema:founder": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:member": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:employee": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:founders": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -1760,7 +1332,19 @@
                         "type": "string"
                     }
                 },
+                "schema:founders": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
                 "schema:subOrganization": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:member": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -1772,13 +1356,25 @@
                         "type": "string"
                     }
                 },
-                "schema:foundingDate": {
+                "schema:department": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
                 "schema:employees": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:foundingDate": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:employee": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -1795,145 +1391,7 @@
         "schema:Person": {
             "type": "object",
             "properties": {
-                "schema:affiliation": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:jobTitle": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:honorificSuffix": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:birthDate": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:honorificPrefix": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:additionalName": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:spouse": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:gender": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:knows": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:colleagues": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:parent": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:sibling": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:parents": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
                 "schema:alumniOf": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:relatedTo": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:worksFor": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:follows": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:siblings": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:familyName": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:performerIn": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:children": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:nationality": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:memberOf": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "schema:givenName": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -1945,7 +1403,67 @@
                         "type": "string"
                     }
                 },
-                "schema:colleague": {
+                "schema:affiliation": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:colleagues": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:nationality": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:gender": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:sibling": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:honorificSuffix": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:parents": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:follows": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:relatedTo": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:jobTitle": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:familyName": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -1957,7 +1475,494 @@
                         "type": "string"
                     }
                 },
+                "schema:performerIn": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:additionalName": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:worksFor": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:honorificPrefix": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
                 "schema:workLocation": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:memberOf": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:knows": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:parent": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:children": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:colleague": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:spouse": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:siblings": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:givenName": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "schema:birthDate": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "wgs84_pos:SpatialThing": {
+            "type": "object",
+            "properties": {
+                "wgs84_pos:lat": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:based_near": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "wgs84_pos:alt": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "wgs84_pos:long": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "foaf:Person": {
+            "type": "object",
+            "properties": {
+                "foaf:myersBriggs": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:publications": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:pastProject": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:schoolHomepage": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:knows": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:lastName": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:surname": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:geekcode": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:workInfoHomepage": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:firstName": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:currentProject": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:familyName": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:family_name": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:plan": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:img": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foaf:workplaceHomepage": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "qudt:AbstractQuantityKind": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "qudt:Concept": {
+            "type": "object",
+            "properties": {
+                "qudt:id": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:code": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:guidance": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "qudt:Verifiable": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "qudt:Aspect": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "qudt:QuantityKind": {
+            "type": "object",
+            "properties": {
+                "qudt:belongsToSystemOfQuantities": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:baseUSCustomaryUnitDimensions": {
+                    "type": "string"
+                },
+                "qudt:qkdvDenominator": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:hasDimensionVector": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:expression": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:applicableImperialUnit": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:generalization": {
+                    "type": "string"
+                },
+                "qudt:dimensionVectorForSI": {
+                    "type": "string"
+                },
+                "qudt:mathMLdefinition": {
+                    "type": "string"
+                },
+                "qudt:applicableCGSUnit": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:applicableSIUnit": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:applicableISOUnit": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:baseSIUnitDimensions": {
+                    "type": "string"
+                },
+                "qudt:applicableUSCustomaryUnit": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:baseCGSUnitDimensions": {
+                    "type": "string"
+                },
+                "qudt:qkdvNumerator": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:baseUnitDimensions": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:baseImperialUnitDimensions": {
+                    "type": "string"
+                },
+                "qudt:latexDefinition": {
+                    "type": "string"
+                },
+                "qudt:isQuantityKindOf": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:baseISOUnitDimensions": {
+                    "type": "string"
+                },
+                "qudt:applicableUnit": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "qudt:Quantifiable": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "qudt:QuantityValue": {
+            "type": "object",
+            "properties": {
+                "qudt:unit": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "qudt:unit"
+            ]
+        },
+        "qudt:Unit": {
+            "type": "object",
+            "properties": {
+                "qudt:unitOfSystem": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:omUnit": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:denominatorDimensionVector": {
+                    "type": "string"
+                },
+                "qudt:latexSymbol": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:symbol": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:numeratorDimensionVector": {
+                    "type": "string"
+                },
+                "qudt:iec61360Code": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:siUnitsExpression": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:latexDefinition": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:hasQuantityKind": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:ucumCode": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:conversionOffset": {
+                    "type": "string"
+                },
+                "qudt:abbreviation": {
+                    "type": "string"
+                },
+                "qudt:conversionMultiplier": {
+                    "type": "string"
+                },
+                "qudt:mathMLdefinition": {
+                    "type": "string"
+                },
+                "qudt:expression": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:hasDimensionVector": {
+                    "type": "string"
+                }
+            },
+            "required": []
+        },
+        "qudt:Quantity": {
+            "type": "object",
+            "properties": {
+                "qudt:isDeltaQuantity": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:quantityValue": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "qudt:hasQuantityKind": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -1967,11 +1972,6 @@
             "required": []
         },
         "wgs84_pos:Point": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "qu:PropertyKind": {
             "type": "object",
             "properties": {},
             "required": []
@@ -1988,12 +1988,12 @@
             },
             "required": []
         },
-        "iso19156_OB:OM_Observation": {
+        "skos:Scheme": {
             "type": "object",
             "properties": {},
             "required": []
         },
-        "skos:Scheme": {
+        "iso19156_OB:OM_Observation": {
             "type": "object",
             "properties": {},
             "required": []

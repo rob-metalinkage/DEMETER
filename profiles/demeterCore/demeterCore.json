@@ -31,18 +31,6 @@
             "type": "object",
             "properties": {},
             "required": []
-        },
-        "ngsi-ld:Property": {
-            "type": "object",
-            "properties": {
-                "ngsi-ld:hasValue": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
         }
     }
 }

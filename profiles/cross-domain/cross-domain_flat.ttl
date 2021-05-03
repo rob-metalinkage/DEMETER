@@ -7,11 +7,11 @@
 @prefix iso19156_OB: <http://def.isotc211.org/iso19156/2011/Observation#> .
 @prefix iso19156_SF: <http://def.isotc211.org/iso19156/2011/SamplingFeature#> .
 @prefix ngsi-ld: <https://uri.etsi.org/ngsi-ld/v1/ontology#> .
-@prefix ns1: <http://schema.org/> .
-@prefix ns2: <http://purl.org/dc/elements/1.1/> .
-@prefix ns3: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix ns4: <http://www.w3.org/ns/dx/prof/> .
-@prefix ns5: <http://www.w3.org/ns/prov#> .
+@prefix ns1: <http://purl.org/dc/elements/1.1/> .
+@prefix ns2: <http://schema.org/> .
+@prefix ns3: <http://www.w3.org/ns/dx/prof/> .
+@prefix ns4: <http://www.w3.org/ns/prov#> .
+@prefix ns5: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix qb: <http://purl.org/linked-data/cube#> .
 @prefix qu: <http://purl.oclc.org/NET/ssnx/qu/qu#> .
@@ -485,7 +485,7 @@ foaf:Agent a rdfs:Class,
             owl:someValuesFrom foaf:Agent ],
         ngsi-ld:Entity ;
     owl:equivalentClass dct:Agent ;
-    ns3:term_status "stable" .
+    ns5:term_status "stable" .
 
 foaf:Person a rdfs:Class,
         owl:Class ;
@@ -497,17 +497,17 @@ foaf:Person a rdfs:Class,
         foaf:Agent ;
     owl:disjointWith foaf:Organization,
         foaf:Project ;
-    owl:equivalentClass ns1:Person,
+    owl:equivalentClass ns2:Person,
         <http://www.w3.org/2000/10/swap/pim/contact#Person>,
         schema:Person ;
-    ns3:term_status "stable" .
+    ns5:term_status "stable" .
 
 schema:Organization a rdfs:Class,
         owl:Class ;
     rdfs:label "Organization"@en ;
     rdfs:comment ""@en,
         "An organization such as a school, NGO, corporation, club, etc."@en ;
-    rdfs:isDefinedBy ns1:Organization,
+    rdfs:isDefinedBy ns2:Organization,
         schema:Organization ;
     rdfs:subClassOf foaf:Agent,
         schema:Thing .
@@ -517,7 +517,7 @@ schema:Person a rdfs:Class,
     rdfs:label "Person"@en ;
     rdfs:comment ""@en,
         "A person (alive, dead, undead, or fictional)."@en ;
-    rdfs:isDefinedBy ns1:Person,
+    rdfs:isDefinedBy ns2:Person,
         schema:Person ;
     rdfs:subClassOf schema:Thing,
         ngsi-ld:Entity .
@@ -869,10 +869,10 @@ qudt:Quantity a owl:Class ;
 
 geo:asWKT a owl:DatatypeProperty ;
     rdfs:label "asWKT"@en ;
-    ns2:contributor "Matthew Perry" ;
-    ns2:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-    ns2:date "2011-06-16"^^xsd:date ;
-    ns2:description """
+    ns1:contributor "Matthew Perry" ;
+    ns1:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+    ns1:date "2011-06-16"^^xsd:date ;
+    ns1:description """
       The WKT serialization of a geometry
     """@en ;
     rdfs:comment """
@@ -980,14 +980,14 @@ schema:affiliation a rdf:Property ;
     rdfs:label "Affiliation"@en ;
     rdfs:comment "An organization that this person is affiliated with. For example, a school/university, a club, or a team."@en ;
     rdfs:domain schema:Person ;
-    rdfs:isDefinedBy ns1:Person ;
+    rdfs:isDefinedBy ns2:Person ;
     rdfs:range schema:Organization .
 
 schema:domainIncludes a rdf:Property ;
     rdfs:label "Domain Includes"@en ;
     rdfs:comment "Relates a property to a class that is (one of) the type(s) the property is expected to be used on."@en ;
     rdfs:domain schema:Property ;
-    rdfs:isDefinedBy ns1:Property ;
+    rdfs:isDefinedBy ns2:Property ;
     rdfs:range schema:Class .
 
 schema:name a rdf:Property ;
@@ -996,14 +996,14 @@ schema:name a rdf:Property ;
     rdfs:comment "The name of the item.",
         "The name of the item."@en ;
     rdfs:domain schema:Thing ;
-    rdfs:isDefinedBy ns1:Thing ;
+    rdfs:isDefinedBy ns2:Thing ;
     rdfs:range xsd:string .
 
 schema:rangeIncludes a rdf:Property ;
     rdfs:label "Range Includes"@en ;
     rdfs:comment "Relates a property to a class that constitutes (one of) the expected type(s) for values of the property."@en ;
     rdfs:domain schema:Property ;
-    rdfs:isDefinedBy ns1:Property ;
+    rdfs:isDefinedBy ns2:Property ;
     rdfs:range schema:Class .
 
 schema:telephone a rdf:Property ;
@@ -1013,14 +1013,14 @@ schema:telephone a rdf:Property ;
         "The telephone number."@en ;
     rdfs:domain [ a owl:Class ;
             owl:unionOf ( schema:Person schema:ContactPoint schema:Place schema:Organization ) ] ;
-    rdfs:isDefinedBy ns1:ContactPoint,
-        ns1:Organization,
-        ns1:Person,
-        ns1:Place ;
+    rdfs:isDefinedBy ns2:ContactPoint,
+        ns2:Organization,
+        ns2:Person,
+        ns2:Place ;
     rdfs:range xsd:string .
 
 <https://w3id.org/demeter/crossDomain> a owl:Ontology,
-        ns5:Entity ;
+        ns4:Entity ;
     dct:contributor [ foaf:name "Ioanna Roussaki" ;
             schema:affiliation [ foaf:name "ICCS" ] ],
         [ rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
@@ -1045,7 +1045,7 @@ schema:telephone a rdf:Property ;
         <https://schema.org> ;
     owl:versionIRI <https://w3id.org/demeter/crossDomain/1.0> ;
     owl:versionInfo "1.0" ;
-    ns4:isProfileOf <http://purl.oclc.org/NET/ssnx/qu/qu>,
+    ns3:isProfileOf <http://purl.oclc.org/NET/ssnx/qu/qu>,
         <http://qudt.org/schema/qudt>,
         <http://www.opengis.net/ont/sf>,
         <http://www.w3.org/2006/time>,
@@ -1054,12 +1054,12 @@ schema:telephone a rdf:Property ;
         <https://schema.org>,
         <https://w3id.org/demeter/agri/proxy/foaf>,
         <https://w3id.org/demeter/agri/proxy/geosparql> ;
-    ns5:wasDerivedFrom [ a ns5:Entity ;
+    ns4:wasDerivedFrom [ a ns4:Entity ;
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\cross-domain.ttl" ] ;
-    ns5:wasGeneratedBy [ a ns5:Activity ;
+    ns4:wasGeneratedBy [ a ns4:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = ../models\\cross-domain.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            ns5:endedAtTime "2021-04-14"^^xsd:date ;
-            ns5:wasAssociatedWith [ a ns5:Agent ;
+            ns4:endedAtTime "2021-05-02"^^xsd:date ;
+            ns4:wasAssociatedWith [ a ns4:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:maker [ foaf:homepage <https://h2020-demeter.eu/> ;
             foaf:name "DEMETER project" ] .
@@ -1215,10 +1215,10 @@ qudt:unit a owl:ObjectProperty ;
 
 geo:hasSerialization a owl:DatatypeProperty ;
     rdfs:label "has serialization"@en ;
-    ns2:contributor "Matthew Perry" ;
-    ns2:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-    ns2:date "2011-06-16"^^xsd:date ;
-    ns2:description """
+    ns1:contributor "Matthew Perry" ;
+    ns1:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+    ns1:date "2011-06-16"^^xsd:date ;
+    ns1:description """
       Connects a geometry object with its text-based serialization.
     """@en ;
     rdfs:comment """
@@ -1236,10 +1236,10 @@ geo:hasSerialization a owl:DatatypeProperty ;
 
 geo:sfContains a owl:ObjectProperty ;
     rdfs:label "contains"@en ;
-    ns2:contributor "Matthew Perry" ;
-    ns2:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-    ns2:date "2011-06-16"^^xsd:date ;
-    ns2:description """
+    ns1:contributor "Matthew Perry" ;
+    ns1:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+    ns1:date "2011-06-16"^^xsd:date ;
+    ns1:description """
       Exists if the subject SpatialObject spatially contains the 
       object SpatialObject. DE-9IM: T*****FF*
     """@en ;
@@ -1261,10 +1261,10 @@ geo:sfContains a owl:ObjectProperty ;
 
 geo:sfWithin a owl:ObjectProperty ;
     rdfs:label "within"@en ;
-    ns2:contributor "Matthew Perry" ;
-    ns2:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-    ns2:date "2011-06-16"^^xsd:date ;
-    ns2:description """
+    ns1:contributor "Matthew Perry" ;
+    ns1:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+    ns1:date "2011-06-16"^^xsd:date ;
+    ns1:description """
       Exists if the subject SpatialObject is spatially within the 
       object SpatialObject. DE-9IM: T*F**F***
     """@en ;
@@ -1347,8 +1347,8 @@ sosa:hasMember a owl:ObjectProperty ;
 sosa:hosts a owl:ObjectProperty ;
     rdfs:label "host"@en,
         "hosts"@en ;
-    ns1:domainIncludes sosa:Platform ;
-    ns1:rangeIncludes sosa:Actuator,
+    ns2:domainIncludes sosa:Platform ;
+    ns2:rangeIncludes sosa:Actuator,
         sosa:Platform,
         sosa:Sampler,
         sosa:Sensor ;
@@ -1362,9 +1362,9 @@ sosa:hosts a owl:ObjectProperty ;
 
 sosa:isFeatureOfInterestOf a owl:ObjectProperty ;
     rdfs:label "is feature of interest of"@en ;
-    ns1:domainIncludes sosa:FeatureOfInterest,
+    ns2:domainIncludes sosa:FeatureOfInterest,
         sosa:Sample ;
-    ns1:rangeIncludes sosa:Actuation,
+    ns2:rangeIncludes sosa:Actuation,
         sosa:Observation,
         sosa:Sampling ;
     rdfs:comment "A relation between a FeatureOfInterest and an Observation about it, an Actuation acting on it, or an act of Sampling that sampled it."@en ;
@@ -1379,8 +1379,8 @@ sosa:isFeatureOfInterestOf a owl:ObjectProperty ;
 
 sosa:observes a owl:ObjectProperty ;
     rdfs:label "observes"@en ;
-    ns1:domainIncludes sosa:Sensor ;
-    ns1:rangeIncludes sosa:ObservableProperty ;
+    ns2:domainIncludes sosa:Sensor ;
+    ns2:rangeIncludes sosa:ObservableProperty ;
     rdfs:comment "Relation between a Sensor and an ObservableProperty that it is capable of sensing."@en ;
     rdfs:isDefinedBy sosa: ;
     rdfs:subPropertyOf ssn:forProperty,
@@ -1391,10 +1391,10 @@ sosa:observes a owl:ObjectProperty ;
 
 sosa:phenomenonTime a owl:ObjectProperty ;
     rdfs:label "phenomenon time"@en ;
-    ns1:domainIncludes sosa:Actuation,
+    ns2:domainIncludes sosa:Actuation,
         sosa:Observation,
         sosa:Sampling ;
-    ns1:rangeIncludes time:TemporalEntity ;
+    ns2:rangeIncludes time:TemporalEntity ;
     rdfs:comment "The time that the Result of an Observation, Actuation or Sampling applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an Interval or an Instant, or some other compound TemporalEntity."@en ;
     rdfs:isDefinedBy sosa: ;
     rdfs:subPropertyOf ngsi-ld:Relationship ;
@@ -1444,7 +1444,7 @@ foaf:member a rdf:Property,
     rdfs:isDefinedBy foaf: ;
     rdfs:range foaf:Agent ;
     rdfs:subPropertyOf ngsi-ld:Relationship ;
-    ns3:term_status "stable" .
+    ns5:term_status "stable" .
 
 iso19156_GFI:GFI_DomainFeature a owl:Class ;
     rdfs:label "GFI_DomainFeature" ;
@@ -1493,10 +1493,10 @@ qb:componentProperty a rdf:Property,
 
 geo:Feature a owl:Class ;
     rdfs:label "Feature"@en ;
-    ns2:contributor "Matthew Perry" ;
-    ns2:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-    ns2:date "2011-06-16"^^xsd:date ;
-    ns2:description """
+    ns1:contributor "Matthew Perry" ;
+    ns1:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+    ns1:date "2011-06-16"^^xsd:date ;
+    ns1:description """
       This class represents the top-level feature type. This class is 
       equivalent to GFI_Feature defined in ISO 19156:2011, and it is 
       superclass of all feature types.
@@ -1541,10 +1541,10 @@ geo:Feature a owl:Class ;
 
 geo:hasGeometry a owl:ObjectProperty ;
     rdfs:label "hasGeometry"@en ;
-    ns2:contributor "Matthew Perry" ;
-    ns2:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-    ns2:date "2011-06-16"^^xsd:date ;
-    ns2:description """
+    ns1:contributor "Matthew Perry" ;
+    ns1:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+    ns1:date "2011-06-16"^^xsd:date ;
+    ns1:description """
       A spatial representation for a given feature.
     """@en ;
     dct:contributor "Matthew Perry" ;
@@ -1607,11 +1607,11 @@ time:hasTime a owl:ObjectProperty ;
 
 sosa:isHostedBy a owl:ObjectProperty ;
     rdfs:label "is hosted by"@en ;
-    ns1:domainIncludes sosa:Actuator,
+    ns2:domainIncludes sosa:Actuator,
         sosa:Platform,
         sosa:Sampler,
         sosa:Sensor ;
-    ns1:rangeIncludes sosa:Platform ;
+    ns2:rangeIncludes sosa:Platform ;
     rdfs:comment "Relation between a Sensor, Actuator, Sampler, or Platform, and the Platform that it is mounted on or hosted by."@en,
         "Relation between a system and its hosting platform."@en ;
     rdfs:isDefinedBy sosa: ;
@@ -1622,8 +1622,8 @@ sosa:isSampleOf owl:equivalentProperty iso19156_SF:SF_SamplingFeature.sampledFea
 
 sosa:madeObservation a owl:ObjectProperty ;
     rdfs:label "made observation"@en ;
-    ns1:domainIncludes sosa:Sensor ;
-    ns1:rangeIncludes sosa:Observation ;
+    ns2:domainIncludes sosa:Sensor ;
+    ns2:rangeIncludes sosa:Observation ;
     rdfs:comment "Relation between a Sensor and an Observation made by the Sensor."@en ;
     rdfs:isDefinedBy sosa: ;
     rdfs:subPropertyOf ngsi-ld:Relationship ;
@@ -1719,8 +1719,8 @@ qudt:hasQuantityKind a owl:ObjectProperty ;
 
 sosa:madeBySensor a owl:ObjectProperty ;
     rdfs:label "made by sensor"@en ;
-    ns1:domainIncludes sosa:Observation ;
-    ns1:rangeIncludes sosa:Sensor ;
+    ns2:domainIncludes sosa:Observation ;
+    ns2:rangeIncludes sosa:Sensor ;
     rdfs:comment "Relation between an Observation and the Sensor which made the Observation."@en ;
     rdfs:isDefinedBy sosa: ;
     rdfs:subPropertyOf ngsi-ld:Relationship ;
@@ -1733,8 +1733,8 @@ sosa:madeBySensor a owl:ObjectProperty ;
 sosa:observedProperty a owl:ObjectProperty ;
     rdfs:label "observed property"@en ;
     dct:description "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation." ;
-    ns1:domainIncludes sosa:Observation ;
-    ns1:rangeIncludes sosa:ObservableProperty ;
+    ns2:domainIncludes sosa:Observation ;
+    ns2:rangeIncludes sosa:ObservableProperty ;
     rdfs:comment "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."@en ;
     rdfs:isDefinedBy sosa: ;
     rdfs:subPropertyOf ngsi-ld:Relationship ;
@@ -1745,7 +1745,7 @@ sosa:observedProperty a owl:ObjectProperty ;
 
 sosa:resultTime a owl:DatatypeProperty ;
     rdfs:label "result time"@en ;
-    ns1:domainIncludes sosa:Actuation,
+    ns2:domainIncludes sosa:Actuation,
         sosa:Observation,
         sosa:Sampling ;
     rdfs:comment "The result time is the instant of time when the Observation, Actuation or Sampling activity was completed."@en ;
@@ -1759,10 +1759,10 @@ sosa:resultTime a owl:DatatypeProperty ;
 
 sosa:usedProcedure a owl:ObjectProperty ;
     rdfs:label "used procedure"@en ;
-    ns1:domainIncludes sosa:Actuation,
+    ns2:domainIncludes sosa:Actuation,
         sosa:Observation,
         sosa:Sampling ;
-    ns1:rangeIncludes sosa:Procedure ;
+    ns2:rangeIncludes sosa:Procedure ;
     rdfs:comment "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."@en ;
     rdfs:isDefinedBy sosa: ;
     rdfs:subPropertyOf ngsi-ld:Relationship ;
@@ -1967,10 +1967,10 @@ sosa:Platform a owl:Class ;
 
 sosa:hasFeatureOfInterest a owl:ObjectProperty ;
     rdfs:label "has feature of interest"@en ;
-    ns1:domainIncludes sosa:Actuation,
+    ns2:domainIncludes sosa:Actuation,
         sosa:Observation,
         sosa:Sampling ;
-    ns1:rangeIncludes sosa:FeatureOfInterest,
+    ns2:rangeIncludes sosa:FeatureOfInterest,
         sosa:Sample ;
     rdfs:comment "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."@en ;
     rdfs:isDefinedBy sosa: ;
@@ -2058,10 +2058,10 @@ A Sample is intended to sample some FatureOfInterest, so there is an expectation
 
 geo:Geometry a owl:Class ;
     rdfs:label "Geometry"@en ;
-    ns2:contributor "Matthew Perry" ;
-    ns2:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-    ns2:date "2011-06-16"^^xsd:date ;
-    ns2:description """
+    ns1:contributor "Matthew Perry" ;
+    ns1:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+    ns1:date "2011-06-16"^^xsd:date ;
+    ns1:description """
       The class represents the top-level geometry type. This class is 
       equivalent to the UML class GM_Object defined in ISO 19107, and 
       it is superclass of all geometry types.
@@ -2102,10 +2102,10 @@ geo:Geometry a owl:Class ;
 
 geo:SpatialObject a owl:Class ;
     rdfs:label "SpatialObject"@en ;
-    ns2:contributor "Matthew Perry" ;
-    ns2:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
-    ns2:date "2011-06-16"^^xsd:date ;
-    ns2:description """
+    ns1:contributor "Matthew Perry" ;
+    ns1:creator "OGC GeoSPARQL 1.0 Standard Working Group" ;
+    ns1:date "2011-06-16"^^xsd:date ;
+    ns1:description """
       The class spatial-object represents everything that can have 
       a spatial representation. It is superclass of feature and geometry.
     """@en ;
@@ -2273,7 +2273,7 @@ sosa:Actuation a owl:Class ;
 
 qu:QuantityKind a owl:Class ;
     rdfs:label "QuantityKind" ;
-    ns2:source "skos:exactMatch 'QuantityKind' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv" ;
+    ns1:source "skos:exactMatch 'QuantityKind' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv" ;
     rdfs:comment """A QuantityKind is an abstract classifier that represents the [VIM] concept of "kind of quantity" that is defined as "aspect
 common to mutually comparable quantities." A QuantityKind represents the essence of a quantity without any numerical
 value or unit. Quantities of the same kind within a given system of quantities have the same quantity dimension. However,

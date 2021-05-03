@@ -164,7 +164,7 @@
         rdfs:label        "Scalar Datatype" ;
         sh:name           "Scalar Datatype" ;
         sh:nodeKind       sh:IRI ;
-        sh:property       <https://astrea.linkeddata.es/shapes#a6d634fcdad2e5a94153b977867b58c3> , <https://astrea.linkeddata.es/shapes#7fd963ccf05a099444df491e502e0d25> , <https://astrea.linkeddata.es/shapes#4e10bcdc4a9b3f11870e89bf622e45ac> , <https://astrea.linkeddata.es/shapes#6646353f188770c37d4a219de6cf71c3> , <https://astrea.linkeddata.es/shapes#fd11456c75fa24c7b69d02630af76b63> , <https://astrea.linkeddata.es/shapes#584799641e74b01d75007abea7f732b5> , <https://astrea.linkeddata.es/shapes#09ce3bce191bf5456008e6a54bdebd09> , <https://astrea.linkeddata.es/shapes#f9ef495625ff7a506e79bd0baa4b5cf2> ;
+        sh:property       <https://astrea.linkeddata.es/shapes#a6d634fcdad2e5a94153b977867b58c3> , <https://astrea.linkeddata.es/shapes#7fd963ccf05a099444df491e502e0d25> , <https://astrea.linkeddata.es/shapes#4e10bcdc4a9b3f11870e89bf622e45ac> , <https://astrea.linkeddata.es/shapes#6646353f188770c37d4a219de6cf71c3> , <https://astrea.linkeddata.es/shapes#fd11456c75fa24c7b69d02630af76b63> , <https://astrea.linkeddata.es/shapes#584799641e74b01d75007abea7f732b5> , <https://astrea.linkeddata.es/shapes#f9ef495625ff7a506e79bd0baa4b5cf2> , <https://astrea.linkeddata.es/shapes#09ce3bce191bf5456008e6a54bdebd09> ;
         sh:targetClass    qudt:ScalarDatatype .
 
 <https://astrea.linkeddata.es/shapes#d5721dbd27a11084227205da6fe2fc31>
@@ -854,7 +854,7 @@
         sh:description    "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en ;
         sh:name           "Feature Of Interest"@en ;
         sh:nodeKind       sh:IRI ;
-        sh:property       <https://astrea.linkeddata.es/shapes#37d326bac283bb914605639aa82dfc51> , <https://astrea.linkeddata.es/shapes#0bd19b86b36817f6b83b9c77c36aff1f> ;
+        sh:property       <https://astrea.linkeddata.es/shapes#0bd19b86b36817f6b83b9c77c36aff1f> , <https://astrea.linkeddata.es/shapes#37d326bac283bb914605639aa82dfc51> ;
         sh:targetClass    sosa:FeatureOfInterest .
 
 <https://astrea.linkeddata.es/shapes#e1dd1953b136ea1319d434ce544b2729>
@@ -1504,29 +1504,6 @@
         sh:nodeKind       sh:BlankNodeOrIRI ;
         sh:path           sosa:usedProcedure .
 
-_:b0    rdf:first  <https://astrea.linkeddata.es/shapes#1277b387effe1ea8b7cf6171d6155a1b> ;
-        rdf:first  [ sh:class  time:Instant ;
-                     sh:path   time:hasTime
-                   ] ;
-        rdf:first  [ sh:class  time:Instant ;
-                     sh:path   time:before
-                   ] ;
-        rdf:first  [ sh:class  time:Instant ;
-                     sh:path   time:after
-                   ] ;
-        rdf:rest   [ rdf:first  <https://astrea.linkeddata.es/shapes#f1ed01ff4ad7e0110c28d4231cd9616c> ;
-                     rdf:first  [ sh:class  time:Interval ;
-                                  sh:path   time:hasTime
-                                ] ;
-                     rdf:first  [ sh:class  time:Interval ;
-                                  sh:path   time:before
-                                ] ;
-                     rdf:first  [ sh:class  time:Interval ;
-                                  sh:path   time:after
-                                ] ;
-                     rdf:rest   ()
-                   ] .
-
 <https://astrea.linkeddata.es/shapes#91417360b25051be98a8c2c31e183be0>
         a            sh:PropertyShape ;
         sh:class     sosa:Result ;
@@ -1839,6 +1816,15 @@ _:b0    rdf:first  <https://astrea.linkeddata.es/shapes#1277b387effe1ea8b7cf6171
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      qudt:hasRule .
 
+<https://astrea.linkeddata.es/shapes#c8ba0e30ea76a68976d6ab2f0d9ce576>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  sosa: ;
+        rdfs:label        "has feature of interest"@en , "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."@en ;
+        sh:description    "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."@en ;
+        sh:name           "has feature of interest"@en ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           sosa:hasFeatureOfInterest .
+
 <https://astrea.linkeddata.es/shapes#a67fd904792ffabb0d28b1b45cce41ba>
         a                 sh:NodeShape ;
         rdfs:isDefinedBy  <http://qudt.org/schema/qudt> , <http://qudt.org/2.1/schema/qudt> ;
@@ -1848,15 +1834,6 @@ _:b0    rdf:first  <https://astrea.linkeddata.es/shapes#1277b387effe1ea8b7cf6171
         sh:nodeKind       sh:IRI ;
         sh:property       <https://astrea.linkeddata.es/shapes#7f85b3b4c730c7dc7309ea209f896979> , <https://astrea.linkeddata.es/shapes#0b9d858ec0ca24ff9a0ada144207f619> ;
         sh:targetClass    qudt:BaseDimensionMagnitude .
-
-<https://astrea.linkeddata.es/shapes#c8ba0e30ea76a68976d6ab2f0d9ce576>
-        a                 sh:PropertyShape ;
-        rdfs:isDefinedBy  sosa: ;
-        rdfs:label        "has feature of interest"@en , "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."@en ;
-        sh:description    "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."@en ;
-        sh:name           "has feature of interest"@en ;
-        sh:nodeKind       sh:BlankNodeOrIRI ;
-        sh:path           sosa:hasFeatureOfInterest .
 
 <https://astrea.linkeddata.es/shapes#288243d349f800fde889edfec9e8be58>
         a                 sh:PropertyShape ;
@@ -2305,16 +2282,6 @@ _:b0    rdf:first  <https://astrea.linkeddata.es/shapes#1277b387effe1ea8b7cf6171
         sh:nodeKind     sh:Literal ;
         sh:pattern      "-?([1-9][0-9]{3,}|0[0-9]{3})(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
 
-<https://astrea.linkeddata.es/shapes#95a321de34ca717324aabf2afab8a80b>
-        a                 sh:NodeShape ;
-        rdfs:isDefinedBy  ssn: ;
-        rdfs:label        "Stimulus"@en ;
-        sh:description    "An event in the real world that 'triggers' the Sensor. The properties associated to the Stimulus may be different to the eventual observed ObservableProperty. It is the event, not the object, that triggers the Sensor."@en ;
-        sh:name           "Stimulus"@en ;
-        sh:nodeKind       sh:IRI ;
-        sh:property       <https://astrea.linkeddata.es/shapes#a814fb83f610bebf6489cc07fe89504f> ;
-        sh:targetClass    ssn:Stimulus .
-
 <https://astrea.linkeddata.es/shapes#5e270612d98f2bee44b823d066e26b27>
         a                 sh:PropertyShape ;
         rdfs:isDefinedBy  <http://qudt.org/2.1/schema/qudt> , <http://qudt.org/schema/qudt> ;
@@ -2337,13 +2304,15 @@ _:b0    rdf:first  <https://astrea.linkeddata.es/shapes#1277b387effe1ea8b7cf6171
         sh:nodeKind     sh:Literal ;
         sh:path         time:year .
 
-<https://astrea.linkeddata.es/shapes#6d8821900054948705b59d34be7f676c>
+<https://astrea.linkeddata.es/shapes#95a321de34ca717324aabf2afab8a80b>
         a                 sh:NodeShape ;
-        rdfs:isDefinedBy  <http://standards.iso.org/iso/19156/ed-1/en/> ;
-        rdfs:label        "GFI_DomainFeature" ;
-        sh:name           "GFI_DomainFeature" ;
+        rdfs:isDefinedBy  ssn: ;
+        rdfs:label        "Stimulus"@en ;
+        sh:description    "An event in the real world that 'triggers' the Sensor. The properties associated to the Stimulus may be different to the eventual observed ObservableProperty. It is the event, not the object, that triggers the Sensor."@en ;
+        sh:name           "Stimulus"@en ;
         sh:nodeKind       sh:IRI ;
-        sh:targetClass    iso19156_GFI:GFI_DomainFeature .
+        sh:property       <https://astrea.linkeddata.es/shapes#a814fb83f610bebf6489cc07fe89504f> ;
+        sh:targetClass    ssn:Stimulus .
 
 <https://astrea.linkeddata.es/shapes#50375996cb18650849d4d23cce15ad78>
         a                 sh:PropertyShape ;
@@ -2352,6 +2321,14 @@ _:b0    rdf:first  <https://astrea.linkeddata.es/shapes#1277b387effe1ea8b7cf6171
         sh:name           "has quantity kind dimension vector numerator part" ;
         sh:nodeKind       sh:BlankNodeOrIRI ;
         sh:path           qudt:hasNumeratorPart .
+
+<https://astrea.linkeddata.es/shapes#6d8821900054948705b59d34be7f676c>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <http://standards.iso.org/iso/19156/ed-1/en/> ;
+        rdfs:label        "GFI_DomainFeature" ;
+        sh:name           "GFI_DomainFeature" ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    iso19156_GFI:GFI_DomainFeature .
 
 <https://astrea.linkeddata.es/shapes#ff222f0020828461f75ccefb88949d33>
         a                 sh:PropertyShape ;
@@ -4938,7 +4915,7 @@ _:b0    rdf:first  <https://astrea.linkeddata.es/shapes#1277b387effe1ea8b7cf6171
         sh:description    "An act of Sampling carries out a sampling Procedure to create or transform one or more samples."@en ;
         sh:name           "Sampling"@en ;
         sh:nodeKind       sh:IRI ;
-        sh:property       <https://astrea.linkeddata.es/shapes#60c83dd4552d352d25b92aa351efcc18> , <https://astrea.linkeddata.es/shapes#0108c26baab7e2cb5a143b40f8bb7e49> , <https://astrea.linkeddata.es/shapes#890f09d251a34c954da61c6ff7fd186d> , <https://astrea.linkeddata.es/shapes#75378174ae359e688981018a87484c02> , <https://astrea.linkeddata.es/shapes#332db225382194124a73229a23672adb> , <https://astrea.linkeddata.es/shapes#417f249758906a730650755f57275b72> ;
+        sh:property       <https://astrea.linkeddata.es/shapes#60c83dd4552d352d25b92aa351efcc18> , <https://astrea.linkeddata.es/shapes#0108c26baab7e2cb5a143b40f8bb7e49> , <https://astrea.linkeddata.es/shapes#890f09d251a34c954da61c6ff7fd186d> , <https://astrea.linkeddata.es/shapes#332db225382194124a73229a23672adb> , <https://astrea.linkeddata.es/shapes#75378174ae359e688981018a87484c02> , <https://astrea.linkeddata.es/shapes#417f249758906a730650755f57275b72> ;
         sh:targetClass    sosa:Sampling .
 
 <https://astrea.linkeddata.es/shapes#8ad3c9206666ec8d3b5afcc73dd52cd1>
@@ -5734,6 +5711,29 @@ _:b0    rdf:first  <https://astrea.linkeddata.es/shapes#1277b387effe1ea8b7cf6171
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      time:minutes .
 
+_:b0    rdf:first  <https://astrea.linkeddata.es/shapes#1277b387effe1ea8b7cf6171d6155a1b> ;
+        rdf:first  [ sh:class  time:Instant ;
+                     sh:path   time:hasTime
+                   ] ;
+        rdf:first  [ sh:class  time:Instant ;
+                     sh:path   time:before
+                   ] ;
+        rdf:first  [ sh:class  time:Instant ;
+                     sh:path   time:after
+                   ] ;
+        rdf:rest   [ rdf:first  <https://astrea.linkeddata.es/shapes#f1ed01ff4ad7e0110c28d4231cd9616c> ;
+                     rdf:first  [ sh:class  time:Interval ;
+                                  sh:path   time:hasTime
+                                ] ;
+                     rdf:first  [ sh:class  time:Interval ;
+                                  sh:path   time:before
+                                ] ;
+                     rdf:first  [ sh:class  time:Interval ;
+                                  sh:path   time:after
+                                ] ;
+                     rdf:rest   ()
+                   ] .
+
 <https://astrea.linkeddata.es/shapes#46deb4072bf7272b8ec8fdba42635e4b>
         a                 sh:PropertyShape ;
         rdfs:isDefinedBy  "http://purl.oclc.org/NET/ssnx/qu" ;
@@ -6172,17 +6172,17 @@ _:b0    rdf:first  <https://astrea.linkeddata.es/shapes#1277b387effe1ea8b7cf6171
         sh:path         time:second ;
         sh:pattern      "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)" .
 
-<https://astrea.linkeddata.es/shapes#095f9984c5d4662d997b832984a4966e>
-        a                 sh:NodeShape ;
-        rdfs:isDefinedBy  <http://purl.oclc.org/NET/ssnx/qu/qu-rec20> ;
-        sh:nodeKind       sh:IRI ;
-        sh:targetClass    dim:StressOrPressure .
-
 <https://astrea.linkeddata.es/shapes#7b047982e409fa32d8598ac24799a77e>
         a            sh:PropertyShape ;
         sh:maxCount  "1"^^xsd:nonNegativeInteger ;
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      time:months .
+
+<https://astrea.linkeddata.es/shapes#095f9984c5d4662d997b832984a4966e>
+        a                 sh:NodeShape ;
+        rdfs:isDefinedBy  <http://purl.oclc.org/NET/ssnx/qu/qu-rec20> ;
+        sh:nodeKind       sh:IRI ;
+        sh:targetClass    dim:StressOrPressure .
 
 <https://astrea.linkeddata.es/shapes#3e7af0827dae621932dbe928e0ff8f8e>
         a                 sh:NodeShape ;
@@ -6469,7 +6469,7 @@ _:b0    rdf:first  <https://astrea.linkeddata.es/shapes#1277b387effe1ea8b7cf6171
 <https://astrea.linkeddata.es/report/0575951112>
         a       <https://w3id.org/def/astrea#ReportEntry> ;
         <https://w3id.org/def/astrea#message>
-                "2021-04-14 01:53:31.658  INFO 1 --- [io-8080-exec-10] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {}->http://www.w3.org:80: The target server failed to respond2021-04-14 01:53:31.658  INFO 1 --- [io-8080-exec-10] o.apache.http.impl.execchain.RetryExec   : Retrying request to {}->http://www.w3.org:80\n" ;
+                "2021-05-02 05:14:01.324  INFO 1 --- [nio-8080-exec-7] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {}->http://www.w3.org:80: The target server failed to respond2021-05-02 05:14:01.324  INFO 1 --- [nio-8080-exec-7] o.apache.http.impl.execchain.RetryExec   : Retrying request to {}->http://www.w3.org:80\n" ;
         <https://w3id.org/def/astrea#source>
                 "http://www.w3.org/ns/ssn" ;
         <https://w3id.org/def/astrea#statusCode>
@@ -6636,7 +6636,7 @@ _:b0    rdf:first  <https://astrea.linkeddata.es/shapes#1277b387effe1ea8b7cf6171
 <https://astrea.linkeddata.es/report/0674618880>
         a       <https://w3id.org/def/astrea#ReportEntry> ;
         <https://w3id.org/def/astrea#message>
-                "2021-04-14 01:53:33.170  INFO 1 --- [io-8080-exec-10] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {}->http://www.w3.org:80: The target server failed to respond2021-04-14 01:53:33.170  INFO 1 --- [io-8080-exec-10] o.apache.http.impl.execchain.RetryExec   : Retrying request to {}->http://www.w3.org:80\n" ;
+                "2021-05-02 05:14:03.152  INFO 1 --- [nio-8080-exec-7] o.apache.http.impl.execchain.RetryExec   : I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {}->http://www.w3.org:80: The target server failed to respond2021-05-02 05:14:03.152  INFO 1 --- [nio-8080-exec-7] o.apache.http.impl.execchain.RetryExec   : Retrying request to {}->http://www.w3.org:80\n" ;
         <https://w3id.org/def/astrea#source>
                 "http://www.w3.org/ns/sosa" ;
         <https://w3id.org/def/astrea#statusCode>

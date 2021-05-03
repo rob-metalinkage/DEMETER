@@ -5,11 +5,11 @@
         "https://fiware.github.io/data-models/full-context.jsonld",
         "https://w3id.org/demeter/agri/proxy/saref4agri?_profile=jsoncontext",
         {
-            "act-inspire": "http://inspire.ec.europa.eu/schemas/act-core/3.0#",
             "foodie": "http://foodie-cloud.com/model/foodie#",
             "fiware": "https://uri.fiware.org/ns/data-models#",
             "saref4agri": "https://w3id.org/def/saref4agri#",
-            "af-inspire": "http://inspire.ec.europa.eu/schemas/af/3.0#"
+            "af-inspire": "http://inspire.ec.europa.eu/schemas/af/3.0#",
+            "act-inspire": "http://inspire.ec.europa.eu/schemas/act-core/3.0#"
         }
     ]
 }
