@@ -20,6 +20,39 @@
 foodie:Treatment a owl:Class ;
     rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:motionSpeed ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:flowAdjustment ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:int ;
+            owl:onProperty foodie:quantity ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:int ;
+            owl:onProperty foodie:formOfTreatment ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:pressure ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:areaDose ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:price ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:plan ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:treatmentDescription ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:applicationWidth ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:treatmentProduct ],
+        [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:int ;
             owl:onProperty foodie:formOfTreatment ],
         [ a owl:Restriction ;
@@ -129,6 +162,8 @@ fiware:waterSource a owl:DatatypeProperty ;
         prov:Entity ;
     dct:contributor [ foaf:name "Ioanna Roussaki" ;
             schema:affiliation [ foaf:name "ICCS" ] ],
+        [ foaf:name "George Routis" ;
+            schema:affiliation [ foaf:name "ICCS" ] ],
         [ foaf:name "Rob Atkinson" ;
             schema:affiliation [ foaf:name "OGC" ] ] ;
     dct:creator [ rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
@@ -147,7 +182,7 @@ fiware:waterSource a owl:DatatypeProperty ;
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriIntervention.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = ../models\\agriIntervention.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            prov:endedAtTime "2021-05-02"^^xsd:date ;
+            prov:endedAtTime "2021-05-05"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:maker [ foaf:homepage <https://h2020-demeter.eu/> ;
@@ -158,12 +193,21 @@ foodie:CampaignType a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:minCardinality "1"^^xsd:int ;
             owl:onProperty foodie:period ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:period ],
         iso19150-2:Datatype ;
     skos:prefLabel "CampaignType"@en .
 
 foodie:DoseUnit a owl:Class ;
     rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:minimumDose ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:maximumDose ],
+        [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:int ;
             owl:onProperty foodie:minimumDose ],
         [ a owl:Restriction ;
@@ -181,11 +225,41 @@ foodie:FormOfTreatmentValue a owl:Class ;
 foodie:Intervention a owl:Class ;
     rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:int ;
+            owl:onProperty foodie:type ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:int ;
+            owl:onProperty foodie:description ],
+        [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:int ;
             owl:onProperty common:validTo ],
         [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:evidenceParty ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:price ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:notes ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:supervisor ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:interventionPlot ],
+        [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:int ;
             owl:onProperty common:validFrom ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:int ;
+            owl:onProperty foodie:status ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:interventionGeometry ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:int ;
+            owl:onProperty foodie:creationDateTime ],
         [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:int ;
             owl:onProperty foodie:notes ],
@@ -231,6 +305,27 @@ foodie:TreatmentPlan a owl:Class ;
     rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:int ;
+            owl:onProperty foodie:treatmentPlanCreation ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:int ;
+            owl:onProperty foodie:description ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:notes ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:treatmentPlanCode ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:planProduct ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:int ;
+            owl:onProperty foodie:campaign ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:int ;
+            owl:onProperty foodie:type ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:int ;
             owl:onProperty foodie:type ],
         [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:int ;
@@ -254,6 +349,31 @@ foodie:TreatmentPlan a owl:Class ;
         iso19150-2:FeatureType,
         geo:Feature ;
     skos:prefLabel "TreatmentPlan"@en .
+
+fiware:AgriParcelOperation a owl:Class ;
+    rdfs:label "AgriParcelOperation" ;
+    rdfs:comment "This entity contains a harmonised description of a generic operations performed on a parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications." ;
+    rdfs:isDefinedBy <https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Parcel-Operation.md> .
+
+fiware:hasOperator a owl:ObjectProperty ;
+    rdfs:label "hasOperator"@en ;
+    rdfs:comment "Reference to the operator conducting the operation" ;
+    rdfs:isDefinedBy <https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Parcel-Record.md> .
+
+fiware:operationHasAgriParcel a owl:ObjectProperty ;
+    rdfs:label "operationHasAgriParcel"@en ;
+    rdfs:comment "Reference to the AgriParcel to which this entity relates." ;
+    rdfs:isDefinedBy <https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Parcel-Operation.md> .
+
+fiware:quantity a owl:DatatypeProperty ;
+    rdfs:label "quantity"@en ;
+    rdfs:comment "The total quantity of water or product used/ applied. It is recommended this is measured in litres for liquids or kilogrammes for solids." ;
+    rdfs:isDefinedBy <https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Parcel-Record.md> .
+
+fiware:status a owl:DatatypeProperty ;
+    rdfs:label "status"@en ;
+    rdfs:comment "A choice from an enumerated list describing the status. One of: planned, ongoing, finished, scheduled, cancelled." ;
+    rdfs:isDefinedBy <https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Parcel-Record.md> .
 
 foodie:applicationWidth a owl:ObjectProperty ;
     rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
@@ -373,29 +493,4 @@ foodie:treatmentProduct a owl:ObjectProperty ;
     rdfs:range foodie:Product ;
     owl:equivalentProperty fiware:hasAgriProductType ;
     skos:prefLabel "treatmentProduct"@en .
-
-fiware:AgriParcelOperation a owl:Class ;
-    rdfs:label "AgriParcelOperation" ;
-    rdfs:comment "This entity contains a harmonised description of a generic operations performed on a parcel of land. This entity is primarily associated with the agricultural vertical and related IoT applications." ;
-    rdfs:isDefinedBy <https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Parcel-Operation.md> .
-
-fiware:hasOperator a owl:ObjectProperty ;
-    rdfs:label "hasOperator"@en ;
-    rdfs:comment "Reference to the operator conducting the operation" ;
-    rdfs:isDefinedBy <https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Parcel-Record.md> .
-
-fiware:operationHasAgriParcel a owl:ObjectProperty ;
-    rdfs:label "operationHasAgriParcel"@en ;
-    rdfs:comment "Reference to the AgriParcel to which this entity relates." ;
-    rdfs:isDefinedBy <https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Parcel-Operation.md> .
-
-fiware:quantity a owl:DatatypeProperty ;
-    rdfs:label "quantity"@en ;
-    rdfs:comment "The total quantity of water or product used/ applied. It is recommended this is measured in litres for liquids or kilogrammes for solids." ;
-    rdfs:isDefinedBy <https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Parcel-Record.md> .
-
-fiware:status a owl:DatatypeProperty ;
-    rdfs:label "status"@en ;
-    rdfs:comment "A choice from an enumerated list describing the status. One of: planned, ongoing, finished, scheduled, cancelled." ;
-    rdfs:isDefinedBy <https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Parcel-Record.md> .
 

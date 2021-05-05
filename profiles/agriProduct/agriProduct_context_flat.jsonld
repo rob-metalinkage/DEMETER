@@ -4,38 +4,50 @@
         {
             "foodie": "http://foodie-cloud.com/model/foodie#",
             "fiware": "https://uri.fiware.org/ns/data-models#",
+            "ProductNutrients": {
+                "@id": "foodie:ProductNutrients"
+            },
+            "AgriProductType": {
+                "@id": "fiware:AgriProductType"
+            },
+            "ProductPreparation": {
+                "@id": "foodie:ProductPreparation"
+            },
+            "ProductKindValue": {
+                "@id": "foodie:ProductKindValue"
+            },
             "Product": {
                 "@id": "foodie:Product"
             },
             "ActiveIngredients": {
                 "@id": "foodie:ActiveIngredients"
             },
-            "ProductPreparation": {
-                "@id": "foodie:ProductPreparation"
-            },
-            "AgriProductType": {
-                "@id": "fiware:AgriProductType"
-            },
-            "ProductNutrients": {
-                "@id": "foodie:ProductNutrients"
-            },
-            "ProductKindValue": {
-                "@id": "foodie:ProductKindValue"
+            "hasAgriProductTypeParent": {
+                "@id": "fiware:hasAgriProductTypeParent",
+                "@type": "@id"
             },
             "hasAgriProductTypeChildren": {
                 "@id": "fiware:hasAgriProductTypeChildren",
                 "@type": "@id"
             },
-            "hasAgriProductTypeParent": {
-                "@id": "fiware:hasAgriProductTypeParent",
+            "nutrientProduct": {
+                "@id": "foodie:nutrientProduct",
                 "@type": "@id"
             },
-            "solventQuantity": {
-                "@id": "foodie:solventQuantity",
+            "productKind": {
+                "@id": "foodie:productKind",
                 "@type": "@id"
             },
             "nutrientAmount": {
                 "@id": "foodie:nutrientAmount",
+                "@type": "@id"
+            },
+            "nutrient": {
+                "@id": "foodie:nutrient",
+                "@type": "@id"
+            },
+            "ingredientAmount": {
+                "@id": "foodie:ingredientAmount",
                 "@type": "@id"
             },
             "manufacturer": {
@@ -46,75 +58,63 @@
                 "@id": "foodie:safetyPeriod",
                 "@type": "@id"
             },
-            "ingredientAmount": {
-                "@id": "foodie:ingredientAmount",
+            "productQuantity": {
+                "@id": "foodie:productQuantity",
                 "@type": "@id"
             },
-            "nutrientProduct": {
-                "@id": "foodie:nutrientProduct",
+            "solventQuantity": {
+                "@id": "foodie:solventQuantity",
                 "@type": "@id"
             },
             "hasAgriProductType": {
                 "@id": "fiware:hasAgriProductType",
                 "@type": "@id"
             },
-            "productKind": {
-                "@id": "foodie:productKind",
-                "@type": "@id"
-            },
-            "productQuantity": {
-                "@id": "foodie:productQuantity",
-                "@type": "@id"
-            },
-            "nutrient": {
-                "@id": "foodie:nutrient",
-                "@type": "@id"
-            },
-            "nutrientName": {
-                "@id": "foodie:nutrientName",
-                "@type": "xsd:string"
-            },
-            "productCode": {
-                "@id": "foodie:productCode",
-                "@type": "xsd:string"
-            },
-            "productType": {
-                "@id": "foodie:productType",
-                "@type": "xsd:string"
-            },
-            "root": {
-                "@id": "fiware:root"
-            },
-            "nutrientMeasure": {
-                "@id": "foodie:nutrientMeasure",
-                "@type": "xsd:string"
-            },
             "ingredientName": {
                 "@id": "foodie:ingredientName",
                 "@type": "xsd:string"
             },
-            "registerUrl": {
-                "@id": "foodie:registerUrl",
-                "@type": "xsd:anyURI"
-            },
-            "productSubType": {
-                "@id": "foodie:productSubType",
-                "@type": "xsd:string"
-            },
-            "safetyInstructions": {
-                "@id": "foodie:safetyInstructions",
+            "nutrientName": {
+                "@id": "foodie:nutrientName",
                 "@type": "xsd:string"
             },
             "storageHandling": {
                 "@id": "foodie:storageHandling",
                 "@type": "xsd:string"
             },
+            "productName": {
+                "@id": "foodie:productName",
+                "@type": "xsd:string"
+            },
+            "productSubType": {
+                "@id": "foodie:productSubType",
+                "@type": "xsd:string"
+            },
+            "root": {
+                "@id": "fiware:root"
+            },
+            "safetyInstructions": {
+                "@id": "foodie:safetyInstructions",
+                "@type": "xsd:string"
+            },
+            "productType": {
+                "@id": "foodie:productType",
+                "@type": "xsd:string"
+            },
+            "productCode": {
+                "@id": "foodie:productCode",
+                "@type": "xsd:string"
+            },
+            "registerUrl": {
+                "@id": "foodie:registerUrl",
+                "@type": "xsd:anyURI"
+            },
             "registrationCode": {
                 "@id": "foodie:registrationCode",
                 "@type": "xsd:string"
             },
-            "productName": {
-                "@id": "foodie:productName",
+            "nutrientMeasure": {
+                "@id": "foodie:nutrientMeasure",
                 "@type": "xsd:string"
             }
         }

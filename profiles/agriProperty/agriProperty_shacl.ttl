@@ -333,6 +333,11 @@
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      saref:controlsProperty .
 
+<https://astrea.linkeddata.es/shapes#b011747329f202f73cb847724acf4cca>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      saref:consistsOf .
+
 <https://astrea.linkeddata.es/shapes#0eb807de4b50dbbb4f338ddf5645226f>
         a               sh:NodeShape ;
         rdfs:label      "State"@en ;
@@ -340,11 +345,6 @@
         sh:name         "State"@en ;
         sh:nodeKind     sh:IRI ;
         sh:targetClass  <https://saref.etsi.org/core/State> .
-
-<https://astrea.linkeddata.es/shapes#b011747329f202f73cb847724acf4cca>
-        a            sh:PropertyShape ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      saref:consistsOf .
 
 <https://astrea.linkeddata.es/shapes#5aaaac2c509407252e1feafc2a9daf4c>
         a            sh:PropertyShape ;
@@ -365,17 +365,6 @@
         sh:class     saref:Measurement ;
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      saref:relatesToMeasurement .
-
-<https://astrea.linkeddata.es/shapes#56e7c85c8d659331447f841c28306ba0>
-        a                 sh:PropertyShape ;
-        rdfs:isDefinedBy  <https://saref.etsi.org/core/> ;
-        rdfs:label        "has model"@en , "A relationship identifying the model of an entity (e.g., device)"@en ;
-        sh:datatype       xsd:string ;
-        sh:description    "A relationship identifying the model of an entity (e.g., device)"@en ;
-        sh:name           "has model"@en ;
-        sh:nodeKind       sh:Literal ;
-        sh:path           <https://saref.etsi.org/core/hasModel> ;
-        sh:pattern        ".*" .
 
 <https://astrea.linkeddata.es/shapes#01cd7d2131ee5eb82729b1f2702a634e>
         a                       sh:PropertyShape ;
@@ -417,6 +406,17 @@
         sh:class     <https://saref.etsi.org/core/Measurement> ;
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      <https://saref.etsi.org/core/hasMeasurement> .
+
+<https://astrea.linkeddata.es/shapes#56e7c85c8d659331447f841c28306ba0>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/core/> ;
+        rdfs:label        "has model"@en , "A relationship identifying the model of an entity (e.g., device)"@en ;
+        sh:datatype       xsd:string ;
+        sh:description    "A relationship identifying the model of an entity (e.g., device)"@en ;
+        sh:name           "has model"@en ;
+        sh:nodeKind       sh:Literal ;
+        sh:path           <https://saref.etsi.org/core/hasModel> ;
+        sh:pattern        ".*" .
 
 <https://astrea.linkeddata.es/shapes#2a1b73f5b3561d40652763c609a399e2>
         a               sh:PropertyShape ;
@@ -1593,17 +1593,25 @@
         sh:nodeKind     sh:IRI ;
         sh:targetClass  cf-feature:SurfaceSurface .
 
-<https://astrea.linkeddata.es/shapes#3adb57e2d654b433129a5a2a98216730>
-        a            sh:PropertyShape ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      saref:hasFunction .
-
 <https://astrea.linkeddata.es/shapes#2ffaad051bf28b701754c72052aefb82>
         a                       sh:PropertyShape ;
         sh:nodeKind             sh:IRIOrLiteral ;
         sh:path                 <https://saref.etsi.org/core/isAccomplishedBy> ;
         sh:qualifiedMinCount    "1"^^xsd:nonNegativeInteger ;
         sh:qualifiedValueShape  [ sh:class  <https://saref.etsi.org/core/Device> ] .
+
+<https://astrea.linkeddata.es/shapes#3adb57e2d654b433129a5a2a98216730>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      saref:hasFunction .
+
+<https://astrea.linkeddata.es/shapes#0e35d5b328815701fde9211392322bfd>
+        a               sh:PropertyShape ;
+        rdfs:label      "represents" , "A relationship between a service and a function." ;
+        sh:description  "A relationship between a service and a function." ;
+        sh:name         "represents" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         saref:represents .
 
 <https://astrea.linkeddata.es/shapes#8c9f0a3ef50fe390869f7c693885d425>
         a                 sh:NodeShape ;
@@ -1623,14 +1631,6 @@
         sh:name         "manages farm"@en ;
         sh:nodeKind     sh:BlankNodeOrIRI ;
         sh:path         s4agri:managesFarm .
-
-<https://astrea.linkeddata.es/shapes#0e35d5b328815701fde9211392322bfd>
-        a               sh:PropertyShape ;
-        rdfs:label      "represents" , "A relationship between a service and a function." ;
-        sh:description  "A relationship between a service and a function." ;
-        sh:name         "represents" ;
-        sh:nodeKind     sh:BlankNodeOrIRI ;
-        sh:path         saref:represents .
 
 <https://astrea.linkeddata.es/shapes#f5d85329dd8373607183ef7a6a2c3fc7>
         a                 sh:PropertyShape ;
@@ -1794,12 +1794,6 @@
         sh:qualifiedMaxCount    "1"^^xsd:nonNegativeInteger ;
         sh:qualifiedValueShape  [ sh:class  s4agri:ID ] .
 
-<https://astrea.linkeddata.es/shapes#fe4b23a836e2b99e7e2855b46819502d>
-        a            sh:PropertyShape ;
-        sh:class     saref:StartStopState ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      saref:actsUpon .
-
 <https://astrea.linkeddata.es/shapes#fe1d20defb55d9b091cee4f590f01aca>
         a                 sh:PropertyShape ;
         rdfs:isDefinedBy  <https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Parcel-Record.md> ;
@@ -1841,6 +1835,12 @@
         sh:nodeKind     sh:Literal ;
         sh:path         saref:hasName ;
         sh:pattern      ".*" .
+
+<https://astrea.linkeddata.es/shapes#fe4b23a836e2b99e7e2855b46819502d>
+        a            sh:PropertyShape ;
+        sh:class     saref:StartStopState ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      saref:actsUpon .
 
 <https://astrea.linkeddata.es/report/1105901718>
         a       <https://w3id.org/def/astrea#ReportEntry> ;
@@ -2085,16 +2085,6 @@
         a            sh:PropertyShape ;
         sh:nodeKind  sh:Literal .
 
-<https://astrea.linkeddata.es/shapes#dc1487d61265ade87dad9cc4a3ae2fc2>
-        a            sh:PropertyShape ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      s4agri:contains .
-
-<https://astrea.linkeddata.es/shapes#5e4785ff12f3c570d6b7a8f8714d25ac>
-        a               sh:NodeShape ;
-        sh:nodeKind     sh:IRI ;
-        sh:targetClass  dim:VolumeDensityRate .
-
 <https://astrea.linkeddata.es/shapes#1c20aeaf56b91e5b9b6adf8be31fd11d>
         a               sh:NodeShape ;
         rdfs:label      "Sensor" ;
@@ -2103,6 +2093,16 @@
         sh:nodeKind     sh:IRI ;
         sh:property     <https://astrea.linkeddata.es/shapes#3adb57e2d654b433129a5a2a98216730> ;
         sh:targetClass  saref:Sensor .
+
+<https://astrea.linkeddata.es/shapes#5e4785ff12f3c570d6b7a8f8714d25ac>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  dim:VolumeDensityRate .
+
+<https://astrea.linkeddata.es/shapes#dc1487d61265ade87dad9cc4a3ae2fc2>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      s4agri:contains .
 
 <https://astrea.linkeddata.es/shapes#fdab135e5e2ec74649a756159a8bbc93>
         a               sh:NodeShape ;
@@ -2143,15 +2143,15 @@
         sh:nodeKind       sh:BlankNodeOrIRI ;
         sh:path           <https://saref.etsi.org/core/relatesToProperty> .
 
-<https://astrea.linkeddata.es/shapes#063f206ce3739840972aeccecf104496>
-        a               sh:NodeShape ;
-        sh:nodeKind     sh:IRI ;
-        sh:targetClass  dim:Power .
-
 <https://astrea.linkeddata.es/shapes#000e19f8d9f47e324c31c5b9b25b0444>
         a            sh:PropertyShape ;
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      saref:hasCommand .
+
+<https://astrea.linkeddata.es/shapes#063f206ce3739840972aeccecf104496>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  dim:Power .
 
 <https://astrea.linkeddata.es/shapes#73fdddf0a990c4784c6646f0d41ea2c1>
         a         sh:PropertyShape ;
@@ -2173,6 +2173,11 @@
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      s4agri:isLocatedIn .
 
+<https://astrea.linkeddata.es/shapes#20fc8ea7fdb61f6c5aef921fb228ad07>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  dim:ElectricConductivity .
+
 <https://astrea.linkeddata.es/shapes#33647ad48fc226dbafdf80923a8a614b>
         a                 sh:PropertyShape ;
         rdfs:isDefinedBy  <https://saref.etsi.org/core/> ;
@@ -2181,11 +2186,6 @@
         sh:name           "is feature of interest of"@en ;
         sh:nodeKind       sh:BlankNodeOrIRI ;
         sh:path           <https://saref.etsi.org/core/hasMeasurement> .
-
-<https://astrea.linkeddata.es/shapes#20fc8ea7fdb61f6c5aef921fb228ad07>
-        a               sh:NodeShape ;
-        sh:nodeKind     sh:IRI ;
-        sh:targetClass  dim:ElectricConductivity .
 
 <https://astrea.linkeddata.es/shapes#6d6adebc3adfc48442d9fb6df3ec2254>
         a                 sh:PropertyShape ;
@@ -2328,17 +2328,6 @@
         sh:property     <https://astrea.linkeddata.es/shapes#01cd7d2131ee5eb82729b1f2702a634e> ;
         sh:targetClass  <https://saref.etsi.org/core/Function> .
 
-<https://astrea.linkeddata.es/shapes#a63054539d67b719c20627268921009f>
-        a            sh:PropertyShape ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      saref:consistsOf .
-
-<https://astrea.linkeddata.es/shapes#98bde45f537b8f3fe691bfd885c8687c>
-        a            sh:PropertyShape ;
-        sh:class     saref:MultiLevelState ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      saref:actsUpon .
-
 <https://astrea.linkeddata.es/shapes#c3abec14372379675b0e3b2033b73a7c>
         a                 sh:PropertyShape ;
         rdfs:isDefinedBy  <https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Parcel-Record.md> ;
@@ -2348,11 +2337,27 @@
         sh:nodeKind       sh:BlankNodeOrIRI ;
         sh:path           fiware:recordHasAgriParcel .
 
+<https://astrea.linkeddata.es/shapes#a63054539d67b719c20627268921009f>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      saref:consistsOf .
+
 <https://astrea.linkeddata.es/shapes#7bbadd0bbac06211e246d5a7f9767dfa>
         a            sh:PropertyShape ;
         sh:class     saref:GetSensingDataCommand ;
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      saref:hasCommand .
+
+<https://astrea.linkeddata.es/shapes#98bde45f537b8f3fe691bfd885c8687c>
+        a            sh:PropertyShape ;
+        sh:class     saref:MultiLevelState ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      saref:actsUpon .
+
+<https://astrea.linkeddata.es/shapes#ed9c731f1f75287b14a99580be1e8174>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  dim:DynamicViscosity .
 
 <https://astrea.linkeddata.es/shapes#9ac11e9ade0148c19c9bbe140273a913>
         a                 sh:NodeShape ;
@@ -2362,11 +2367,6 @@
         sh:name           "Unit of measure" ;
         sh:nodeKind       sh:IRI ;
         sh:targetClass    saref:UnitOfMeasure , qudt:Unit .
-
-<https://astrea.linkeddata.es/shapes#ed9c731f1f75287b14a99580be1e8174>
-        a               sh:NodeShape ;
-        sh:nodeKind     sh:IRI ;
-        sh:targetClass  dim:DynamicViscosity .
 
 <https://astrea.linkeddata.es/shapes#68157bd564db99247d6d7857297bf60e>
         a               sh:PropertyShape ;
@@ -2564,15 +2564,6 @@
         sh:nodeKind     sh:IRI ;
         sh:targetClass  saref:Network .
 
-<https://astrea.linkeddata.es/shapes#dd7c5ae36318814e4c4bd073b97ad3bb>
-        a                 sh:PropertyShape ;
-        rdfs:isDefinedBy  <https://saref.etsi.org/core/> ;
-        rdfs:label        "has function"@en , "A relationship identifying the type of function of a device"@en ;
-        sh:description    "A relationship identifying the type of function of a device"@en ;
-        sh:name           "has function"@en ;
-        sh:nodeKind       sh:BlankNodeOrIRI ;
-        sh:path           <https://saref.etsi.org/core/hasFunction> .
-
 <https://astrea.linkeddata.es/shapes#4dbe021536fe2df95a1b2bf20860f8b0>
         a                       sh:PropertyShape ;
         sh:class                <https://saref.etsi.org/core/UnitOfMeasure> ;
@@ -2589,6 +2580,15 @@
         sh:name         "Set relative level command" ;
         sh:nodeKind     sh:IRI ;
         sh:targetClass  saref:SetRelativeLevelCommand .
+
+<https://astrea.linkeddata.es/shapes#dd7c5ae36318814e4c4bd073b97ad3bb>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/core/> ;
+        rdfs:label        "has function"@en , "A relationship identifying the type of function of a device"@en ;
+        sh:description    "A relationship identifying the type of function of a device"@en ;
+        sh:name           "has function"@en ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           <https://saref.etsi.org/core/hasFunction> .
 
 <https://astrea.linkeddata.es/shapes#6700c174117da3e7eea079c1a2e0adc8>
         a               sh:NodeShape ;
@@ -3028,16 +3028,16 @@
         sh:nodeKind     sh:IRI ;
         sh:targetClass  s4agri:MovementActivitySensor .
 
+<https://astrea.linkeddata.es/shapes#112db86e65af71537d268825b1c4b128>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      saref:offers .
+
 <https://astrea.linkeddata.es/shapes#aee01a797435564ab1947c674c856799>
         a            sh:PropertyShape ;
         sh:class     saref:OpenCloseState ;
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      saref:actsUpon .
-
-<https://astrea.linkeddata.es/shapes#112db86e65af71537d268825b1c4b128>
-        a            sh:PropertyShape ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      saref:offers .
 
 <https://astrea.linkeddata.es/shapes#4de4494ab1d2cc7a5b56181054bf5abb>
         a               sh:PropertyShape ;
@@ -3279,6 +3279,13 @@
         sh:nodeKind     sh:BlankNodeOrIRI ;
         sh:path         saref:measuresProperty .
 
+<https://astrea.linkeddata.es/shapes#5ebba26c88846b9b0b5f22fed6348d77>
+        a                       sh:PropertyShape ;
+        sh:nodeKind             sh:IRIOrLiteral ;
+        sh:path                 saref:hasCommand ;
+        sh:qualifiedMinCount    "1"^^xsd:nonNegativeInteger ;
+        sh:qualifiedValueShape  [ sh:class  saref:Command ] .
+
 <https://astrea.linkeddata.es/shapes#b139d149be15b6e60e6c8b1bef46b4fa>
         a               sh:PropertyShape ;
         rdfs:label      "relates to measurement"@en , "A relationship between a property and the measurements it relates to" ;
@@ -3286,13 +3293,6 @@
         sh:name         "relates to measurement"@en ;
         sh:nodeKind     sh:BlankNodeOrIRI ;
         sh:path         saref:relatesToMeasurement .
-
-<https://astrea.linkeddata.es/shapes#5ebba26c88846b9b0b5f22fed6348d77>
-        a                       sh:PropertyShape ;
-        sh:nodeKind             sh:IRIOrLiteral ;
-        sh:path                 saref:hasCommand ;
-        sh:qualifiedMinCount    "1"^^xsd:nonNegativeInteger ;
-        sh:qualifiedValueShape  [ sh:class  saref:Command ] .
 
 <https://astrea.linkeddata.es/shapes#7589745be47bb5791f38a6c316c4d49b>
         a               sh:PropertyShape ;

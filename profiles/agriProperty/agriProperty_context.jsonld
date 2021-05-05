@@ -1,15 +1,19 @@
 {
     "@id": "https://w3id.org/demeter/agri/agriProperty",
     "@context": [
-        "https://w3id.org/demeter/agri/proxy/foodie?_profile=jsoncontext",
         "https://fiware.github.io/data-models/full-context.jsonld",
         "https://w3id.org/demeter/agri/proxy/saref?_profile=jsoncontext",
+        "https://w3id.org/demeter/agri/proxy/foodie?_profile=jsoncontext",
         "https://w3id.org/demeter/agri/proxy/saref4agri?_profile=jsoncontext",
+        "https://w3id.org/demeter/agri/proxy/saref4agri?_profile=jsoncontext",
+        "https://w3id.org/demeter/agri/agriCommon?_profile=jsoncontext",
+        "https://w3id.org/demeter/agri/proxy/saref?_profile=jsoncontext",
+        "https://w3id.org/demeter/agri/proxy/foodie?_profile=jsoncontext",
         {
-            "foodie": "http://foodie-cloud.com/model/foodie#",
             "fiware": "https://uri.fiware.org/ns/data-models#",
-            "cf-feature": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#",
             "saref": "https://w3id.org/saref#",
+            "foodie": "http://foodie-cloud.com/model/foodie#",
+            "cf-feature": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#",
             "saref4agri": "https://w3id.org/def/saref4agri#"
         }
     ]

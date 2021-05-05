@@ -319,12 +319,12 @@
                 <th>Restrictions</th>
                 <td>
                     <a href="http://portele.de/ont/inspire/baseInspire#validFrom">common:validFrom</a> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://www.opengis.net/ont/geosparql#hasGeometry">geo:hasGeometry</a> <span class="cardinality">min</span> 1<br/>
-                    <a href="http://www.w3.org/ns/prov#invalidatedAtTime">prov:invalidatedAtTime</a> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://portele.de/ont/inspire/baseInspire#validTo">common:validTo</a> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#notes">foodie:notes</a> <span class="cardinality">max</span> 1<br/>
                     <a href="http://www.w3.org/ns/prov#generatedAtTime">prov:generatedAtTime</a> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://portele.de/ont/inspire/baseInspire#validTo">common:validTo</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://www.w3.org/ns/prov#invalidatedAtTime">prov:invalidatedAtTime</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://www.opengis.net/ont/geosparql#hasGeometry">geo:hasGeometry</a> <span class="cardinality">min</span> 1<br/>
                     <a href="http://foodie-cloud.com/model/foodie#code">foodie:code</a> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#notes">foodie:notes</a> <span class="cardinality">max</span> 1<br/>
                 </td>
             </tr>
             <tr>
@@ -384,20 +384,20 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="http://www.w3.org/ns/prov#generatedAtTime">prov:generatedAtTime</a> <span class="cardinality">max</span> 1<br/>
                     <a href="http://foodie-cloud.com/model/foodie#description">foodie:description</a> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://portele.de/ont/inspire/baseInspire#validTo">common:validTo</a> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#code">foodie:code</a> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://www.w3.org/ns/prov#generatedAtTime">prov:generatedAtTime</a> <span class="cardinality">max</span> 1<br/>
                     <a href="http://www.opengis.net/ont/geosparql#hasGeometry">geo:hasGeometry</a> <span class="cardinality">min</span> 1<br/>
                     <a href="http://portele.de/ont/inspire/baseInspire#validFrom">common:validFrom</a> <span class="cardinality">exactly</span> 1<br/>
                     <a href="http://www.w3.org/ns/prov#invalidatedAtTime">prov:invalidatedAtTime</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#code">foodie:code</a> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://portele.de/ont/inspire/baseInspire#validTo">common:validTo</a> <span class="cardinality">max</span> 1<br/>
                 </td>
             </tr>
             <tr>
                 <th>In range of</th>
                 <td>
-                    <a href="http://foodie-cloud.com/model/foodie#holdingZone">foodie:holdingZone</a><sup class="sup-op" title="object property">op</sup><br/>
                     <a href="http://foodie-cloud.com/model/foodie#containsPlot">foodie:containsPlot</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://foodie-cloud.com/model/foodie#holdingZone">foodie:holdingZone</a><sup class="sup-op" title="object property">op</sup><br/>
                 </td>
             </tr>
         </table>
@@ -439,8 +439,8 @@
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://inspire.ec.europa.eu/schemas/act-core/3.0#ActivityComplex">act-inspire:ActivityComplex</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://inspire.ec.europa.eu/schemas/act-core/3.0#ActivityComplex">act-inspire:ActivityComplex</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -480,14 +480,14 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="http://portele.de/ont/inspire/baseInspire#validTo">common:validTo</a> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://inspire.ec.europa.eu/schemas/af/3.0#activity">af-inspire:activity</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
                     <a href="http://www.w3.org/ns/prov#generatedAtTime">prov:generatedAtTime</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#containsPlot">foodie:containsPlot</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
                     <a href="http://www.w3.org/ns/prov#invalidatedAtTime">prov:invalidatedAtTime</a> <span class="cardinality">max</span> 1<br/>
                     <a href="http://foodie-cloud.com/model/foodie#code">foodie:code</a> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#containsPlot">foodie:containsPlot</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
-                    <a href="http://portele.de/ont/inspire/baseInspire#validFrom">common:validFrom</a> <span class="cardinality">exactly</span> 1<br/>
                     <a href="http://www.opengis.net/ont/geosparql#hasGeometry">geo:hasGeometry</a> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://portele.de/ont/inspire/baseInspire#validTo">common:validTo</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://portele.de/ont/inspire/baseInspire#validFrom">common:validFrom</a> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://inspire.ec.europa.eu/schemas/af/3.0#activity">af-inspire:activity</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
                 </td>
             </tr>
             <tr>
@@ -602,8 +602,8 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/def/saref4agri#contains">saref4agri:contains</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="https://w3id.org/def/saref4agri#BuildingSpace">saref4agri:BuildingSpace</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/def/saref4agri#hasName">saref4agri:hasName</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/def/saref4agri#contains">saref4agri:contains</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="https://w3id.org/def/saref4agri#BuildingSpace">saref4agri:BuildingSpace</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -663,15 +663,15 @@
             <tr>
                 <th>Alignments</th>
                 <td class="highlight-alignment">
-                    <a href="af-inspire:Holding">af-inspire:Holding</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="fiware:AgriFarm">fiware:AgriFarm</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="af-inspire:Holding">af-inspire:Holding</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/def/saref4agri#contains">saref4agri:contains</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="https://w3id.org/def/saref4agri#Building">saref4agri:Building</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/def/saref4agri#hasName">saref4agri:hasName</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/def/saref4agri#contains">saref4agri:contains</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="https://w3id.org/def/saref4agri#Building">saref4agri:Building</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/def/saref4agri#contains">saref4agri:contains</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="https://w3id.org/def/saref4agri#Parcel">saref4agri:Parcel</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>

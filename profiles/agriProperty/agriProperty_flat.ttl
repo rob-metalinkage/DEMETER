@@ -453,7 +453,7 @@ saref4agri:SoilTemperature rdfs:isDefinedBy saref4agri: ;
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriProperty.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = ../models\\agriProperty.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            prov:endedAtTime "2021-05-02"^^xsd:date ;
+            prov:endedAtTime "2021-05-05"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:maker [ foaf:homepage <https://h2020-demeter.eu/> ;
@@ -464,14 +464,14 @@ saref:Humidity a owl:Class ;
         "Humidity",
         "Humidity"@en,
         "Humidiy"@en ;
-    rdfs:comment "A saref:Property related to some measurements that are characterized by a certain value that is measured in a humidity unit",
-        "A saref:Property related to some measurements that are characterized by a certain value that is measured in a humidity unit"^^xsd:string ;
+    rdfs:comment "A saref:Property related to some measurements that are characterized by a certain value that is measured in a humidity unit"^^xsd:string,
+        "A saref:Property related to some measurements that are characterized by a certain value that is measured in a humidity unit" ;
     rdfs:isDefinedBy saref: ;
     rdfs:subClassOf saref:Property .
 
 saref:Temperature a owl:Class ;
-    rdfs:label "Temperature"^^xsd:string,
-        "Temperature",
+    rdfs:label "Temperature",
+        "Temperature"^^xsd:string,
         "Temperature"@en ;
     rdfs:comment "A saref:Property related to some measurements that are characterized by a certain value that is measured in a temperature unit (degree_Celsius, degree_Fahrenheit, or degree_kelvin)"^^xsd:string,
         "A saref:Property related to some measurements that are characterized by a certain value that is measured in a temperature unit (degree_Celsius, degree_Fahrenheit, or degree_kelvin)" ;
@@ -741,27 +741,6 @@ saref:Measurement a owl:Class ;
     rdfs:comment "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement."@en ;
     rdfs:isDefinedBy saref: ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom xsd:dateTime ;
-            owl:onProperty saref:hasTimestamp ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom saref:UnitOfMeasure ;
-            owl:onProperty saref:isMeasuredIn ],
-        [ a owl:Restriction ;
-            owl:onClass saref:Property ;
-            owl:onProperty saref:relatesToProperty ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:onClass saref:UnitOfMeasure ;
-            owl:onProperty saref:isMeasuredIn ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom saref:Property ;
-            owl:onProperty saref:relatesToProperty ],
-        [ a owl:Restriction ;
-            owl:onDataRange xsd:float ;
-            owl:onProperty saref:hasValue ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
-        [ a owl:Restriction ;
             owl:allValuesFrom saref:FeatureOfInterest ;
             owl:onProperty saref:hasFeatureOfInterest ],
         [ a owl:Restriction ;
@@ -784,6 +763,27 @@ saref:Measurement a owl:Class ;
         [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty saref:hasValue ],
+        [ a owl:Restriction ;
+            owl:onDataRange xsd:float ;
+            owl:onProperty saref:hasValue ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:dateTime ;
+            owl:onProperty saref:hasTimestamp ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom saref:UnitOfMeasure ;
+            owl:onProperty saref:isMeasuredIn ],
+        [ a owl:Restriction ;
+            owl:onClass saref:Property ;
+            owl:onProperty saref:relatesToProperty ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onClass saref:UnitOfMeasure ;
+            owl:onProperty saref:isMeasuredIn ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom saref:Property ;
+            owl:onProperty saref:relatesToProperty ],
         [ a owl:Restriction ;
             owl:onDataRange xsd:float ;
             owl:onProperty saref:hasValue ;
@@ -821,23 +821,14 @@ saref:UnitOfMeasure a owl:Class ;
     owl:equivalentClass qudt:Unit .
 
 saref:Property a owl:Class ;
-    rdfs:label "Property",
-        "Property"^^xsd:string,
+    rdfs:label "Property"^^xsd:string,
+        "Property",
         "Property"@en ;
     rdfs:comment "Anything that can be sensed, measured or controlled in households, common public buildings or offices. We propose here a list of properties that are relevant for the purpose of SAREF, but this list can be extended.",
         "Anything that can be sensed, measured or controlled in households, common public buildings or offices. We propose here a list of properties that are relevant for the purpose of SAREF, but this list can be extended."^^xsd:string,
         "An aspect of an entity that can be observable by a sensor."@en ;
     rdfs:isDefinedBy saref: ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom saref:Device ;
-            owl:onProperty saref:isMeasuredByDevice ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom saref:Device ;
-            owl:onProperty saref:isControlledByDevice ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom saref:Measurement ;
-            owl:onProperty saref:relatesToMeasurement ],
-        [ a owl:Restriction ;
             owl:allValuesFrom saref:Device ;
             owl:onProperty saref:isControlledByDevice ],
         [ a owl:Restriction ;
@@ -846,6 +837,15 @@ saref:Property a owl:Class ;
         [ a owl:Restriction ;
             owl:allValuesFrom saref:FeatureOfInterest ;
             owl:onProperty saref:isPropertyOf ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom saref:Measurement ;
+            owl:onProperty saref:relatesToMeasurement ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom saref:Device ;
+            owl:onProperty saref:isMeasuredByDevice ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom saref:Device ;
+            owl:onProperty saref:isControlledByDevice ],
         [ a owl:Restriction ;
             owl:allValuesFrom saref:Measurement ;
             owl:onProperty saref:relatesToMeasurement ] ;

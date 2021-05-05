@@ -2,64 +2,92 @@
     "@id": "https://w3id.org/demeter/agri/agriProperty",
     "@context": [
         {
-            "foodie": "http://foodie-cloud.com/model/foodie#",
             "fiware": "https://uri.fiware.org/ns/data-models#",
-            "cf-feature": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#",
             "saref": "https://w3id.org/saref#",
+            "foodie": "http://foodie-cloud.com/model/foodie#",
+            "cf-feature": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#",
             "saref4agri": "https://w3id.org/def/saref4agri#",
-            "PropertyTypeValue": {
-                "@id": "foodie:PropertyTypeValue"
-            },
-            "Humidity": {
-                "@id": "saref:Humidity"
-            },
-            "saref.FeatureOfInterest": {
-                "@id": "https://w3id.org/saref#FeatureOfInterest"
-            },
-            "WeatherForecast": {
-                "@id": "fiware:WeatherForecast"
-            },
             "saref.Property": {
                 "@id": "https://w3id.org/saref#Property"
-            },
-            "WeatherObserved": {
-                "@id": "fiware:WeatherObserved"
-            },
-            "Medium": {
-                "@id": "cf-feature:Medium"
-            },
-            "Soil": {
-                "@id": "saref4agri:Soil"
-            },
-            "UnitOfMeasure": {
-                "@id": "saref:UnitOfMeasure"
-            },
-            "PropertyType": {
-                "@id": "foodie:PropertyType"
-            },
-            "Precipitation": {
-                "@id": "cf-feature:Precipitation"
-            },
-            "cf.Surface": {
-                "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#Surface"
-            },
-            "Measurement": {
-                "@id": "saref:Measurement"
-            },
-            "SurfaceLayer": {
-                "@id": "cf-feature:SurfaceLayer"
             },
             "saref.Temperature": {
                 "@id": "https://w3id.org/saref#Temperature"
             },
-            "Layer": {
-                "@id": "cf-feature:Layer"
-            },
             "Wind": {
                 "@id": "cf-feature:Wind"
             },
+            "PropertyTypeValue": {
+                "@id": "foodie:PropertyTypeValue"
+            },
+            "SurfaceLayer": {
+                "@id": "cf-feature:SurfaceLayer"
+            },
+            "Layer": {
+                "@id": "cf-feature:Layer"
+            },
+            "saref.FeatureOfInterest": {
+                "@id": "https://w3id.org/saref#FeatureOfInterest"
+            },
+            "UnitOfMeasure": {
+                "@id": "saref:UnitOfMeasure"
+            },
+            "WeatherObserved": {
+                "@id": "fiware:WeatherObserved"
+            },
+            "PropertyType": {
+                "@id": "foodie:PropertyType"
+            },
+            "Soil": {
+                "@id": "saref4agri:Soil"
+            },
+            "Precipitation": {
+                "@id": "cf-feature:Precipitation"
+            },
+            "Humidity": {
+                "@id": "saref:Humidity"
+            },
             "AgriParcelRecord": {
                 "@id": "fiware:AgriParcelRecord"
+            },
+            "WeatherForecast": {
+                "@id": "fiware:WeatherForecast"
+            },
+            "Measurement": {
+                "@id": "saref:Measurement"
+            },
+            "Medium": {
+                "@id": "cf-feature:Medium"
+            },
+            "cf.Surface": {
+                "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#Surface"
+            },
+            "productionProperty": {
+                "@id": "foodie:productionProperty",
+                "@type": "@id"
+            },
+            "productionAmount": {
+                "@id": "foodie:productionAmount",
+                "@type": "@id"
+            },
+            "refDevice": {
+                "@id": "fiware:refDevice",
+                "@type": "@id"
+            },
+            "recordHasAgriParcel": {
+                "@id": "fiware:recordHasAgriParcel",
+                "@type": "@id"
+            },
+            "quantitativeProperty": {
+                "@id": "foodie:quantitativeProperty",
+                "@type": "@id"
+            },
+            "soilProperty": {
+                "@id": "foodie:soilProperty",
+                "@type": "@id"
+            },
+            "propertyType": {
+                "@id": "foodie:propertyType",
+                "@type": "@id"
             },
             "refPointOfInterest": {
                 "@id": "fiware:refPointOfInterest",
@@ -69,107 +97,79 @@
                 "@id": "fiware:hasDevice",
                 "@type": "@id"
             },
-            "propertyType": {
-                "@id": "foodie:propertyType",
-                "@type": "@id"
+            "analysisDate": {
+                "@id": "foodie:analysisDate",
+                "@type": "xsd:dateTime"
             },
-            "refDevice": {
-                "@id": "fiware:refDevice",
-                "@type": "@id"
-            },
-            "quantitativeProperty": {
-                "@id": "foodie:quantitativeProperty",
-                "@type": "@id"
-            },
-            "productionProperty": {
-                "@id": "foodie:productionProperty",
-                "@type": "@id"
-            },
-            "soilProperty": {
-                "@id": "foodie:soilProperty",
-                "@type": "@id"
-            },
-            "productionAmount": {
-                "@id": "foodie:productionAmount",
-                "@type": "@id"
-            },
-            "recordHasAgriParcel": {
-                "@id": "fiware:recordHasAgriParcel",
-                "@type": "@id"
-            },
-            "streamGauge": {
-                "@id": "fiware:streamGauge"
-            },
-            "visibility": {
-                "@id": "fiware:visibility"
-            },
-            "airTemperature": {
-                "@id": "fiware:airTemperature"
+            "soilTemperature": {
+                "@id": "fiware:soilTemperature"
             },
             "precipitation": {
                 "@id": "fiware:precipitation"
             },
-            "dewPoint": {
-                "@id": "fiware:dewPoint"
-            },
-            "temperature": {
-                "@id": "fiware:temperature"
-            },
-            "pressureTendency": {
-                "@id": "fiware:pressureTendency"
-            },
-            "soilMoistureEc": {
-                "@id": "fiware:soilMoistureEc"
-            },
-            "illuminance": {
-                "@id": "fiware:illuminance"
-            },
-            "propertyName": {
-                "@id": "foodie:propertyName",
-                "@type": "xsd:string"
-            },
-            "atmosphericPressure": {
-                "@id": "fiware:atmosphericPressure"
-            },
-            "analysisDate": {
-                "@id": "foodie:analysisDate",
-                "@type": "xsd:date"
-            },
-            "weatherType": {
-                "@id": "fiware:weatherType"
+            "relativeHumidity": {
+                "@id": "fiware:relativeHumidity"
             },
             "observedAt": {
                 "@id": "fiware:observedAt",
                 "@type": "xsd:dateTime"
             },
-            "nonQuantitativeProperty": {
-                "@id": "foodie:nonQuantitativeProperty",
-                "@type": "xsd:string"
-            },
-            "windDirection": {
-                "@id": "fiware:windDirection"
+            "windSpeed": {
+                "@id": "fiware:windSpeed"
             },
             "solarRadiation": {
                 "@id": "fiware:solarRadiation"
             },
-            "windSpeed": {
-                "@id": "fiware:windSpeed"
+            "soilMoistureEc": {
+                "@id": "fiware:soilMoistureEc"
             },
             "dateObserved": {
                 "@id": "fiware:dateObserved",
                 "@type": "xsd:dateTime"
             },
+            "weatherType": {
+                "@id": "fiware:weatherType"
+            },
+            "illuminance": {
+                "@id": "fiware:illuminance"
+            },
+            "visibility": {
+                "@id": "fiware:visibility"
+            },
+            "atmosphericPressure": {
+                "@id": "fiware:atmosphericPressure"
+            },
+            "propertyName": {
+                "@id": "foodie:propertyName",
+                "@type": "xsd:string"
+            },
+            "pressureTendency": {
+                "@id": "fiware:pressureTendency"
+            },
+            "streamGauge": {
+                "@id": "fiware:streamGauge"
+            },
+            "temperature": {
+                "@id": "fiware:temperature"
+            },
             "snowHeight": {
                 "@id": "fiware:snowHeight"
+            },
+            "windDirection": {
+                "@id": "fiware:windDirection"
             },
             "soilMoistureVwc": {
                 "@id": "fiware:soilMoistureVwc"
             },
-            "relativeHumidity": {
-                "@id": "fiware:relativeHumidity"
+            "nonQuantitativeProperty": {
+                "@id": "foodie:nonQuantitativeProperty",
+                "@type": "xsd:string"
             },
-            "soilTemperature": {
-                "@id": "fiware:soilTemperature"
+            "dewPoint": {
+                "@id": "fiware:dewPoint"
+            },
+            "airTemperature": {
+                "@id": "fiware:airTemperature"
             }
         }
     ]

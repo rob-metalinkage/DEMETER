@@ -1058,7 +1058,7 @@ schema:telephone a rdf:Property ;
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\cross-domain.ttl" ] ;
     ns4:wasGeneratedBy [ a ns4:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = ../models\\cross-domain.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            ns4:endedAtTime "2021-05-02"^^xsd:date ;
+            ns4:endedAtTime "2021-05-05"^^xsd:date ;
             ns4:wasAssociatedWith [ a ns4:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:maker [ foaf:homepage <https://h2020-demeter.eu/> ;

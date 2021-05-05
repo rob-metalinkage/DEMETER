@@ -1,0 +1,45 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            PREFIX owl: <http://www.w3.org/2002/07/owl#>
+	prefix prof: <http://www.w3.org/ns/dx/prof/> 
+            INSERT { GRAPH ?this { ?this a skos:ConceptScheme .
+		?this skos:hasTopConcept ?models .
+  		?models rdfs:label "AIM modules" ;
+    		a skos:Concept ;
+            skos:inScheme ?this . 
+  		?module  skos:broader ?models .
+    ?models  skos:narrower ?module . 
+        ?module rdfs:label ?sml ;
+        a skos:Concept ;
+            skos:inScheme ?this .
+        ?module rdfs:seeAlso ?submodel . 
+    	rdfs:seeAlso rdfs:label "See Also" .
+    ?this skos:definition ?desc . 
+    ?this skos:prefLabel ?label
+} }
+WHERE {  
+  BIND ( <https://w3id.org/demeter/agri> as ?this )
+   BIND ( <https://w3id.org/demeter/agri/moduleset> as ?models )
+  ?this owl:imports ?submodel . 
+  OPTIONAL { ?submodel rdfs:label ?sml } 
+  ?this rdfs:comment ?desc .
+   ?this rdfs:label ?label .
+    BIND ( URI(CONCAT( str(?submodel),"_asConcept" )) AS ?module )
+  					                
+            }
+            
+            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            PREFIX owl: <http://www.w3.org/2002/07/owl#>
+	prefix prof: <http://www.w3.org/ns/dx/prof/> 
+            INSERT { GRAPH <x-urn:annotations> { 
+    ?this skos:definition ?description . 
+} }
+WHERE {  ?this a skos:ConceptScheme . 
+  ?this rdfs:comment ?desc .
+  OPTIONAL { ?this skos:definition ?def }
+  BIND ( COALESCE(?def,?desc,"Add skos:definition or rdfs:comment" ) AS ?description )
+  					                
+}

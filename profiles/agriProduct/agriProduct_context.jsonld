@@ -3,6 +3,8 @@
     "@context": [
         "https://w3id.org/demeter/agri/proxy/foodie?_profile=jsoncontext",
         "https://fiware.github.io/data-models/full-context.jsonld",
+        "https://w3id.org/demeter/agri/proxy/foodie?_profile=jsoncontext",
+        "https://w3id.org/demeter/agri/agriCommon?_profile=jsoncontext",
         {
             "foodie": "http://foodie-cloud.com/model/foodie#",
             "fiware": "https://uri.fiware.org/ns/data-models#"

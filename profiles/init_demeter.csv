@@ -2,8 +2,6 @@ action,path,context
 # need to init demeter repository as RDF + SPIN and init the app schema entailment suite first..
 PUT,agriAlert/agriAlert_flat.ttl,https://w3id.org/demeter/agri/agriAlert
 PUT,agriFeature/agriFeature_flat.ttl,https://w3id.org/demeter/agri/agriFeature
-PUT,agriProduct/agriProduct_flat.ttl,https://w3id.org/demeter/agri/agriProduct
-PUT,demeterAgriProfile/demeterAgriProfile_flat.ttl,https://w3id.org/demeter/agri/demeterAgriProfile
 PUT,agriIntervention/agriIntervention_flat.ttl,https://w3id.org/demeter/agri/agriIntervention
 PUT,agriProperty/agriProperty_flat.ttl,https://w3id.org/demeter/agri/agriProperty
 PUT,demeterCore/demeterCore_flat.ttl,https://w3id.org/demeter/agri/demeterCore
@@ -12,12 +10,11 @@ PUT,agriPest/agriPest_flat.ttl,https://w3id.org/demeter/agri/agriPest
 PUT,agriSystem/agriSystem_flat.ttl,https://w3id.org/demeter/agri/agriSystem
 PUT,farmAnimal/farmAnimal_flat.ttl,https://w3id.org/demeter/agri/farmAnimal
 PUT,agriCommon/agriCommon.ttl,https://w3id.org/demeter/agri/agriCommon
-PUT,cross-domain/cross-domain_flat.ttl,https://w3id.org/demeter/agri/cross-domain
+PUT,cross-domain/cross-domain_flat.ttl,https://w3id.org/demeter/crossDomain
 # add the prof viewpoints - this will trigger entailments as ogx:Application schemas - turning OWL to SKOS so can be presented
 PUT,agriAlert/agriAlert_prof.ttl,https://w3id.org/demeter/agri/agriAlert?_profile=profile
 PUT,agriFeature/agriFeature_prof.ttl,https://w3id.org/demeter/agri/agriFeature?_profile=profile
 PUT,agriProduct/agriProduct_prof.ttl,https://w3id.org/demeter/agri/agriProduct?_profile=profile
-PUT,demeterAgriProfile/demeterAgriProfile_prof.ttl,https://w3id.org/demeter/agri/demeterAgriProfile?_profile=profile
 PUT,agriIntervention/agriIntervention_prof.ttl,https://w3id.org/demeter/agri/agriIntervention?_profile=profile
 PUT,agriProperty/agriProperty_prof.ttl,https://w3id.org/demeter/agri/agriProperty?_profile=profile
 PUT,demeterCore/demeterCore_prof.ttl,https://w3id.org/demeter/agri/demeterCore?_profile=profile
@@ -26,4 +23,4 @@ PUT,agriPest/agriPest_prof.ttl,https://w3id.org/demeter/agri/agriPest?_profile=p
 PUT,agriSystem/agriSystem_prof.ttl,https://w3id.org/demeter/agri/agriSystem?_profile=profile
 PUT,farmAnimal/farmAnimal_prof.ttl,https://w3id.org/demeter/agri/farmAnimal?_profile=profile
 PUT,agriCommon/agriCommon_prof.ttl,https://w3id.org/demeter/agri/agriCommon?_profile=profile
-PUT,cross-domain/cross-domain_prof.ttl,https://w3id.org/demeter/agri/cross-domain?_profile=profile
+PUT,cross-domain/cross-domain_prof.ttl,https://w3id.org/demeter/crossDomain?_profile=profile

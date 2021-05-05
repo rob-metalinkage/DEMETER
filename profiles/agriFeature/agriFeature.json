@@ -3,26 +3,6 @@
     "$id": "https://w3id.org/demeter/agri/agriFeature?_profile=jsonschema",
     "type": "object",
     "properties": {
-        "skos:Concept": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "iso19150-2:Codelist": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "foodie:OriginTypeValue": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "iso19109:AnyFeature": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
         "iso19150-2:FeatureType": {
             "type": "object",
             "properties": {},
@@ -43,37 +23,42 @@
         "geo:SpatialObject": {
             "type": "object",
             "properties": {
-                "geo:sfContains": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
                 "geo:sfWithin": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
+                },
+                "geo:sfContains": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
                 }
             },
             "required": []
         },
-        "foodie:ManagementZone": {
+        "iso19109:AnyFeature": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "af-inspire:Site": {
             "type": "object",
             "properties": {
-                "prov:generatedAtTime": {
+                "common:validFrom": {
                     "type": "string"
                 },
                 "common:validTo": {
                     "type": "string"
                 },
-                "foodie:notes": {
-                    "type": "string"
-                },
                 "prov:invalidatedAtTime": {
                     "type": "string"
                 },
-                "geo:hasGeometry": {
+                "prov:generatedAtTime": {
+                    "type": "string"
+                },
+                "af-inspire:activity": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -82,36 +67,101 @@
                 "foodie:code": {
                     "type": "string"
                 },
-                "common:validFrom": {
+                "foodie:containsPlot": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "geo:hasGeometry": {
                     "type": "string"
                 }
             },
             "required": [
+                "common:validFrom",
                 "prov:generatedAtTime",
-                "foodie:notes",
+                "af-inspire:activity",
+                "foodie:code",
+                "foodie:containsPlot",
+                "geo:hasGeometry"
+            ]
+        },
+        "act-inspire:ActivityComplex": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "af-inspire:Holding": {
+            "type": "object",
+            "properties": {
+                "geo:hasGeometry": {
+                    "type": "string"
+                },
+                "af-inspire:contains": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "foodie:userId": {
+                    "type": "string"
+                }
+            },
+            "required": [
                 "geo:hasGeometry",
-                "foodie:code"
+                "af-inspire:contains",
+                "foodie:userId"
             ]
         },
         "foodie:Plot": {
             "type": "object",
             "properties": {
-                "prov:invalidatedAtTime": {
-                    "type": "string"
-                },
-                "foodie:originType": {
-                    "type": "string"
-                },
-                "foodie:code": {
+                "common:validFrom": {
                     "type": "string"
                 },
                 "prov:generatedAtTime": {
                     "type": "string"
                 },
+                "foodie:code": {
+                    "type": "string"
+                },
+                "geo:hasGeometry": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
                 "common:validTo": {
                     "type": "string"
                 },
+                "prov:invalidatedAtTime": {
+                    "type": "string"
+                },
                 "foodie:description": {
+                    "type": "string"
+                },
+                "foodie:originType": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "common:validFrom",
+                "prov:generatedAtTime",
+                "foodie:code",
+                "geo:hasGeometry",
+                "foodie:originType"
+            ]
+        },
+        "foodie:ManagementZone": {
+            "type": "object",
+            "properties": {
+                "foodie:code": {
+                    "type": "string"
+                },
+                "prov:invalidatedAtTime": {
+                    "type": "string"
+                },
+                "foodie:notes": {
                     "type": "string"
                 },
                 "geo:hasGeometry": {
@@ -122,47 +172,32 @@
                 },
                 "common:validFrom": {
                     "type": "string"
-                }
-            },
-            "required": [
-                "foodie:originType",
-                "foodie:code",
-                "prov:generatedAtTime",
-                "geo:hasGeometry",
-                "common:validFrom"
-            ]
-        },
-        "fiware:AgriParcel": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "fiware:AgriGreenhouse": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "fiware:AgriFarm": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "saref4agri:Farm": {
-            "type": "object",
-            "properties": {
-                "saref4agri:contains": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
                 },
-                "saref4agri:hasName": {
+                "common:validTo": {
+                    "type": "string"
+                },
+                "prov:generatedAtTime": {
                     "type": "string"
                 }
             },
+            "required": [
+                "foodie:code",
+                "foodie:notes",
+                "geo:hasGeometry",
+                "prov:generatedAtTime"
+            ]
+        },
+        "iso19150-2:Codelist": {
+            "type": "object",
+            "properties": {},
             "required": []
         },
-        "saref4agri:BuildingSpace": {
+        "skos:Concept": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "foodie:OriginTypeValue": {
             "type": "object",
             "properties": {},
             "required": []
@@ -175,6 +210,26 @@
                     "items": {
                         "type": "string"
                     }
+                },
+                "saref4agri:contains": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "saref4agri:BuildingSpace": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "saref4agri:Farm": {
+            "type": "object",
+            "properties": {
+                "saref4agri:hasName": {
+                    "type": "string"
                 },
                 "saref4agri:contains": {
                     "type": "array",
@@ -200,75 +255,20 @@
             },
             "required": []
         },
-        "af-inspire:Site": {
-            "type": "object",
-            "properties": {
-                "foodie:code": {
-                    "type": "string"
-                },
-                "prov:generatedAtTime": {
-                    "type": "string"
-                },
-                "common:validFrom": {
-                    "type": "string"
-                },
-                "geo:hasGeometry": {
-                    "type": "string"
-                },
-                "af-inspire:activity": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "common:validTo": {
-                    "type": "string"
-                },
-                "foodie:containsPlot": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "prov:invalidatedAtTime": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "foodie:code",
-                "prov:generatedAtTime",
-                "common:validFrom",
-                "geo:hasGeometry",
-                "af-inspire:activity",
-                "foodie:containsPlot"
-            ]
-        },
-        "act-inspire:ActivityComplex": {
+        "fiware:AgriParcel": {
             "type": "object",
             "properties": {},
             "required": []
         },
-        "af-inspire:Holding": {
+        "fiware:AgriGreenhouse": {
             "type": "object",
-            "properties": {
-                "geo:hasGeometry": {
-                    "type": "string"
-                },
-                "foodie:userId": {
-                    "type": "string"
-                },
-                "af-inspire:contains": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": [
-                "geo:hasGeometry",
-                "foodie:userId",
-                "af-inspire:contains"
-            ]
+            "properties": {},
+            "required": []
+        },
+        "fiware:AgriFarm": {
+            "type": "object",
+            "properties": {},
+            "required": []
         },
         "act-inspire:EconomicActivityNACEValue": {
             "type": "object",

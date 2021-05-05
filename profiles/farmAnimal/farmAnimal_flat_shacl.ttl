@@ -1090,17 +1090,17 @@
         sh:nodeKind       sh:IRI ;
         sh:targetClass    saref:Actuator .
 
-<https://astrea.linkeddata.es/shapes#cf809be9586ae5c4cfb787151dde76ed>
-        a            sh:PropertyShape ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      s4agri:isLocatedIn .
-
 <https://astrea.linkeddata.es/shapes#95c322184613a1662d48949c2a46829e>
         a            sh:PropertyShape ;
         sh:maxCount  "1"^^xsd:int ;
         sh:minCount  "1"^^xsd:int ;
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      foodie:livestockNumber .
+
+<https://astrea.linkeddata.es/shapes#cf809be9586ae5c4cfb787151dde76ed>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      s4agri:isLocatedIn .
 
 <https://astrea.linkeddata.es/shapes#3fa7d19a4912e3306f7209cb475e0272>
         a                 sh:PropertyShape ;
@@ -1110,6 +1110,14 @@
         sh:name           "has command"@en ;
         sh:nodeKind       sh:BlankNodeOrIRI ;
         sh:path           saref:hasCommand .
+
+<https://astrea.linkeddata.es/shapes#ee1bb8ccf767b89f8e9b7a7df2b4e749>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  saref: ;
+        rdfs:label        "has state"@en ;
+        sh:name           "has state"@en ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           saref:hasState .
 
 <https://astrea.linkeddata.es/shapes#9207fef9fa9b243a4ee1bf06b90c17b8>
         a            sh:PropertyShape ;
@@ -1121,13 +1129,10 @@
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      s4agri:hasHarvestDate .
 
-<https://astrea.linkeddata.es/shapes#ee1bb8ccf767b89f8e9b7a7df2b4e749>
-        a                 sh:PropertyShape ;
-        rdfs:isDefinedBy  saref: ;
-        rdfs:label        "has state"@en ;
-        sh:name           "has state"@en ;
-        sh:nodeKind       sh:BlankNodeOrIRI ;
-        sh:path           saref:hasState .
+<https://astrea.linkeddata.es/shapes#648de9d6c441730aa0cd0828108e1f39>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      s4agri:hasDeathDate .
 
 <https://astrea.linkeddata.es/shapes#df40098fb648431a7a497556e4b0842b>
         a               sh:NodeShape ;
@@ -1137,11 +1142,6 @@
         sh:nodeKind     sh:IRI ;
         sh:property     <https://astrea.linkeddata.es/shapes#ab80b338ced0a329d13d23134839f1ef> , <https://astrea.linkeddata.es/shapes#720f22d4e1f7459c8db8ecaa13211f49> ;
         sh:targetClass  s4agri:Farm .
-
-<https://astrea.linkeddata.es/shapes#648de9d6c441730aa0cd0828108e1f39>
-        a            sh:PropertyShape ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      s4agri:hasDeathDate .
 
 <https://astrea.linkeddata.es/shapes#e8991cd7864fdd37aeb8413270a50313>
         a                       sh:PropertyShape ;

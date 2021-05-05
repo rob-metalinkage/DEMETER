@@ -8,51 +8,29 @@
             "properties": {},
             "required": []
         },
-        "iso19150-2:FeatureType": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "geo:Feature": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
         "foodie:Intervention": {
             "type": "object",
             "properties": {
-                "foodie:type": {
-                    "type": "string"
-                },
-                "foodie:interventionPlot": {
-                    "type": "string"
-                },
-                "common:validFrom": {
-                    "type": "string"
-                },
-                "foodie:creationDateTime": {
-                    "type": "string"
-                },
-                "common:validTo": {
-                    "type": "string"
-                },
-                "foodie:status": {
-                    "type": "string"
-                },
-                "foodie:description": {
-                    "type": "string"
-                },
-                "foodie:price": {
-                    "type": "string"
-                },
-                "foodie:supervisor": {
-                    "type": "string"
-                },
                 "foodie:interventionGeometry": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
+                },
+                "common:validTo": {
+                    "type": "string"
+                },
+                "foodie:type": {
+                    "type": "string"
+                },
+                "foodie:creationDateTime": {
+                    "type": "string"
+                },
+                "foodie:price": {
+                    "type": "string"
+                },
+                "foodie:description": {
+                    "type": "string"
                 },
                 "foodie:evidenceParty": {
                     "type": "array",
@@ -62,41 +40,101 @@
                 },
                 "foodie:notes": {
                     "type": "string"
+                },
+                "foodie:interventionPlot": {
+                    "type": "string"
+                },
+                "foodie:supervisor": {
+                    "type": "string"
+                },
+                "foodie:status": {
+                    "type": "string"
+                },
+                "common:validFrom": {
+                    "type": "string"
                 }
             },
             "required": [
-                "foodie:type",
-                "common:validFrom",
-                "foodie:creationDateTime",
-                "foodie:status",
-                "foodie:description",
                 "foodie:interventionGeometry",
-                "foodie:evidenceParty"
+                "foodie:type",
+                "foodie:creationDateTime",
+                "foodie:description",
+                "foodie:evidenceParty",
+                "foodie:status",
+                "common:validFrom"
             ]
         },
-        "iso19150-2:Codelist": {
+        "geo:Feature": {
             "type": "object",
             "properties": {},
             "required": []
         },
-        "skos:Concept": {
+        "iso19150-2:FeatureType": {
             "type": "object",
             "properties": {},
             "required": []
         },
-        "foodie:FormOfTreatmentValue": {
+        "foodie:Treatment": {
             "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "foodie:TreatmentPurposeValue": {
-            "type": "object",
-            "properties": {},
-            "required": []
+            "properties": {
+                "foodie:flowAdjustment": {
+                    "type": "string"
+                },
+                "foodie:pressure": {
+                    "type": "string"
+                },
+                "foodie:quantity": {
+                    "type": "string"
+                },
+                "foodie:areaDose": {
+                    "type": "string"
+                },
+                "foodie:motionSpeed": {
+                    "type": "string"
+                },
+                "foodie:price": {
+                    "type": "string"
+                },
+                "foodie:applicationWidth": {
+                    "type": "string"
+                },
+                "foodie:plan": {
+                    "type": "string"
+                },
+                "foodie:formOfTreatment": {
+                    "type": "string"
+                },
+                "foodie:treatmentDescription": {
+                    "type": "string"
+                },
+                "foodie:treatmentProduct": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "foodie:quantity",
+                "foodie:formOfTreatment",
+                "foodie:treatmentProduct"
+            ]
         },
         "iso19150-2:Datatype": {
             "type": "object",
             "properties": {},
+            "required": []
+        },
+        "foodie:DoseUnit": {
+            "type": "object",
+            "properties": {
+                "foodie:maximumDose": {
+                    "type": "string"
+                },
+                "foodie:minimumDose": {
+                    "type": "string"
+                }
+            },
             "required": []
         },
         "foodie:CampaignType": {
@@ -116,13 +154,25 @@
         "foodie:TreatmentPlan": {
             "type": "object",
             "properties": {
-                "foodie:type": {
-                    "type": "string"
+                "foodie:campaign": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
                 },
                 "foodie:treatmentPlanCreation": {
                     "type": "string"
                 },
+                "foodie:type": {
+                    "type": "string"
+                },
+                "foodie:treatmentPlanCode": {
+                    "type": "string"
+                },
                 "foodie:notes": {
+                    "type": "string"
+                },
+                "foodie:description": {
                     "type": "string"
                 },
                 "foodie:planProduct": {
@@ -130,85 +180,35 @@
                     "items": {
                         "type": "string"
                     }
-                },
-                "foodie:treatmentPlanCode": {
-                    "type": "string"
-                },
-                "foodie:campaign": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foodie:description": {
-                    "type": "string"
                 }
             },
             "required": [
-                "foodie:type",
-                "foodie:treatmentPlanCreation",
-                "foodie:planProduct",
                 "foodie:campaign",
-                "foodie:description"
+                "foodie:treatmentPlanCreation",
+                "foodie:type",
+                "foodie:description",
+                "foodie:planProduct"
             ]
         },
-        "foodie:DoseUnit": {
+        "skos:Concept": {
             "type": "object",
-            "properties": {
-                "foodie:maximumDose": {
-                    "type": "string"
-                },
-                "foodie:minimumDose": {
-                    "type": "string"
-                }
-            },
+            "properties": {},
             "required": []
         },
-        "foodie:Treatment": {
+        "iso19150-2:Codelist": {
             "type": "object",
-            "properties": {
-                "foodie:price": {
-                    "type": "string"
-                },
-                "foodie:plan": {
-                    "type": "string"
-                },
-                "foodie:motionSpeed": {
-                    "type": "string"
-                },
-                "foodie:quantity": {
-                    "type": "string"
-                },
-                "foodie:pressure": {
-                    "type": "string"
-                },
-                "foodie:treatmentDescription": {
-                    "type": "string"
-                },
-                "foodie:treatmentProduct": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "foodie:areaDose": {
-                    "type": "string"
-                },
-                "foodie:flowAdjustment": {
-                    "type": "string"
-                },
-                "foodie:formOfTreatment": {
-                    "type": "string"
-                },
-                "foodie:applicationWidth": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "foodie:quantity",
-                "foodie:treatmentProduct",
-                "foodie:formOfTreatment"
-            ]
+            "properties": {},
+            "required": []
+        },
+        "foodie:TreatmentPurposeValue": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "foodie:FormOfTreatmentValue": {
+            "type": "object",
+            "properties": {},
+            "required": []
         },
         "fiware:AgriParcelOperation": {
             "type": "object",

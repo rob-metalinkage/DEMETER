@@ -172,6 +172,7 @@ saref4agri:Farmer a owl:Class ;
     dct:title "DEMETER AgriCommon"@en ;
     rdfs:comment "The DEMETER Agriculture Information Model (AIM) is the common vocabulary in DEMETER project providing the basis for semantic interoperability across smart farming solutions"@en ;
     owl:imports <http://foodie-cloud.com/model/foodie>,
+        <http://portele.de/ont/inspire/baseInspire>,
         <http://purl.obolibrary.org/obo>,
         <http://www.w3.org/ns/prov>,
         <https://w3id.org/def/saref4agri>,
@@ -179,7 +180,8 @@ saref4agri:Farmer a owl:Class ;
         <https://w3id.org/saref> ;
     owl:versionIRI <https://w3id.org/demeter/agri/agriCommon/2.0> ;
     owl:versionInfo "2.0" ;
-    ns1:isProfileOf <https://w3id.org/demeter/agri/proxy/foodie>,
+    ns1:isProfileOf <https://w3id.org/demeter/agri/proxy/baseInspire>,
+        <https://w3id.org/demeter/agri/proxy/foodie>,
         <https://w3id.org/demeter/agri/proxy/obo>,
         <https://w3id.org/demeter/agri/proxy/prov>,
         <https://w3id.org/demeter/agri/proxy/saref>,
@@ -188,7 +190,7 @@ saref4agri:Farmer a owl:Class ;
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriCommon.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = ../models\\agriCommon.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            prov:endedAtTime "2021-05-02"^^xsd:date ;
+            prov:endedAtTime "2021-05-05"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:maker [ foaf:homepage <https://h2020-demeter.eu/> ;

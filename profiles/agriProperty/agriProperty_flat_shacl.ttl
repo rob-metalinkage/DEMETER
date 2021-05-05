@@ -377,6 +377,12 @@
         sh:nodeKind     sh:IRI ;
         sh:targetClass  saref:Currency .
 
+<https://astrea.linkeddata.es/shapes#67aa80a88bab9ce4563e3d9f9a4f65ab>
+        a            sh:PropertyShape ;
+        sh:class     <https://saref.etsi.org/core/Measurement> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <https://saref.etsi.org/core/hasMeasurement> .
+
 <https://astrea.linkeddata.es/shapes#df4ae458b4e554c080717d9bdb48e778>
         a            sh:PropertyShape ;
         sh:class     saref:Measurement ;
@@ -417,12 +423,6 @@
         sh:class     saref:Commodity ;
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      saref:isUsedFor .
-
-<https://astrea.linkeddata.es/shapes#67aa80a88bab9ce4563e3d9f9a4f65ab>
-        a            sh:PropertyShape ;
-        sh:class     <https://saref.etsi.org/core/Measurement> ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      <https://saref.etsi.org/core/hasMeasurement> .
 
 <https://astrea.linkeddata.es/shapes#56e7c85c8d659331447f841c28306ba0>
         a                 sh:PropertyShape ;
@@ -1528,6 +1528,14 @@
         sh:nodeKind     sh:IRI ;
         sh:targetClass  <https://saref.etsi.org/core/Time> .
 
+<https://astrea.linkeddata.es/shapes#2b02ceb19d3b7559e94106abe410df11>
+        a               sh:PropertyShape ;
+        rdfs:label      "has sensor type" , "A relationship identifying the sensing type of a sensor detection (i.e., Temperature, Occupancy, Humidity, Motion , Smoke, Pressure, etc.) " ;
+        sh:description  "A relationship identifying the sensing type of a sensor detection (i.e., Temperature, Occupancy, Humidity, Motion , Smoke, Pressure, etc.) " ;
+        sh:name         "has sensor type" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         saref:hasSensorType .
+
 <https://astrea.linkeddata.es/shapes#a581d506f76f32455fbb3dce8a9a5b20>
         a            sh:PropertyShape ;
         sh:hasValue  saref:Entertainment ;
@@ -1542,14 +1550,6 @@
         sh:name           "in deployment"@en ;
         sh:nodeKind       sh:BlankNodeOrIRI ;
         sh:path           <http://www.w3.org/ns/ssn/inDeployment> .
-
-<https://astrea.linkeddata.es/shapes#2b02ceb19d3b7559e94106abe410df11>
-        a               sh:PropertyShape ;
-        rdfs:label      "has sensor type" , "A relationship identifying the sensing type of a sensor detection (i.e., Temperature, Occupancy, Humidity, Motion , Smoke, Pressure, etc.) " ;
-        sh:description  "A relationship identifying the sensing type of a sensor detection (i.e., Temperature, Occupancy, Humidity, Motion , Smoke, Pressure, etc.) " ;
-        sh:name         "has sensor type" ;
-        sh:nodeKind     sh:BlankNodeOrIRI ;
-        sh:path         saref:hasSensorType .
 
 <https://astrea.linkeddata.es/shapes#61831577bcbf4588767fc1545d94c2bd>
         a               sh:PropertyShape ;
@@ -2110,13 +2110,13 @@
         sh:nodeKind       sh:Literal ;
         sh:path           fiware:visibility .
 
-<https://astrea.linkeddata.es/shapes#2b2890d59075f54bc73193c9d2a1c211>
-        a               sh:PropertyShape ;
-        rdfs:label      "consists of" , "A relationship indicating a composite entity that consists of other entities (e.g., a temperature/humidity sensor that consists of a temperature sensor and a humidity sensor)" ;
-        sh:description  "A relationship indicating a composite entity that consists of other entities (e.g., a temperature/humidity sensor that consists of a temperature sensor and a humidity sensor)" ;
-        sh:name         "consists of" ;
-        sh:nodeKind     sh:BlankNodeOrIRI ;
-        sh:path         saref:consistsOf .
+<https://astrea.linkeddata.es/shapes#c088fd6854acbca9eecaf9b9dec3d43c>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/core/> ;
+        rdfs:label        "has value"@en ;
+        sh:name           "has value"@en ;
+        sh:nodeKind       sh:Literal ;
+        sh:path           <https://saref.etsi.org/core/hasValue> .
 
 <https://astrea.linkeddata.es/shapes#f1ae3fa4ffe533f93b1ba23ec8571eba>
         a               sh:NodeShape ;
@@ -2125,6 +2125,12 @@
         sh:name         "Smoke" ;
         sh:nodeKind     sh:IRI ;
         sh:targetClass  saref:Smoke .
+
+<https://astrea.linkeddata.es/shapes#d12f4d5879159c35c9440ab64921c949>
+        a            sh:PropertyShape ;
+        sh:class     <https://saref.etsi.org/core/FeatureOfInterest> ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      <https://saref.etsi.org/core/isMeasurementOf> .
 
 <https://astrea.linkeddata.es/shapes#378884c9a8a498df70f2e193093df0af>
         a                 sh:NodeShape ;
@@ -2135,24 +2141,18 @@
         sh:nodeKind       sh:IRI ;
         sh:targetClass    <http://www.w3.org/ns/ssn/System> .
 
-<https://astrea.linkeddata.es/shapes#d12f4d5879159c35c9440ab64921c949>
-        a            sh:PropertyShape ;
-        sh:class     <https://saref.etsi.org/core/FeatureOfInterest> ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      <https://saref.etsi.org/core/isMeasurementOf> .
-
 <https://astrea.linkeddata.es/shapes#6ace7559c09873d57bb26d2909a563c6>
         a               sh:NodeShape ;
         sh:nodeKind     sh:IRI ;
         sh:targetClass  wgs84:SpatialThing .
 
-<https://astrea.linkeddata.es/shapes#c088fd6854acbca9eecaf9b9dec3d43c>
-        a                 sh:PropertyShape ;
-        rdfs:isDefinedBy  <https://saref.etsi.org/core/> ;
-        rdfs:label        "has value"@en ;
-        sh:name           "has value"@en ;
-        sh:nodeKind       sh:Literal ;
-        sh:path           <https://saref.etsi.org/core/hasValue> .
+<https://astrea.linkeddata.es/shapes#2b2890d59075f54bc73193c9d2a1c211>
+        a               sh:PropertyShape ;
+        rdfs:label      "consists of" , "A relationship indicating a composite entity that consists of other entities (e.g., a temperature/humidity sensor that consists of a temperature sensor and a humidity sensor)" ;
+        sh:description  "A relationship indicating a composite entity that consists of other entities (e.g., a temperature/humidity sensor that consists of a temperature sensor and a humidity sensor)" ;
+        sh:name         "consists of" ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         saref:consistsOf .
 
 <https://astrea.linkeddata.es/shapes#8902e106a5e9663e690199331d695f9a>
         a               sh:NodeShape ;
@@ -2465,11 +2465,6 @@
         sh:nodeKind     sh:IRI ;
         sh:targetClass  dim:DynamicViscosity .
 
-<https://astrea.linkeddata.es/shapes#e7d09ea75472fdab925bd7954ab0a2f4>
-        a               sh:NodeShape ;
-        sh:nodeKind     sh:IRI ;
-        sh:targetClass  dim:Acceleration .
-
 <https://astrea.linkeddata.es/shapes#68157bd564db99247d6d7857297bf60e>
         a               sh:PropertyShape ;
         rdfs:label      "has command" , "A relationship between an entity (such as a function) and a command" ;
@@ -2482,6 +2477,11 @@
         a               sh:NodeShape ;
         sh:nodeKind     sh:IRI ;
         sh:targetClass  dim:Angle .
+
+<https://astrea.linkeddata.es/shapes#e7d09ea75472fdab925bd7954ab0a2f4>
+        a               sh:NodeShape ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  dim:Acceleration .
 
 <https://astrea.linkeddata.es/shapes#ed2adc72397fdf193561014f7e0a34dd>
         a               sh:NodeShape ;
@@ -2879,6 +2879,11 @@
         sh:qualifiedMinCount    "1"^^xsd:nonNegativeInteger ;
         sh:qualifiedValueShape  [ sh:class  saref:Measurement ] .
 
+<https://astrea.linkeddata.es/shapes#5f8e1e862d26021410f9dbfe65685f66>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:IRIOrLiteral ;
+        sh:path      saref:hasFunction .
+
 <https://astrea.linkeddata.es/report/01163512728>
         a       <https://w3id.org/def/astrea#ReportEntry> ;
         <https://w3id.org/def/astrea#message>
@@ -2888,10 +2893,13 @@
         <https://w3id.org/def/astrea#statusCode>
                 "400"^^xsd:int .
 
-<https://astrea.linkeddata.es/shapes#5f8e1e862d26021410f9dbfe65685f66>
-        a            sh:PropertyShape ;
-        sh:nodeKind  sh:IRIOrLiteral ;
-        sh:path      saref:hasFunction .
+<https://astrea.linkeddata.es/shapes#84dabe1f51bdcdab8668ef404bc51bf9>
+        a               sh:NodeShape ;
+        rdfs:label      "Building space"@en ;
+        sh:description  "An entity used to define the physical spaces of the building. A building space contains devices or building objects."@en ;
+        sh:name         "Building space"@en ;
+        sh:nodeKind     sh:IRI ;
+        sh:targetClass  s4agri:BuildingSpace .
 
 <https://astrea.linkeddata.es/shapes#f47f83cfc80f60f1cbef92d413b7fac3>
         a               sh:NodeShape ;
@@ -2900,14 +2908,6 @@
         sh:name         "Illuminance unit" ;
         sh:nodeKind     sh:IRI ;
         sh:targetClass  saref:IlluminanceUnit .
-
-<https://astrea.linkeddata.es/shapes#84dabe1f51bdcdab8668ef404bc51bf9>
-        a               sh:NodeShape ;
-        rdfs:label      "Building space"@en ;
-        sh:description  "An entity used to define the physical spaces of the building. A building space contains devices or building objects."@en ;
-        sh:name         "Building space"@en ;
-        sh:nodeKind     sh:IRI ;
-        sh:targetClass  s4agri:BuildingSpace .
 
 <https://astrea.linkeddata.es/shapes#9e81a8547fd8cabc79752e243c8d2b67>
         a                 sh:NodeShape ;
@@ -2968,6 +2968,11 @@
         sh:nodeKind     sh:Literal ;
         sh:path         saref:hasValue .
 
+<https://astrea.linkeddata.es/shapes#3c142191e14e161eec2d2483985edbd2>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:BlankNodeOrIRI ;
+        sh:path      ssn:hasProperty .
+
 <https://astrea.linkeddata.es/shapes#92d0fd6fe9d12c9f390a2276eb2bb086>
         a               sh:NodeShape ;
         rdfs:label      "Washing machine" ;
@@ -2976,11 +2981,6 @@
         sh:nodeKind     sh:IRI ;
         sh:property     <https://astrea.linkeddata.es/shapes#8e5d61bda38d9f3dbaa3af4a7f4243ff> , <https://astrea.linkeddata.es/shapes#5aaaac2c509407252e1feafc2a9daf4c> , <https://astrea.linkeddata.es/shapes#14bff52ed0013a49a4b750d0eaaf307f> , <https://astrea.linkeddata.es/shapes#5f8e1e862d26021410f9dbfe65685f66> ;
         sh:targetClass  saref:WashingMachine .
-
-<https://astrea.linkeddata.es/shapes#3c142191e14e161eec2d2483985edbd2>
-        a            sh:PropertyShape ;
-        sh:nodeKind  sh:BlankNodeOrIRI ;
-        sh:path      ssn:hasProperty .
 
 <https://astrea.linkeddata.es/shapes#88d3f022bbe5ad4138183c6dd3f64ebf>
         a                 sh:NodeShape ;
@@ -3287,16 +3287,16 @@
         sh:nodeKind     sh:BlankNodeOrIRI ;
         sh:path         saref:accomplishes .
 
+<https://astrea.linkeddata.es/shapes#d7ebf345df8fe1eee1b1baae1be67bf2>
+        a         sh:PropertyShape ;
+        sh:class  saref:Property .
+
 <https://astrea.linkeddata.es/shapes#b146f25348b90d3405d93c2555dfc85e>
         a               sh:NodeShape ;
         rdfs:label      "Person"@en ;
         sh:name         "Person"@en ;
         sh:nodeKind     sh:IRI ;
         sh:targetClass  foaf:Person .
-
-<https://astrea.linkeddata.es/shapes#d7ebf345df8fe1eee1b1baae1be67bf2>
-        a         sh:PropertyShape ;
-        sh:class  saref:Property .
 
 <https://astrea.linkeddata.es/shapes#8462c23f6dc48c6a6045e96b9170a9d3>
         a            sh:PropertyShape ;

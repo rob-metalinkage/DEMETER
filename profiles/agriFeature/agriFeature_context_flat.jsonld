@@ -2,53 +2,49 @@
     "@id": "https://w3id.org/demeter/agri/agriFeature",
     "@context": [
         {
-            "foodie": "http://foodie-cloud.com/model/foodie#",
-            "fiware": "https://uri.fiware.org/ns/data-models#",
-            "saref4agri": "https://w3id.org/def/saref4agri#",
             "af-inspire": "http://inspire.ec.europa.eu/schemas/af/3.0#",
+            "foodie": "http://foodie-cloud.com/model/foodie#",
+            "saref4agri": "https://w3id.org/def/saref4agri#",
+            "fiware": "https://uri.fiware.org/ns/data-models#",
             "act-inspire": "http://inspire.ec.europa.eu/schemas/act-core/3.0#",
-            "AgriGreenhouse": {
-                "@id": "fiware:AgriGreenhouse"
-            },
-            "AgriFarm": {
-                "@id": "fiware:AgriFarm"
-            },
-            "Holding": {
-                "@id": "af-inspire:Holding"
-            },
-            "Farm": {
-                "@id": "saref4agri:Farm"
-            },
-            "OriginTypeValue": {
-                "@id": "foodie:OriginTypeValue"
-            },
-            "Site": {
-                "@id": "af-inspire:Site"
-            },
-            "AgriParcel": {
-                "@id": "fiware:AgriParcel"
+            "EconomicActivityNACEValue": {
+                "@id": "act-inspire:EconomicActivityNACEValue"
             },
             "Plot": {
                 "@id": "foodie:Plot"
             },
-            "EconomicActivityNACEValue": {
-                "@id": "act-inspire:EconomicActivityNACEValue"
+            "OriginTypeValue": {
+                "@id": "foodie:OriginTypeValue"
+            },
+            "AgriFarm": {
+                "@id": "fiware:AgriFarm"
             },
             "ManagementZone": {
                 "@id": "foodie:ManagementZone"
             },
-            "BuildingSpace": {
-                "@id": "saref4agri:BuildingSpace"
-            },
             "Building": {
                 "@id": "saref4agri:Building"
+            },
+            "AgriParcel": {
+                "@id": "fiware:AgriParcel"
+            },
+            "Farm": {
+                "@id": "saref4agri:Farm"
             },
             "Parcel": {
                 "@id": "saref4agri:Parcel"
             },
-            "isContainedIn": {
-                "@id": "saref4agri:isContainedIn",
-                "@type": "@id"
+            "AgriGreenhouse": {
+                "@id": "fiware:AgriGreenhouse"
+            },
+            "BuildingSpace": {
+                "@id": "saref4agri:BuildingSpace"
+            },
+            "Site": {
+                "@id": "af-inspire:Site"
+            },
+            "Holding": {
+                "@id": "af-inspire:Holding"
             },
             "machine": {
                 "@id": "foodie:machine",
@@ -56,38 +52,6 @@
             },
             "locationGeoJson": {
                 "@id": "https://uri.fiware.org/ns/data-models#location",
-                "@type": "@id"
-            },
-            "contains": {
-                "@id": "saref4agri:contains",
-                "@type": "@id"
-            },
-            "holdingZone": {
-                "@id": "foodie:holdingZone",
-                "@type": "@id"
-            },
-            "containsSite": {
-                "@id": "http://inspire.ec.europa.eu/schemas/af/3.0#contains",
-                "@type": "@id"
-            },
-            "tractor": {
-                "@id": "foodie:tractor",
-                "@type": "@id"
-            },
-            "containsPlot": {
-                "@id": "foodie:containsPlot",
-                "@type": "@id"
-            },
-            "hasAgriCrop": {
-                "@id": "fiware:hasAgriCrop",
-                "@type": "@id"
-            },
-            "activity": {
-                "@id": "af-inspire:activity",
-                "@type": "@id"
-            },
-            "containsZone": {
-                "@id": "foodie:containsZone",
                 "@type": "@id"
             },
             "landLocation": {
@@ -98,39 +62,75 @@
                 "@id": "fiware:hasAgriParcel",
                 "@type": "@id"
             },
+            "hasAgriCrop": {
+                "@id": "fiware:hasAgriCrop",
+                "@type": "@id"
+            },
             "hasAgriParcelParent": {
                 "@id": "fiware:hasAgriParcelParent",
                 "@type": "@id"
             },
-            "hasAgriParcelChildren": {
-                "@id": "fiware:hasAgriParcelChildren",
+            "tractor": {
+                "@id": "foodie:tractor",
+                "@type": "@id"
+            },
+            "containsZone": {
+                "@id": "foodie:containsZone",
                 "@type": "@id"
             },
             "originType": {
                 "@id": "foodie:originType",
                 "@type": "@id"
             },
+            "containsPlot": {
+                "@id": "foodie:containsPlot",
+                "@type": "@id"
+            },
             "holdingPlot": {
                 "@id": "foodie:holdingPlot",
                 "@type": "@id"
             },
-            "hasAgriSoil": {
-                "@id": "fiware:hasAgriSoil",
+            "containsSite": {
+                "@id": "http://inspire.ec.europa.eu/schemas/af/3.0#contains",
                 "@type": "@id"
             },
             "holdingSite": {
                 "@id": "foodie:holdingSite",
                 "@type": "@id"
             },
-            "cropStatus": {
-                "@id": "fiware:cropStatus"
+            "hasAgriSoil": {
+                "@id": "fiware:hasAgriSoil",
+                "@type": "@id"
+            },
+            "activity": {
+                "@id": "af-inspire:activity",
+                "@type": "@id"
+            },
+            "contains": {
+                "@id": "saref4agri:contains",
+                "@type": "@id"
+            },
+            "hasAgriParcelChildren": {
+                "@id": "fiware:hasAgriParcelChildren",
+                "@type": "@id"
+            },
+            "isContainedIn": {
+                "@id": "saref4agri:isContainedIn",
+                "@type": "@id"
+            },
+            "holdingZone": {
+                "@id": "foodie:holdingZone",
+                "@type": "@id"
+            },
+            "area": {
+                "@id": "fiware:area"
             },
             "lastPlantedAt": {
                 "@id": "fiware:lastPlantedAt",
                 "@type": "xsd:dateTime"
             },
-            "area": {
-                "@id": "fiware:area"
+            "cropStatus": {
+                "@id": "fiware:cropStatus"
             }
         }
     ]

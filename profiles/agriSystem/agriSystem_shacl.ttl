@@ -155,14 +155,6 @@
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      saref:hasFunction .
 
-<https://astrea.linkeddata.es/shapes#ee1bb8ccf767b89f8e9b7a7df2b4e749>
-        a                 sh:PropertyShape ;
-        rdfs:isDefinedBy  <https://saref.etsi.org/core/> ;
-        rdfs:label        "has state"@en ;
-        sh:name           "has state"@en ;
-        sh:nodeKind       sh:BlankNodeOrIRI ;
-        sh:path           <https://saref.etsi.org/core/hasState> .
-
 <https://astrea.linkeddata.es/shapes#32388fcc212e3b93e385650a51916ae5>
         a               sh:PropertyShape ;
         rdfs:label      "Relation to indicate the temporal duration or period of a deployment."@en , "has deployment period"@en ;
@@ -170,6 +162,14 @@
         sh:name         "has deployment period"@en ;
         sh:nodeKind     sh:BlankNodeOrIRI ;
         sh:path         s4agri:hasDeploymentPeriod .
+
+<https://astrea.linkeddata.es/shapes#ee1bb8ccf767b89f8e9b7a7df2b4e749>
+        a                 sh:PropertyShape ;
+        rdfs:isDefinedBy  <https://saref.etsi.org/core/> ;
+        rdfs:label        "has state"@en ;
+        sh:name           "has state"@en ;
+        sh:nodeKind       sh:BlankNodeOrIRI ;
+        sh:path           <https://saref.etsi.org/core/hasState> .
 
 <https://astrea.linkeddata.es/shapes#dd5254243bad0908f1801766c32a626c>
         a            sh:PropertyShape ;
@@ -1158,6 +1158,15 @@
         sh:nodeKind  sh:IRIOrLiteral ;
         sh:path      s4agri:hasPlantDate .
 
+<https://astrea.linkeddata.es/shapes#0a1ee340fb0944c53b93c6322875e2d8>
+        a               sh:NodeShape ;
+        rdfs:label      "Smoke sensor" ;
+        sh:description  "A device that consists of a sensor, has category saref:Sensor, performs the saref:SensingFunction and saref:EventFunction (which notifies that a certain threshold has been exceeded), and is used for the purpose of sensing a property of type saref:Smoke." ;
+        sh:name         "Smoke sensor" ;
+        sh:nodeKind     sh:IRI ;
+        sh:property     <https://astrea.linkeddata.es/shapes#b7d1393014d51c7f574155ae6b8d8080> , <https://astrea.linkeddata.es/shapes#45bbb0fe9fe39ab90c6586892aa47d3c> , <https://astrea.linkeddata.es/shapes#b011747329f202f73cb847724acf4cca> , <https://astrea.linkeddata.es/shapes#636d1bfe1946c777bf2e0fe2fbaac905> ;
+        sh:targetClass  saref:SmokeSensor .
+
 <https://astrea.linkeddata.es/shapes#0ac542fe05bf1e2555a2cb0118d23dc8>
         a                 sh:NodeShape ;
         rdfs:isDefinedBy  <https://saref.etsi.org/core/> ;
@@ -1174,15 +1183,6 @@
         sh:name           "Point"@en ;
         sh:nodeKind       sh:IRI ;
         sh:targetClass    wgs84:Point .
-
-<https://astrea.linkeddata.es/shapes#0a1ee340fb0944c53b93c6322875e2d8>
-        a               sh:NodeShape ;
-        rdfs:label      "Smoke sensor" ;
-        sh:description  "A device that consists of a sensor, has category saref:Sensor, performs the saref:SensingFunction and saref:EventFunction (which notifies that a certain threshold has been exceeded), and is used for the purpose of sensing a property of type saref:Smoke." ;
-        sh:name         "Smoke sensor" ;
-        sh:nodeKind     sh:IRI ;
-        sh:property     <https://astrea.linkeddata.es/shapes#b7d1393014d51c7f574155ae6b8d8080> , <https://astrea.linkeddata.es/shapes#45bbb0fe9fe39ab90c6586892aa47d3c> , <https://astrea.linkeddata.es/shapes#b011747329f202f73cb847724acf4cca> , <https://astrea.linkeddata.es/shapes#636d1bfe1946c777bf2e0fe2fbaac905> ;
-        sh:targetClass  saref:SmokeSensor .
 
 <https://astrea.linkeddata.es/shapes#5818b8db0fd6fa6667b40650961724e7>
         a               sh:NodeShape ;
@@ -1743,10 +1743,6 @@
         sh:nodeKind     sh:BlankNodeOrIRI ;
         sh:path         saref:consistsOf .
 
-<https://astrea.linkeddata.es/shapes#7d482eb871622dc4066b4b983184ab78>
-        a            sh:PropertyShape ;
-        sh:nodeKind  sh:Literal .
-
 <https://astrea.linkeddata.es/shapes#8902e106a5e9663e690199331d695f9a>
         a               sh:NodeShape ;
         rdfs:label      "Motion" ;
@@ -1762,6 +1758,10 @@
         sh:name         "Generator" ;
         sh:nodeKind     sh:IRI ;
         sh:targetClass  saref:Generator .
+
+<https://astrea.linkeddata.es/shapes#7d482eb871622dc4066b4b983184ab78>
+        a            sh:PropertyShape ;
+        sh:nodeKind  sh:Literal .
 
 <https://astrea.linkeddata.es/shapes#dc1487d61265ade87dad9cc4a3ae2fc2>
         a            sh:PropertyShape ;
@@ -2028,6 +2028,14 @@
         sh:path         s4agri:hasPlantDate ;
         sh:pattern      "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?" .
 
+<https://astrea.linkeddata.es/shapes#f8f4bcca1508a35fdd8296dc25525da6>
+        a               sh:PropertyShape ;
+        rdfs:label      "is member of"@en , "A relation to express that an animal can be part of groups."@en ;
+        sh:description  "A relation to express that an animal can be part of groups."@en ;
+        sh:name         "is member of"@en ;
+        sh:nodeKind     sh:BlankNodeOrIRI ;
+        sh:path         s4agri:isMemberOf .
+
 <https://astrea.linkeddata.es/shapes#f5964a49119d177c39d3573f1ede7cad>
         a            sh:PropertyShape ;
         sh:datatype  xsd:dateTime ;
@@ -2042,14 +2050,6 @@
         sh:nodeKind     sh:IRI ;
         sh:property     <https://astrea.linkeddata.es/shapes#3f9e551a825c0cee22258194111a01d6> ;
         sh:targetClass  saref:OnCommand .
-
-<https://astrea.linkeddata.es/shapes#f8f4bcca1508a35fdd8296dc25525da6>
-        a               sh:PropertyShape ;
-        rdfs:label      "is member of"@en , "A relation to express that an animal can be part of groups."@en ;
-        sh:description  "A relation to express that an animal can be part of groups."@en ;
-        sh:name         "is member of"@en ;
-        sh:nodeKind     sh:BlankNodeOrIRI ;
-        sh:path         s4agri:isMemberOf .
 
 <https://astrea.linkeddata.es/shapes#f2b8bc7d0e880ae8382b58193d34e8cc>
         a               sh:PropertyShape ;
