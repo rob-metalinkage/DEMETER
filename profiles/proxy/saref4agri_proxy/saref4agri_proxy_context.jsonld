@@ -2,6 +2,7 @@
     "@id": "https://w3id.org/demeter/agri/proxy/saref4agri",
     "@context": [
         "https://w3id.org/demeter/agri/proxy/saref4agri?_profile=jsoncontext",
+        "https://w3id.org/demeter/agri/proxy/saref4agri?_profile=jsoncontext",
         {
             "saref4agri": "https://w3id.org/def/saref4agri#"
         }

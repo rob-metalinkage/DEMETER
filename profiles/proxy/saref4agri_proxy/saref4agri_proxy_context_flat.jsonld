@@ -3,23 +3,17 @@
     "@context": [
         {
             "saref4agri": "https://w3id.org/def/saref4agri#",
-            "saref4agri:ID": {
-                "@id": "saref4agri:ID"
+            "saref4agri:Farm": {
+                "@id": "saref4agri:Farm"
             },
-            "saref4agri:BuildingSpace": {
-                "@id": "saref4agri:BuildingSpace"
-            },
-            "saref4agri:Farmer": {
-                "@id": "saref4agri:Farmer"
-            },
-            "saref4agri:FarmHolding": {
-                "@id": "saref4agri:FarmHolding"
+            "saref4agri:Building": {
+                "@id": "saref4agri:Building"
             },
             "saref4agri:AnimalGroup": {
                 "@id": "saref4agri:AnimalGroup"
             },
-            "saref4agri:Farm": {
-                "@id": "saref4agri:Farm"
+            "saref4agri:ID": {
+                "@id": "saref4agri:ID"
             },
             "saref4agri:Animal": {
                 "@id": "saref4agri:Animal"
@@ -27,8 +21,14 @@
             "saref4agri:Parcel": {
                 "@id": "saref4agri:Parcel"
             },
-            "saref4agri:Building": {
-                "@id": "saref4agri:Building"
+            "saref4agri:FarmHolding": {
+                "@id": "saref4agri:FarmHolding"
+            },
+            "saref4agri:BuildingSpace": {
+                "@id": "saref4agri:BuildingSpace"
+            },
+            "saref4agri:Farmer": {
+                "@id": "saref4agri:Farmer"
             },
             "saref4agri:isContainedIn": {
                 "@id": "saref4agri:isContainedIn",

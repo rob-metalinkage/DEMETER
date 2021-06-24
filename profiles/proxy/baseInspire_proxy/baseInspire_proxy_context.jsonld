@@ -2,6 +2,7 @@
     "@id": "https://w3id.org/demeter/agri/proxy/baseInspire",
     "@context": [
         "https://w3id.org/demeter/agri/proxy/baseInspire?_profile=jsoncontext",
+        "https://w3id.org/demeter/agri/proxy/baseInspire?_profile=jsoncontext",
         {
             "common": "http://portele.de/ont/inspire/baseInspire#"
         }

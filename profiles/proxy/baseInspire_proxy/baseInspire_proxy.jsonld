@@ -1,28 +1,6 @@
 [
   {
-    "@id": "http://portele.de/ont/inspire/baseInspire#validFrom",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://portele.de/ont/inspire/baseInspire#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "begin of real-world phenomenon"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb952d9e202602a22380c00ab17f1f2e2bb11c2ff465c938718a61aafda8818f79",
+    "@id": "_:cbd1f3f609732c3cc13a1811ab59f9d6caefd754bd1ffb1696a5390d065b1135a0",
     "@type": [
       "http://www.w3.org/ns/prov#Activity"
     ],
@@ -39,73 +17,41 @@
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
       {
-        "@id": "_:cb0"
+        "@id": "_:cb1d513a7853434f694cba34eb04a0d1fc04711fd1bbd4005a737abefa949a79862"
       }
     ]
   },
   {
-    "@id": "_:cb0",
-    "@type": [
-      "http://www.w3.org/ns/prov#Agent"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "ProfileWiz 0.1.5"
-      }
-    ]
-  },
-  {
-    "@id": "http://portele.de/ont/inspire/baseInspire#validTo",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://portele.de/ont/inspire/baseInspire#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-        "@language": "en",
-        "@value": "end of real-world phenomenon"
-      }
-    ]
+    "@id": "_:cb1d513a7853434f694cba34eb04a0d1fc04711fd1bbd4005a737abefa949a79862"
   },
   {
     "@id": "https://w3id.org/demeter/agri/proxy/baseInspire",
     "@type": [
-      "http://www.w3.org/ns/prov#Entity",
-      "http://www.w3.org/2002/07/owl#Ontology"
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://portele.de/ont/inspire/baseInspire"
+      }
+    ],
+    "http://www.w3.org/ns/dx/prof/isProfileOf": [
+      {
+        "@id": "https://w3id.org/demeter/agri/proxy/baseInspire"
+      }
     ],
     "http://www.w3.org/ns/prov#wasDerivedFrom": [
       {
-        "@id": "_:N30dfb1eb976e4c829d69c875116449d0"
+        "@id": "_:Ne39b05e39e004683a679ae797e927cd7"
       }
     ],
     "http://www.w3.org/ns/prov#wasGeneratedBy": [
       {
-        "@id": "_:N3a4e147f570d423db2d587108273bf74"
+        "@id": "_:Nc0e6c2edaf3f4017aa6d322a6076e371"
       }
     ]
   },
   {
-    "@id": "_:N30dfb1eb976e4c829d69c875116449d0",
-    "@type": [
-      "http://www.w3.org/ns/prov#Entity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\profiles\\merge_temp.ttl"
-      }
-    ]
-  },
-  {
-    "@id": "_:N3a4e147f570d423db2d587108273bf74",
+    "@id": "_:Nc0e6c2edaf3f4017aa6d322a6076e371",
     "@type": [
       "http://www.w3.org/ns/prov#Activity"
     ],
@@ -117,17 +63,17 @@
     "http://www.w3.org/ns/prov#endedAtTime": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-11-09"
+        "@value": "2021-06-25"
       }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
       {
-        "@id": "_:N141447f6c5494794ba2cc110c292ed51"
+        "@id": "_:N884e09fe090844e7966c73c0f62362fa"
       }
     ]
   },
   {
-    "@id": "_:N141447f6c5494794ba2cc110c292ed51",
+    "@id": "_:N884e09fe090844e7966c73c0f62362fa",
     "@type": [
       "http://www.w3.org/ns/prov#Agent"
     ],
@@ -138,13 +84,13 @@
     ]
   },
   {
-    "@id": "_:cbc6e97993d2314154985f93279daeade11890e1748da4d4883fe76a3b51a600b8",
+    "@id": "_:Ne39b05e39e004683a679ae797e927cd7",
     "@type": [
       "http://www.w3.org/ns/prov#Entity"
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriCommon.ttl"
+        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\profiles\\merge_temp.ttl"
       }
     ]
   }

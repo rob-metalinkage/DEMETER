@@ -1,29 +1,22 @@
-@prefix act-inspire: <http://inspire.ec.europa.eu/schemas/act-core/3.0#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-act-inspire:EconomicActivityNACEValue a owl:Class ;
-    rdfs:label "EconomicActivityNACEValue" ;
-    rdfs:isDefinedBy act-inspire: .
-
-<https://w3id.org/demeter/agri/proxy/act-core> a owl:Ontology,
-        prov:Entity ;
+<https://w3id.org/demeter/agri/proxy/act-core> a prov:Entity ;
+    owl:imports <http://inspire.ec.europa.eu/schemas/act-core/3.0> ;
+    prof:isProfileOf <https://w3id.org/demeter/agri/proxy/act-core> ;
     prov:wasDerivedFrom [ a prov:Entity ;
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\profiles\\merge_temp.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = merge_temp.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            prov:endedAtTime "2020-12-10"^^xsd:date ;
+            prov:endedAtTime "2021-06-25"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] .
 
 [] a prov:Activity ;
     rdfs:label "ProfileWiz: extraction of used terms from unavailable namespace" ;
     prov:endedAtTime "2020-09-30"^^xsd:date ;
-    prov:wasAssociatedWith [ a prov:Agent ;
-            rdfs:label "ProfileWiz 0.1.5" ] .
-
-[] a prov:Entity ;
-    rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriFeature.ttl" .
+    prov:wasAssociatedWith [ ] .
 

@@ -3,48 +3,20 @@
     "@context": [
         {
             "foodie": "http://foodie-cloud.com/model/foodie#",
-            "foodie:ManagementZone": {
-                "@id": "foodie:ManagementZone"
+            "foodie:Alert": {
+                "@id": "foodie:Alert"
             },
             "foodie:Plot": {
                 "@id": "foodie:Plot"
             },
+            "foodie:ManagementZone": {
+                "@id": "foodie:ManagementZone"
+            },
             "foodie:OriginTypeValue": {
                 "@id": "foodie:OriginTypeValue"
             },
-            "foodie:Alert": {
-                "@id": "foodie:Alert"
-            },
-            "foodie:machine": {
-                "@id": "foodie:machine",
-                "@type": "@id"
-            },
-            "foodie:plotAlert": {
-                "@id": "foodie:plotAlert",
-                "@type": "@id"
-            },
-            "foodie:holdingPlot": {
-                "@id": "foodie:holdingPlot",
-                "@type": "@id"
-            },
-            "foodie:containsZone": {
-                "@id": "foodie:containsZone",
-                "@type": "@id"
-            },
-            "foodie:alertZone": {
-                "@id": "foodie:alertZone",
-                "@type": "@id"
-            },
             "foodie:holdingSite": {
                 "@id": "foodie:holdingSite",
-                "@type": "@id"
-            },
-            "foodie:tractor": {
-                "@id": "foodie:tractor",
-                "@type": "@id"
-            },
-            "foodie:zoneAlert": {
-                "@id": "foodie:zoneAlert",
                 "@type": "@id"
             },
             "foodie:originType": {
@@ -59,29 +31,57 @@
                 "@id": "foodie:alertPlot",
                 "@type": "@id"
             },
-            "foodie:holdingZone": {
-                "@id": "foodie:holdingZone",
+            "foodie:tractor": {
+                "@id": "foodie:tractor",
                 "@type": "@id"
             },
-            "foodie:alertSpecies": {
-                "@id": "foodie:alertSpecies",
+            "foodie:holdingPlot": {
+                "@id": "foodie:holdingPlot",
                 "@type": "@id"
             },
             "foodie:alertGeometry": {
                 "@id": "foodie:alertGeometry",
                 "@type": "@id"
             },
+            "foodie:alertZone": {
+                "@id": "foodie:alertZone",
+                "@type": "@id"
+            },
             "foodie:containsPlot": {
                 "@id": "foodie:containsPlot",
                 "@type": "@id"
             },
-            "foodie:alertDate": {
-                "@id": "foodie:alertDate",
-                "@type": "xsd:date"
+            "foodie:holdingZone": {
+                "@id": "foodie:holdingZone",
+                "@type": "@id"
+            },
+            "foodie:plotAlert": {
+                "@id": "foodie:plotAlert",
+                "@type": "@id"
+            },
+            "foodie:machine": {
+                "@id": "foodie:machine",
+                "@type": "@id"
+            },
+            "foodie:containsZone": {
+                "@id": "foodie:containsZone",
+                "@type": "@id"
+            },
+            "foodie:alertSpecies": {
+                "@id": "foodie:alertSpecies",
+                "@type": "@id"
+            },
+            "foodie:zoneAlert": {
+                "@id": "foodie:zoneAlert",
+                "@type": "@id"
             },
             "foodie:livestockNumber": {
                 "@id": "foodie:livestockNumber",
                 "@type": "xsd:decimal"
+            },
+            "foodie:alertDate": {
+                "@id": "foodie:alertDate",
+                "@type": "xsd:date"
             },
             "foodie:livestockType": {
                 "@id": "foodie:livestockType",

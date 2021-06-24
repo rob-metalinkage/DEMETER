@@ -1,5 +1,26 @@
 [
   {
+    "@id": "http://foodie-cloud.com/model/foodie#Alert",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://foodie-cloud.com/model/foodie"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "https://uri.fiware.org/ns/data-models#Alert"
+      }
+    ]
+  },
+  {
+    "@id": "http://foodie-cloud.com/model/foodie#Plot",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://foodie-cloud.com/model/foodie"
+      }
+    ]
+  },
+  {
     "@id": "http://foodie-cloud.com/model/foodie#holdingSite",
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
@@ -13,6 +34,14 @@
     ]
   },
   {
+    "@id": "http://foodie-cloud.com/model/foodie#originType",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://foodie-cloud.com/model/foodie"
+      }
+    ]
+  },
+  {
     "@id": "http://foodie-cloud.com/model/foodie#speciesAlert",
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
@@ -21,95 +50,7 @@
     ]
   },
   {
-    "@id": "_:cb147cd8e943f3613b6fc42f8b29889135f579d6e4a3ff1f37bb5311b60a58d25a9",
-    "@type": [
-      "http://www.w3.org/ns/prov#Activity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "ProfileWiz: subset of used terms from available ontology"
-      }
-    ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-10-01"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasAssociatedWith": [
-      {
-        "@id": "_:cb161a679d6bef03da9b52f592be78c10580d2479fe569a84c49347dcb2b3a6e14a"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb161a679d6bef03da9b52f592be78c10580d2479fe569a84c49347dcb2b3a6e14a",
-    "@type": [
-      "http://www.w3.org/ns/prov#Agent"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "ProfileWiz 0.1.5"
-      }
-    ]
-  },
-  {
-    "@id": "http://foodie-cloud.com/model/foodie#alertDate",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
-      }
-    ]
-  },
-  {
-    "@id": "http://foodie-cloud.com/model/foodie#zoneAlert",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie"
-      }
-    ]
-  },
-  {
-    "@id": "http://foodie-cloud.com/model/foodie#alertZone",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie"
-      }
-    ]
-  },
-  {
-    "@id": "http://foodie-cloud.com/model/foodie#holdingZone",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/def/saref4agri#isContainedIn"
-      }
-    ]
-  },
-  {
-    "@id": "http://foodie-cloud.com/model/foodie#alertGeometry",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.opengis.net/ont/geosparql#hasGeometry"
-      }
-    ]
-  },
-  {
-    "@id": "http://foodie-cloud.com/model/foodie#machine",
+    "@id": "http://foodie-cloud.com/model/foodie#alertPlot",
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
         "@id": "http://foodie-cloud.com/model/foodie"
@@ -121,536 +62,6 @@
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
         "@id": "http://foodie-cloud.com/model/foodie"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb18ad482a445f31bdf6c324c77f38eed03170a0fce52b055fd4fbb5ed22596bd64",
-    "@type": [
-      "http://www.w3.org/ns/prov#Activity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "ProfileWiz: subset of used terms from available ontology"
-      }
-    ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-09-29"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasAssociatedWith": [
-      {
-        "@id": "_:cb1b94b4a85c5127c93ddd55a808768c027d0e2edde5bfce4750a51a8a72aafe904"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb1b94b4a85c5127c93ddd55a808768c027d0e2edde5bfce4750a51a8a72aafe904",
-    "@type": [
-      "http://www.w3.org/ns/prov#Agent"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "ProfileWiz 0.1.5"
-      }
-    ]
-  },
-  {
-    "@id": "http://foodie-cloud.com/model/foodie#OriginTypeValue",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie"
-      }
-    ]
-  },
-  {
-    "@id": "http://foodie-cloud.com/model/foodie#containsZone",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/def/saref4agri#contains"
-      }
-    ]
-  },
-  {
-    "@id": "http://foodie-cloud.com/model/foodie#alertSpecies",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie"
-      }
-    ]
-  },
-  {
-    "@id": "http://foodie-cloud.com/model/foodie#containsPlot",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "https://w3id.org/def/saref4agri#contains"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb11b84530ea1eea7c478f7ef1044d5b5be7bd850a16bcd4d4490c25b2c3a24da75",
-    "@type": [
-      "http://www.w3.org/ns/prov#Entity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\models\\farmAnimal.ttl"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb123dc11a50bfc9d977dd9b600215e3b4d892edbf2869f7f616b13ab3019c40215",
-    "@type": [
-      "http://www.w3.org/ns/prov#Entity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriFeature.ttl"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/demeter/agri/proxy/foodie",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Ontology",
-      "http://www.w3.org/ns/prov#Entity"
-    ],
-    "http://www.w3.org/2002/07/owl#imports": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie"
-      }
-    ],
-    "http://www.w3.org/ns/dx/prof/isProfileOf": [
-      {
-        "@id": "https://w3id.org/demeter/agri/proxy/foodie"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasDerivedFrom": [
-      {
-        "@id": "_:Nb7c9ad95b05f4c05b3d3077a86fa9fd7"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasGeneratedBy": [
-      {
-        "@id": "_:Neeb6a16b737f4ed1816fc179c1447124"
-      }
-    ]
-  },
-  {
-    "@id": "_:Neeb6a16b737f4ed1816fc179c1447124",
-    "@type": [
-      "http://www.w3.org/ns/prov#Activity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "ProfileWiz: Normalisation (source = merge_temp.ttl, force_local=False, profile libs : lib/profile_cat.ttl) "
-      }
-    ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-11-09"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasAssociatedWith": [
-      {
-        "@id": "_:N905bf88dad414773b61b6d81a47272bc"
-      }
-    ]
-  },
-  {
-    "@id": "_:N905bf88dad414773b61b6d81a47272bc",
-    "@type": [
-      "http://www.w3.org/ns/prov#Agent"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "ProfileWiz 0.1.5"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nb7c9ad95b05f4c05b3d3077a86fa9fd7",
-    "@type": [
-      "http://www.w3.org/ns/prov#Entity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\profiles\\merge_temp.ttl"
-      }
-    ]
-  },
-  {
-    "@id": "http://foodie-cloud.com/model/foodie#ManagementZone",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:cb21e18f21b1ca76f29b20e9403cc5ffde4f9c17d85d8dc6a33b032092507133595"
-      },
-      {
-        "@id": "_:cb1a44827be9b48e7b75e497c97e0fd60ea7055f494f654d67e5663c928dc062d4b"
-      },
-      {
-        "@id": "_:cb2a7064cffd65e53242a10b3a65e22c5ad3953834b5b20bf54b00c0031e4276d25"
-      },
-      {
-        "@id": "_:cb20ac6abe72d1b81ac9fa2ab61516cc8c00c894ed41262197ac7e33980e7932b0d"
-      },
-      {
-        "@id": "_:cb30eb71d93da56edfcead7777a39f743da56c836baf495e5a2a6a9fd1172a7ac05"
-      },
-      {
-        "@id": "_:cb1fd2c65949b147cf5c9bcc8d775f727c2096220b1c341759af8309845c63300bf"
-      },
-      {
-        "@id": "_:cb2f8e3ec0d79f82abb09be6e9b774bc46c98fee303dd13d13e0dd20080b14e35d0"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb21e18f21b1ca76f29b20e9403cc5ffde4f9c17d85d8dc6a33b032092507133595",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#int",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie#code"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb1a44827be9b48e7b75e497c97e0fd60ea7055f494f654d67e5663c928dc062d4b",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#int",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie#notes"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb2a7064cffd65e53242a10b3a65e22c5ad3953834b5b20bf54b00c0031e4276d25",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#int",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://portele.de/ont/inspire/baseInspire#validTo"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb20ac6abe72d1b81ac9fa2ab61516cc8c00c894ed41262197ac7e33980e7932b0d",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#int",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/prov#generatedAtTime"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb30eb71d93da56edfcead7777a39f743da56c836baf495e5a2a6a9fd1172a7ac05",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#int",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/prov#invalidatedAtTime"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb1fd2c65949b147cf5c9bcc8d775f727c2096220b1c341759af8309845c63300bf",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#int",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.opengis.net/ont/geosparql#hasGeometry"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb2f8e3ec0d79f82abb09be6e9b774bc46c98fee303dd13d13e0dd20080b14e35d0",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#int",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://portele.de/ont/inspire/baseInspire#validFrom"
-      }
-    ]
-  },
-  {
-    "@id": "http://foodie-cloud.com/model/foodie#originType",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie"
-      }
-    ]
-  },
-  {
-    "@id": "http://foodie-cloud.com/model/foodie#Plot",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:cb26e9bfc4fd73fd8c99b2c52423839eb0e061d62d434183da385128cc9078c8a03"
-      },
-      {
-        "@id": "_:cb1c4c214e49bf6029b3ad86773500e4d22d62c003a9c38f3e9cd3724dce9981d9d"
-      },
-      {
-        "@id": "_:cb1d25c5b372dfd075210be49fd2b83ee20d9532e5ceb5997c99ce9c6180af847eb"
-      },
-      {
-        "@id": "_:cb2d64ccce3db3873a25bf31616140e693b23921643cd8d63f17bb089a8960cc8e3"
-      },
-      {
-        "@id": "_:cb2a7981e278252e72dd9b87ca167d47455ff6c31f506f24084ed500b7b41f66be7"
-      },
-      {
-        "@id": "_:cb18817bb7f8a5188cfc15e545f3cf5e95a2c89e5107da153c424043aeab6719ace"
-      },
-      {
-        "@id": "_:cb1ec6f720bcc2a6ed882c7194b230edac89f7bbf2faa0acb1de15a2a066f36bfee"
-      },
-      {
-        "@id": "_:cb1e5aea16b1d88f4cf232a329fa6772345c68b5d0eb1d3e882853895bc2a785273"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb26e9bfc4fd73fd8c99b2c52423839eb0e061d62d434183da385128cc9078c8a03",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#int",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://portele.de/ont/inspire/baseInspire#validTo"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb1c4c214e49bf6029b3ad86773500e4d22d62c003a9c38f3e9cd3724dce9981d9d",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#int",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.opengis.net/ont/geosparql#hasGeometry"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb1d25c5b372dfd075210be49fd2b83ee20d9532e5ceb5997c99ce9c6180af847eb",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#int",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/prov#generatedAtTime"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb2d64ccce3db3873a25bf31616140e693b23921643cd8d63f17bb089a8960cc8e3",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#int",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/prov#invalidatedAtTime"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb2a7981e278252e72dd9b87ca167d47455ff6c31f506f24084ed500b7b41f66be7",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#int",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie#description"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb18817bb7f8a5188cfc15e545f3cf5e95a2c89e5107da153c424043aeab6719ace",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#int",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie#originType"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb1ec6f720bcc2a6ed882c7194b230edac89f7bbf2faa0acb1de15a2a066f36bfee",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#int",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://portele.de/ont/inspire/baseInspire#validFrom"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb1e5aea16b1d88f4cf232a329fa6772345c68b5d0eb1d3e882853895bc2a785273",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#int",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie#code"
-      }
-    ]
-  },
-  {
-    "@id": "http://foodie-cloud.com/model/foodie#plotAlert",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie"
-      }
-    ]
-  },
-  {
-    "@id": "http://foodie-cloud.com/model/foodie#livestockNumber",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#equivalentProperty": [
-      {
-        "@id": "https://uri.fiware.org/ns/data-models#legalID"
-      }
-    ]
-  },
-  {
-    "@id": "http://foodie-cloud.com/model/foodie#livestockType",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#equivalentProperty": [
-      {
-        "@id": "https://uri.fiware.org/ns/data-models#species"
       }
     ]
   },
@@ -701,125 +112,129 @@
     ]
   },
   {
-    "@id": "http://foodie-cloud.com/model/foodie#Alert",
+    "@id": "_:cb123dc11a50bfc9d977dd9b600215e3b4d892edbf2869f7f616b13ab3019c40215",
+    "@type": [
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriFeature.ttl"
+      }
+    ]
+  },
+  {
+    "@id": "http://foodie-cloud.com/model/foodie#livestockNumber",
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
         "@id": "http://foodie-cloud.com/model/foodie"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+    "http://www.w3.org/2002/07/owl#equivalentProperty": [
       {
-        "@id": "_:cb25b32aad4ee2a0d7d3dcf499c5bba3f1280654446850f3ffba46cb88470a4b0dc"
-      },
-      {
-        "@id": "_:cb2bcba328cbd6473642409bf11294322af5dd64c061a9d2b4201fbe4e558aba98a"
-      },
-      {
-        "@id": "_:cb355bedbfea67d12a48c257556c7dc17c8ef8173d375f6f007682ee5c675437bf2"
-      },
-      {
-        "@id": "_:cb2601870e9cb40cf87cd3c7ea4c15b9a94c8d27d9d8276907e4727bb0fef91b50e"
-      },
-      {
-        "@id": "_:cb293d55f4241b32045d5972b55067ec6b8b6a09eed20d89805001770075dc5627e"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#equivalentClass": [
-      {
-        "@id": "https://uri.fiware.org/ns/data-models#Alert"
+        "@id": "https://uri.fiware.org/ns/data-models#legalID"
       }
     ]
   },
   {
-    "@id": "_:cb25b32aad4ee2a0d7d3dcf499c5bba3f1280654446850f3ffba46cb88470a4b0dc",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#int",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie#type"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb2bcba328cbd6473642409bf11294322af5dd64c061a9d2b4201fbe4e558aba98a",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#int",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie#alertGeometry"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb355bedbfea67d12a48c257556c7dc17c8ef8173d375f6f007682ee5c675437bf2",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#maxCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#int",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie#description"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb2601870e9cb40cf87cd3c7ea4c15b9a94c8d27d9d8276907e4727bb0fef91b50e",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#int",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie#alertDate"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb293d55f4241b32045d5972b55067ec6b8b6a09eed20d89805001770075dc5627e",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#int",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://foodie-cloud.com/model/foodie#code"
-      }
-    ]
-  },
-  {
-    "@id": "http://foodie-cloud.com/model/foodie#alertPlot",
+    "@id": "http://foodie-cloud.com/model/foodie#ManagementZone",
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
         "@id": "http://foodie-cloud.com/model/foodie"
+      }
+    ]
+  },
+  {
+    "@id": "http://foodie-cloud.com/model/foodie#alertGeometry",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://foodie-cloud.com/model/foodie"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.opengis.net/ont/geosparql#hasGeometry"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb11b84530ea1eea7c478f7ef1044d5b5be7bd850a16bcd4d4490c25b2c3a24da75",
+    "@type": [
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\models\\farmAnimal.ttl"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/demeter/agri/proxy/foodie",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://foodie-cloud.com/model/foodie"
+      }
+    ],
+    "http://www.w3.org/ns/dx/prof/isProfileOf": [
+      {
+        "@id": "https://w3id.org/demeter/agri/proxy/foodie"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "_:N73aa989ddaa74516805401b41fd62e0a"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+      {
+        "@id": "_:Nb8b507beefef42a3ad03af07b7216c4f"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb8b507beefef42a3ad03af07b7216c4f",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ProfileWiz: Normalisation (source = merge_temp.ttl, force_local=False, profile libs : lib/profile_cat.ttl) "
+      }
+    ],
+    "http://www.w3.org/ns/prov#endedAtTime": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2021-06-25"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasAssociatedWith": [
+      {
+        "@id": "_:N1f47508328134ea5afacf368654056e9"
+      }
+    ]
+  },
+  {
+    "@id": "_:N1f47508328134ea5afacf368654056e9",
+    "@type": [
+      "http://www.w3.org/ns/prov#Agent"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ProfileWiz 0.1.5"
+      }
+    ]
+  },
+  {
+    "@id": "_:N73aa989ddaa74516805401b41fd62e0a",
+    "@type": [
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\profiles\\merge_temp.ttl"
       }
     ]
   },
@@ -831,6 +246,185 @@
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriAlert.ttl"
+      }
+    ]
+  },
+  {
+    "@id": "http://foodie-cloud.com/model/foodie#alertZone",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://foodie-cloud.com/model/foodie"
+      }
+    ]
+  },
+  {
+    "@id": "http://foodie-cloud.com/model/foodie#containsPlot",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://foodie-cloud.com/model/foodie"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/def/saref4agri#contains"
+      }
+    ]
+  },
+  {
+    "@id": "http://foodie-cloud.com/model/foodie#alertDate",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://foodie-cloud.com/model/foodie"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
+      }
+    ]
+  },
+  {
+    "@id": "http://foodie-cloud.com/model/foodie#holdingZone",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://foodie-cloud.com/model/foodie"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/def/saref4agri#isContainedIn"
+      }
+    ]
+  },
+  {
+    "@id": "http://foodie-cloud.com/model/foodie#plotAlert",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://foodie-cloud.com/model/foodie"
+      }
+    ]
+  },
+  {
+    "@id": "http://foodie-cloud.com/model/foodie#machine",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://foodie-cloud.com/model/foodie"
+      }
+    ]
+  },
+  {
+    "@id": "http://foodie-cloud.com/model/foodie#OriginTypeValue",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://foodie-cloud.com/model/foodie"
+      }
+    ]
+  },
+  {
+    "@id": "http://foodie-cloud.com/model/foodie#containsZone",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://foodie-cloud.com/model/foodie"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "https://w3id.org/def/saref4agri#contains"
+      }
+    ]
+  },
+  {
+    "@id": "http://foodie-cloud.com/model/foodie#alertSpecies",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://foodie-cloud.com/model/foodie"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb18ad482a445f31bdf6c324c77f38eed03170a0fce52b055fd4fbb5ed22596bd64",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ProfileWiz: subset of used terms from available ontology"
+      }
+    ],
+    "http://www.w3.org/ns/prov#endedAtTime": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2020-09-29"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasAssociatedWith": [
+      {
+        "@id": "_:cb1b94b4a85c5127c93ddd55a808768c027d0e2edde5bfce4750a51a8a72aafe904"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1b94b4a85c5127c93ddd55a808768c027d0e2edde5bfce4750a51a8a72aafe904",
+    "@type": [
+      "http://www.w3.org/ns/prov#Agent"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ProfileWiz 0.1.5"
+      }
+    ]
+  },
+  {
+    "@id": "http://foodie-cloud.com/model/foodie#livestockType",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://foodie-cloud.com/model/foodie"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentProperty": [
+      {
+        "@id": "https://uri.fiware.org/ns/data-models#species"
+      }
+    ]
+  },
+  {
+    "@id": "http://foodie-cloud.com/model/foodie#zoneAlert",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://foodie-cloud.com/model/foodie"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb147cd8e943f3613b6fc42f8b29889135f579d6e4a3ff1f37bb5311b60a58d25a9",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ProfileWiz: subset of used terms from available ontology"
+      }
+    ],
+    "http://www.w3.org/ns/prov#endedAtTime": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2020-10-01"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasAssociatedWith": [
+      {
+        "@id": "_:cb23695449d4e07af33d15c7ce210008fbd1d7e78dbaf11535e07241a9a47033030"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb23695449d4e07af33d15c7ce210008fbd1d7e78dbaf11535e07241a9a47033030",
+    "@type": [
+      "http://www.w3.org/ns/prov#Agent"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ProfileWiz 0.1.5"
       }
     ]
   }

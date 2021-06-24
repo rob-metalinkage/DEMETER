@@ -3,31 +3,23 @@
     "@context": [
         {
             "fiware": "https://uri.fiware.org/ns/data-models#",
-            "AlertEntity": {
-                "@id": "https://uri.fiware.org/ns/data-models#Alert"
-            },
             "fiware:AgriParcel": {
                 "@id": "fiware:AgriParcel"
-            },
-            "fiware:AgriGreenhouse": {
-                "@id": "fiware:AgriGreenhouse"
-            },
-            "fiware:AgriFarm": {
-                "@id": "fiware:AgriFarm"
             },
             "AnimalEntity": {
                 "@id": "https://uri.fiware.org/ns/data-models#Animal"
             },
-            "fiware:hasAgriParcel": {
-                "@id": "fiware:hasAgriParcel",
-                "@type": "@id"
+            "fiware:AgriFarm": {
+                "@id": "fiware:AgriFarm"
+            },
+            "fiware:AgriGreenhouse": {
+                "@id": "fiware:AgriGreenhouse"
+            },
+            "AlertEntity": {
+                "@id": "https://uri.fiware.org/ns/data-models#Alert"
             },
             "fiware:hasAgriParcelChildren": {
                 "@id": "fiware:hasAgriParcelChildren",
-                "@type": "@id"
-            },
-            "fiware:landLocation": {
-                "@id": "fiware:landLocation",
                 "@type": "@id"
             },
             "fiware:hasAgriParcelParent": {
@@ -38,15 +30,23 @@
                 "@id": "https://uri.fiware.org/ns/data-models#location",
                 "@type": "@id"
             },
+            "fiware:hasAgriParcel": {
+                "@id": "fiware:hasAgriParcel",
+                "@type": "@id"
+            },
+            "fiware:landLocation": {
+                "@id": "fiware:landLocation",
+                "@type": "@id"
+            },
             "fiware:locatedAt": {
                 "@id": "fiware:locatedAt",
                 "@type": "@id"
             },
-            "alertValidTo": {
-                "@id": "https://uri.fiware.org/ns/data-models#validTo"
-            },
             "alertValidFrom": {
                 "@id": "https://uri.fiware.org/ns/data-models#validFrom"
+            },
+            "alertValidTo": {
+                "@id": "https://uri.fiware.org/ns/data-models#validTo"
             }
         }
     ]

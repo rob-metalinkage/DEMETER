@@ -2,6 +2,7 @@
     "@id": "https://w3id.org/demeter/agri/proxy/fiware",
     "@context": [
         "https://fiware.github.io/data-models/full-context.jsonld",
+        "https://fiware.github.io/data-models/full-context.jsonld",
         {
             "fiware": "https://uri.fiware.org/ns/data-models#"
         }

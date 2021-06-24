@@ -1,6 +1,77 @@
 [
   {
-    "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#Precipitation",
+    "@id": "https://w3id.org/demeter/agri/proxy/cf-feature",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature"
+      }
+    ],
+    "http://www.w3.org/ns/dx/prof/isProfileOf": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "_:N5e882d8905c340d3a71ec3594267ec38"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+      {
+        "@id": "_:N167dca351e2d4b8c90f17d42ebe06dd4"
+      }
+    ]
+  },
+  {
+    "@id": "_:N167dca351e2d4b8c90f17d42ebe06dd4",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ProfileWiz: Normalisation (source = merge_temp.ttl, force_local=False, profile libs : lib/profile_cat.ttl) "
+      }
+    ],
+    "http://www.w3.org/ns/prov#endedAtTime": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2021-06-25"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasAssociatedWith": [
+      {
+        "@id": "_:Nf0b1714a29e54b3b91e079e9eb68a433"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf0b1714a29e54b3b91e079e9eb68a433",
+    "@type": [
+      "http://www.w3.org/ns/prov#Agent"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ProfileWiz 0.1.5"
+      }
+    ]
+  },
+  {
+    "@id": "_:N5e882d8905c340d3a71ec3594267ec38",
+    "@type": [
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\profiles\\merge_temp.ttl"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#Layer",
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
         "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature"
@@ -13,20 +84,7 @@
     ]
   },
   {
-    "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#Medium",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.w3.org/ns/sosa/FeatureOfInterest"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb952d9e202602a22380c00ab17f1f2e2bb11c2ff465c938718a61aafda8818f79",
+    "@id": "_:cb1b710d10943315468969858f34030e459a9a3cf6c430581b1c2358e21dca1a4ca",
     "@type": [
       "http://www.w3.org/ns/prov#Activity"
     ],
@@ -43,55 +101,18 @@
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
       {
-        "@id": "_:cb0"
+        "@id": "_:cb184fa4839d2dc20877b92afe8fc1f0bc448c5359c27ac287cd87db28cd19bff72"
       }
     ]
   },
   {
-    "@id": "_:cb0",
+    "@id": "_:cb184fa4839d2dc20877b92afe8fc1f0bc448c5359c27ac287cd87db28cd19bff72",
     "@type": [
       "http://www.w3.org/ns/prov#Agent"
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@value": "ProfileWiz 0.1.5"
-      }
-    ]
-  },
-  {
-    "@id": "_:cbd12909f9526d96fdd870b2ddf6711be5337c60d3a4615cb43bd846a676408925",
-    "@type": [
-      "http://www.w3.org/ns/prov#Entity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriProperty.ttl"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#SurfaceLayer",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.w3.org/ns/sosa/FeatureOfInterest"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#Layer",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.w3.org/ns/sosa/FeatureOfInterest"
       }
     ]
   },
@@ -122,73 +143,52 @@
     ]
   },
   {
-    "@id": "https://w3id.org/demeter/agri/proxy/cf-feature",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Ontology",
-      "http://www.w3.org/ns/prov#Entity"
-    ],
-    "http://www.w3.org/2002/07/owl#imports": [
+    "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#Precipitation",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
         "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature"
       }
     ],
-    "http://www.w3.org/ns/dx/prof/isProfileOf": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/FeatureOfInterest"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#SurfaceLayer",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
         "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature"
       }
     ],
-    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:Ne4d19445c1f843058ea175778e81b569"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasGeneratedBy": [
-      {
-        "@id": "_:Nd1ad43d3dbff426085963df37407cca3"
+        "@id": "http://www.w3.org/ns/sosa/FeatureOfInterest"
       }
     ]
   },
   {
-    "@id": "_:Nd1ad43d3dbff426085963df37407cca3",
-    "@type": [
-      "http://www.w3.org/ns/prov#Activity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
+    "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#Medium",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "ProfileWiz: Normalisation (source = merge_temp.ttl, force_local=False, profile libs : lib/profile_cat.ttl) "
+        "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature"
       }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-11-09"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasAssociatedWith": [
-      {
-        "@id": "_:Ne922e2b5face4669a66d0e923879b9a8"
+        "@id": "http://www.w3.org/ns/sosa/FeatureOfInterest"
       }
     ]
   },
   {
-    "@id": "_:Ne922e2b5face4669a66d0e923879b9a8",
-    "@type": [
-      "http://www.w3.org/ns/prov#Agent"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "ProfileWiz 0.1.5"
-      }
-    ]
-  },
-  {
-    "@id": "_:Ne4d19445c1f843058ea175778e81b569",
+    "@id": "_:cb12ec057a261393486c05277710ae1c1543afdb76317b3f7e8319d6490eb7ae275",
     "@type": [
       "http://www.w3.org/ns/prov#Entity"
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\profiles\\merge_temp.ttl"
+        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriProperty.ttl"
       }
     ]
   }

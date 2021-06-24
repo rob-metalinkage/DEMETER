@@ -59,7 +59,7 @@ fiware:locatedAt a owl:ObjectProperty ;
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\profiles\\merge_temp.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = merge_temp.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            prov:endedAtTime "2020-11-09"^^xsd:date ;
+            prov:endedAtTime "2021-06-25"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] .
 

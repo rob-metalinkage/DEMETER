@@ -1,6 +1,6 @@
 [
   {
-    "@id": "_:cb952d9e202602a22380c00ab17f1f2e2bb11c2ff465c938718a61aafda8818f79",
+    "@id": "_:cbd1f3f609732c3cc13a1811ab59f9d6caefd754bd1ffb1696a5390d065b1135a0",
     "@type": [
       "http://www.w3.org/ns/prov#Activity"
     ],
@@ -17,49 +17,32 @@
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
       {
-        "@id": "_:cb0"
+        "@id": "_:cb1d513a7853434f694cba34eb04a0d1fc04711fd1bbd4005a737abefa949a79862"
       }
     ]
   },
   {
-    "@id": "_:cb0",
-    "@type": [
-      "http://www.w3.org/ns/prov#Agent"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "ProfileWiz 0.1.5"
-      }
-    ]
+    "@id": "_:cb1d513a7853434f694cba34eb04a0d1fc04711fd1bbd4005a737abefa949a79862"
   },
   {
     "@id": "https://w3id.org/demeter/agri/proxy/obo",
     "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology",
       "http://www.w3.org/ns/prov#Entity"
-    ],
-    "http://www.w3.org/2002/07/owl#imports": [
-      {
-        "@id": "http://purl.obolibrary.org/obo"
-      }
-    ],
-    "http://www.w3.org/ns/dx/prof/isProfileOf": [
-      {
-        "@id": "https://w3id.org/demeter/agri/proxy/obo"
-      }
     ],
     "http://www.w3.org/ns/prov#wasDerivedFrom": [
       {
-        "@id": "_:N46fb89a4da8e45bda87a73521f2b9431"
+        "@id": "_:N3169df61c5a940759adfabc41a9fd0d3"
       }
     ],
     "http://www.w3.org/ns/prov#wasGeneratedBy": [
       {
-        "@id": "_:Na470b8f58760428193ae2ce5b2f39333"
+        "@id": "_:N977e3a671b804447bced3ed38cc8086f"
       }
     ]
   },
   {
-    "@id": "_:Na470b8f58760428193ae2ce5b2f39333",
+    "@id": "_:N977e3a671b804447bced3ed38cc8086f",
     "@type": [
       "http://www.w3.org/ns/prov#Activity"
     ],
@@ -71,17 +54,17 @@
     "http://www.w3.org/ns/prov#endedAtTime": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-11-09"
+        "@value": "2021-06-25"
       }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
       {
-        "@id": "_:Ncaafa414ec5d4afc9de0a8af4452b783"
+        "@id": "_:N9d573e4b372c4f26b474b150306af0dc"
       }
     ]
   },
   {
-    "@id": "_:Ncaafa414ec5d4afc9de0a8af4452b783",
+    "@id": "_:N9d573e4b372c4f26b474b150306af0dc",
     "@type": [
       "http://www.w3.org/ns/prov#Agent"
     ],
@@ -92,7 +75,7 @@
     ]
   },
   {
-    "@id": "_:N46fb89a4da8e45bda87a73521f2b9431",
+    "@id": "_:N3169df61c5a940759adfabc41a9fd0d3",
     "@type": [
       "http://www.w3.org/ns/prov#Entity"
     ],
@@ -103,13 +86,19 @@
     ]
   },
   {
-    "@id": "_:cbc6e97993d2314154985f93279daeade11890e1748da4d4883fe76a3b51a600b8",
+    "@id": "http://purl.obolibrary.org/obo/TAXRANK_0000000",
     "@type": [
-      "http://www.w3.org/ns/prov#Entity"
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.obolibrary.org/obo/"
+      }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriCommon.ttl"
+        "@language": "en",
+        "@value": "taxonomic_rank"
       }
     ]
   }

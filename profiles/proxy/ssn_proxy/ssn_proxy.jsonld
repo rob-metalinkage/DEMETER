@@ -1,15 +1,6 @@
 [
   {
-    "@id": "http://www.w3.org/ns/ssn/System",
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other Systems. (Definition taken from http://www.w3.org/ns/ssn/System)"
-      }
-    ]
-  },
-  {
-    "@id": "_:cbb6634eec685ae7baa22c154487cdad99e050635a485999f779601be7881a94d0",
+    "@id": "_:cb113fa9c95772685438a0dd9d79c3e5308e7d1b9e9bbac352b6f2539d1fd54ee20",
     "@type": [
       "http://www.w3.org/ns/prov#Entity"
     ],
@@ -20,78 +11,7 @@
     ]
   },
   {
-    "@id": "https://w3id.org/demeter/agri/proxy/ssn",
-    "@type": [
-      "http://www.w3.org/ns/prov#Entity",
-      "http://www.w3.org/2002/07/owl#Ontology"
-    ],
-    "http://www.w3.org/2002/07/owl#imports": [
-      {
-        "@id": "http://www.w3.org/ns/ssn"
-      }
-    ],
-    "http://www.w3.org/ns/dx/prof/isProfileOf": [
-      {
-        "@id": "http://www.w3.org/ns/ssn"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasDerivedFrom": [
-      {
-        "@id": "_:Nfc8fee7155fc4c45980b77f8f42316bf"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasGeneratedBy": [
-      {
-        "@id": "_:N56a906dfebf0406f871ce400a70137ab"
-      }
-    ]
-  },
-  {
-    "@id": "_:N56a906dfebf0406f871ce400a70137ab",
-    "@type": [
-      "http://www.w3.org/ns/prov#Activity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "ProfileWiz: Normalisation (source = merge_temp.ttl, force_local=False, profile libs : lib/profile_cat.ttl) "
-      }
-    ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-11-09"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasAssociatedWith": [
-      {
-        "@id": "_:N9aff8aff7f784604bb753ab2eb2a9cef"
-      }
-    ]
-  },
-  {
-    "@id": "_:N9aff8aff7f784604bb753ab2eb2a9cef",
-    "@type": [
-      "http://www.w3.org/ns/prov#Agent"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "ProfileWiz 0.1.5"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nfc8fee7155fc4c45980b77f8f42316bf",
-    "@type": [
-      "http://www.w3.org/ns/prov#Entity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\profiles\\merge_temp.ttl"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb952d9e202602a22380c00ab17f1f2e2bb11c2ff465c938718a61aafda8818f79",
+    "@id": "_:cb1b710d10943315468969858f34030e459a9a3cf6c430581b1c2358e21dca1a4ca",
     "@type": [
       "http://www.w3.org/ns/prov#Activity"
     ],
@@ -108,18 +28,98 @@
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
       {
-        "@id": "_:cb0"
+        "@id": "_:cb184fa4839d2dc20877b92afe8fc1f0bc448c5359c27ac287cd87db28cd19bff72"
       }
     ]
   },
   {
-    "@id": "_:cb0",
+    "@id": "_:cb184fa4839d2dc20877b92afe8fc1f0bc448c5359c27ac287cd87db28cd19bff72",
     "@type": [
       "http://www.w3.org/ns/prov#Agent"
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@value": "ProfileWiz 0.1.5"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/demeter/agri/proxy/ssn",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://www.w3.org/ns/ssn"
+      }
+    ],
+    "http://www.w3.org/ns/dx/prof/isProfileOf": [
+      {
+        "@id": "http://www.w3.org/ns/ssn"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "_:Nd08e0a5e7cf04f6aa40080a3ab4eded8"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+      {
+        "@id": "_:N48758ce1d85c49e586d633a99327efe3"
+      }
+    ]
+  },
+  {
+    "@id": "_:N48758ce1d85c49e586d633a99327efe3",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ProfileWiz: Normalisation (source = merge_temp.ttl, force_local=False, profile libs : lib/profile_cat.ttl) "
+      }
+    ],
+    "http://www.w3.org/ns/prov#endedAtTime": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2021-06-25"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasAssociatedWith": [
+      {
+        "@id": "_:Nf356365be95a425984ab414af71e96de"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf356365be95a425984ab414af71e96de",
+    "@type": [
+      "http://www.w3.org/ns/prov#Agent"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ProfileWiz 0.1.5"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd08e0a5e7cf04f6aa40080a3ab4eded8",
+    "@type": [
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\profiles\\merge_temp.ttl"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/ssn/System",
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other Systems. (Definition taken from http://www.w3.org/ns/ssn/System)"
       }
     ]
   }

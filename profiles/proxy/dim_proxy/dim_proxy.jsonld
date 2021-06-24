@@ -1,319 +1,6 @@
 [
   {
-    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#EnergyDensity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Concentration",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Acceleration",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Compressibility",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Distance",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#EnergyFlux",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeed",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#MassPerTimePerArea",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
-      }
-    ]
-  },
-  {
     "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#SurfaceDensity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Dimensionless",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb952d9e202602a22380c00ab17f1f2e2bb11c2ff465c938718a61aafda8818f79",
-    "@type": [
-      "http://www.w3.org/ns/prov#Activity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "ProfileWiz: extraction of used terms from unavailable namespace"
-      }
-    ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-09-30"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasAssociatedWith": [
-      {
-        "@id": "_:cb0"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb0",
-    "@type": [
-      "http://www.w3.org/ns/prov#Agent"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "ProfileWiz 0.1.5"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#StressOrPressure",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
-      }
-    ]
-  },
-  {
-    "@id": "_:cbd12909f9526d96fdd870b2ddf6711be5337c60d3a4615cb43bd846a676408925",
-    "@type": [
-      "http://www.w3.org/ns/prov#Entity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriProperty.ttl"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/demeter/agri/proxy/dim",
-    "@type": [
-      "http://www.w3.org/ns/prov#Entity",
-      "http://www.w3.org/2002/07/owl#Ontology"
-    ],
-    "http://www.w3.org/ns/prov#wasDerivedFrom": [
-      {
-        "@id": "_:Nfe3baacbc6364c36bd79efec3c10edc5"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasGeneratedBy": [
-      {
-        "@id": "_:N7517758df0674b2583e9f9abb44477f9"
-      }
-    ]
-  },
-  {
-    "@id": "_:N7517758df0674b2583e9f9abb44477f9",
-    "@type": [
-      "http://www.w3.org/ns/prov#Activity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "ProfileWiz: Normalisation (source = merge_temp.ttl, force_local=False, profile libs : lib/profile_cat.ttl) "
-      }
-    ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-11-09"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasAssociatedWith": [
-      {
-        "@id": "_:N94cda773961047ff9874f15c6bf98807"
-      }
-    ]
-  },
-  {
-    "@id": "_:N94cda773961047ff9874f15c6bf98807",
-    "@type": [
-      "http://www.w3.org/ns/prov#Agent"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "ProfileWiz 0.1.5"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nfe3baacbc6364c36bd79efec3c10edc5",
-    "@type": [
-      "http://www.w3.org/ns/prov#Entity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\profiles\\merge_temp.ttl"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Density",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#SpecificEntropy",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Temperature",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -345,7 +32,23 @@
     ]
   },
   {
-    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#RadianceExposure",
+    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#EnergyFlux",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#SpecificEntropy",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -373,6 +76,303 @@
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
         "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#RadianceExposure",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#MassPerTimePerArea",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#StressOrPressure",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Dimensionless",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Concentration",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#VelocityOrSpeed",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#EnergyDensity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Compressibility",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "_:cbd1f3f609732c3cc13a1811ab59f9d6caefd754bd1ffb1696a5390d065b1135a0",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ProfileWiz: extraction of used terms from unavailable namespace"
+      }
+    ],
+    "http://www.w3.org/ns/prov#endedAtTime": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2020-09-30"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasAssociatedWith": [
+      {
+        "@id": "_:cb1d513a7853434f694cba34eb04a0d1fc04711fd1bbd4005a737abefa949a79862"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1d513a7853434f694cba34eb04a0d1fc04711fd1bbd4005a737abefa949a79862",
+    "@type": [
+      "http://www.w3.org/ns/prov#Agent"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ProfileWiz 0.1.5"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Density",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Temperature",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Acceleration",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.oclc.org/NET/ssnx/qu/dim#Distance",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb12ec057a261393486c05277710ae1c1543afdb76317b3f7e8319d6490eb7ae275",
+    "@type": [
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriProperty.ttl"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/demeter/agri/proxy/dim",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "_:N038e4459658640c9b517a6803fe164a4"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+      {
+        "@id": "_:N4707de94a51c49b1b156f2acc36fbd91"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4707de94a51c49b1b156f2acc36fbd91",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ProfileWiz: Normalisation (source = merge_temp.ttl, force_local=False, profile libs : lib/profile_cat.ttl) "
+      }
+    ],
+    "http://www.w3.org/ns/prov#endedAtTime": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2021-06-25"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasAssociatedWith": [
+      {
+        "@id": "_:N2abb8471311e46a18b4d5afeaaaf7b38"
+      }
+    ]
+  },
+  {
+    "@id": "_:N2abb8471311e46a18b4d5afeaaaf7b38",
+    "@type": [
+      "http://www.w3.org/ns/prov#Agent"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ProfileWiz 0.1.5"
+      }
+    ]
+  },
+  {
+    "@id": "_:N038e4459658640c9b517a6803fe164a4",
+    "@type": [
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\profiles\\merge_temp.ttl"
       }
     ]
   }

@@ -2,6 +2,7 @@
     "@id": "https://w3id.org/demeter/agri/proxy/foodie",
     "@context": [
         "https://w3id.org/demeter/agri/proxy/foodie?_profile=jsoncontext",
+        "https://w3id.org/demeter/agri/proxy/foodie?_profile=jsoncontext",
         {
             "foodie": "http://foodie-cloud.com/model/foodie#"
         }

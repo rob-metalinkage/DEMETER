@@ -3,23 +3,23 @@
     "@context": [
         {
             "cf-feature": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#",
+            "cf-feature:Layer": {
+                "@id": "cf-feature:Layer"
+            },
+            "cf-feature:Wind": {
+                "@id": "cf-feature:Wind"
+            },
             "cf.Surface": {
                 "@id": "http://purl.oclc.org/NET/ssnx/cf/cf-feature#Surface"
             },
             "cf-feature:Precipitation": {
                 "@id": "cf-feature:Precipitation"
             },
-            "cf-feature:Layer": {
-                "@id": "cf-feature:Layer"
-            },
-            "cf-feature:Medium": {
-                "@id": "cf-feature:Medium"
-            },
             "cf-feature:SurfaceLayer": {
                 "@id": "cf-feature:SurfaceLayer"
             },
-            "cf-feature:Wind": {
-                "@id": "cf-feature:Wind"
+            "cf-feature:Medium": {
+                "@id": "cf-feature:Medium"
             }
         }
     ]

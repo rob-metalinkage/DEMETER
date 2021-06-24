@@ -1,30 +1,6 @@
 [
   {
-    "@id": "_:cbd12909f9526d96fdd870b2ddf6711be5337c60d3a4615cb43bd846a676408925",
-    "@type": [
-      "http://www.w3.org/ns/prov#Entity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriProperty.ttl"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "PropertyKind"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb952d9e202602a22380c00ab17f1f2e2bb11c2ff465c938718a61aafda8818f79",
+    "@id": "_:cb1b710d10943315468969858f34030e459a9a3cf6c430581b1c2358e21dca1a4ca",
     "@type": [
       "http://www.w3.org/ns/prov#Activity"
     ],
@@ -41,12 +17,12 @@
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
       {
-        "@id": "_:cb0"
+        "@id": "_:cb184fa4839d2dc20877b92afe8fc1f0bc448c5359c27ac287cd87db28cd19bff72"
       }
     ]
   },
   {
-    "@id": "_:cb0",
+    "@id": "_:cb184fa4839d2dc20877b92afe8fc1f0bc448c5359c27ac287cd87db28cd19bff72",
     "@type": [
       "http://www.w3.org/ns/prov#Agent"
     ],
@@ -57,10 +33,40 @@
     ]
   },
   {
+    "@id": "_:cb12ec057a261393486c05277710ae1c1543afdb76317b3f7e8319d6490eb7ae275",
+    "@type": [
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriProperty.ttl"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb70f969322aa8a6982788c8bf04b0a0e45b43ccdc844d25e03a710a6136059b97",
+    "http://dummy.fix": [
+      {
+        "@id": "_:cb62eadee7ad079ae36e3b639311fd3ba3177cdd39c15cd0fbf264c3e0c005a75c"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb62eadee7ad079ae36e3b639311fd3ba3177cdd39c15cd0fbf264c3e0c005a75c"
+  },
+  {
+    "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
+      }
+    ]
+  },
+  {
     "@id": "https://w3id.org/demeter/agri/proxy/qu",
     "@type": [
-      "http://www.w3.org/ns/prov#Entity",
-      "http://www.w3.org/2002/07/owl#Ontology"
+      "http://www.w3.org/2002/07/owl#Ontology",
+      "http://www.w3.org/ns/prov#Entity"
     ],
     "http://www.w3.org/2002/07/owl#imports": [
       {
@@ -74,28 +80,17 @@
     ],
     "http://www.w3.org/ns/prov#wasDerivedFrom": [
       {
-        "@id": "_:Nf9f705c5456a4aa4a053c5439d34d193"
+        "@id": "_:N6abd69bd215c4ddda202c58a405fcd27"
       }
     ],
     "http://www.w3.org/ns/prov#wasGeneratedBy": [
       {
-        "@id": "_:N72e5b32b8757406f8e1f33c42784b544"
+        "@id": "_:Nab3c31e712854df7bbb4defdfb58689b"
       }
     ]
   },
   {
-    "@id": "_:Nf9f705c5456a4aa4a053c5439d34d193",
-    "@type": [
-      "http://www.w3.org/ns/prov#Entity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\profiles\\merge_temp.ttl"
-      }
-    ]
-  },
-  {
-    "@id": "_:N72e5b32b8757406f8e1f33c42784b544",
+    "@id": "_:Nab3c31e712854df7bbb4defdfb58689b",
     "@type": [
       "http://www.w3.org/ns/prov#Activity"
     ],
@@ -107,17 +102,17 @@
     "http://www.w3.org/ns/prov#endedAtTime": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-11-09"
+        "@value": "2021-06-25"
       }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
       {
-        "@id": "_:Nbc780fd4f1794a2fa236fb100a8eeec3"
+        "@id": "_:N4c01c8ff7c1f4b89a38c527e03e2dfbb"
       }
     ]
   },
   {
-    "@id": "_:Nbc780fd4f1794a2fa236fb100a8eeec3",
+    "@id": "_:N4c01c8ff7c1f4b89a38c527e03e2dfbb",
     "@type": [
       "http://www.w3.org/ns/prov#Agent"
     ],
@@ -128,10 +123,26 @@
     ]
   },
   {
-    "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#QuantityKind",
+    "@id": "_:N6abd69bd215c4ddda202c58a405fcd27",
+    "@type": [
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\profiles\\merge_temp.ttl"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.oclc.org/NET/ssnx/qu/qu#PropertyKind",
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
         "@id": "http://purl.oclc.org/NET/ssnx/qu/qu-rec20"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "PropertyKind"
       }
     ]
   }

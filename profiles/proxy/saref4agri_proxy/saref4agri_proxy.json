@@ -3,14 +3,16 @@
     "$id": "https://w3id.org/demeter/agri/proxy/saref4agri?_profile=jsonschema",
     "type": "object",
     "properties": {
-        "Organization": {
+        "geosparql": {
             "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "Agent": {
-            "type": "object",
-            "properties": {},
+            "properties": {
+                "geosparql": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
             "required": []
         },
         "saref4agri": {
@@ -30,16 +32,14 @@
             "properties": {},
             "required": []
         },
-        "geosparql": {
+        "Organization": {
             "type": "object",
-            "properties": {
-                "geosparql": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
+            "properties": {},
+            "required": []
+        },
+        "Agent": {
+            "type": "object",
+            "properties": {},
             "required": []
         },
         "Person": {

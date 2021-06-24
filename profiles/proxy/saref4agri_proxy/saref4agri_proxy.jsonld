@@ -1,45 +1,14 @@
 [
   {
-    "@id": "_:cb12480c73ce0fcdedd804157bab21f53502012380400f76fbc35ac8825c6e05a08",
-    "@type": [
-      "http://www.w3.org/ns/prov#Entity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
+    "@id": "https://w3id.org/def/saref4agri#isContainedIn",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriCommon.ttl"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb18ad482a445f31bdf6c324c77f38eed03170a0fce52b055fd4fbb5ed22596bd64",
-    "@type": [
-      "http://www.w3.org/ns/prov#Activity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "ProfileWiz: subset of used terms from available ontology"
+        "@id": "https://w3id.org/def/saref4agri#"
       }
     ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
       {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-09-29"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasAssociatedWith": [
-      {
-        "@id": "_:cb1b94b4a85c5127c93ddd55a808768c027d0e2edde5bfce4750a51a8a72aafe904"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb1b94b4a85c5127c93ddd55a808768c027d0e2edde5bfce4750a51a8a72aafe904",
-    "@type": [
-      "http://www.w3.org/ns/prov#Agent"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "ProfileWiz 0.1.5"
+        "@id": "http://www.opengis.net/ont/geosparql#sfWithin"
       }
     ]
   },
@@ -52,15 +21,15 @@
     ],
     "http://www.w3.org/2002/07/owl#equivalentClass": [
       {
-        "@id": "http://inspire.ec.europa.eu/schemas/af/3.0#Holding"
+        "@id": "https://uri.fiware.org/ns/data-models#AgriFarm"
       },
       {
-        "@id": "https://uri.fiware.org/ns/data-models#AgriFarm"
+        "@id": "http://inspire.ec.europa.eu/schemas/af/3.0#Holding"
       }
     ]
   },
   {
-    "@id": "https://w3id.org/def/saref4agri#hasID",
+    "@id": "https://w3id.org/def/saref4agri#Building",
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
         "@id": "https://w3id.org/def/saref4agri#"
@@ -68,15 +37,13 @@
     ]
   },
   {
-    "@id": "https://w3id.org/def/saref4agri#isContainedIn",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/def/saref4agri#"
-      }
+    "@id": "_:cb12480c73ce0fcdedd804157bab21f53502012380400f76fbc35ac8825c6e05a08",
+    "@type": [
+      "http://www.w3.org/ns/prov#Entity"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+    "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@id": "http://www.opengis.net/ont/geosparql#sfWithin"
+        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriCommon.ttl"
       }
     ]
   },
@@ -92,60 +59,6 @@
     ]
   },
   {
-    "@id": "https://w3id.org/def/saref4agri#AnimalGroup",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/def/saref4agri#"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/def/saref4agri#hasBirthDate",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/def/saref4agri#"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#equivalentProperty": [
-      {
-        "@id": "https://uri.fiware.org/ns/data-models#birthdate"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb147cd8e943f3613b6fc42f8b29889135f579d6e4a3ff1f37bb5311b60a58d25a9",
-    "@type": [
-      "http://www.w3.org/ns/prov#Activity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "ProfileWiz: subset of used terms from available ontology"
-      }
-    ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-10-01"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasAssociatedWith": [
-      {
-        "@id": "_:cb161a679d6bef03da9b52f592be78c10580d2479fe569a84c49347dcb2b3a6e14a"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb161a679d6bef03da9b52f592be78c10580d2479fe569a84c49347dcb2b3a6e14a",
-    "@type": [
-      "http://www.w3.org/ns/prov#Agent"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "ProfileWiz 0.1.5"
-      }
-    ]
-  },
-  {
     "@id": "https://w3id.org/def/saref4agri#ID",
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
@@ -154,7 +67,15 @@
     ]
   },
   {
-    "@id": "_:cb137fa0a6aa05da6569c949b0444acb384337ecb1f3bdd07cc20efaef318dc00c4",
+    "@id": "https://w3id.org/def/saref4agri#hasDeathDate",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/def/saref4agri#"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1b710d10943315468969858f34030e459a9a3cf6c430581b1c2358e21dca1a4ca",
     "@type": [
       "http://www.w3.org/ns/prov#Activity"
     ],
@@ -187,6 +108,151 @@
     ]
   },
   {
+    "@id": "_:cb269ac0afe5189584ee32033b15cbe88f0e2fad1534064b438ff94c7c1c8b473d5",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ProfileWiz: subset of used terms from available ontology"
+      }
+    ],
+    "http://www.w3.org/ns/prov#endedAtTime": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2020-09-29"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasAssociatedWith": [
+      {
+        "@id": "_:cb1b94b4a85c5127c93ddd55a808768c027d0e2edde5bfce4750a51a8a72aafe904"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1b94b4a85c5127c93ddd55a808768c027d0e2edde5bfce4750a51a8a72aafe904",
+    "@type": [
+      "http://www.w3.org/ns/prov#Agent"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ProfileWiz 0.1.5"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/demeter/agri/proxy/saref4agri",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology",
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "https://w3id.org/def/saref4agri"
+      }
+    ],
+    "http://www.w3.org/ns/dx/prof/isProfileOf": [
+      {
+        "@id": "https://w3id.org/demeter/agri/proxy/saref4agri"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+        "@id": "_:N5611ac53c7574bbbb4655fea7fdf2d08"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+      {
+        "@id": "_:N4888e0f3d1544f70bfe58475743272fb"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4888e0f3d1544f70bfe58475743272fb",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ProfileWiz: Normalisation (source = merge_temp.ttl, force_local=False, profile libs : lib/profile_cat.ttl) "
+      }
+    ],
+    "http://www.w3.org/ns/prov#endedAtTime": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2021-06-25"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasAssociatedWith": [
+      {
+        "@id": "_:Na39ec673301f4bcd88732a77645f3b9a"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na39ec673301f4bcd88732a77645f3b9a",
+    "@type": [
+      "http://www.w3.org/ns/prov#Agent"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ProfileWiz 0.1.5"
+      }
+    ]
+  },
+  {
+    "@id": "_:N5611ac53c7574bbbb4655fea7fdf2d08",
+    "@type": [
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\profiles\\merge_temp.ttl"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1e6b123e3d0c74f6ef6042793b568d9c14cfd3bb042997f6837f6487f0db9c0dc",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ProfileWiz: subset of used terms from available ontology"
+      }
+    ],
+    "http://www.w3.org/ns/prov#endedAtTime": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2020-10-01"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasAssociatedWith": [
+      {
+        "@id": "_:cb23695449d4e07af33d15c7ce210008fbd1d7e78dbaf11535e07241a9a47033030"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb23695449d4e07af33d15c7ce210008fbd1d7e78dbaf11535e07241a9a47033030",
+    "@type": [
+      "http://www.w3.org/ns/prov#Agent"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ProfileWiz 0.1.5"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/def/saref4agri#hasID",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/def/saref4agri#"
+      }
+    ]
+  },
+  {
     "@id": "https://w3id.org/def/saref4agri#Parcel",
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
@@ -199,14 +265,6 @@
       },
       {
         "@id": "https://uri.fiware.org/ns/data-models#AgriParcel"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/def/saref4agri#hasDeathDate",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/def/saref4agri#"
       }
     ]
   },
@@ -243,6 +301,14 @@
     ]
   },
   {
+    "@id": "https://w3id.org/def/saref4agri#AnimalGroup",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/def/saref4agri#"
+      }
+    ]
+  },
+  {
     "@id": "https://w3id.org/def/saref4agri#Animal",
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
@@ -256,14 +322,6 @@
     ]
   },
   {
-    "@id": "https://w3id.org/def/saref4agri#Building",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "https://w3id.org/def/saref4agri#"
-      }
-    ]
-  },
-  {
     "@id": "https://w3id.org/def/saref4agri#BuildingSpace",
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
@@ -272,73 +330,15 @@
     ]
   },
   {
-    "@id": "https://w3id.org/demeter/agri/proxy/saref4agri",
-    "@type": [
-      "http://www.w3.org/ns/prov#Entity",
-      "http://www.w3.org/2002/07/owl#Ontology"
-    ],
-    "http://www.w3.org/2002/07/owl#imports": [
+    "@id": "https://w3id.org/def/saref4agri#hasBirthDate",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-        "@id": "https://w3id.org/def/saref4agri"
+        "@id": "https://w3id.org/def/saref4agri#"
       }
     ],
-    "http://www.w3.org/ns/dx/prof/isProfileOf": [
+    "http://www.w3.org/2002/07/owl#equivalentProperty": [
       {
-        "@id": "https://w3id.org/demeter/agri/proxy/saref4agri"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasDerivedFrom": [
-      {
-        "@id": "_:N0d134c0fd70e45b284b034e03d0615d9"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasGeneratedBy": [
-      {
-        "@id": "_:N742ee3021ffc4933a6716e397b4a2b4c"
-      }
-    ]
-  },
-  {
-    "@id": "_:N0d134c0fd70e45b284b034e03d0615d9",
-    "@type": [
-      "http://www.w3.org/ns/prov#Entity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\profiles\\merge_temp.ttl"
-      }
-    ]
-  },
-  {
-    "@id": "_:N742ee3021ffc4933a6716e397b4a2b4c",
-    "@type": [
-      "http://www.w3.org/ns/prov#Activity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "ProfileWiz: Normalisation (source = merge_temp.ttl, force_local=False, profile libs : lib/profile_cat.ttl) "
-      }
-    ],
-    "http://www.w3.org/ns/prov#endedAtTime": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-11-09"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasAssociatedWith": [
-      {
-        "@id": "_:Nd9d52465eaff42039abcab6e71e4ab03"
-      }
-    ]
-  },
-  {
-    "@id": "_:Nd9d52465eaff42039abcab6e71e4ab03",
-    "@type": [
-      "http://www.w3.org/ns/prov#Agent"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "ProfileWiz 0.1.5"
+        "@id": "https://uri.fiware.org/ns/data-models#birthdate"
       }
     ]
   }

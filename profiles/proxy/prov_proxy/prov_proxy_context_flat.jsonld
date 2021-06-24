@@ -3,12 +3,12 @@
     "@context": [
         {
             "prov": "http://www.w3.org/ns/prov#",
-            "prov:generatedAtTime": {
-                "@id": "prov:generatedAtTime",
-                "@type": "xsd:dateTime"
-            },
             "prov:invalidatedAtTime": {
                 "@id": "prov:invalidatedAtTime",
+                "@type": "xsd:dateTime"
+            },
+            "prov:generatedAtTime": {
+                "@id": "prov:generatedAtTime",
                 "@type": "xsd:dateTime"
             }
         }

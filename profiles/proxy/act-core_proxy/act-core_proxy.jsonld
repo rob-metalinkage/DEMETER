@@ -1,50 +1,32 @@
 [
   {
-    "@id": "http://inspire.ec.europa.eu/schemas/act-core/3.0#EconomicActivityNACEValue",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://inspire.ec.europa.eu/schemas/act-core/3.0#"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "EconomicActivityNACEValue"
-      }
-    ]
-  },
-  {
     "@id": "https://w3id.org/demeter/agri/proxy/act-core",
     "@type": [
-      "http://www.w3.org/2002/07/owl#Ontology",
       "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://inspire.ec.europa.eu/schemas/act-core/3.0"
+      }
+    ],
+    "http://www.w3.org/ns/dx/prof/isProfileOf": [
+      {
+        "@id": "https://w3id.org/demeter/agri/proxy/act-core"
+      }
     ],
     "http://www.w3.org/ns/prov#wasDerivedFrom": [
       {
-        "@id": "_:N58246d6594b6411b924732220c61ead2"
+        "@id": "_:N9fe36f956ccb4c8592980485a45d8701"
       }
     ],
     "http://www.w3.org/ns/prov#wasGeneratedBy": [
       {
-        "@id": "_:N7a00668d376242ffb9e9e8ad669539bf"
+        "@id": "_:Nf8b37a66566741fd86a434cdde641ef5"
       }
     ]
   },
   {
-    "@id": "_:N58246d6594b6411b924732220c61ead2",
-    "@type": [
-      "http://www.w3.org/ns/prov#Entity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\profiles\\merge_temp.ttl"
-      }
-    ]
-  },
-  {
-    "@id": "_:N7a00668d376242ffb9e9e8ad669539bf",
+    "@id": "_:Nf8b37a66566741fd86a434cdde641ef5",
     "@type": [
       "http://www.w3.org/ns/prov#Activity"
     ],
@@ -56,17 +38,17 @@
     "http://www.w3.org/ns/prov#endedAtTime": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-12-10"
+        "@value": "2021-06-25"
       }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
       {
-        "@id": "_:Ndb4609817bbe46d796891c7537f7c276"
+        "@id": "_:N775b0b96dd6948bea7ceff46dc9b9e25"
       }
     ]
   },
   {
-    "@id": "_:Ndb4609817bbe46d796891c7537f7c276",
+    "@id": "_:N775b0b96dd6948bea7ceff46dc9b9e25",
     "@type": [
       "http://www.w3.org/ns/prov#Agent"
     ],
@@ -77,7 +59,18 @@
     ]
   },
   {
-    "@id": "_:cb952d9e202602a22380c00ab17f1f2e2bb11c2ff465c938718a61aafda8818f79",
+    "@id": "_:N9fe36f956ccb4c8592980485a45d8701",
+    "@type": [
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\profiles\\merge_temp.ttl"
+      }
+    ]
+  },
+  {
+    "@id": "_:cbd1f3f609732c3cc13a1811ab59f9d6caefd754bd1ffb1696a5390d065b1135a0",
     "@type": [
       "http://www.w3.org/ns/prov#Activity"
     ],
@@ -94,30 +87,11 @@
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
       {
-        "@id": "_:cb0"
+        "@id": "_:cb1d513a7853434f694cba34eb04a0d1fc04711fd1bbd4005a737abefa949a79862"
       }
     ]
   },
   {
-    "@id": "_:cb0",
-    "@type": [
-      "http://www.w3.org/ns/prov#Agent"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "ProfileWiz 0.1.5"
-      }
-    ]
-  },
-  {
-    "@id": "_:cbc644c3fbfd31000e95f7f16d0ced95de81ad8563134ce42d754e8d45a489a8c5",
-    "@type": [
-      "http://www.w3.org/ns/prov#Entity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriFeature.ttl"
-      }
-    ]
+    "@id": "_:cb1d513a7853434f694cba34eb04a0d1fc04711fd1bbd4005a737abefa949a79862"
   }
 ]

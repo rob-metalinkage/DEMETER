@@ -9,26 +9,6 @@
     rdfs:label "https://w3id.org/demeter/agri/proxy/fiware" ;
     skos:historyNote "Ontology profile normalised using ProfileWiz" ;
     prof:hasResource [ a prof:ResourceDescriptor ;
-            rdfs:label "Flattened JSON-LD context" ;
-            dcterms:conformsTo <http://www.opengis.net/def/metamodel/profiles/json_ld_context> ;
-            dcterms:format "application/ld+json" ;
-            prof:hasArtifact "proxy\\fiware_proxy\\fiware_proxy_context_flat.jsonld" ;
-            prof:hasRole profrole:contextflat ],
-        [ a prof:ResourceDescriptor ;
-            rdfs:label "Normalised OWL with imports" ;
-            dcterms:conformsTo <http://www.w3.org/2002/07/owl#> ;
-            dcterms:format "text/turtle" ;
-            rdfs:comment "This is an OWL file with imports for ontologies containing all object definitions, but with only statements not present in imports" ;
-            prof:hasArtifact "proxy\\fiware_proxy\\fiware_proxy.ttl" ;
-            prof:hasRole profrole:vocabulary ],
-        [ a prof:ResourceDescriptor ;
-            rdfs:label "Original Source OWL model" ;
-            dcterms:conformsTo <http://www.w3.org/2002/07/owl#> ;
-            dcterms:format "text/turtle" ;
-            rdfs:comment "Source OWL model used to derive normalised profile views." ;
-            prof:hasArtifact "merge_temp.ttl" ;
-            prof:hasRole profrole:source ],
-        [ a prof:ResourceDescriptor ;
             rdfs:label "JSON-LD Context" ;
             dcterms:conformsTo <http://www.opengis.net/def/metamodel/profiles/json_ld_context> ;
             dcterms:format "application/ld+json" ;
@@ -39,20 +19,47 @@
             dcterms:conformsTo <http://www.w3.org/2002/07/owl#> ;
             dcterms:format "application/ld+json" ;
             rdfs:comment "This is an OWL file with imports for ontologies containing all object definitions, but with only statements not present in imports" ;
-            prof:hasArtifact "proxy\\fiware_proxy\\fiware_proxy.jsonld" ;
+            prof:hasArtifact "fiware_proxy.jsonld" ;
             prof:hasRole profrole:vocabulary ],
         [ a prof:ResourceDescriptor ;
             rdfs:label "JSON-LD Context - local file link" ;
             dcterms:conformsTo <http://www.opengis.net/def/metamodel/profiles/json_ld_context> ;
             dcterms:format "application/ld+json" ;
-            prof:hasArtifact "proxy\\fiware_proxy\\fiware_proxy_context.jsonld" ;
+            prof:hasArtifact "fiware_proxy_context.jsonld" ;
             prof:hasRole profrole:contextlocal ],
         [ a prof:ResourceDescriptor ;
             rdfs:label "JSON Schema" ;
             dcterms:conformsTo <http://www.opengis.net/def/metamodel/profiles/json_schema> ;
             dcterms:format "application/json" ;
-            prof:hasArtifact "proxy\\fiware_proxy\\fiware_proxy.json" ;
-            prof:hasRole profrole:schema ] ;
+            prof:hasArtifact "fiware_proxy.json" ;
+            prof:hasRole profrole:schema ],
+        [ a prof:ResourceDescriptor ;
+            rdfs:label "Normalised OWL with imports" ;
+            dcterms:conformsTo <http://www.w3.org/2002/07/owl#> ;
+            dcterms:format "text/turtle" ;
+            rdfs:comment "This is an OWL file with imports for ontologies containing all object definitions, but with only statements not present in imports" ;
+            prof:hasArtifact "fiware_proxy.ttl" ;
+            prof:hasRole profrole:vocabulary ],
+        [ a prof:ResourceDescriptor ;
+            rdfs:label "Original Source OWL model" ;
+            dcterms:conformsTo <http://www.w3.org/2002/07/owl#> ;
+            dcterms:format "text/turtle" ;
+            rdfs:comment "Source OWL model used to derive normalised profile views." ;
+            prof:hasArtifact "merge_temp.ttl" ;
+            prof:hasRole profrole:source ],
+        [ a prof:ResourceDescriptor ;
+            rdfs:label "Profile description as HTML" ;
+            dcterms:conformsTo prof: ;
+            dcterms:format "text/html" ;
+            rdfs:comment "Overview of profile and available descriptive and implementation support resources" ;
+            prof:hasArtifact "fiware_proxy_prof.html" ;
+            prof:hasRole profrole:profile ],
+        [ a prof:ResourceDescriptor ;
+            rdfs:label "Flattened JSON-LD context" ;
+            dcterms:conformsTo <http://www.opengis.net/def/metamodel/profiles/json_ld_context> ;
+            dcterms:format "application/ld+json" ;
+            prof:hasArtifact "fiware_proxy_context_flat.jsonld" ;
+            prof:hasRole profrole:contextflat ] ;
     prof:isProfileOf <https://uri.fiware.org/ns/data-models> ;
     prov:wasDerivedFrom "merge_temp.ttl" .
 

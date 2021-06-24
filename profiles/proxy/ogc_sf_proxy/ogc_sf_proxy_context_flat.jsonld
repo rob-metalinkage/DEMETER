@@ -3,56 +3,56 @@
     "@context": [
         {
             "sf": "http://www.opengis.net/ont/sf#",
-            "sf:LinearRing": {
-                "@id": "sf:LinearRing"
-            },
-            "sf:MultiPoint": {
-                "@id": "sf:MultiPoint"
-            },
-            "sf:Triangle": {
-                "@id": "sf:Triangle"
-            },
-            "sf:Surface": {
-                "@id": "sf:Surface"
-            },
             "sf:GeometryCollection": {
                 "@id": "sf:GeometryCollection"
-            },
-            "sf:Polygon": {
-                "@id": "sf:Polygon"
-            },
-            "sf:LineString": {
-                "@id": "sf:LineString"
-            },
-            "sf:Curve": {
-                "@id": "sf:Curve"
-            },
-            "sf:MultiLineString": {
-                "@id": "sf:MultiLineString"
             },
             "sf:MultiPolygon": {
                 "@id": "sf:MultiPolygon"
             },
-            "sf:PolyhedralSurface": {
-                "@id": "sf:PolyhedralSurface"
-            },
-            "sf:Point": {
-                "@id": "sf:Point"
-            },
-            "sf:Line": {
-                "@id": "sf:Line"
+            "sf:LinearRing": {
+                "@id": "sf:LinearRing"
             },
             "sf:MultiCurve": {
                 "@id": "sf:MultiCurve"
             },
-            "sf:TIN": {
-                "@id": "sf:TIN"
+            "sf:Polygon": {
+                "@id": "sf:Polygon"
+            },
+            "sf:MultiLineString": {
+                "@id": "sf:MultiLineString"
+            },
+            "sf:Triangle": {
+                "@id": "sf:Triangle"
+            },
+            "sf:Curve": {
+                "@id": "sf:Curve"
+            },
+            "sf.Geometry": {
+                "@id": "http://www.opengis.net/ont/sf#Geometry"
+            },
+            "sf:Surface": {
+                "@id": "sf:Surface"
+            },
+            "sf:MultiPoint": {
+                "@id": "sf:MultiPoint"
             },
             "sf:MultiSurface": {
                 "@id": "sf:MultiSurface"
             },
-            "sf.Geometry": {
-                "@id": "http://www.opengis.net/ont/sf#Geometry"
+            "sf:Point": {
+                "@id": "sf:Point"
+            },
+            "sf:PolyhedralSurface": {
+                "@id": "sf:PolyhedralSurface"
+            },
+            "sf:Line": {
+                "@id": "sf:Line"
+            },
+            "sf:LineString": {
+                "@id": "sf:LineString"
+            },
+            "sf:TIN": {
+                "@id": "sf:TIN"
             }
         }
     ]

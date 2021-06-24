@@ -1,9 +1,55 @@
 [
   {
+    "@id": "http://xmlns.com/foaf/0.1/Agent",
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "http://xmlns.com/foaf/0.1/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Agent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:cb27776e0be91050c5815095ec776ea120490eff4fd502973720f68dd11683f8397"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb27776e0be91050c5815095ec776ea120490eff4fd502973720f68dd11683f8397",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://xmlns.com/foaf/0.1/member"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://xmlns.com/foaf/0.1/Agent"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb12480c73ce0fcdedd804157bab21f53502012380400f76fbc35ac8825c6e05a08",
+    "@type": [
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriCommon.ttl"
+      }
+    ]
+  },
+  {
     "@id": "https://w3id.org/demeter/agri/proxy/foaf",
     "@type": [
-      "http://www.w3.org/ns/prov#Entity",
-      "http://www.w3.org/2002/07/owl#Ontology"
+      "http://www.w3.org/2002/07/owl#Ontology",
+      "http://www.w3.org/ns/prov#Entity"
     ],
     "http://www.w3.org/2002/07/owl#imports": [
       {
@@ -17,28 +63,17 @@
     ],
     "http://www.w3.org/ns/prov#wasDerivedFrom": [
       {
-        "@id": "_:N3fee5caac3cf4929a71a506ac311a13d"
+        "@id": "_:N6bf881aa2e4c4b14b1b42e1be6089235"
       }
     ],
     "http://www.w3.org/ns/prov#wasGeneratedBy": [
       {
-        "@id": "_:N298e3dc2528c4639aa20766b74e39d47"
+        "@id": "_:N96d1416899394d8f9769c1c811e86596"
       }
     ]
   },
   {
-    "@id": "_:N3fee5caac3cf4929a71a506ac311a13d",
-    "@type": [
-      "http://www.w3.org/ns/prov#Entity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\profiles\\merge_temp.ttl"
-      }
-    ]
-  },
-  {
-    "@id": "_:N298e3dc2528c4639aa20766b74e39d47",
+    "@id": "_:N96d1416899394d8f9769c1c811e86596",
     "@type": [
       "http://www.w3.org/ns/prov#Activity"
     ],
@@ -50,17 +85,17 @@
     "http://www.w3.org/ns/prov#endedAtTime": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2020-11-09"
+        "@value": "2021-06-25"
       }
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
       {
-        "@id": "_:N49009c6425bb4c48a81c32e84ce3fe95"
+        "@id": "_:Ndccbe124f23842eabe25c54e5213ae35"
       }
     ]
   },
   {
-    "@id": "_:N49009c6425bb4c48a81c32e84ce3fe95",
+    "@id": "_:Ndccbe124f23842eabe25c54e5213ae35",
     "@type": [
       "http://www.w3.org/ns/prov#Agent"
     ],
@@ -71,7 +106,27 @@
     ]
   },
   {
-    "@id": "_:cb952d9e202602a22380c00ab17f1f2e2bb11c2ff465c938718a61aafda8818f79",
+    "@id": "_:N6bf881aa2e4c4b14b1b42e1be6089235",
+    "@type": [
+      "http://www.w3.org/ns/prov#Entity"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\profiles\\merge_temp.ttl"
+      }
+    ]
+  },
+  {
+    "@id": "http://xmlns.com/foaf/0.1/Person",
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "Person"
+      }
+    ]
+  },
+  {
+    "@id": "_:cb1b710d10943315468969858f34030e459a9a3cf6c430581b1c2358e21dca1a4ca",
     "@type": [
       "http://www.w3.org/ns/prov#Activity"
     ],
@@ -88,73 +143,18 @@
     ],
     "http://www.w3.org/ns/prov#wasAssociatedWith": [
       {
-        "@id": "_:cbc8faaa0049a10f045bf2fcb1dcfa1076b43505fc834ad7260b5f05e456f0e5bf"
+        "@id": "_:cb184fa4839d2dc20877b92afe8fc1f0bc448c5359c27ac287cd87db28cd19bff72"
       }
     ]
   },
   {
-    "@id": "_:cbc8faaa0049a10f045bf2fcb1dcfa1076b43505fc834ad7260b5f05e456f0e5bf",
+    "@id": "_:cb184fa4839d2dc20877b92afe8fc1f0bc448c5359c27ac287cd87db28cd19bff72",
     "@type": [
       "http://www.w3.org/ns/prov#Agent"
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@value": "ProfileWiz 0.1.5"
-      }
-    ]
-  },
-  {
-    "@id": "_:cbc6e97993d2314154985f93279daeade11890e1748da4d4883fe76a3b51a600b8",
-    "@type": [
-      "http://www.w3.org/ns/prov#Entity"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriCommon.ttl"
-      }
-    ]
-  },
-  {
-    "@id": "http://xmlns.com/foaf/0.1/Person",
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Person"
-      }
-    ]
-  },
-  {
-    "@id": "http://xmlns.com/foaf/0.1/Agent",
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-        "@id": "http://xmlns.com/foaf/0.1/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "Agent"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:cb0"
-      }
-    ]
-  },
-  {
-    "@id": "_:cb0",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://xmlns.com/foaf/0.1/member"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://xmlns.com/foaf/0.1/Agent"
       }
     ]
   }

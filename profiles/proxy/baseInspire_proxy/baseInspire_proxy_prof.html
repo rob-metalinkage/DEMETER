@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>https://w3id.org/demeter/agri/proxy/baseInspire</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <style>
+        #pylode {
+            position: fixed;
+            top: 130px;
+            left: -60px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
+
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 5px 0 5px 0;
+        }
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        section#overview img {
+            max-width: 1000px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 3px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
+
+
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: justify;
+        }
+
+        section {
+            max-width: 1500px;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-cp,
+        .sup-cl {
+            cursor:help;
+            margin-left: 3px;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-cp {
+            color:orange;
+        }
+
+        .sup-cl {
+            color:darkred;
+        }
+
+        code {
+            font-size: large;
+            color: darkred;
+        }
+
+        /* less prominent links for properties */
+        .proplink {
+            color: #336;
+            text-decoration: none;
+        }
+
+        /* highlight imported definition */
+        .importeddef { background: #B88 }
+
+        /* highlight alignment */
+        .highlight-alignment { background: #8B8 }
+    </style>
+    
+    <script type="application/ld+json">
+      b'[\n  {\n    "@id": "https://w3id.org/demeter/agri/proxy/baseInspire",\n    "@type": [\n      "https://schema.org/DefinedTermSet"\n    ],\n    "https://schema.org/name": [\n      {\n        "@value": "None"\n      }\n    ]\n  }\n]'
+    </script>
+</head>
+<body>
+  <div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">
+    <span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a>
+    <span style="font-size:smaller;">2.8.4</span>
+  </div>
+  <h1>https://w3id.org/demeter/agri/proxy/baseInspire</h1>
+<h3><em>A Profile</em></h3>
+<section id="metadata">
+    <h2 style="display:none;">Metadata</h2>
+    <dl>
+        <dt>URI</dt>
+        <dd><code>https://w3id.org/demeter/agri/proxy/baseInspire</code></dd>
+        
+        <dt><a href="https://www.w3.org/TR/dx-prof/#Property:isProfileOf">Is Profile Of</a></dt>
+        <dd>
+            <a href="https://w3id.org/demeter/agri/proxy/baseInspire">https://w3id.org/demeter/agri/proxy/baseInspire</a><br/>
+        </dd>
+        
+        
+        <dt>Profile RDF</dt>
+        <dd><a href="input.ttl">RDF (turtle)</a></dd>
+    </dl>
+      <dt><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasResource">Has Resource Descriptor(s)</a></dt>
+    <dd>
+          <a href="#N43693ea4a14745f08d6478d6789ef416">JSON Schema</a><br/>
+          <a href="#N4663164f7ba34170bd65174eab764df0">Profile description as HTML</a><br/>
+          <a href="#N6d499bc4bc4d47f1a17fccd2d37468a8">Flattened JSON-LD context</a><br/>
+          <a href="#N6fafa70729444ae4b68ff91aa2c82375">Normalised OWL with imports</a><br/>
+          <a href="#N84a8122fb93c453c87450a8910701f43">Normalised OWL with imports</a><br/>
+          <a href="#N91c71e47065b4fc9aabc75d7157f6c5d">JSON-LD Context</a><br/>
+          <a href="#Nddc8f718f3fb48d39752e154b0255b55">JSON-LD Context - local file link</a><br/>
+          <a href="#Nf2f957bcb90f4827bca92e770db1f58f">Original Source OWL model</a><br/>
+    </dd>
+</section>
+  <section id="resource_descriptors">
+      <h2>Resource Descriptors</h2>
+  
+  
+  
+  
+  
+      <div class="entity resource_descriptor" id="N43693ea4a14745f08d6478d6789ef416">
+    <h3>JSON Schema</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="baseInspire_proxy.json">baseInspire_proxy.json</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/schema">profrole:schema</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.opengis.net/def/metamodel/profiles/json_schema">http://www.opengis.net/def/metamodel/profiles/json_schema</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="N4663164f7ba34170bd65174eab764df0">
+    <h3>Profile description as HTML</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
+          <td>Overview of profile and available descriptive and implementation support resources</td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="baseInspire_proxy_prof.html">baseInspire_proxy_prof.html</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/profile">profrole:profile</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/">prof:</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="N6d499bc4bc4d47f1a17fccd2d37468a8">
+    <h3>Flattened JSON-LD context</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="baseInspire_proxy_context_flat.jsonld">baseInspire_proxy_context_flat.jsonld</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/contextflat">profrole:contextflat</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.opengis.net/def/metamodel/profiles/json_ld_context">http://www.opengis.net/def/metamodel/profiles/json_ld_context</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="N6fafa70729444ae4b68ff91aa2c82375">
+    <h3>Normalised OWL with imports</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
+          <td>This is an OWL file with imports for ontologies containing all object definitions, but with only statements not present in imports</td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="baseInspire_proxy.jsonld">baseInspire_proxy.jsonld</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/vocabulary">profrole:vocabulary</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/2002/07/owl#">http://www.w3.org/2002/07/owl#</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="N84a8122fb93c453c87450a8910701f43">
+    <h3>Normalised OWL with imports</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
+          <td>This is an OWL file with imports for ontologies containing all object definitions, but with only statements not present in imports</td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="baseInspire_proxy.ttl">baseInspire_proxy.ttl</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/vocabulary">profrole:vocabulary</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/2002/07/owl#">http://www.w3.org/2002/07/owl#</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="N91c71e47065b4fc9aabc75d7157f6c5d">
+    <h3>JSON-LD Context</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="https://w3id.org/demeter/agri/proxy/baseInspire?_profile=jsoncontext">https://w3id.org/demeter/agri/proxy/baseInspire?_profile=jsoncontext</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/context">profrole:context</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.opengis.net/def/metamodel/profiles/json_ld_context">http://www.opengis.net/def/metamodel/profiles/json_ld_context</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="Nddc8f718f3fb48d39752e154b0255b55">
+    <h3>JSON-LD Context - local file link</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="baseInspire_proxy_context.jsonld">baseInspire_proxy_context.jsonld</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/contextlocal">profrole:contextlocal</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.opengis.net/def/metamodel/profiles/json_ld_context">http://www.opengis.net/def/metamodel/profiles/json_ld_context</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="Nf2f957bcb90f4827bca92e770db1f58f">
+    <h3>Original Source OWL model</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
+          <td>Source OWL model used to derive normalised profile views.</td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="merge_temp.ttl">merge_temp.ttl</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/source">profrole:source</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/2002/07/owl#">http://www.w3.org/2002/07/owl#</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+  </section>
+  <section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt>dcterms</dt>
+        <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>prof</dt>
+        <dd><code>http://www.w3.org/ns/dx/prof/</code></dd>
+        <dt>profrole</dt>
+        <dd><code>http://www.w3.org/ns/dx/prof/role/</code></dd>
+        <dt>prov</dt>
+        <dd><code>http://www.w3.org/ns/prov#</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>sdo</dt>
+        <dd><code>https://schema.org/</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+    </dl>
+</section>
+</body>
+</html>

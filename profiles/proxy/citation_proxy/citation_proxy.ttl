@@ -12,16 +12,16 @@ iso19115-citation:ResponsibleParty rdfs:subClassOf <http://xmlns.com/foaf/0.1/Ag
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\profiles\\merge_temp.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = merge_temp.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            prov:endedAtTime "2020-11-09"^^xsd:date ;
+            prov:endedAtTime "2021-06-25"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] .
+
+[] a prov:Entity ;
+    rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriCommon.ttl" .
 
 [] a prov:Activity ;
     rdfs:label "ProfileWiz: subset of used terms from available ontology" ;
     prov:endedAtTime "2020-09-30"^^xsd:date ;
     prov:wasAssociatedWith [ a prov:Agent ;
             rdfs:label "ProfileWiz 0.1.5" ] .
-
-[] a prov:Entity ;
-    rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriCommon.ttl" .
 

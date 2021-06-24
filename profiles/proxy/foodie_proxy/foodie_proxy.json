@@ -3,7 +3,12 @@
     "$id": "https://w3id.org/demeter/agri/proxy/foodie?_profile=jsonschema",
     "type": "object",
     "properties": {
-        "core": {
+        "feature": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "geosparql": {
             "type": "object",
             "properties": {},
             "required": []
@@ -15,24 +20,10 @@
         },
         "foodie": {
             "type": "object",
-            "properties": {
-                "foodie": {
-                    "type": "string"
-                }
-            },
-            "required": [
-                "foodie",
-                "foodie",
-                "foodie",
-                "foodie"
-            ]
-        },
-        "feature": {
-            "type": "object",
             "properties": {},
             "required": []
         },
-        "geosparql": {
+        "core": {
             "type": "object",
             "properties": {},
             "required": []

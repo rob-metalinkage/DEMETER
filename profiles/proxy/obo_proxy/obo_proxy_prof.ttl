@@ -11,16 +11,42 @@
     prof:hasResource [ a prof:ResourceDescriptor ;
             rdfs:label "Normalised OWL with imports" ;
             dcterms:conformsTo <http://www.w3.org/2002/07/owl#> ;
-            dcterms:format "application/ld+json" ;
+            dcterms:format "text/turtle" ;
             rdfs:comment "This is an OWL file with imports for ontologies containing all object definitions, but with only statements not present in imports" ;
-            prof:hasArtifact "proxy\\obo_proxy\\obo_proxy.jsonld" ;
+            prof:hasArtifact "obo_proxy.ttl" ;
             prof:hasRole profrole:vocabulary ],
         [ a prof:ResourceDescriptor ;
-            rdfs:label "JSON-LD Context" ;
+            rdfs:label "Profile description as HTML" ;
+            dcterms:conformsTo prof: ;
+            dcterms:format "text/html" ;
+            rdfs:comment "Overview of profile and available descriptive and implementation support resources" ;
+            prof:hasArtifact "obo_proxy_prof.html" ;
+            prof:hasRole profrole:profile ],
+        [ a prof:ResourceDescriptor ;
+            rdfs:label "JSON-LD Context - local file link" ;
             dcterms:conformsTo <http://www.opengis.net/def/metamodel/profiles/json_ld_context> ;
             dcterms:format "application/ld+json" ;
-            prof:hasArtifact "https://w3id.org/demeter/agri/proxy/obo?_profile=jsoncontext" ;
-            prof:hasRole profrole:context ],
+            prof:hasArtifact "obo_proxy_context.jsonld" ;
+            prof:hasRole profrole:contextlocal ],
+        [ a prof:ResourceDescriptor ;
+            rdfs:label "JSON Schema" ;
+            dcterms:conformsTo <http://www.opengis.net/def/metamodel/profiles/json_schema> ;
+            dcterms:format "application/json" ;
+            prof:hasArtifact "obo_proxy.json" ;
+            prof:hasRole profrole:schema ],
+        [ a prof:ResourceDescriptor ;
+            rdfs:label "Normalised OWL with imports" ;
+            dcterms:conformsTo <http://www.w3.org/2002/07/owl#> ;
+            dcterms:format "application/ld+json" ;
+            rdfs:comment "This is an OWL file with imports for ontologies containing all object definitions, but with only statements not present in imports" ;
+            prof:hasArtifact "obo_proxy.jsonld" ;
+            prof:hasRole profrole:vocabulary ],
+        [ a prof:ResourceDescriptor ;
+            rdfs:label "Flattened JSON-LD context" ;
+            dcterms:conformsTo <http://www.opengis.net/def/metamodel/profiles/json_ld_context> ;
+            dcterms:format "application/ld+json" ;
+            prof:hasArtifact "obo_proxy_context_flat.jsonld" ;
+            prof:hasRole profrole:contextflat ],
         [ a prof:ResourceDescriptor ;
             rdfs:label "Original Source OWL model" ;
             dcterms:conformsTo <http://www.w3.org/2002/07/owl#> ;
@@ -29,30 +55,10 @@
             prof:hasArtifact "merge_temp.ttl" ;
             prof:hasRole profrole:source ],
         [ a prof:ResourceDescriptor ;
-            rdfs:label "JSON Schema" ;
-            dcterms:conformsTo <http://www.opengis.net/def/metamodel/profiles/json_schema> ;
-            dcterms:format "application/json" ;
-            prof:hasArtifact "proxy\\obo_proxy\\obo_proxy.json" ;
-            prof:hasRole profrole:schema ],
-        [ a prof:ResourceDescriptor ;
-            rdfs:label "Normalised OWL with imports" ;
-            dcterms:conformsTo <http://www.w3.org/2002/07/owl#> ;
-            dcterms:format "text/turtle" ;
-            rdfs:comment "This is an OWL file with imports for ontologies containing all object definitions, but with only statements not present in imports" ;
-            prof:hasArtifact "proxy\\obo_proxy\\obo_proxy.ttl" ;
-            prof:hasRole profrole:vocabulary ],
-        [ a prof:ResourceDescriptor ;
-            rdfs:label "Flattened JSON-LD context" ;
+            rdfs:label "JSON-LD Context" ;
             dcterms:conformsTo <http://www.opengis.net/def/metamodel/profiles/json_ld_context> ;
             dcterms:format "application/ld+json" ;
-            prof:hasArtifact "proxy\\obo_proxy\\obo_proxy_context_flat.jsonld" ;
-            prof:hasRole profrole:contextflat ],
-        [ a prof:ResourceDescriptor ;
-            rdfs:label "JSON-LD Context - local file link" ;
-            dcterms:conformsTo <http://www.opengis.net/def/metamodel/profiles/json_ld_context> ;
-            dcterms:format "application/ld+json" ;
-            prof:hasArtifact "proxy\\obo_proxy\\obo_proxy_context.jsonld" ;
-            prof:hasRole profrole:contextlocal ] ;
-    prof:isProfileOf <https://w3id.org/demeter/agri/proxy/obo> ;
+            prof:hasArtifact "https://w3id.org/demeter/agri/proxy/obo?_profile=jsoncontext" ;
+            prof:hasRole profrole:context ] ;
     prov:wasDerivedFrom "merge_temp.ttl" .
 

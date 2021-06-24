@@ -2,6 +2,7 @@
     "@id": "https://w3id.org/demeter/agri/proxy/prov",
     "@context": [
         "https://w3id.org/demeter/agri/proxy/prov?_profile=jsoncontext",
+        "https://w3id.org/demeter/agri/proxy/prov?_profile=jsoncontext",
         {
             "prov": "http://www.w3.org/ns/prov#"
         }
