@@ -27,7 +27,10 @@
                         "type": "string"
                     }
                 },
-                "foodie:alertDate": {
+                "foodie:description": {
+                    "type": "string"
+                },
+                "foodie:code": {
                     "type": "string"
                 },
                 "foodie:type": {
@@ -36,18 +39,15 @@
                         "type": "string"
                     }
                 },
-                "foodie:code": {
-                    "type": "string"
-                },
-                "foodie:description": {
+                "foodie:alertDate": {
                     "type": "string"
                 }
             },
             "required": [
                 "foodie:alertGeometry",
-                "foodie:alertDate",
+                "foodie:code",
                 "foodie:type",
-                "foodie:code"
+                "foodie:alertDate"
             ]
         },
         "fiware:Alert": {

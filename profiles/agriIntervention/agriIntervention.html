@@ -193,29 +193,7 @@
     </style>
     
     <script type="application/ld+json">
-      [
-  {
-    "@id": "https://w3id.org/demeter/agri/agriIntervention",
-    "@type": [
-      "https://schema.org/DefinedTermSet"
-    ],
-    "https://schema.org/description": [
-      {
-        "@value": "<p>The DEMETER Agriculture Information Model (AIM) is the common vocabulary in DEMETER project providing the basis for semantic interoperability across smart farming solutions</p>"
-      }
-    ],
-    "https://schema.org/name": [
-      {
-        "@value": "DEMETER AgriIntervention"
-      }
-    ],
-    "https://schema.org/rights": [
-      {
-        "@value": "This vocabulary is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"
-      }
-    ]
-  }
-]
+      b'[\n  {\n    "@id": "https://w3id.org/demeter/agri/agriIntervention",\n    "@type": [\n      "https://schema.org/DefinedTermSet"\n    ],\n    "https://schema.org/description": [\n      {\n        "@value": "<p>The DEMETER Agriculture Information Model (AIM) is the common vocabulary in DEMETER project providing the basis for semantic interoperability across smart farming solutions</p>"\n      }\n    ],\n    "https://schema.org/name": [\n      {\n        "@value": "DEMETER AgriIntervention"\n      }\n    ],\n    "https://schema.org/rights": [\n      {\n        "@value": "This vocabulary is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"\n      }\n    ]\n  }\n]'
     </script>
 </head>
 <body>
@@ -232,12 +210,17 @@
         <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator">Creator</a>(s)</dt>
         <dd>
             
-    Raul Palma<br/>
+    Raul Palma of 
+    PSNC<br/>
         </dd>
         <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor">Contributor</a>(s)</dt>
         <dd>
             
-    None<br/>
+    Ioanna Roussaki of 
+    ICCS<br/>
+            
+    Rob Atkinson of 
+    OGC<br/>
         </dd>
         <dt>Version Information</dt>
         <dd>2.0</dd>
@@ -310,7 +293,6 @@
                 <th>Restrictions</th>
                 <td>
                     <a href="http://foodie-cloud.com/model/foodie#period">foodie:period</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#period">foodie:period</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
                 </td>
             </tr>
             <tr>
@@ -345,8 +327,6 @@
                 <td>
                     <a href="http://foodie-cloud.com/model/foodie#minimumDose">foodie:minimumDose</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="http://foodie-cloud.com/model/foodie#maximumDose">foodie:maximumDose</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#maximumDose">foodie:maximumDose</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#minimumDose">foodie:minimumDose</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                 </td>
             </tr>
             <tr>
@@ -401,38 +381,26 @@
             <tr>
                 <th>Super-classes</th>
                 <td>
+                    <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#FeatureType">iso19150-2:FeatureType</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://def.seegrid.csiro.au/isotc211/iso19109/2005/feature#AnyFeature">iso19109:AnyFeature</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="http://foodie-cloud.com/model/foodie#status">foodie:status</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#notes">foodie:notes</a> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#type">foodie:type</a> <span class="cardinality">exactly</span> 1<br/>
                     <a href="http://foodie-cloud.com/model/foodie#price">foodie:price</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#interventionPlot">foodie:interventionPlot</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#status">foodie:status</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="http://foodie-cloud.com/model/foodie#creationDateTime">foodie:creationDateTime</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="http://foodie-cloud.com/model/foodie#notes">foodie:notes</a> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#description">foodie:description</a> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="http://portele.de/ont/inspire/baseInspire#validTo">common:validTo</a> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#creationDateTime">foodie:creationDateTime</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="http://foodie-cloud.com/model/foodie#type">foodie:type</a> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="http://portele.de/ont/inspire/baseInspire#validFrom">common:validFrom</a> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#supervisor">foodie:supervisor</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#description">foodie:description</a> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#interventionGeometry">foodie:interventionGeometry</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
                     <a href="http://foodie-cloud.com/model/foodie#evidenceParty">foodie:evidenceParty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#interventionGeometry">foodie:interventionGeometry</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#interventionPlot">foodie:interventionPlot</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#supervisor">foodie:supervisor</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="http://portele.de/ont/inspire/baseInspire#validTo">common:validTo</a> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#status">foodie:status</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="http://portele.de/ont/inspire/baseInspire#validFrom">common:validFrom</a> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#evidenceParty">foodie:evidenceParty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#interventionPlot">foodie:interventionPlot</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#price">foodie:price</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#description">foodie:description</a> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#supervisor">foodie:supervisor</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#interventionGeometry">foodie:interventionGeometry</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
                 </td>
             </tr>
             <tr>
@@ -459,10 +427,10 @@
             <tr>
                 <th>Super-classes</th>
                 <td>
+                    <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://foodie-cloud.com/model/foodie#Intervention">foodie:Intervention</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://def.seegrid.csiro.au/isotc211/iso19109/2005/feature#AnyFeature">iso19109:AnyFeature</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#FeatureType">iso19150-2:FeatureType</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -474,28 +442,17 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="http://foodie-cloud.com/model/foodie#price">foodie:price</a> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#treatmentDescription">foodie:treatmentDescription</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#formOfTreatment">foodie:formOfTreatment</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#applicationWidth">foodie:applicationWidth</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#pressure">foodie:pressure</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#flowAdjustment">foodie:flowAdjustment</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#flowAdjustment">foodie:flowAdjustment</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#treatmentDescription">foodie:treatmentDescription</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#applicationWidth">foodie:applicationWidth</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#quantity">foodie:quantity</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#quantity">foodie:quantity</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#motionSpeed">foodie:motionSpeed</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#pressure">foodie:pressure</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#plan">foodie:plan</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#treatmentProduct">foodie:treatmentProduct</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#formOfTreatment">foodie:formOfTreatment</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#treatmentProduct">foodie:treatmentProduct</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#price">foodie:price</a> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#motionSpeed">foodie:motionSpeed</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#plan">foodie:plan</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="http://foodie-cloud.com/model/foodie#areaDose">foodie:areaDose</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#areaDose">foodie:areaDose</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#formOfTreatment">foodie:formOfTreatment</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#price">foodie:price</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#plan">foodie:plan</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#applicationWidth">foodie:applicationWidth</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#flowAdjustment">foodie:flowAdjustment</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#treatmentProduct">foodie:treatmentProduct</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#pressure">foodie:pressure</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#treatmentDescription">foodie:treatmentDescription</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#motionSpeed">foodie:motionSpeed</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#quantity">foodie:quantity</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
         </table>
@@ -524,20 +481,13 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="http://foodie-cloud.com/model/foodie#campaign">foodie:campaign</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#planProduct">foodie:planProduct</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#notes">foodie:notes</a> <span class="cardinality">max</span> 1<br/>
                     <a href="http://foodie-cloud.com/model/foodie#type">foodie:type</a> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#treatmentPlanCode">foodie:treatmentPlanCode</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#type">foodie:type</a> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#notes">foodie:notes</a> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#description">foodie:description</a> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#treatmentPlanCreation">foodie:treatmentPlanCreation</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#treatmentPlanCode">foodie:treatmentPlanCode</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="http://foodie-cloud.com/model/foodie#campaign">foodie:campaign</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
                     <a href="http://foodie-cloud.com/model/foodie#description">foodie:description</a> <span class="cardinality">exactly</span> 1<br/>
                     <a href="http://foodie-cloud.com/model/foodie#planProduct">foodie:planProduct</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
                     <a href="http://foodie-cloud.com/model/foodie#treatmentPlanCreation">foodie:treatmentPlanCreation</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#treatmentPlanCode">foodie:treatmentPlanCode</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#notes">foodie:notes</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#campaign">foodie:campaign</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1<br/>
                 </td>
             </tr>
             <tr>
@@ -564,8 +514,8 @@
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#Codelist">iso19150-2:Codelist</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#Codelist">iso19150-2:Codelist</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1543,6 +1493,8 @@
         <dt>iso19150-2</dt>
         <dd><code>http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#</code></dd>
         <dt>ns1</dt>
+        <dd><code>http://</code></dd>
+        <dt>ns2</dt>
         <dd><code>http://www.w3.org/ns/dx/prof/</code></dd>
         <dt>owl</dt>
         <dd><code>http://www.w3.org/2002/07/owl#</code></dd>

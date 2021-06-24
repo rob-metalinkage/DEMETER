@@ -193,19 +193,7 @@
     </style>
     
     <script type="application/ld+json">
-      [
-  {
-    "@id": "https://w3id.org/demeter/core",
-    "@type": [
-      "https://schema.org/DefinedTermSet"
-    ],
-    "https://schema.org/name": [
-      {
-        "@value": "None"
-      }
-    ]
-  }
-]
+      b'[\n  {\n    "@id": "https://w3id.org/demeter/core",\n    "@type": [\n      "https://schema.org/DefinedTermSet"\n    ],\n    "https://schema.org/name": [\n      {\n        "@value": "None"\n      }\n    ]\n  }\n]'
     </script>
 </head>
 <body>
@@ -227,22 +215,20 @@
     </dl>
       <dt><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasResource">Has Resource Descriptor(s)</a></dt>
     <dd>
-          <a href="#N307da82f21604e0fa171db02b5e41961">Original Source OWL model</a><br/>
-          <a href="#N3823d799e38746e182476be0df1c9792">Profile description as HTML</a><br/>
-          <a href="#N384fdd290bfe4b508234da62af8dc221">JSON-LD Context - local file link</a><br/>
-          <a href="#N49635f72dfd6453db2ed730f15c79d7c">JSON-LD Context</a><br/>
-          <a href="#N5641e8f5520c41a9b3098876e59fcf7c">OWL documentation as HTML</a><br/>
-          <a href="#N7c2a22cfca154c02aa35ccc6602b1774">SHACL constraints for profile</a><br/>
-          <a href="#N7e27cd3658d84eb39ca5874cc550876e">OWL with definition details from imports</a><br/>
-          <a href="#Na82cb94d5ff44982befe3afdc7235a30">JSON Schema</a><br/>
-          <a href="#Nad5214a6df724f5fa80e4d056552ae0e">Normalised OWL with imports</a><br/>
-          <a href="#Ncd3bdc0eaa624f4ab42f2925a8948133">Flattened JSON-LD context</a><br/>
-          <a href="#Ne3aad3d3318a4e7fb7597ce04e151ccd">SHACL for minimal profile</a><br/>
-          <a href="#Neb934748d1214a248597132773873e81">Profile description as HTML</a><br/>
+          <a href="#N04a2a7a7b979421b892ed6dbdde31750">Flattened JSON-LD context</a><br/>
+          <a href="#N14cdb005c50643ee8283907e24855fdf">JSON Schema</a><br/>
+          <a href="#N26b7f73a5eca47239174f98f4ac73dfd">JSON-LD Context</a><br/>
+          <a href="#N818824d5fa5448e9ae023488a4752071">OWL documentation as HTML</a><br/>
+          <a href="#N86e72bec64094ce39dd1ded3c4a7a4a2">Original Source OWL model</a><br/>
+          <a href="#N8dccfc5ef7534903b942850a753b3d17">OWL with definition details from imports</a><br/>
+          <a href="#N91e9729ea4614a7aa6df72085b05c37d">Normalised OWL with imports</a><br/>
+          <a href="#N9328cc4333474626aad9a739dd4a3ff0">JSON-LD Context - local file link</a><br/>
+          <a href="#Ncb912e43a93f49f2ae583736239bfa08">Profile description as HTML</a><br/>
+          <a href="#Nee0d9fb1f2cd41a78bc0d31e0ad4d7cf">Profile description as HTML</a><br/>
     </dd>
     <h2>Description</h2>
     <div id="comment">
-        <p>The DEMETER core ontology is a profile (subset) of the ontology presented in Annex D of the NGSI-LD standard: ETSI GS CIM 006 V1.1.1 (2019-07), covering only the core property-graph entities.</p>
+        <p>The DEMETER core ontology includes the meta-model elements reused from NGSI-LD specification that provide a formal basis for representing 'property graphs' using RDF/RDFS/OWL.</p>
     </div>
 </section>
   <section id="resource_descriptors">
@@ -252,18 +238,13 @@
   
   
   
-      <div class="entity resource_descriptor" id="N307da82f21604e0fa171db02b5e41961">
-    <h3>Original Source OWL model</h3>
+      <div class="entity resource_descriptor" id="N04a2a7a7b979421b892ed6dbdde31750">
+    <h3>Flattened JSON-LD context</h3>
     <table>
-        <tr>
-          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
-          <td>Source OWL model used to derive normalised profile views.</td>
-        </tr>
-        
         <tr>
           <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
           <td>
-            <a href="../models\demeterCore.ttl">../models\demeterCore.ttl</a>
+            <a href="demeterCore_context_flat.jsonld">demeterCore_context_flat.jsonld</a>
           </td>
         </tr>
         
@@ -271,72 +252,7 @@
           <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
           <td>
             
-              <a href="http://www.w3.org/ns/dx/prof/role/source">profrole:source</a><br />
-            
-          </td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
-          <td>
-            
-              <a href="http://www.w3.org/2002/07/owl#">http://www.w3.org/2002/07/owl#</a><br />
-            
-          </td>
-        </tr>
-        
-    </table>
-</div>
-      <div class="entity resource_descriptor" id="N3823d799e38746e182476be0df1c9792">
-    <h3>Profile description as HTML</h3>
-    <table>
-        <tr>
-          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
-          <td>Overview of profile and available descriptive and implementation support resources</td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
-          <td>
-            <a href="demeterCore_prof.html">demeterCore_prof.html</a>
-          </td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
-          <td>
-            
-              <a href="http://www.w3.org/ns/dx/prof/role/profile">profrole:profile</a><br />
-            
-          </td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
-          <td>
-            
-              <a href="http://www.w3.org/ns/dx/prof/">prof:</a><br />
-            
-          </td>
-        </tr>
-        
-    </table>
-</div>
-      <div class="entity resource_descriptor" id="N384fdd290bfe4b508234da62af8dc221">
-    <h3>JSON-LD Context - local file link</h3>
-    <table>
-        <tr>
-          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
-          <td>
-            <a href="demeterCore_context.jsonld">demeterCore_context.jsonld</a>
-          </td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
-          <td>
-            
-              <a href="http://www.w3.org/ns/dx/prof/role/contextlocal">profrole:contextlocal</a><br />
+              <a href="http://www.w3.org/ns/dx/prof/role/contextflat">profrole:contextflat</a><br />
             
           </td>
         </tr>
@@ -352,7 +268,37 @@
         
     </table>
 </div>
-      <div class="entity resource_descriptor" id="N49635f72dfd6453db2ed730f15c79d7c">
+      <div class="entity resource_descriptor" id="N14cdb005c50643ee8283907e24855fdf">
+    <h3>JSON Schema</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="demeterCore.json">demeterCore.json</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/schema">profrole:schema</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.opengis.net/def/metamodel/profiles/json_schema">http://www.opengis.net/def/metamodel/profiles/json_schema</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="N26b7f73a5eca47239174f98f4ac73dfd">
     <h3>JSON-LD Context</h3>
     <table>
         <tr>
@@ -382,7 +328,7 @@
         
     </table>
 </div>
-      <div class="entity resource_descriptor" id="N5641e8f5520c41a9b3098876e59fcf7c">
+      <div class="entity resource_descriptor" id="N818824d5fa5448e9ae023488a4752071">
     <h3>OWL documentation as HTML</h3>
     <table>
         <tr>
@@ -417,18 +363,18 @@
         
     </table>
 </div>
-      <div class="entity resource_descriptor" id="N7c2a22cfca154c02aa35ccc6602b1774">
-    <h3>SHACL constraints for profile</h3>
+      <div class="entity resource_descriptor" id="N86e72bec64094ce39dd1ded3c4a7a4a2">
+    <h3>Original Source OWL model</h3>
     <table>
         <tr>
           <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
-          <td>SHACL validation constraints for all declarations relevant to profile including imports</td>
+          <td>Source OWL model used to derive normalised profile views.</td>
         </tr>
         
         <tr>
           <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
           <td>
-            <a href="demeterCore_flat_shacl.ttl">demeterCore_flat_shacl.ttl</a>
+            <a href="../models\demeterCore.ttl">../models\demeterCore.ttl</a>
           </td>
         </tr>
         
@@ -436,7 +382,7 @@
           <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
           <td>
             
-              <a href="http://www.w3.org/ns/dx/prof/role/validation">profrole:validation</a><br />
+              <a href="http://www.w3.org/ns/dx/prof/role/source">profrole:source</a><br />
             
           </td>
         </tr>
@@ -445,14 +391,14 @@
           <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
           <td>
             
-              <a href="http://www.w3.org/ns/shacl#">http://www.w3.org/ns/shacl#</a><br />
+              <a href="http://www.w3.org/2002/07/owl#">http://www.w3.org/2002/07/owl#</a><br />
             
           </td>
         </tr>
         
     </table>
 </div>
-      <div class="entity resource_descriptor" id="N7e27cd3658d84eb39ca5874cc550876e">
+      <div class="entity resource_descriptor" id="N8dccfc5ef7534903b942850a753b3d17">
     <h3>OWL with definition details from imports</h3>
     <table>
         <tr>
@@ -487,37 +433,7 @@
         
     </table>
 </div>
-      <div class="entity resource_descriptor" id="Na82cb94d5ff44982befe3afdc7235a30">
-    <h3>JSON Schema</h3>
-    <table>
-        <tr>
-          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
-          <td>
-            <a href="demeterCore.json">demeterCore.json</a>
-          </td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
-          <td>
-            
-              <a href="http://www.w3.org/ns/dx/prof/role/schema">profrole:schema</a><br />
-            
-          </td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
-          <td>
-            
-              <a href="http://www.opengis.net/def/metamodel/profiles/json_schema">http://www.opengis.net/def/metamodel/profiles/json_schema</a><br />
-            
-          </td>
-        </tr>
-        
-    </table>
-</div>
-      <div class="entity resource_descriptor" id="Nad5214a6df724f5fa80e4d056552ae0e">
+      <div class="entity resource_descriptor" id="N91e9729ea4614a7aa6df72085b05c37d">
     <h3>Normalised OWL with imports</h3>
     <table>
         <tr>
@@ -552,13 +468,13 @@
         
     </table>
 </div>
-      <div class="entity resource_descriptor" id="Ncd3bdc0eaa624f4ab42f2925a8948133">
-    <h3>Flattened JSON-LD context</h3>
+      <div class="entity resource_descriptor" id="N9328cc4333474626aad9a739dd4a3ff0">
+    <h3>JSON-LD Context - local file link</h3>
     <table>
         <tr>
           <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
           <td>
-            <a href="demeterCore_context_flat.jsonld">demeterCore_context_flat.jsonld</a>
+            <a href="demeterCore_context.jsonld">demeterCore_context.jsonld</a>
           </td>
         </tr>
         
@@ -566,7 +482,7 @@
           <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
           <td>
             
-              <a href="http://www.w3.org/ns/dx/prof/role/contextflat">profrole:contextflat</a><br />
+              <a href="http://www.w3.org/ns/dx/prof/role/contextlocal">profrole:contextlocal</a><br />
             
           </td>
         </tr>
@@ -582,18 +498,18 @@
         
     </table>
 </div>
-      <div class="entity resource_descriptor" id="Ne3aad3d3318a4e7fb7597ce04e151ccd">
-    <h3>SHACL for minimal profile</h3>
+      <div class="entity resource_descriptor" id="Ncb912e43a93f49f2ae583736239bfa08">
+    <h3>Profile description as HTML</h3>
     <table>
         <tr>
           <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
-          <td>SHACL validation constraints for profile specific declarations</td>
+          <td>Overview of profile and available descriptive and implementation support resources</td>
         </tr>
         
         <tr>
           <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
           <td>
-            <a href="demeterCore_shacl.ttl">demeterCore_shacl.ttl</a>
+            <a href="demeterCore_prof.html">demeterCore_prof.html</a>
           </td>
         </tr>
         
@@ -601,7 +517,7 @@
           <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
           <td>
             
-              <a href="http://www.w3.org/ns/dx/prof/role/validation">profrole:validation</a><br />
+              <a href="http://www.w3.org/ns/dx/prof/role/profile">profrole:profile</a><br />
             
           </td>
         </tr>
@@ -610,14 +526,14 @@
           <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
           <td>
             
-              <a href="http://www.w3.org/ns/shacl#">http://www.w3.org/ns/shacl#</a><br />
+              <a href="http://www.w3.org/ns/dx/prof/">prof:</a><br />
             
           </td>
         </tr>
         
     </table>
 </div>
-      <div class="entity resource_descriptor" id="Neb934748d1214a248597132773873e81">
+      <div class="entity resource_descriptor" id="Nee0d9fb1f2cd41a78bc0d31e0ad4d7cf">
     <h3>Profile description as HTML</h3>
     <table>
         <tr>

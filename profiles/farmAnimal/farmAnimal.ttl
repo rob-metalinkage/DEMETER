@@ -3,7 +3,7 @@
 @prefix fiware: <https://uri.fiware.org/ns/data-models#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix foodie: <http://foodie-cloud.com/model/foodie#> .
-@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix ns1: <http://> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -89,10 +89,23 @@ fiware:welfareCondition a owl:DatatypeProperty ;
     rdfs:comment "Indicator of the animal welfare" ;
     rdfs:isDefinedBy <https://github.com/FIWARE/data-models/blob/master/specs/AgriFood/Animal/doc/spec.md> .
 
+saref4agri:AnimalGroup rdfs:isDefinedBy saref4agri: .
+
+saref4agri:ID rdfs:isDefinedBy saref4agri: .
+
 saref4agri:hasBirthDate rdfs:isDefinedBy saref4agri: ;
     owl:equivalentProperty fiware:birthdate .
 
+saref4agri:hasDeathDate rdfs:isDefinedBy saref4agri: .
+
+saref4agri:hasID rdfs:isDefinedBy saref4agri: .
+
+saref4agri:hasMember rdfs:comment "A relation to represent the members of an AnimalGroup." ;
+    rdfs:isDefinedBy saref4agri: .
+
 saref4agri:isLocationOf rdfs:isDefinedBy saref4agri: .
+
+saref4agri:isMemberOf rdfs:isDefinedBy saref4agri: .
 
 <https://w3id.org/demeter/agri/farmAnimal> a owl:Ontology,
         prov:Entity ;
@@ -120,7 +133,7 @@ saref4agri:isLocationOf rdfs:isDefinedBy saref4agri: .
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\farmAnimal.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = ../models\\farmAnimal.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            prov:endedAtTime "2021-05-05"^^xsd:date ;
+            prov:endedAtTime "2021-05-21"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:maker [ foaf:homepage <https://h2020-demeter.eu/> ;
@@ -147,49 +160,10 @@ fiware:species a owl:DatatypeProperty ;
     rdfs:comment "Species to which the animal belongs (dairy cattle, beef cattle, sheep, goat, horse, pig)" ;
     rdfs:isDefinedBy <https://github.com/FIWARE/data-models/blob/master/specs/AgriFood/Animal/doc/spec.md> .
 
-saref4agri:AnimalGroup rdfs:isDefinedBy saref4agri: ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty saref4agri:isLocatedIn ;
-            owl:someValuesFrom geo:Feature ],
-        [ a owl:Restriction ;
-            owl:onProperty saref4agri:hasMember ;
-            owl:someValuesFrom saref4agri:Animal ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty saref4agri:hasName ] .
-
-saref4agri:ID rdfs:isDefinedBy saref4agri: .
-
-saref4agri:hasDeathDate rdfs:isDefinedBy saref4agri: .
-
-saref4agri:hasID rdfs:isDefinedBy saref4agri: .
-
-saref4agri:hasMember rdfs:comment "A relation to represent the members of an AnimalGroup." ;
-    rdfs:isDefinedBy saref4agri: .
-
-saref4agri:isMemberOf rdfs:isDefinedBy saref4agri: .
-
 saref4agri:Animal rdfs:isDefinedBy saref4agri: ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty saref4agri:isLocatedIn ;
-            owl:someValuesFrom geo:Feature ],
-        [ a owl:Restriction ;
-            owl:onProperty saref4agri:isMemberOf ;
-            owl:someValuesFrom saref4agri:AnimalGroup ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:dateTime ;
-            owl:onProperty saref4agri:hasDeathDate ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass saref4agri:ID ;
-            owl:onProperty saref4agri:hasID ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty saref4agri:hasName ] ;
     owl:equivalentClass fiware:Animal .
 
 saref4agri:isLocatedIn rdfs:isDefinedBy saref4agri: .
+
+[] ns1:dummy.fix [ ] .
 

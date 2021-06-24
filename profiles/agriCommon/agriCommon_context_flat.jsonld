@@ -2,17 +2,14 @@
     "@id": "https://w3id.org/demeter/agri/agriCommon",
     "@context": [
         {
-            "foodie": "http://foodie-cloud.com/model/foodie#",
-            "fiware": "https://uri.fiware.org/ns/data-models#",
-            "saref4agri": "https://w3id.org/def/saref4agri#",
             "demeterAgriCommon": "https://w3id.org/demeter/agri/agriCommon#",
+            "saref4agri": "https://w3id.org/def/saref4agri#",
+            "common": "http://portele.de/ont/inspire/baseInspire#",
             "prov": "http://www.w3.org/ns/prov#",
+            "foodie": "http://foodie-cloud.com/model/foodie#",
             "saref": "https://w3id.org/saref#",
             "obo": "http://purl.obolibrary.org/obo/",
-            "common": "http://portele.de/ont/inspire/baseInspire#",
-            "TAXRANK_0000000": {
-                "@id": "obo:TAXRANK_0000000"
-            },
+            "fiware": "https://uri.fiware.org/ns/data-models#",
             "Image": {
                 "@id": "demeterAgriCommon:Image"
             },
@@ -22,6 +19,9 @@
             "Farmer": {
                 "@id": "saref4agri:Farmer"
             },
+            "TAXRANK_0000000": {
+                "@id": "obo:TAXRANK_0000000"
+            },
             "eppoConcept": {
                 "@id": "demeterAgriCommon:eppoConcept",
                 "@type": "@id"
@@ -30,105 +30,105 @@
                 "@id": "fiware:agroVocConcept",
                 "@type": "@id"
             },
-            "generatedAtTime": {
-                "@id": "prov:generatedAtTime",
+            "dataProvider": {
+                "@id": "fiware:dataProvider"
+            },
+            "createdAt": {
+                "@id": "fiware:createdAt",
                 "@type": "xsd:dateTime"
-            },
-            "descriptionEntity": {
-                "@id": "https://uri.fiware.org/ns/data-models#description"
-            },
-            "description": {
-                "@id": "foodie:description",
-                "@type": "xsd:string"
             },
             "imageURL": {
                 "@id": "demeterAgriCommon:imageURL",
                 "@type": "xsd:anyURI"
             },
+            "category": {
+                "@id": "fiware:category"
+            },
+            "imageWidth": {
+                "@id": "demeterAgriCommon:imageWidth"
+            },
+            "password": {
+                "@id": "demeterAgriCommon:password",
+                "@type": "xsd:string"
+            },
+            "name": {
+                "@id": "fiware:name"
+            },
+            "userName": {
+                "@id": "demeterAgriCommon:userName",
+                "@type": "xsd:string"
+            },
+            "source": {
+                "@id": "fiware:source"
+            },
+            "descriptionEntity": {
+                "@id": "https://uri.fiware.org/ns/data-models#description"
+            },
+            "imageFormat": {
+                "@id": "demeterAgriCommon:imageFormat"
+            },
+            "imageHeight": {
+                "@id": "demeterAgriCommon:imageHeight"
+            },
+            "alternateName": {
+                "@id": "fiware:alternateName"
+            },
+            "imageDataType": {
+                "@id": "demeterAgriCommon:imageDataType"
+            },
+            "modifiedAt": {
+                "@id": "fiware:modifiedAt",
+                "@type": "xsd:dateTime"
+            },
             "entityVersion": {
                 "@id": "fiware:entityVersion"
             },
-            "type": {
-                "@id": "foodie:type",
+            "hasName": {
+                "@id": "saref4agri:hasName",
+                "@type": "xsd:string"
+            },
+            "validFrom": {
+                "@id": "common:validFrom",
+                "@type": "xsd:dateTime"
+            },
+            "validTo": {
+                "@id": "common:validTo",
+                "@type": "xsd:dateTime"
+            },
+            "invalidatedAtTime": {
+                "@id": "prov:invalidatedAtTime",
+                "@type": "xsd:dateTime"
+            },
+            "generatedAtTime": {
+                "@id": "prov:generatedAtTime",
+                "@type": "xsd:dateTime"
+            },
+            "description": {
+                "@id": "foodie:description",
                 "@type": "xsd:string"
             },
             "code": {
                 "@id": "foodie:code",
                 "@type": "xsd:string"
             },
-            "dataProvider": {
-                "@id": "fiware:dataProvider"
-            },
-            "password": {
-                "@id": "demeterAgriCommon:password",
-                "@type": "xsd:string"
-            },
-            "modifiedAt": {
-                "@id": "fiware:modifiedAt",
-                "@type": "xsd:dateTime"
-            },
             "price": {
                 "@id": "foodie:price",
                 "@type": "xsd:string"
             },
-            "imageFormat": {
-                "@id": "demeterAgriCommon:imageFormat"
-            },
-            "source": {
-                "@id": "fiware:source"
-            },
-            "category": {
-                "@id": "fiware:category"
-            },
-            "validTo": {
-                "@id": "common:validTo",
-                "@type": "xsd:dateTime"
-            },
-            "alternateName": {
-                "@id": "fiware:alternateName"
-            },
-            "userName": {
-                "@id": "demeterAgriCommon:userName",
-                "@type": "xsd:string"
-            },
-            "imageWidth": {
-                "@id": "demeterAgriCommon:imageWidth"
-            },
-            "hasTimestamp": {
-                "@id": "saref:hasTimestamp",
-                "@type": "xsd:dateTime"
-            },
-            "imageDataType": {
-                "@id": "demeterAgriCommon:imageDataType"
-            },
-            "hasDescription": {
-                "@id": "saref:hasDescription",
-                "@type": "xsd:string"
-            },
-            "createdAt": {
-                "@id": "fiware:createdAt",
-                "@type": "xsd:dateTime"
-            },
-            "name": {
-                "@id": "fiware:name"
-            },
-            "invalidatedAtTime": {
-                "@id": "prov:invalidatedAtTime",
-                "@type": "xsd:dateTime"
-            },
-            "hasName": {
-                "@id": "saref4agri:hasName",
+            "type": {
+                "@id": "foodie:type",
                 "@type": "xsd:string"
             },
             "notes": {
                 "@id": "foodie:notes",
                 "@type": "xsd:string"
             },
-            "imageHeight": {
-                "@id": "demeterAgriCommon:imageHeight"
+            "hasDescription": {
+                "@id": "saref:hasDescription",
+                "@type": "xsd:string"
             },
-            "validFrom": {
-                "@id": "common:validFrom",
+            "hasTimestamp": {
+                "@id": "saref:hasTimestamp",
                 "@type": "xsd:dateTime"
             }
         }

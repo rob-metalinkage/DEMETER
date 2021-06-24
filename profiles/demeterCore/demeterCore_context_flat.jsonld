@@ -3,10 +3,6 @@
     "@context": [
         {
             "ngsi-ld": "https://uri.etsi.org/ngsi-ld/v1/ontology#",
-            "Relationship": {
-                "@id": "ngsi-ld:Relationship",
-                "@type": "@id"
-            },
             "Entity": {
                 "@id": "ngsi-ld:Entity"
             },
@@ -15,6 +11,10 @@
             },
             "Property": {
                 "@id": "ngsi-ld:Property",
+                "@type": "@id"
+            },
+            "Relationship": {
+                "@id": "ngsi-ld:Relationship",
                 "@type": "@id"
             },
             "hasObject": {

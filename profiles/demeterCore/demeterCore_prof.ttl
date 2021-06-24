@@ -11,25 +11,17 @@
         "The DEMETER core ontology is a profile (subset) of the ontology presented in Annex D of the NGSI-LD standard: ETSI GS CIM 006 V1.1.1 (2019-07), covering only the core property-graph entities."@en ;
     skos:historyNote "Ontology profile normalised using ProfileWiz" ;
     prof:hasResource [ a prof:ResourceDescriptor ;
-            rdfs:label "Original Source OWL model" ;
-            dcterms:conformsTo <http://www.w3.org/2002/07/owl#> ;
-            dcterms:format "text/turtle" ;
-            rdfs:comment "Source OWL model used to derive normalised profile views." ;
-            prof:hasArtifact "../models\\demeterCore.ttl" ;
-            prof:hasRole profrole:source ],
-        [ a prof:ResourceDescriptor ;
-            rdfs:label "Profile description as HTML" ;
-            dcterms:conformsTo prof: ;
-            dcterms:format "text/html" ;
-            rdfs:comment "Overview of profile and available descriptive and implementation support resources" ;
-            prof:hasArtifact "demeterCore_prof.html" ;
-            prof:hasRole profrole:profile ],
-        [ a prof:ResourceDescriptor ;
-            rdfs:label "JSON-LD Context - local file link" ;
+            rdfs:label "Flattened JSON-LD context" ;
             dcterms:conformsTo <http://www.opengis.net/def/metamodel/profiles/json_ld_context> ;
             dcterms:format "application/ld+json" ;
-            prof:hasArtifact "demeterCore_context.jsonld" ;
-            prof:hasRole profrole:contextlocal ],
+            prof:hasArtifact "demeterCore_context_flat.jsonld" ;
+            prof:hasRole profrole:contextflat ],
+        [ a prof:ResourceDescriptor ;
+            rdfs:label "JSON Schema" ;
+            dcterms:conformsTo <http://www.opengis.net/def/metamodel/profiles/json_schema> ;
+            dcterms:format "application/json" ;
+            prof:hasArtifact "demeterCore.json" ;
+            prof:hasRole profrole:schema ],
         [ a prof:ResourceDescriptor ;
             rdfs:label "JSON-LD Context" ;
             dcterms:conformsTo <http://www.opengis.net/def/metamodel/profiles/json_ld_context> ;
@@ -44,12 +36,12 @@
             prof:hasArtifact "demeterCore.html" ;
             prof:hasRole profrole:profile ],
         [ a prof:ResourceDescriptor ;
-            rdfs:label "SHACL constraints for profile" ;
-            dcterms:conformsTo <http://www.w3.org/ns/shacl#> ;
+            rdfs:label "Original Source OWL model" ;
+            dcterms:conformsTo <http://www.w3.org/2002/07/owl#> ;
             dcterms:format "text/turtle" ;
-            rdfs:comment "SHACL validation constraints for all declarations relevant to profile including imports" ;
-            prof:hasArtifact "demeterCore_flat_shacl.ttl" ;
-            prof:hasRole profrole:validation ],
+            rdfs:comment "Source OWL model used to derive normalised profile views." ;
+            prof:hasArtifact "../models\\demeterCore.ttl" ;
+            prof:hasRole profrole:source ],
         [ a prof:ResourceDescriptor ;
             rdfs:label "OWL with definition details from imports" ;
             dcterms:conformsTo <http://www.w3.org/2002/07/owl#> ;
@@ -58,12 +50,6 @@
             prof:hasArtifact "demeterCore_flat.ttl" ;
             prof:hasRole profrole:vocabulary ],
         [ a prof:ResourceDescriptor ;
-            rdfs:label "JSON Schema" ;
-            dcterms:conformsTo <http://www.opengis.net/def/metamodel/profiles/json_schema> ;
-            dcterms:format "application/json" ;
-            prof:hasArtifact "demeterCore.json" ;
-            prof:hasRole profrole:schema ],
-        [ a prof:ResourceDescriptor ;
             rdfs:label "Normalised OWL with imports" ;
             dcterms:conformsTo <http://www.w3.org/2002/07/owl#> ;
             dcterms:format "text/turtle" ;
@@ -71,18 +57,18 @@
             prof:hasArtifact "demeterCore.ttl" ;
             prof:hasRole profrole:vocabulary ],
         [ a prof:ResourceDescriptor ;
-            rdfs:label "Flattened JSON-LD context" ;
+            rdfs:label "JSON-LD Context - local file link" ;
             dcterms:conformsTo <http://www.opengis.net/def/metamodel/profiles/json_ld_context> ;
             dcterms:format "application/ld+json" ;
-            prof:hasArtifact "demeterCore_context_flat.jsonld" ;
-            prof:hasRole profrole:contextflat ],
+            prof:hasArtifact "demeterCore_context.jsonld" ;
+            prof:hasRole profrole:contextlocal ],
         [ a prof:ResourceDescriptor ;
-            rdfs:label "SHACL for minimal profile" ;
-            dcterms:conformsTo <http://www.w3.org/ns/shacl#> ;
-            dcterms:format "text/turtle" ;
-            rdfs:comment "SHACL validation constraints for profile specific declarations" ;
-            prof:hasArtifact "demeterCore_shacl.ttl" ;
-            prof:hasRole profrole:validation ],
+            rdfs:label "Profile description as HTML" ;
+            dcterms:conformsTo prof: ;
+            dcterms:format "text/html" ;
+            rdfs:comment "Overview of profile and available descriptive and implementation support resources" ;
+            prof:hasArtifact "demeterCore_prof.html" ;
+            prof:hasRole profrole:profile ],
         [ a prof:ResourceDescriptor ;
             rdfs:label "Profile description as HTML" ;
             dcterms:conformsTo prof: ;

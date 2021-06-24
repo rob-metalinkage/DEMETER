@@ -8,10 +8,10 @@
             "properties": {},
             "required": []
         },
-        "ngsi-ld:Relationship": {
+        "ngsi-ld:Property": {
             "type": "object",
             "properties": {
-                "ngsi-ld:hasObject": {
+                "ngsi-ld:hasValue": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -24,6 +24,18 @@
             "type": "object",
             "properties": {
                 "ngsi-ld:Relationship": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "ngsi-ld:Relationship": {
+            "type": "object",
+            "properties": {
+                "ngsi-ld:hasObject": {
                     "type": "array",
                     "items": {
                         "type": "string"

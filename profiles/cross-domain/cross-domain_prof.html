@@ -193,19 +193,7 @@
     </style>
     
     <script type="application/ld+json">
-      [
-  {
-    "@id": "https://w3id.org/demeter/crossDomain",
-    "@type": [
-      "https://schema.org/DefinedTermSet"
-    ],
-    "https://schema.org/name": [
-      {
-        "@value": "None"
-      }
-    ]
-  }
-]
+      b'[\n  {\n    "@id": "https://w3id.org/demeter/crossDomain",\n    "@type": [\n      "https://schema.org/DefinedTermSet"\n    ],\n    "https://schema.org/name": [\n      {\n        "@value": "None"\n      }\n    ]\n  }\n]'
     </script>
 </head>
 <body>
@@ -223,15 +211,15 @@
         
         <dt><a href="https://www.w3.org/TR/dx-prof/#Property:isProfileOf">Is Profile Of</a></dt>
         <dd>
-            <a href="http://purl.oclc.org/NET/ssnx/qu/qu">http://purl.oclc.org/NET/ssnx/qu/qu</a><br/>
+            <a href="http://www.w3.org/2006/time">http://www.w3.org/2006/time</a><br/>
             <a href="http://www.opengis.net/ont/sf">http://www.opengis.net/ont/sf</a><br/>
+            <a href="http://www.w3.org/ns/sosa">http://www.w3.org/ns/sosa</a><br/>
             <a href="https://w3id.org/demeter/agri/proxy/geosparql">https://w3id.org/demeter/agri/proxy/geosparql</a><br/>
             <a href="http://qudt.org/schema/qudt">http://qudt.org/schema/qudt</a><br/>
             <a href="http://www.w3.org/ns/ssn">http://www.w3.org/ns/ssn</a><br/>
-            <a href="https://schema.org">https://schema.org</a><br/>
             <a href="https://w3id.org/demeter/agri/proxy/foaf">https://w3id.org/demeter/agri/proxy/foaf</a><br/>
-            <a href="http://www.w3.org/2006/time">http://www.w3.org/2006/time</a><br/>
-            <a href="http://www.w3.org/ns/sosa">http://www.w3.org/ns/sosa</a><br/>
+            <a href="http://purl.oclc.org/NET/ssnx/qu/qu">http://purl.oclc.org/NET/ssnx/qu/qu</a><br/>
+            <a href="https://schema.org">https://schema.org</a><br/>
         </dd>
         
         
@@ -240,22 +228,20 @@
     </dl>
       <dt><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasResource">Has Resource Descriptor(s)</a></dt>
     <dd>
-          <a href="#N153c706dde004ae7955c13bec19954f0">OWL with definition details from imports</a><br/>
-          <a href="#N29f9210fa385444e94d23678f1960930">OWL documentation as HTML</a><br/>
-          <a href="#N43feb405cce34a0881c6b73862983bfa">Normalised OWL with imports</a><br/>
-          <a href="#N5231310899ea4bb0a4e7d7d9faefd034">Flattened JSON-LD context</a><br/>
-          <a href="#N58af5d8e628143bc8671dffad4e1e565">SHACL for minimal profile</a><br/>
-          <a href="#N8c69a952097e46f1bc1502d421a9c4e2">Profile description as HTML</a><br/>
-          <a href="#Na9db6cb48a3d44a7b8e2456b1f328c92">Original Source OWL model</a><br/>
-          <a href="#Nb45058da19d54f9d8a02a3ce8b9531d6">JSON Schema</a><br/>
-          <a href="#Nc14a1437cf004c8ebcd58c7574b10ca9">JSON-LD Context</a><br/>
-          <a href="#Nc5725f459ab64afc8e90f3013cdd5472">JSON-LD Context - local file link</a><br/>
-          <a href="#Necc3e752cb27422fa4c6479b27801837">SHACL constraints for profile</a><br/>
-          <a href="#Nf92aa22162de4e5080a96a5e00900d39">Profile description as HTML</a><br/>
+          <a href="#N04909e3442184c18b256dacdc6f5551f">Normalised OWL with imports</a><br/>
+          <a href="#N10053295aeaa465c8f3c9ee52136c483">JSON-LD Context</a><br/>
+          <a href="#N12930ef9bcdb46c2b33a5bef490253b6">OWL documentation as HTML</a><br/>
+          <a href="#N142bfbd5ac20422895fb3809f56e2318">OWL with definition details from imports</a><br/>
+          <a href="#N1c8e04d9e9ab4e0b8782c028bf0efab3">Flattened JSON-LD context</a><br/>
+          <a href="#N2eaac939b63248f68dc000fca3198378">JSON Schema</a><br/>
+          <a href="#N368a06fd1fb94809a7364fdb55a830db">JSON-LD Context - local file link</a><br/>
+          <a href="#N5bf57cb94e7e43b587d868b2d840c5d6">Profile description as HTML</a><br/>
+          <a href="#N98aa7481055944419225c4ed3798c1e1">Profile description as HTML</a><br/>
+          <a href="#Nc8b88456bf8a452f9f8d5b8660e201ea">Original Source OWL model</a><br/>
     </dd>
     <h2>Description</h2>
     <div id="comment">
-        <p>The DEMETER Agriculture Information Model (AIM) is the common vocabulary in DEMETER project providing the basis for semantic interoperability across smart farming solutions</p>
+        <p>The DEMETER cross domain ontology i) defines concepts and terms that are generic and applicable to various domains; ii) avoids conflicting or redundant definitions of the same concept in different domain specific models; iii) provides the basis for interoperability. The ontology is specified by reusing concepts and terms from a number of standard ontologies and vocabularies including OGC/W3C SOSA/SSN, OGC GeoSparql, W3C RDF data cube, QUDT, FOAF, schema.org and others. It includes alignment to ISO standards and with DEMETER core meta-model (NGSI-LD).</p>
     </div>
 </section>
   <section id="resource_descriptors">
@@ -265,77 +251,7 @@
   
   
   
-      <div class="entity resource_descriptor" id="N153c706dde004ae7955c13bec19954f0">
-    <h3>OWL with definition details from imports</h3>
-    <table>
-        <tr>
-          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
-          <td>This is a OWL file containing all the properties of objects used by the profile in a single (flat) denormalised file. This may be augmented in future with RDF* or reified statements with the provenance of each statement if required.</td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
-          <td>
-            <a href="cross-domain_flat.ttl">cross-domain_flat.ttl</a>
-          </td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
-          <td>
-            
-              <a href="http://www.w3.org/ns/dx/prof/role/vocabulary">profrole:vocabulary</a><br />
-            
-          </td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
-          <td>
-            
-              <a href="http://www.w3.org/2002/07/owl#">http://www.w3.org/2002/07/owl#</a><br />
-            
-          </td>
-        </tr>
-        
-    </table>
-</div>
-      <div class="entity resource_descriptor" id="N29f9210fa385444e94d23678f1960930">
-    <h3>OWL documentation as HTML</h3>
-    <table>
-        <tr>
-          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
-          <td>Based on the OWL flat view of the profile, a HTML rendering of key elements of the model.</td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
-          <td>
-            <a href="cross-domain.html">cross-domain.html</a>
-          </td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
-          <td>
-            
-              <a href="http://www.w3.org/ns/dx/prof/role/profile">profrole:profile</a><br />
-            
-          </td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
-          <td>
-            
-              <a href="http://www.w3.org/ns/dx/prof/">prof:</a><br />
-            
-          </td>
-        </tr>
-        
-    </table>
-</div>
-      <div class="entity resource_descriptor" id="N43feb405cce34a0881c6b73862983bfa">
+      <div class="entity resource_descriptor" id="N04909e3442184c18b256dacdc6f5551f">
     <h3>Normalised OWL with imports</h3>
     <table>
         <tr>
@@ -370,7 +286,107 @@
         
     </table>
 </div>
-      <div class="entity resource_descriptor" id="N5231310899ea4bb0a4e7d7d9faefd034">
+      <div class="entity resource_descriptor" id="N10053295aeaa465c8f3c9ee52136c483">
+    <h3>JSON-LD Context</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="https://w3id.org/demeter/crossDomain?_profile=jsoncontext">https://w3id.org/demeter/crossDomain?_profile=jsoncontext</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/context">profrole:context</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.opengis.net/def/metamodel/profiles/json_ld_context">http://www.opengis.net/def/metamodel/profiles/json_ld_context</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="N12930ef9bcdb46c2b33a5bef490253b6">
+    <h3>OWL documentation as HTML</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
+          <td>Based on the OWL flat view of the profile, a HTML rendering of key elements of the model.</td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="cross-domain.html">cross-domain.html</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/profile">profrole:profile</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/">prof:</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="N142bfbd5ac20422895fb3809f56e2318">
+    <h3>OWL with definition details from imports</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
+          <td>This is a OWL file containing all the properties of objects used by the profile in a single (flat) denormalised file. This may be augmented in future with RDF* or reified statements with the provenance of each statement if required.</td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="cross-domain_flat.ttl">cross-domain_flat.ttl</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/vocabulary">profrole:vocabulary</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/2002/07/owl#">http://www.w3.org/2002/07/owl#</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="N1c8e04d9e9ab4e0b8782c028bf0efab3">
     <h3>Flattened JSON-LD context</h3>
     <table>
         <tr>
@@ -400,18 +416,13 @@
         
     </table>
 </div>
-      <div class="entity resource_descriptor" id="N58af5d8e628143bc8671dffad4e1e565">
-    <h3>SHACL for minimal profile</h3>
+      <div class="entity resource_descriptor" id="N2eaac939b63248f68dc000fca3198378">
+    <h3>JSON Schema</h3>
     <table>
-        <tr>
-          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
-          <td>SHACL validation constraints for profile specific declarations</td>
-        </tr>
-        
         <tr>
           <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
           <td>
-            <a href="cross-domain_shacl.ttl">cross-domain_shacl.ttl</a>
+            <a href="cross-domain.json">cross-domain.json</a>
           </td>
         </tr>
         
@@ -419,7 +430,7 @@
           <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
           <td>
             
-              <a href="http://www.w3.org/ns/dx/prof/role/validation">profrole:validation</a><br />
+              <a href="http://www.w3.org/ns/dx/prof/role/schema">profrole:schema</a><br />
             
           </td>
         </tr>
@@ -428,14 +439,44 @@
           <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
           <td>
             
-              <a href="http://www.w3.org/ns/shacl#">http://www.w3.org/ns/shacl#</a><br />
+              <a href="http://www.opengis.net/def/metamodel/profiles/json_schema">http://www.opengis.net/def/metamodel/profiles/json_schema</a><br />
             
           </td>
         </tr>
         
     </table>
 </div>
-      <div class="entity resource_descriptor" id="N8c69a952097e46f1bc1502d421a9c4e2">
+      <div class="entity resource_descriptor" id="N368a06fd1fb94809a7364fdb55a830db">
+    <h3>JSON-LD Context - local file link</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="cross-domain_context.jsonld">cross-domain_context.jsonld</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/contextlocal">profrole:contextlocal</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.opengis.net/def/metamodel/profiles/json_ld_context">http://www.opengis.net/def/metamodel/profiles/json_ld_context</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="N5bf57cb94e7e43b587d868b2d840c5d6">
     <h3>Profile description as HTML</h3>
     <table>
         <tr>
@@ -470,167 +511,7 @@
         
     </table>
 </div>
-      <div class="entity resource_descriptor" id="Na9db6cb48a3d44a7b8e2456b1f328c92">
-    <h3>Original Source OWL model</h3>
-    <table>
-        <tr>
-          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
-          <td>Source OWL model used to derive normalised profile views.</td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
-          <td>
-            <a href="../models\cross-domain.ttl">../models\cross-domain.ttl</a>
-          </td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
-          <td>
-            
-              <a href="http://www.w3.org/ns/dx/prof/role/source">profrole:source</a><br />
-            
-          </td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
-          <td>
-            
-              <a href="http://www.w3.org/2002/07/owl#">http://www.w3.org/2002/07/owl#</a><br />
-            
-          </td>
-        </tr>
-        
-    </table>
-</div>
-      <div class="entity resource_descriptor" id="Nb45058da19d54f9d8a02a3ce8b9531d6">
-    <h3>JSON Schema</h3>
-    <table>
-        <tr>
-          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
-          <td>
-            <a href="cross-domain.json">cross-domain.json</a>
-          </td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
-          <td>
-            
-              <a href="http://www.w3.org/ns/dx/prof/role/schema">profrole:schema</a><br />
-            
-          </td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
-          <td>
-            
-              <a href="http://www.opengis.net/def/metamodel/profiles/json_schema">http://www.opengis.net/def/metamodel/profiles/json_schema</a><br />
-            
-          </td>
-        </tr>
-        
-    </table>
-</div>
-      <div class="entity resource_descriptor" id="Nc14a1437cf004c8ebcd58c7574b10ca9">
-    <h3>JSON-LD Context</h3>
-    <table>
-        <tr>
-          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
-          <td>
-            <a href="https://w3id.org/demeter/crossDomain?_profile=jsoncontext">https://w3id.org/demeter/crossDomain?_profile=jsoncontext</a>
-          </td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
-          <td>
-            
-              <a href="http://www.w3.org/ns/dx/prof/role/context">profrole:context</a><br />
-            
-          </td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
-          <td>
-            
-              <a href="http://www.opengis.net/def/metamodel/profiles/json_ld_context">http://www.opengis.net/def/metamodel/profiles/json_ld_context</a><br />
-            
-          </td>
-        </tr>
-        
-    </table>
-</div>
-      <div class="entity resource_descriptor" id="Nc5725f459ab64afc8e90f3013cdd5472">
-    <h3>JSON-LD Context - local file link</h3>
-    <table>
-        <tr>
-          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
-          <td>
-            <a href="cross-domain_context.jsonld">cross-domain_context.jsonld</a>
-          </td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
-          <td>
-            
-              <a href="http://www.w3.org/ns/dx/prof/role/contextlocal">profrole:contextlocal</a><br />
-            
-          </td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
-          <td>
-            
-              <a href="http://www.opengis.net/def/metamodel/profiles/json_ld_context">http://www.opengis.net/def/metamodel/profiles/json_ld_context</a><br />
-            
-          </td>
-        </tr>
-        
-    </table>
-</div>
-      <div class="entity resource_descriptor" id="Necc3e752cb27422fa4c6479b27801837">
-    <h3>SHACL constraints for profile</h3>
-    <table>
-        <tr>
-          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
-          <td>SHACL validation constraints for all declarations relevant to profile including imports</td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
-          <td>
-            <a href="cross-domain_flat_shacl.ttl">cross-domain_flat_shacl.ttl</a>
-          </td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
-          <td>
-            
-              <a href="http://www.w3.org/ns/dx/prof/role/validation">profrole:validation</a><br />
-            
-          </td>
-        </tr>
-        
-        <tr>
-          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
-          <td>
-            
-              <a href="http://www.w3.org/ns/shacl#">http://www.w3.org/ns/shacl#</a><br />
-            
-          </td>
-        </tr>
-        
-    </table>
-</div>
-      <div class="entity resource_descriptor" id="Nf92aa22162de4e5080a96a5e00900d39">
+      <div class="entity resource_descriptor" id="N98aa7481055944419225c4ed3798c1e1">
     <h3>Profile description as HTML</h3>
     <table>
         <tr>
@@ -659,6 +540,41 @@
           <td>
             
               <a href="http://www.w3.org/ns/dx/prof/">prof:</a><br />
+            
+          </td>
+        </tr>
+        
+    </table>
+</div>
+      <div class="entity resource_descriptor" id="Nc8b88456bf8a452f9f8d5b8660e201ea">
+    <h3>Original Source OWL model</h3>
+    <table>
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/description">Description</a></th>
+          <td>Source OWL model used to derive normalised profile views.</td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasArtifact">Artifact</a></th>
+          <td>
+            <a href="../models\cross-domain.ttl">../models\cross-domain.ttl</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.w3.org/TR/dx-prof/#Property:hasRole">Role(s)</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/ns/dx/prof/role/source">profrole:source</a><br />
+            
+          </td>
+        </tr>
+        
+        <tr>
+          <th><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/conformsTo">Conforms to</a></th>
+          <td>
+            
+              <a href="http://www.w3.org/2002/07/owl#">http://www.w3.org/2002/07/owl#</a><br />
             
           </td>
         </tr>

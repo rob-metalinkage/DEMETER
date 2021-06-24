@@ -10,48 +10,48 @@
             "AlertEntity": {
                 "@id": "https://uri.fiware.org/ns/data-models#Alert"
             },
-            "alertPlot": {
-                "@id": "foodie:alertPlot",
+            "alertZone": {
+                "@id": "foodie:alertZone",
                 "@type": "@id"
             },
             "speciesAlert": {
                 "@id": "foodie:speciesAlert",
                 "@type": "@id"
             },
-            "alertZone": {
-                "@id": "foodie:alertZone",
-                "@type": "@id"
-            },
-            "zoneAlert": {
-                "@id": "foodie:zoneAlert",
+            "alertPlot": {
+                "@id": "foodie:alertPlot",
                 "@type": "@id"
             },
             "alertGeometry": {
                 "@id": "foodie:alertGeometry",
                 "@type": "@id"
             },
-            "plotAlert": {
-                "@id": "foodie:plotAlert",
+            "zoneAlert": {
+                "@id": "foodie:zoneAlert",
                 "@type": "@id"
             },
             "alertSpecies": {
                 "@id": "foodie:alertSpecies",
                 "@type": "@id"
             },
+            "plotAlert": {
+                "@id": "foodie:plotAlert",
+                "@type": "@id"
+            },
             "alertDate": {
                 "@id": "foodie:alertDate",
                 "@type": "xsd:date"
             },
-            "alertValidTo": {
-                "@id": "https://uri.fiware.org/ns/data-models#validTo",
+            "alertValidFrom": {
+                "@id": "https://uri.fiware.org/ns/data-models#validFrom",
                 "@type": "xsd:dateTime"
             },
             "dateIssued": {
                 "@id": "fiware:dateIssued",
                 "@type": "xsd:dateTime"
             },
-            "alertValidFrom": {
-                "@id": "https://uri.fiware.org/ns/data-models#validFrom",
+            "alertValidTo": {
+                "@id": "https://uri.fiware.org/ns/data-models#validTo",
                 "@type": "xsd:dateTime"
             }
         }

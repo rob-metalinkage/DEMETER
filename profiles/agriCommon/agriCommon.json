@@ -3,7 +3,48 @@
     "$id": "https://w3id.org/demeter/agri/agriCommon?_profile=jsonschema",
     "type": "object",
     "properties": {
-        "foaf:Person": {
+        "schema:ImageObject": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "demeterAgriCommon:Image": {
+            "type": "object",
+            "properties": {
+                "demeterAgriCommon:imageDataType": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "demeterAgriCommon:imageHeight": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "demeterAgriCommon:imageFormat": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "demeterAgriCommon:imageURL": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "demeterAgriCommon:imageWidth": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "schema:Organization": {
             "type": "object",
             "properties": {},
             "required": []
@@ -13,7 +54,30 @@
             "properties": {},
             "required": []
         },
-        "ns1:Entity": {
+        "ns2:Entity": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        },
+        "saref4agri:FarmHolding": {
+            "type": "object",
+            "properties": {
+                "saref4agri:hasName": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "saref4agri:managesFarm": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": []
+        },
+        "foaf:Person": {
             "type": "object",
             "properties": {},
             "required": []
@@ -28,70 +92,6 @@
                     }
                 },
                 "saref4agri:managesFarm": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "schema:Organization": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "saref4agri:FarmHolding": {
-            "type": "object",
-            "properties": {
-                "saref4agri:managesFarm": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "saref4agri:hasName": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                }
-            },
-            "required": []
-        },
-        "schema:ImageObject": {
-            "type": "object",
-            "properties": {},
-            "required": []
-        },
-        "demeterAgriCommon:Image": {
-            "type": "object",
-            "properties": {
-                "demeterAgriCommon:imageURL": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "demeterAgriCommon:imageDataType": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "demeterAgriCommon:imageFormat": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "demeterAgriCommon:imageHeight": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "demeterAgriCommon:imageWidth": {
                     "type": "array",
                     "items": {
                         "type": "string"

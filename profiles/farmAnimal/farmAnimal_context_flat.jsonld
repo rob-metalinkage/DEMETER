@@ -6,6 +6,9 @@
             "foodie": "http://foodie-cloud.com/model/foodie#",
             "fiware": "https://uri.fiware.org/ns/data-models#",
             "af-inspire": "http://inspire.ec.europa.eu/schemas/af/3.0#",
+            "AnimalEntity": {
+                "@id": "https://uri.fiware.org/ns/data-models#Animal"
+            },
             "ID": {
                 "@id": "saref4agri:ID"
             },
@@ -14,9 +17,6 @@
             },
             "AnimalGroup": {
                 "@id": "saref4agri:AnimalGroup"
-            },
-            "AnimalEntity": {
-                "@id": "https://uri.fiware.org/ns/data-models#Animal"
             },
             "FarmAnimalSpecies": {
                 "@id": "af-inspire:FarmAnimalSpecies"
@@ -29,6 +29,10 @@
                 "@id": "fiware:fedWith",
                 "@type": "@id"
             },
+            "ownedBy": {
+                "@id": "fiware:ownedBy",
+                "@type": "@id"
+            },
             "siredBy": {
                 "@id": "fiware:siredBy",
                 "@type": "@id"
@@ -37,47 +41,28 @@
                 "@id": "fiware:locatedAt",
                 "@type": "@id"
             },
-            "includesAnimal": {
-                "@id": "af-inspire:includesAnimal",
-                "@type": "@id"
-            },
             "hasID": {
                 "@id": "saref4agri:hasID",
                 "@type": "@id"
             },
-            "ownedBy": {
-                "@id": "fiware:ownedBy",
+            "includesAnimal": {
+                "@id": "af-inspire:includesAnimal",
                 "@type": "@id"
             },
-            "reproductiveCondition": {
-                "@id": "fiware:reproductiveCondition"
+            "legalID": {
+                "@id": "fiware:legalID"
             },
-            "hasBirthDate": {
-                "@id": "saref4agri:hasBirthDate",
-                "@type": "xsd:dateTime"
-            },
-            "breed": {
-                "@id": "fiware:breed"
-            },
-            "birthdate": {
-                "@id": "fiware:birthdate",
-                "@type": "xsd:dateTime"
+            "healthCondition": {
+                "@id": "fiware:healthCondition"
             },
             "phenologicalCondition": {
                 "@id": "fiware:phenologicalCondition"
             },
-            "livestockNumber": {
-                "@id": "foodie:livestockNumber",
-                "@type": "xsd:decimal"
-            },
-            "welfareCondition": {
-                "@id": "fiware:welfareCondition"
+            "relatedSource": {
+                "@id": "fiware:relatedSource"
             },
             "sex": {
                 "@id": "fiware:sex"
-            },
-            "healthCondition": {
-                "@id": "fiware:healthCondition"
             },
             "weight": {
                 "@id": "fiware:weight"
@@ -85,19 +70,34 @@
             "animalSpecies": {
                 "@id": "https://uri.fiware.org/ns/data-models#species"
             },
-            "livestockType": {
-                "@id": "foodie:livestockType",
-                "@type": "xsd:string"
+            "reproductiveCondition": {
+                "@id": "fiware:reproductiveCondition"
             },
-            "legalID": {
-                "@id": "fiware:legalID"
+            "birthdate": {
+                "@id": "fiware:birthdate",
+                "@type": "xsd:dateTime"
+            },
+            "welfareCondition": {
+                "@id": "fiware:welfareCondition"
+            },
+            "breed": {
+                "@id": "fiware:breed"
             },
             "hasDeathDate": {
                 "@id": "saref4agri:hasDeathDate",
                 "@type": "xsd:dateTime"
             },
-            "relatedSource": {
-                "@id": "fiware:relatedSource"
+            "hasBirthDate": {
+                "@id": "saref4agri:hasBirthDate",
+                "@type": "xsd:dateTime"
+            },
+            "livestockType": {
+                "@id": "foodie:livestockType",
+                "@type": "xsd:string"
+            },
+            "livestockNumber": {
+                "@id": "foodie:livestockNumber",
+                "@type": "xsd:decimal"
             }
         }
     ]

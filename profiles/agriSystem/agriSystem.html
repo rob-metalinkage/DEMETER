@@ -193,29 +193,7 @@
     </style>
     
     <script type="application/ld+json">
-      [
-  {
-    "@id": "https://w3id.org/demeter/agri/agriSystem",
-    "@type": [
-      "https://schema.org/DefinedTermSet"
-    ],
-    "https://schema.org/description": [
-      {
-        "@value": "<p>The DEMETER Agriculture Information Model (AIM) is the common vocabulary in DEMETER project providing the basis for semantic interoperability across smart farming solutions</p>"
-      }
-    ],
-    "https://schema.org/name": [
-      {
-        "@value": "DEMETER AgriSystem"
-      }
-    ],
-    "https://schema.org/rights": [
-      {
-        "@value": "This vocabulary is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"
-      }
-    ]
-  }
-]
+      b'[\n  {\n    "@id": "https://w3id.org/demeter/agri/agriSystem",\n    "@type": [\n      "https://schema.org/DefinedTermSet"\n    ],\n    "https://schema.org/description": [\n      {\n        "@value": "<p>The DEMETER Agriculture Information Model (AIM) is the common vocabulary in DEMETER project providing the basis for semantic interoperability across smart farming solutions</p>"\n      }\n    ],\n    "https://schema.org/name": [\n      {\n        "@value": "DEMETER AgriSystem"\n      }\n    ],\n    "https://schema.org/rights": [\n      {\n        "@value": "This vocabulary is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"\n      }\n    ]\n  }\n]'
     </script>
 </head>
 <body>
@@ -347,8 +325,8 @@
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#Datatype">iso19150-2:Datatype</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="http://www.w3.org/ns/sosa/Platform">sosa:Platform</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#Datatype">iso19150-2:Datatype</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -588,8 +566,8 @@
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="http://www.w3.org/ns/ssn/System">ssn:System</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#Sensor">saref:Sensor</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://www.w3.org/ns/ssn/System">ssn:System</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -684,27 +662,27 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/saref#hasProfile">saref:hasProfile</a> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Profile">saref:Profile</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/saref#hasModel">saref:hasModel</a> <span class="cardinality">max</span> 1<br/>
-                    <a href="https://w3id.org/saref#consistsOf">saref:consistsOf</a> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Device">saref:Device</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#isUsedFor">saref:isUsedFor</a> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Commodity">saref:Commodity</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/saref#measuresProperty">saref:measuresProperty</a> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Property">saref:Property</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/saref#consistsOf">saref:consistsOf</a> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Device">saref:Device</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#offers">saref:offers</a> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Service">saref:Service</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/saref#hasDescription">saref:hasDescription</a> <span class="cardinality">max</span> 1<br/>
-                    <a href="https://w3id.org/saref#hasManufacturer">saref:hasManufacturer</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/saref#hasModel">saref:hasModel</a> <span class="cardinality">max</span> 1<br/>
                     <a href="https://w3id.org/saref#hasFunction">saref:hasFunction</a> <span class="cardinality">min</span> 1 <a href="https://w3id.org/saref#Function">saref:Function</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/saref#hasTypicalConsumption">saref:hasTypicalConsumption</a> <span class="cardinality">only</span> (<a href="https://w3id.org/saref#Energy">saref:Energy</a><sup class="sup-c" title="class">c</sup> or <a href="https://w3id.org/saref#Power">saref:Power</a><sup class="sup-c" title="class">c</sup>)<br/>
-                    <a href="https://w3id.org/saref#makesMeasurement">saref:makesMeasurement</a> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Measurement">saref:Measurement</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/saref#hasProfile">saref:hasProfile</a> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Profile">saref:Profile</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#controlsProperty">saref:controlsProperty</a> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Property">saref:Property</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/saref#hasDescription">saref:hasDescription</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/saref#measuresProperty">saref:measuresProperty</a> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Property">saref:Property</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#hasState">saref:hasState</a> <span class="cardinality">only</span> <a href="https://w3id.org/saref#State">saref:State</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/saref#hasTypicalConsumption">saref:hasTypicalConsumption</a> <span class="cardinality">only</span> (<a href="https://w3id.org/saref#Energy">saref:Energy</a><sup class="sup-c" title="class">c</sup> or <a href="https://w3id.org/saref#Power">saref:Power</a><sup class="sup-c" title="class">c</sup>)<br/>
+                    <a href="https://w3id.org/saref#hasManufacturer">saref:hasManufacturer</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/saref#makesMeasurement">saref:makesMeasurement</a> <span class="cardinality">only</span> <a href="https://w3id.org/saref#Measurement">saref:Measurement</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#accomplishes">saref:accomplishes</a> <span class="cardinality">min</span> 1 <a href="https://w3id.org/saref#Task">saref:Task</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="https://w3id.org/saref#Actuator">saref:Actuator</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#Sensor">saref:Sensor</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/saref#Actuator">saref:Actuator</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -731,8 +709,8 @@
             <tr>
                 <th>Super-classes</th>
                 <td>
-                    <a href="https://w3id.org/saref#FunctionRelated">saref:FunctionRelated</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/saref#Device">saref:Device</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/saref#FunctionRelated">saref:FunctionRelated</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -751,12 +729,12 @@
                 <th>Sub-classes</th>
                 <td>
                     <a href="https://w3id.org/def/saref4agri#SoilTensiometer">saref4agri:SoilTensiometer</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/def/saref4agri#EatingActivitySensor">saref4agri:EatingActivitySensor</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/def/saref4agri#WeightSensor">saref4agri:WeightSensor</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/def/saref4agri#MovementActivitySensor">saref4agri:MovementActivitySensor</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/def/saref4agri#WeatherStation">saref4agri:WeatherStation</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/def/saref4agri#MilkingSensor">saref4agri:MilkingSensor</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/def/saref4agri#Thermometer">saref4agri:Thermometer</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/def/saref4agri#MovementActivitySensor">saref4agri:MovementActivitySensor</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/def/saref4agri#WeightSensor">saref4agri:WeightSensor</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/def/saref4agri#EatingActivitySensor">saref4agri:EatingActivitySensor</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/def/saref4agri#MilkingSensor">saref4agri:MilkingSensor</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/def/saref4agri#Pluviometer">saref4agri:Pluviometer</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
@@ -804,6 +782,8 @@
         <dt>iso19150-2</dt>
         <dd><code>http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#</code></dd>
         <dt>ns1</dt>
+        <dd><code>http://</code></dd>
+        <dt>ns2</dt>
         <dd><code>http://www.w3.org/ns/dx/prof/</code></dd>
         <dt>owl</dt>
         <dd><code>http://www.w3.org/2002/07/owl#</code></dd>

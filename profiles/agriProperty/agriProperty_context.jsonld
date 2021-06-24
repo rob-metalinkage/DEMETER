@@ -5,10 +5,10 @@
         "https://w3id.org/demeter/agri/proxy/saref?_profile=jsoncontext",
         "https://w3id.org/demeter/agri/proxy/foodie?_profile=jsoncontext",
         "https://w3id.org/demeter/agri/proxy/saref4agri?_profile=jsoncontext",
-        "https://w3id.org/demeter/agri/proxy/saref4agri?_profile=jsoncontext",
         "https://w3id.org/demeter/agri/agriCommon?_profile=jsoncontext",
         "https://w3id.org/demeter/agri/proxy/saref?_profile=jsoncontext",
         "https://w3id.org/demeter/agri/proxy/foodie?_profile=jsoncontext",
+        "https://w3id.org/demeter/agri/proxy/saref4agri?_profile=jsoncontext",
         {
             "fiware": "https://uri.fiware.org/ns/data-models#",
             "saref": "https://w3id.org/saref#",

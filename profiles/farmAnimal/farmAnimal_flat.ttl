@@ -6,6 +6,7 @@
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix iso19150-2: <http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#> .
 @prefix ns1: <http://www.w3.org/ns/dx/prof/> .
+@prefix ns2: <http://> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -115,7 +116,7 @@ saref4agri:isLocationOf rdfs:isDefinedBy saref4agri: .
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\farmAnimal.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = ../models\\farmAnimal.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            prov:endedAtTime "2021-05-05"^^xsd:date ;
+            prov:endedAtTime "2021-05-21"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:maker [ foaf:homepage <https://h2020-demeter.eu/> ;
@@ -166,28 +167,11 @@ fiware:species a owl:DatatypeProperty ;
     rdfs:comment "Species to which the animal belongs (dairy cattle, beef cattle, sheep, goat, horse, pig)" ;
     rdfs:isDefinedBy <https://github.com/FIWARE/data-models/blob/master/specs/AgriFood/Animal/doc/spec.md> .
 
-saref4agri:hasBirthDate a owl:DatatypeProperty ;
-    rdfs:label "has birth date" ;
-    rdfs:comment "A relation to express the birth date of an animal." ;
-    rdfs:isDefinedBy saref4agri: ;
-    rdfs:range xsd:dateTime ;
-    owl:equivalentProperty fiware:birthdate .
-
 saref4agri:AnimalGroup a owl:Class ;
     rdfs:label "Animal Group" ;
     rdfs:comment "A collection of one or multiple animals."@en ;
     rdfs:isDefinedBy saref4agri: ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty saref4agri:isLocatedIn ;
-            owl:someValuesFrom geo:Feature ],
-        [ a owl:Restriction ;
-            owl:onProperty saref4agri:hasMember ;
-            owl:someValuesFrom saref4agri:Animal ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty saref4agri:hasName ],
-        [ a owl:Restriction ;
             owl:onProperty saref4agri:hasMember ;
             owl:someValuesFrom saref4agri:Animal ],
         [ a owl:Restriction ;
@@ -198,6 +182,13 @@ saref4agri:AnimalGroup a owl:Class ;
             owl:onDataRange xsd:string ;
             owl:onProperty saref4agri:hasName ],
         saref:FeatureOfInterest .
+
+saref4agri:hasBirthDate a owl:DatatypeProperty ;
+    rdfs:label "has birth date" ;
+    rdfs:comment "A relation to express the birth date of an animal." ;
+    rdfs:isDefinedBy saref4agri: ;
+    rdfs:range xsd:dateTime ;
+    owl:equivalentProperty fiware:birthdate .
 
 saref4agri:hasDeathDate a owl:DatatypeProperty ;
     rdfs:label "has death date" ;
@@ -222,33 +213,6 @@ saref4agri:Animal a owl:Class ;
     rdfs:comment "An individual and identifiable living organism that feeds on organic matter, typically having specialized sense organs and nervous system and able to respond rapidly to stimuli."@en ;
     rdfs:isDefinedBy saref4agri: ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty saref4agri:isLocatedIn ;
-            owl:someValuesFrom geo:Feature ],
-        [ a owl:Restriction ;
-            owl:onProperty saref4agri:isMemberOf ;
-            owl:someValuesFrom saref4agri:AnimalGroup ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:dateTime ;
-            owl:onProperty saref4agri:hasDeathDate ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass saref4agri:ID ;
-            owl:onProperty saref4agri:hasID ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty saref4agri:hasName ],
-        [ a owl:Restriction ;
-            owl:onProperty obo:TAXRANK_1000000 ;
-            owl:someValuesFrom obo:TAXRANK_0000000 ],
-        [ a owl:Restriction ;
-            owl:onProperty saref4agri:isLocatedIn ;
-            owl:someValuesFrom geo:Feature ],
-        [ a owl:Restriction ;
-            owl:onProperty saref4agri:isMemberOf ;
-            owl:someValuesFrom saref4agri:AnimalGroup ],
-        [ a owl:Restriction ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass saref4agri:ID ;
             owl:onProperty saref4agri:hasID ],
@@ -264,6 +228,15 @@ saref4agri:Animal a owl:Class ;
             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onDataRange xsd:string ;
             owl:onProperty saref4agri:hasName ],
+        [ a owl:Restriction ;
+            owl:onProperty obo:TAXRANK_1000000 ;
+            owl:someValuesFrom obo:TAXRANK_0000000 ],
+        [ a owl:Restriction ;
+            owl:onProperty saref4agri:isLocatedIn ;
+            owl:someValuesFrom geo:Feature ],
+        [ a owl:Restriction ;
+            owl:onProperty saref4agri:isMemberOf ;
+            owl:someValuesFrom saref4agri:AnimalGroup ],
         saref:FeatureOfInterest ;
     owl:equivalentClass fiware:Animal .
 
@@ -272,4 +245,6 @@ saref4agri:ID a owl:Class ;
     rdfs:isDefinedBy saref4agri: .
 
 saref4agri:isLocatedIn rdfs:isDefinedBy saref4agri: .
+
+[] ns2:dummy.fix [ ] .
 

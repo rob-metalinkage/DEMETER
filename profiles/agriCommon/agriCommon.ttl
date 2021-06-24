@@ -4,6 +4,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix foodie: <http://foodie-cloud.com/model/foodie#> .
 @prefix iso19115-citation: <http://def.seegrid.csiro.au/isotc211/iso19115/2003/citation#> .
+@prefix ns1: <http://> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
@@ -78,19 +79,8 @@ fiware:source a owl:DatatypeProperty ;
     rdfs:comment "Specifies the URL to the source of this data (either organisation or where relevant more specific source)" ;
     rdfs:isDefinedBy <https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Parcel.md> .
 
-saref4agri:FarmHolding rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty saref4agri:hasName ],
-        [ a owl:Restriction ;
-            owl:onProperty saref4agri:managesFarm ;
-            owl:someValuesFrom saref4agri:Farm ] .
-
-saref4agri:Farmer rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom xsd:string ;
-            owl:onProperty saref4agri:hasName ],
-        [ a owl:Restriction ;
-            owl:onProperty saref4agri:managesFarm ;
-            owl:someValuesFrom saref4agri:Farm ] .
+saref4agri:hasName rdfs:isDefinedBy saref4agri: ;
+    owl:equivalentProperty fiware:name .
 
 <https://w3id.org/demeter/agri/agriCommon> a owl:Ontology,
         prov:Entity ;
@@ -124,7 +114,7 @@ saref4agri:Farmer rdfs:subClassOf [ a owl:Restriction ;
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriCommon.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = ../models\\agriCommon.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            prov:endedAtTime "2021-05-05"^^xsd:date ;
+            prov:endedAtTime "2021-05-21"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:maker [ foaf:homepage <https://h2020-demeter.eu/> ;
@@ -207,9 +197,6 @@ fiware:name a owl:DatatypeProperty ;
         <https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Product-Type.md> ;
     rdfs:subPropertyOf schema:name .
 
-saref4agri:hasName rdfs:isDefinedBy saref4agri: ;
-    owl:equivalentProperty fiware:name .
-
 saref:hasTimestamp rdfs:range xsd:dateTime .
 
 demeterAgriCommon:Image a owl:Class ;
@@ -217,4 +204,6 @@ demeterAgriCommon:Image a owl:Class ;
     rdfs:comment "An image object" ;
     rdfs:isDefinedBy demeterAgriCommon: ;
     rdfs:subClassOf schema:ImageObject .
+
+[] ns1:dummy.fix [ ] .
 

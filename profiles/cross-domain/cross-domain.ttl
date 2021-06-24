@@ -7,6 +7,7 @@
 @prefix iso19156_OB: <http://def.isotc211.org/iso19156/2011/Observation#> .
 @prefix iso19156_SF: <http://def.isotc211.org/iso19156/2011/SamplingFeature#> .
 @prefix ngsi-ld: <https://uri.etsi.org/ngsi-ld/v1/ontology#> .
+@prefix ns1: <http://> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -824,7 +825,7 @@ schema:telephone rdfs:label "telephone"@en ;
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\cross-domain.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = ../models\\cross-domain.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            prov:endedAtTime "2021-05-05"^^xsd:date ;
+            prov:endedAtTime "2021-05-21"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:maker [ foaf:homepage <https://h2020-demeter.eu/> ;
@@ -1114,5 +1115,5 @@ ngsi-ld:Entity a owl:Class .
 
 ngsi-ld:Relationship a owl:ObjectProperty .
 
-[] rdf:rest ( time:Interval ) .
+[] ns1:dummy.fix [ ] .
 

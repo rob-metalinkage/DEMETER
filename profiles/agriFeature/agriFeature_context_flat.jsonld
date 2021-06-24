@@ -3,30 +3,24 @@
     "@context": [
         {
             "af-inspire": "http://inspire.ec.europa.eu/schemas/af/3.0#",
-            "foodie": "http://foodie-cloud.com/model/foodie#",
             "saref4agri": "https://w3id.org/def/saref4agri#",
             "fiware": "https://uri.fiware.org/ns/data-models#",
+            "foodie": "http://foodie-cloud.com/model/foodie#",
             "act-inspire": "http://inspire.ec.europa.eu/schemas/act-core/3.0#",
-            "EconomicActivityNACEValue": {
-                "@id": "act-inspire:EconomicActivityNACEValue"
-            },
-            "Plot": {
-                "@id": "foodie:Plot"
-            },
-            "OriginTypeValue": {
-                "@id": "foodie:OriginTypeValue"
+            "AgriGreenhouse": {
+                "@id": "fiware:AgriGreenhouse"
             },
             "AgriFarm": {
                 "@id": "fiware:AgriFarm"
             },
-            "ManagementZone": {
-                "@id": "foodie:ManagementZone"
-            },
-            "Building": {
-                "@id": "saref4agri:Building"
-            },
             "AgriParcel": {
                 "@id": "fiware:AgriParcel"
+            },
+            "Holding": {
+                "@id": "af-inspire:Holding"
+            },
+            "Site": {
+                "@id": "af-inspire:Site"
             },
             "Farm": {
                 "@id": "saref4agri:Farm"
@@ -34,32 +28,30 @@
             "Parcel": {
                 "@id": "saref4agri:Parcel"
             },
-            "AgriGreenhouse": {
-                "@id": "fiware:AgriGreenhouse"
+            "Building": {
+                "@id": "saref4agri:Building"
             },
             "BuildingSpace": {
                 "@id": "saref4agri:BuildingSpace"
             },
-            "Site": {
-                "@id": "af-inspire:Site"
+            "ManagementZone": {
+                "@id": "foodie:ManagementZone"
             },
-            "Holding": {
-                "@id": "af-inspire:Holding"
+            "Plot": {
+                "@id": "foodie:Plot"
             },
-            "machine": {
-                "@id": "foodie:machine",
-                "@type": "@id"
+            "OriginTypeValue": {
+                "@id": "foodie:OriginTypeValue"
             },
-            "locationGeoJson": {
-                "@id": "https://uri.fiware.org/ns/data-models#location",
-                "@type": "@id"
+            "EconomicActivityNACEValue": {
+                "@id": "act-inspire:EconomicActivityNACEValue"
             },
             "landLocation": {
                 "@id": "fiware:landLocation",
                 "@type": "@id"
             },
-            "hasAgriParcel": {
-                "@id": "fiware:hasAgriParcel",
+            "hasAgriParcelChildren": {
+                "@id": "fiware:hasAgriParcelChildren",
                 "@type": "@id"
             },
             "hasAgriCrop": {
@@ -70,60 +62,65 @@
                 "@id": "fiware:hasAgriParcelParent",
                 "@type": "@id"
             },
-            "tractor": {
-                "@id": "foodie:tractor",
-                "@type": "@id"
-            },
-            "containsZone": {
-                "@id": "foodie:containsZone",
-                "@type": "@id"
-            },
-            "originType": {
-                "@id": "foodie:originType",
-                "@type": "@id"
-            },
-            "containsPlot": {
-                "@id": "foodie:containsPlot",
-                "@type": "@id"
-            },
-            "holdingPlot": {
-                "@id": "foodie:holdingPlot",
-                "@type": "@id"
-            },
-            "containsSite": {
-                "@id": "http://inspire.ec.europa.eu/schemas/af/3.0#contains",
-                "@type": "@id"
-            },
-            "holdingSite": {
-                "@id": "foodie:holdingSite",
-                "@type": "@id"
-            },
             "hasAgriSoil": {
                 "@id": "fiware:hasAgriSoil",
+                "@type": "@id"
+            },
+            "hasAgriParcel": {
+                "@id": "fiware:hasAgriParcel",
+                "@type": "@id"
+            },
+            "locationGeoJson": {
+                "@id": "https://uri.fiware.org/ns/data-models#location",
                 "@type": "@id"
             },
             "activity": {
                 "@id": "af-inspire:activity",
                 "@type": "@id"
             },
-            "contains": {
-                "@id": "saref4agri:contains",
-                "@type": "@id"
-            },
-            "hasAgriParcelChildren": {
-                "@id": "fiware:hasAgriParcelChildren",
+            "containsSite": {
+                "@id": "http://inspire.ec.europa.eu/schemas/af/3.0#contains",
                 "@type": "@id"
             },
             "isContainedIn": {
                 "@id": "saref4agri:isContainedIn",
                 "@type": "@id"
             },
+            "contains": {
+                "@id": "saref4agri:contains",
+                "@type": "@id"
+            },
+            "tractor": {
+                "@id": "foodie:tractor",
+                "@type": "@id"
+            },
+            "machine": {
+                "@id": "foodie:machine",
+                "@type": "@id"
+            },
+            "originType": {
+                "@id": "foodie:originType",
+                "@type": "@id"
+            },
+            "holdingPlot": {
+                "@id": "foodie:holdingPlot",
+                "@type": "@id"
+            },
+            "holdingSite": {
+                "@id": "foodie:holdingSite",
+                "@type": "@id"
+            },
             "holdingZone": {
                 "@id": "foodie:holdingZone",
                 "@type": "@id"
             },
-            "area": {
-                "@id": "fiware:area"
+            "containsZone": {
+                "@id": "foodie:containsZone",
+                "@type": "@id"
+            },
+            "containsPlot": {
+                "@id": "foodie:containsPlot",
+                "@type": "@id"
             },
             "lastPlantedAt": {
                 "@id": "fiware:lastPlantedAt",
@@ -131,6 +128,9 @@
             },
             "cropStatus": {
                 "@id": "fiware:cropStatus"
+            },
+            "area": {
+                "@id": "fiware:area"
             }
         }
     ]

@@ -3,10 +3,37 @@
     "@context": [
         {
             "saref4agri": "https://w3id.org/def/saref4agri#",
-            "saref": "https://w3id.org/saref#",
             "foodie": "http://foodie-cloud.com/model/foodie#",
-            "MachineType": {
-                "@id": "foodie:MachineType"
+            "saref": "https://w3id.org/saref#",
+            "SoilTensiometer": {
+                "@id": "saref4agri:SoilTensiometer"
+            },
+            "WeatherStation": {
+                "@id": "saref4agri:WeatherStation"
+            },
+            "Thermometer": {
+                "@id": "saref4agri:Thermometer"
+            },
+            "MovementActivitySensor": {
+                "@id": "saref4agri:MovementActivitySensor"
+            },
+            "WeightSensor": {
+                "@id": "saref4agri:WeightSensor"
+            },
+            "EatingActivitySensor": {
+                "@id": "saref4agri:EatingActivitySensor"
+            },
+            "MilkingSensor": {
+                "@id": "saref4agri:MilkingSensor"
+            },
+            "WateringValve": {
+                "@id": "saref4agri:WateringValve"
+            },
+            "Pluviometer": {
+                "@id": "saref4agri:Pluviometer"
+            },
+            "WateringGun": {
+                "@id": "saref4agri:WateringGun"
             },
             "WateringSystem": {
                 "@id": "saref4agri:WateringSystem"
@@ -14,44 +41,17 @@
             "TractorType": {
                 "@id": "foodie:TractorType"
             },
-            "Actuator": {
-                "@id": "saref:Actuator"
+            "MachineType": {
+                "@id": "foodie:MachineType"
             },
-            "WeatherStation": {
-                "@id": "saref4agri:WeatherStation"
-            },
-            "WateringValve": {
-                "@id": "saref4agri:WateringValve"
+            "Sensor": {
+                "@id": "saref:Sensor"
             },
             "Device": {
                 "@id": "saref:Device"
             },
-            "WeightSensor": {
-                "@id": "saref4agri:WeightSensor"
-            },
-            "WateringGun": {
-                "@id": "saref4agri:WateringGun"
-            },
-            "Pluviometer": {
-                "@id": "saref4agri:Pluviometer"
-            },
-            "EatingActivitySensor": {
-                "@id": "saref4agri:EatingActivitySensor"
-            },
-            "MovementActivitySensor": {
-                "@id": "saref4agri:MovementActivitySensor"
-            },
-            "MilkingSensor": {
-                "@id": "saref4agri:MilkingSensor"
-            },
-            "Thermometer": {
-                "@id": "saref4agri:Thermometer"
-            },
-            "SoilTensiometer": {
-                "@id": "saref4agri:SoilTensiometer"
-            },
-            "Sensor": {
-                "@id": "saref:Sensor"
+            "Actuator": {
+                "@id": "saref:Actuator"
             }
         }
     ]

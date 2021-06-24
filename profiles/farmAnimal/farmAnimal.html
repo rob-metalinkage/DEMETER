@@ -193,29 +193,7 @@
     </style>
     
     <script type="application/ld+json">
-      [
-  {
-    "@id": "https://w3id.org/demeter/agri/farmAnimal",
-    "@type": [
-      "https://schema.org/DefinedTermSet"
-    ],
-    "https://schema.org/description": [
-      {
-        "@value": "<p>The DEMETER Agriculture Information Model (AIM) is the common vocabulary in DEMETER project providing the basis for semantic interoperability across smart farming solutions</p>"
-      }
-    ],
-    "https://schema.org/name": [
-      {
-        "@value": "DEMETER FarmAnimal"
-      }
-    ],
-    "https://schema.org/rights": [
-      {
-        "@value": "This vocabulary is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"
-      }
-    ]
-  }
-]
+      b'[\n  {\n    "@id": "https://w3id.org/demeter/agri/farmAnimal",\n    "@type": [\n      "https://schema.org/DefinedTermSet"\n    ],\n    "https://schema.org/description": [\n      {\n        "@value": "<p>The DEMETER Agriculture Information Model (AIM) is the common vocabulary in DEMETER project providing the basis for semantic interoperability across smart farming solutions</p>"\n      }\n    ],\n    "https://schema.org/name": [\n      {\n        "@value": "DEMETER FarmAnimal"\n      }\n    ],\n    "https://schema.org/rights": [\n      {\n        "@value": "This vocabulary is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"\n      }\n    ]\n  }\n]'
     </script>
 </head>
 <body>
@@ -319,8 +297,8 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="http://foodie-cloud.com/model/foodie#livestockNumber">foodie:livestockNumber</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                     <a href="http://foodie-cloud.com/model/foodie#livestockType">foodie:livestockType</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
+                    <a href="http://foodie-cloud.com/model/foodie#livestockNumber">foodie:livestockNumber</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">exactly</span> 1<br/>
                 </td>
             </tr>
             <tr>
@@ -386,18 +364,13 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/def/saref4agri#hasName">saref4agri:hasName</a> <span class="cardinality">max</span> 1<br/>
-                    <a href="https://w3id.org/def/saref4agri#isMemberOf">saref4agri:isMemberOf</a> <span class="cardinality">some</span> <a href="https://w3id.org/def/saref4agri#AnimalGroup">saref4agri:AnimalGroup</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/def/saref4agri#hasName">saref4agri:hasName</a> <span class="cardinality">max</span> 1<br/>
-                    <a href="https://w3id.org/def/saref4agri#isMemberOf">saref4agri:isMemberOf</a> <span class="cardinality">some</span> <a href="https://w3id.org/def/saref4agri#AnimalGroup">saref4agri:AnimalGroup</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/def/saref4agri#hasDeathDate">saref4agri:hasDeathDate</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
-                    <a href="https://w3id.org/def/saref4agri#hasID">saref4agri:hasID</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="https://w3id.org/def/saref4agri#ID">saref4agri:ID</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/def/saref4agri#hasBirthDate">saref4agri:hasBirthDate</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="http://purl.obolibrary.org/obo/TAXRANK_1000000">obo:TAXRANK_1000000</a> <span class="cardinality">some</span> <a href="http://purl.obolibrary.org/obo/TAXRANK_0000000">obo:TAXRANK_0000000</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/def/saref4agri#hasID">saref4agri:hasID</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="https://w3id.org/def/saref4agri#ID">saref4agri:ID</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/def/saref4agri#hasName">saref4agri:hasName</a> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/def/saref4agri#hasBirthDate">saref4agri:hasBirthDate</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="https://w3id.org/def/saref4agri#isMemberOf">saref4agri:isMemberOf</a> <span class="cardinality">some</span> <a href="https://w3id.org/def/saref4agri#AnimalGroup">saref4agri:AnimalGroup</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/def/saref4agri#hasDeathDate">saref4agri:hasDeathDate</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
                     <a href="https://w3id.org/def/saref4agri#isLocatedIn">saref4agri:isLocatedIn</a> <span class="cardinality">some</span> <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/def/saref4agri#isLocatedIn">saref4agri:isLocatedIn</a> <span class="cardinality">some</span> <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/def/saref4agri#hasID">saref4agri:hasID</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">max</span> 1 <a href="https://w3id.org/def/saref4agri#ID">saref4agri:ID</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -430,12 +403,9 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/def/saref4agri#hasMember">saref4agri:hasMember</a> <span class="cardinality">some</span> <a href="https://w3id.org/def/saref4agri#Animal">saref4agri:Animal</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/def/saref4agri#hasMember">saref4agri:hasMember</a> <span class="cardinality">some</span> <a href="https://w3id.org/def/saref4agri#Animal">saref4agri:Animal</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/def/saref4agri#hasName">saref4agri:hasName</a> <span class="cardinality">max</span> 1<br/>
                     <a href="https://w3id.org/def/saref4agri#isLocatedIn">saref4agri:isLocatedIn</a> <span class="cardinality">some</span> <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/def/saref4agri#hasName">saref4agri:hasName</a> <span class="cardinality">max</span> 1<br/>
-                    <a href="https://w3id.org/def/saref4agri#isLocatedIn">saref4agri:isLocatedIn</a> <span class="cardinality">some</span> <a href="http://www.opengis.net/ont/geosparql#Feature">geo:Feature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/def/saref4agri#hasMember">saref4agri:hasMember</a> <span class="cardinality">some</span> <a href="https://w3id.org/def/saref4agri#Animal">saref4agri:Animal</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1050,6 +1020,8 @@
         <dd><code>http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#</code></dd>
         <dt>ns1</dt>
         <dd><code>http://www.w3.org/ns/dx/prof/</code></dd>
+        <dt>ns2</dt>
+        <dd><code>http://</code></dd>
         <dt>obo</dt>
         <dd><code>http://purl.obolibrary.org/obo/</code></dd>
         <dt>owl</dt>

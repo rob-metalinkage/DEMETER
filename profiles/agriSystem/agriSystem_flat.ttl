@@ -2,7 +2,8 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix foodie: <http://foodie-cloud.com/model/foodie#> .
 @prefix iso19150-2: <http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#> .
-@prefix ns1: <http://www.w3.org/ns/dx/prof/> .
+@prefix ns1: <http://> .
+@prefix ns2: <http://www.w3.org/ns/dx/prof/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -97,10 +98,10 @@ saref4agri:WeightSensor a owl:Class ;
         prov:Entity ;
     dct:contributor [ foaf:name "Ioanna Roussaki" ;
             schema:affiliation [ foaf:name "ICCS" ] ],
-        [ foaf:name "George Routis" ;
-            schema:affiliation [ foaf:name "ICCS" ] ],
         [ foaf:name "Rob Atkinson" ;
-            schema:affiliation [ foaf:name "OGC" ] ] ;
+            schema:affiliation [ foaf:name "OGC" ] ],
+        [ foaf:name "George Routis" ;
+            schema:affiliation [ foaf:name "ICCS" ] ] ;
     dct:creator [ rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
             foaf:name "Raul Palma" ;
             schema:affiliation [ foaf:name "PSNC" ] ] ;
@@ -114,14 +115,14 @@ saref4agri:WeightSensor a owl:Class ;
         <https://w3id.org/saref> ;
     owl:versionIRI <https://w3id.org/demeter/agri/agriSystem/2.0> ;
     owl:versionInfo "2.0" ;
-    ns1:isProfileOf <https://w3id.org/demeter/agri/proxy/foodie>,
+    ns2:isProfileOf <https://w3id.org/demeter/agri/proxy/foodie>,
         <https://w3id.org/demeter/agri/proxy/saref>,
         <https://w3id.org/demeter/agri/proxy/saref4agri> ;
     prov:wasDerivedFrom [ a prov:Entity ;
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriSystem.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = ../models\\agriSystem.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            prov:endedAtTime "2021-05-05"^^xsd:date ;
+            prov:endedAtTime "2021-05-21"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:maker [ foaf:homepage <https://h2020-demeter.eu/> ;
@@ -144,14 +145,6 @@ saref:Device a owl:Class ;
     rdfs:comment "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device's user vs. the point of view of the device's manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended."^^xsd:string ;
     rdfs:isDefinedBy saref: ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass saref:Task ;
-            owl:onProperty saref:accomplishes ],
-        [ a owl:Restriction ;
-            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass saref:Function ;
-            owl:onProperty saref:hasFunction ],
-        [ a owl:Restriction ;
             owl:allValuesFrom saref:Service ;
             owl:onProperty saref:offers ],
         [ a owl:Restriction ;
@@ -188,6 +181,14 @@ saref:Device a owl:Class ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( saref:Energy saref:Power ) ] ;
             owl:onProperty saref:hasTypicalConsumption ],
+        [ a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass saref:Task ;
+            owl:onProperty saref:accomplishes ],
+        [ a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass saref:Function ;
+            owl:onProperty saref:hasFunction ],
         ssn:System .
 
 saref:Sensor a owl:Class ;
@@ -201,4 +202,6 @@ saref:Sensor a owl:Class ;
         saref:Device,
         saref:FunctionRelated ;
     owl:equivalentClass sosa:Sensor .
+
+[] ns1:dummy.fix [ ] .
 

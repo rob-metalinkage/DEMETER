@@ -1,10 +1,10 @@
-@prefix act-inspire: <http://inspire.ec.europa.eu/schemas/act-core/3.0#> .
 @prefix af-inspire: <http://inspire.ec.europa.eu/schemas/af/3.0#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix fiware: <https://uri.fiware.org/ns/data-models#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix foodie: <http://foodie-cloud.com/model/foodie#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix ns1: <http://> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -44,9 +44,6 @@ foodie:machine rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> .
 foodie:originType rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> .
 
 foodie:tractor rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> .
-
-act-inspire:EconomicActivityNACEValue rdfs:label "EconomicActivityNACEValue" ;
-    rdfs:isDefinedBy act-inspire: .
 
 af-inspire:Site rdfs:isDefinedBy af-inspire: ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -109,18 +106,17 @@ fiware:lastPlantedAt a owl:DatatypeProperty ;
     rdfs:isDefinedBy <https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Parcel.md> ;
     rdfs:range xsd:dateTime .
 
+saref4agri:Building rdfs:isDefinedBy saref4agri: .
+
+saref4agri:BuildingSpace rdfs:isDefinedBy saref4agri: .
+
 saref4agri:Farm rdfs:isDefinedBy saref4agri: ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty saref4agri:hasName ],
-        [ a owl:Restriction ;
-            owl:onProperty saref4agri:contains ;
-            owl:someValuesFrom saref4agri:Building ],
-        [ a owl:Restriction ;
-            owl:onProperty saref4agri:contains ;
-            owl:someValuesFrom saref4agri:Parcel ] ;
     owl:equivalentClass af-inspire:Holding,
         fiware:AgriFarm .
+
+saref4agri:Parcel rdfs:isDefinedBy saref4agri: ;
+    owl:equivalentClass foodie:Plot,
+        fiware:AgriParcel .
 
 <https://w3id.org/demeter/agri/agriFeature> a owl:Ontology,
         prov:Entity ;
@@ -142,15 +138,15 @@ saref4agri:Farm rdfs:isDefinedBy saref4agri: ;
         <https://w3id.org/demeter/agri/agriCommon> ;
     owl:versionIRI <https://w3id.org/demeter/agri/agriFeature/2.0> ;
     owl:versionInfo "2.0" ;
-    prof:isProfileOf <http://inspire.ec.europa.eu/schemas/act-core/3.0>,
-        <http://inspire.ec.europa.eu/schemas/af/3.0>,
+    prof:isProfileOf <http://inspire.ec.europa.eu/schemas/af/3.0>,
+        <https://w3id.org/demeter/agri/proxy/act-core>,
         <https://w3id.org/demeter/agri/proxy/foodie>,
         <https://w3id.org/demeter/agri/proxy/saref4agri> ;
     prov:wasDerivedFrom [ a prov:Entity ;
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriFeature.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = ../models\\agriFeature.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            prov:endedAtTime "2021-05-05"^^xsd:date ;
+            prov:endedAtTime "2021-05-21"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:maker [ foaf:homepage <https://h2020-demeter.eu/> ;
@@ -183,27 +179,6 @@ fiware:location a owl:ObjectProperty ;
         <https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Parcel.md> ;
     rdfs:subPropertyOf geo:hasGeometry .
 
-saref4agri:Building rdfs:isDefinedBy saref4agri: ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty saref4agri:hasName ],
-        [ a owl:Restriction ;
-            owl:onProperty saref4agri:contains ;
-            owl:someValuesFrom saref4agri:BuildingSpace ] .
-
-saref4agri:BuildingSpace rdfs:isDefinedBy saref4agri: .
-
-saref4agri:Parcel rdfs:isDefinedBy saref4agri: ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty saref4agri:contains ;
-            owl:someValuesFrom saref4agri:Crop ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onDataRange xsd:string ;
-            owl:onProperty saref4agri:hasName ] ;
-    owl:equivalentClass foodie:Plot,
-        fiware:AgriParcel .
-
 geo:hasGeometry owl:equivalentProperty wgs84_pos:location .
 
 fiware:AgriParcel a owl:Class ;
@@ -215,4 +190,6 @@ saref4agri:isContainedIn rdfs:isDefinedBy saref4agri: ;
     rdfs:subPropertyOf geo:sfWithin .
 
 saref4agri:contains rdfs:isDefinedBy saref4agri: .
+
+[] ns1:dummy.fix [ ] .
 

@@ -8,7 +8,8 @@
 @prefix iso19109: <http://def.seegrid.csiro.au/isotc211/iso19109/2005/feature#> .
 @prefix iso19115-citation: <http://def.seegrid.csiro.au/isotc211/iso19115/2003/citation#> .
 @prefix iso19150-2: <http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#> .
-@prefix ns1: <http://www.w3.org/ns/dx/prof/> .
+@prefix ns1: <http://> .
+@prefix ns2: <http://www.w3.org/ns/dx/prof/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -19,15 +20,6 @@
 foodie:ActiveIngredients a owl:Class ;
     rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality "1"^^xsd:int ;
-            owl:onProperty foodie:ingredientAmount ],
-        [ a owl:Restriction ;
-            owl:maxCardinality "1"^^xsd:int ;
-            owl:onProperty foodie:code ],
-        [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:int ;
-            owl:onProperty foodie:ingredientName ],
-        [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:int ;
             owl:onProperty foodie:ingredientName ],
         [ a owl:Restriction ;
@@ -42,15 +34,6 @@ foodie:ActiveIngredients a owl:Class ;
 foodie:ProductPreparation a owl:Class ;
     rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:int ;
-            owl:onProperty foodie:safetyPeriod ],
-        [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:int ;
-            owl:onProperty foodie:productQuantity ],
-        [ a owl:Restriction ;
-            owl:maxCardinality "1"^^xsd:int ;
-            owl:onProperty foodie:solventQuantity ],
-        [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:int ;
             owl:onProperty foodie:solventQuantity ],
         [ a owl:Restriction ;
@@ -110,8 +93,6 @@ fiware:root a owl:DatatypeProperty ;
         prov:Entity ;
     dct:contributor [ foaf:name "Ioanna Roussaki" ;
             schema:affiliation [ foaf:name "ICCS" ] ],
-        [ foaf:name "George Routis" ;
-            schema:affiliation [ foaf:name "ICCS" ] ],
         [ foaf:name "Rob Atkinson" ;
             schema:affiliation [ foaf:name "OGC" ] ] ;
     dct:creator [ rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
@@ -125,12 +106,12 @@ fiware:root a owl:DatatypeProperty ;
         <https://w3id.org/demeter/agri/agriCommon> ;
     owl:versionIRI <https://w3id.org/demeter/agri/agriProduct/2.0> ;
     owl:versionInfo "2.0" ;
-    ns1:isProfileOf <https://w3id.org/demeter/agri/proxy/foodie> ;
+    ns2:isProfileOf <https://w3id.org/demeter/agri/proxy/foodie> ;
     prov:wasDerivedFrom [ a prov:Entity ;
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriProduct.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = ../models\\agriProduct.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            prov:endedAtTime "2021-05-05"^^xsd:date ;
+            prov:endedAtTime "2021-05-21"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:maker [ foaf:homepage <https://h2020-demeter.eu/> ;
@@ -139,30 +120,6 @@ fiware:root a owl:DatatypeProperty ;
 foodie:Product a owl:Class ;
     rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality "1"^^xsd:int ;
-            owl:onProperty foodie:storageHandling ],
-        [ a owl:Restriction ;
-            owl:maxCardinality "1"^^xsd:int ;
-            owl:onProperty foodie:price ],
-        [ a owl:Restriction ;
-            owl:maxCardinality "1"^^xsd:int ;
-            owl:onProperty foodie:description ],
-        [ a owl:Restriction ;
-            owl:maxCardinality "1"^^xsd:int ;
-            owl:onProperty foodie:safetyInstructions ],
-        [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:int ;
-            owl:onProperty foodie:productType ],
-        [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:int ;
-            owl:onProperty foodie:manufacturer ],
-        [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:int ;
-            owl:onProperty foodie:productKind ],
-        [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:int ;
-            owl:onProperty foodie:productName ],
-        [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:int ;
             owl:onProperty foodie:description ],
         [ a owl:Restriction ;
@@ -201,18 +158,6 @@ foodie:ProductKindValue a owl:Class ;
 foodie:ProductNutrients a owl:Class ;
     rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality "1"^^xsd:int ;
-            owl:onProperty foodie:nutrientAmount ],
-        [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:int ;
-            owl:onProperty foodie:nutrientName ],
-        [ a owl:Restriction ;
-            owl:maxCardinality "1"^^xsd:int ;
-            owl:onProperty foodie:nutrientMeasure ],
-        [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:int ;
-            owl:onProperty foodie:nutrientProduct ],
-        [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:int ;
             owl:onProperty foodie:nutrientName ],
         [ a owl:Restriction ;
@@ -228,11 +173,6 @@ foodie:ProductNutrients a owl:Class ;
         iso19150-2:FeatureType,
         geo:Feature ;
     skos:prefLabel "ProductNutrients"@en .
-
-fiware:AgriProductType a owl:Class ;
-    rdfs:label "AgriProductType" ;
-    rdfs:comment "This entity contains a harmonised description of a generic agricultural product type. This entity is primarily associated with the agricultural vertical and related IoT applications. The AgriProductType includes a hierarchical structure that allows product types to be grouped in a flexible way." ;
-    rdfs:isDefinedBy <https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Product-Type.md> .
 
 foodie:ingredientAmount a owl:ObjectProperty ;
     rdfs:isDefinedBy <http://foodie-cloud.com/model/foodie> ;
@@ -312,9 +252,16 @@ foodie:storageHandling a owl:DatatypeProperty ;
     rdfs:range xsd:string ;
     skos:prefLabel "storageHandling"@en .
 
+fiware:AgriProductType a owl:Class ;
+    rdfs:label "AgriProductType" ;
+    rdfs:comment "This entity contains a harmonised description of a generic agricultural product type. This entity is primarily associated with the agricultural vertical and related IoT applications. The AgriProductType includes a hierarchical structure that allows product types to be grouped in a flexible way." ;
+    rdfs:isDefinedBy <https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Product-Type.md> .
+
 fiware:hasAgriProductType a owl:ObjectProperty ;
     rdfs:label "hasAgriProductType"@en ;
     rdfs:comment "Reference to the AgriProductType used/ applied." ;
     rdfs:isDefinedBy <https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Parcel-Record.md>,
         <https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Pest.md> .
+
+[] ns1:dummy.fix [ ] .
 

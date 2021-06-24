@@ -193,29 +193,7 @@
     </style>
     
     <script type="application/ld+json">
-      [
-  {
-    "@id": "https://w3id.org/demeter/agri/agriCommon",
-    "@type": [
-      "https://schema.org/DefinedTermSet"
-    ],
-    "https://schema.org/description": [
-      {
-        "@value": "<p>The DEMETER Agriculture Information Model (AIM) is the common vocabulary in DEMETER project providing the basis for semantic interoperability across smart farming solutions</p>"
-      }
-    ],
-    "https://schema.org/name": [
-      {
-        "@value": "DEMETER AgriCommon"
-      }
-    ],
-    "https://schema.org/rights": [
-      {
-        "@value": "This vocabulary is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"
-      }
-    ]
-  }
-]
+      b'[\n  {\n    "@id": "https://w3id.org/demeter/agri/agriCommon",\n    "@type": [\n      "https://schema.org/DefinedTermSet"\n    ],\n    "https://schema.org/description": [\n      {\n        "@value": "<p>The DEMETER Agriculture Information Model (AIM) is the common vocabulary in DEMETER project providing the basis for semantic interoperability across smart farming solutions</p>"\n      }\n    ],\n    "https://schema.org/name": [\n      {\n        "@value": "DEMETER AgriCommon"\n      }\n    ],\n    "https://schema.org/rights": [\n      {\n        "@value": "This vocabulary is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"\n      }\n    ]\n  }\n]'
     </script>
 </head>
 <body>
@@ -331,10 +309,8 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/def/saref4agri#managesFarm">saref4agri:managesFarm</a> <span class="cardinality">some</span> <a href="https://w3id.org/def/saref4agri#Farm">saref4agri:Farm</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/def/saref4agri#hasName">saref4agri:hasName</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/def/saref4agri#managesFarm">saref4agri:managesFarm</a> <span class="cardinality">some</span> <a href="https://w3id.org/def/saref4agri#Farm">saref4agri:Farm</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/def/saref4agri#hasName">saref4agri:hasName</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -361,10 +337,8 @@
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="https://w3id.org/def/saref4agri#managesFarm">saref4agri:managesFarm</a> <span class="cardinality">some</span> <a href="https://w3id.org/def/saref4agri#Farm">saref4agri:Farm</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/def/saref4agri#managesFarm">saref4agri:managesFarm</a> <span class="cardinality">some</span> <a href="https://w3id.org/def/saref4agri#Farm">saref4agri:Farm</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="https://w3id.org/def/saref4agri#hasName">saref4agri:hasName</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="https://w3id.org/def/saref4agri#hasName">saref4agri:hasName</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">only</span> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://w3id.org/def/saref4agri#managesFarm">saref4agri:managesFarm</a> <span class="cardinality">some</span> <a href="https://w3id.org/def/saref4agri#Farm">saref4agri:Farm</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -397,11 +371,11 @@
             <tr>
                 <th>In domain of</th>
                 <td>
-                    <a href="#imageHeight">demeterAgriCommon:imageHeight</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#imageDataType">demeterAgriCommon:imageDataType</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#imageHeight">demeterAgriCommon:imageHeight</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="#imageFormat">demeterAgriCommon:imageFormat</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#imageURL">demeterAgriCommon:imageURL</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                     <a href="#imageWidth">demeterAgriCommon:imageWidth</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
-                    <a href="#imageFormat">demeterAgriCommon:imageFormat</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
                 </td>
             </tr>
         </table>
@@ -832,7 +806,7 @@
             <tr class="importeddef">
                 <th>Is Defined By</th>
                 <td>
-                    https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Crop.md
+                    https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Parcel.md
                 </td>
             </tr>
             <tr>
@@ -901,7 +875,7 @@
             <tr class="importeddef">
                 <th>Is Defined By</th>
                 <td>
-                    https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Product-Type.md
+                    https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Pest.md
                 </td>
             </tr>
             <tr>
@@ -1048,8 +1022,8 @@
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="https://w3id.org/saref#hasValue">saref:hasValue</a>
                     <a href="https://schema.org/height">sdo:height</a>
+                    <a href="https://w3id.org/saref#hasValue">saref:hasValue</a>
                 </td>
             </tr>
             <tr>
@@ -1121,8 +1095,8 @@
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="https://schema.org/width">sdo:width</a>
                     <a href="https://w3id.org/saref#hasValue">saref:hasValue</a>
+                    <a href="https://schema.org/width">sdo:width</a>
                 </td>
             </tr>
             <tr>
@@ -1197,8 +1171,8 @@
             <tr>
                 <th>Equivalent properties</th>
                 <td class="highlight-alignment">
-                    <a href="http://foodie-cloud.com/model/foodie#description">foodie:description</a><sup class="sup-dp" title="datatype property">dp</sup>
                     <a href="https://uri.fiware.org/ns/data-models#description">fiware:description</a><sup class="sup-dp" title="datatype property">dp</sup>
+                    <a href="http://foodie-cloud.com/model/foodie#description">foodie:description</a><sup class="sup-dp" title="datatype property">dp</sup>
                 </td>
             </tr>
             <tr>
@@ -1301,6 +1275,8 @@
         <dt>iso19150-2</dt>
         <dd><code>http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#</code></dd>
         <dt>ns1</dt>
+        <dd><code>http://</code></dd>
+        <dt>ns2</dt>
         <dd><code>http://www.w3.org/ns/dx/prof/</code></dd>
         <dt>obo</dt>
         <dd><code>http://purl.obolibrary.org/obo/</code></dd>

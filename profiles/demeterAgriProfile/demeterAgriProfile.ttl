@@ -1,5 +1,6 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -8,12 +9,13 @@
 
 <https://w3id.org/demeter/agri> a owl:Ontology,
         prov:Entity ;
-    dcterms:contributor [ foaf:name "Rob Atkinson" ;
-            schema:affiliation [ ] ],
-        [ ] ;
+    dcterms:contributor [ foaf:name "Ioanna Roussaki" ;
+            schema:affiliation [ foaf:name "ICCS" ] ],
+        [ foaf:name "Rob Atkinson" ;
+            schema:affiliation [ foaf:name "OGC" ] ] ;
     dcterms:creator [ rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
             foaf:name "Raul Palma" ;
-            schema:affiliation [ ] ] ;
+            schema:affiliation [ foaf:name "PSNC" ] ] ;
     dcterms:description "The DEMETER Agri Profile is a master profile importing focused specific profiles/modules of DEMETER AIM."@en ;
     dcterms:rights "This vocabulary is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en ;
     dcterms:title "DEMETER Agriculture Information Model (AIM) domain ontology"@en ;
@@ -34,9 +36,11 @@
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\demeterAgriProfile.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = ../models\\demeterAgriProfile.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            prov:endedAtTime "2021-05-05"^^xsd:date ;
+            prov:endedAtTime "2021-05-21"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:maker [ foaf:homepage <https://h2020-demeter.eu/> ;
             foaf:name "DEMETER project" ] .
+
+[] ns1:dummy.fix [ ] .
 

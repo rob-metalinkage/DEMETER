@@ -3,6 +3,7 @@
 @prefix fiware: <https://uri.fiware.org/ns/data-models#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix foodie: <http://foodie-cloud.com/model/foodie#> .
+@prefix ns1: <http://> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -70,9 +71,6 @@ fiware:wateringFrequency a owl:DatatypeProperty ;
     rdfs:isDefinedBy <https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Crop.md> .
 
 saref4agri:Crop rdfs:isDefinedBy saref4agri: ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty saref4agri:hasPlantDate ;
-            owl:someValuesFrom xsd:dateTime ] ;
     owl:equivalentClass foodie:CropSpecies,
         fiware:AgriCrop .
 
@@ -80,6 +78,8 @@ saref4agri:generates rdfs:isDefinedBy saref4agri: .
 
 saref4agri:hasHarvestDate rdfs:isDefinedBy saref4agri: ;
     owl:equivalentProperty foodie:productionDate .
+
+saref4agri:hasPlantDate rdfs:isDefinedBy saref4agri: .
 
 saref4agri:receives rdfs:isDefinedBy saref4agri: .
 
@@ -107,7 +107,7 @@ saref4agri:receives rdfs:isDefinedBy saref4agri: .
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriCrop.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = ../models\\agriCrop.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            prov:endedAtTime "2021-05-05"^^xsd:date ;
+            prov:endedAtTime "2021-05-21"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:maker [ foaf:homepage <https://h2020-demeter.eu/> ;
@@ -141,5 +141,5 @@ fiware:AgriCrop a owl:Class ;
     rdfs:comment "This entity contains a harmonised description of a generic crop. This entity is primarily associated with the agricultural vertical and related IoT applications." ;
     rdfs:isDefinedBy <https://github.com/GSMADeveloper/NGSI-LD-Entities/blob/master/definitions/Agri-Crop.md> .
 
-saref4agri:hasPlantDate rdfs:isDefinedBy saref4agri: .
+[] ns1:dummy.fix [ ] .
 

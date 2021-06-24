@@ -257,11 +257,36 @@ proxy:geosparql a prof:Profile ;
 	prof:hasResource  [ 
 			prof:hasRole profrole:context ;
 			prof:hasArtifact <https://w3id.org/demeter/agri/proxy/geosparql?_profile=jsoncontext> ;
-			rdfs:comment "Provides json-ld context representation pending ISO provision" ;
+			rdfs:comment "Provides json-ld context representation pending provision of this via the namespace URIn" ;
 			dct:conformsTo jsoncontext: ;
             dct:format "application/ld+json" ;
 		] ;
 .
+
+<http://inspire.ec.europa.eu/schemas/act-core/3.0>  a prof:Profile ;
+	rdfs:label  "GeoSPARQL"@en ;
+	prof:hasResource 	[
+			prof:hasRole profrole:cachedCopy ;
+			prof:hasArtifact "proxy/act-core_proxy/act-core_proxy.ttl" ;
+			dct:conformsTo owl:, rdfs: ;
+            dct:format "text/turtle" ;
+		] ;
+	
+.
+
+proxy:act-core a prof:Profile ;
+	prof:isProfileOf <http://inspire.ec.europa.eu/schemas/act-core/3.0> ;
+	rdfs:label  "Proxy for Geosparql"@en ;
+	rdfs:comment "This profile  provides for content negotatiation behaviour to access a valid JSON-LD context" ;
+	prof:hasResource  [ 
+			prof:hasRole profrole:context ;
+			prof:hasArtifact <https://w3id.org/demeter/agri/proxy/act-core?_profile=jsoncontext> ;
+			rdfs:comment "Provides json-ld context representation pending provision of this via the namespace URI" ;
+			dct:conformsTo jsoncontext: ;
+            dct:format "application/ld+json" ;
+		] ;
+.
+
 
 <http://def.isotc211.org/iso19156/2011/Observation>  a prof:Profile ;
 	rdfs:label  "ISO 19156 Observation"@en ;

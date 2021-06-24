@@ -7,7 +7,8 @@
 @prefix foodie: <http://foodie-cloud.com/model/foodie#> .
 @prefix iso19103: <http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#> .
 @prefix iso19150-2: <http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#> .
-@prefix ns1: <http://www.w3.org/ns/dx/prof/> .
+@prefix ns1: <http://> .
+@prefix ns2: <http://www.w3.org/ns/dx/prof/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix qu: <http://purl.oclc.org/NET/ssnx/qu/qu#> .
@@ -445,7 +446,7 @@ saref4agri:SoilTemperature rdfs:isDefinedBy saref4agri: ;
         <https://w3id.org/saref> ;
     owl:versionIRI <https://w3id.org/demeter/agri/agriProperty/2.0> ;
     owl:versionInfo "2.0" ;
-    ns1:isProfileOf <http://purl.oclc.org/NET/ssnx/cf/cf-feature>,
+    ns2:isProfileOf <http://purl.oclc.org/NET/ssnx/cf/cf-feature>,
         <https://w3id.org/demeter/agri/proxy/foodie>,
         <https://w3id.org/demeter/agri/proxy/saref>,
         <https://w3id.org/demeter/agri/proxy/saref4agri> ;
@@ -453,28 +454,28 @@ saref4agri:SoilTemperature rdfs:isDefinedBy saref4agri: ;
             rdfs:label "C:\\repos\\rob-metalinkage\\DEMETER\\models\\agriProperty.ttl" ] ;
     prov:wasGeneratedBy [ a prov:Activity ;
             rdfs:label "ProfileWiz: Normalisation (source = ../models\\agriProperty.ttl, force_local=False, profile libs : lib/profile_cat.ttl) " ;
-            prov:endedAtTime "2021-05-05"^^xsd:date ;
+            prov:endedAtTime "2021-05-21"^^xsd:date ;
             prov:wasAssociatedWith [ a prov:Agent ;
                     rdfs:label "ProfileWiz 0.1.5" ] ] ;
     foaf:maker [ foaf:homepage <https://h2020-demeter.eu/> ;
             foaf:name "DEMETER project" ] .
 
 saref:Humidity a owl:Class ;
-    rdfs:label "Humidity"^^xsd:string,
-        "Humidity",
+    rdfs:label "Humidity",
+        "Humidity"^^xsd:string,
         "Humidity"@en,
         "Humidiy"@en ;
-    rdfs:comment "A saref:Property related to some measurements that are characterized by a certain value that is measured in a humidity unit"^^xsd:string,
-        "A saref:Property related to some measurements that are characterized by a certain value that is measured in a humidity unit" ;
+    rdfs:comment "A saref:Property related to some measurements that are characterized by a certain value that is measured in a humidity unit",
+        "A saref:Property related to some measurements that are characterized by a certain value that is measured in a humidity unit"^^xsd:string ;
     rdfs:isDefinedBy saref: ;
     rdfs:subClassOf saref:Property .
 
 saref:Temperature a owl:Class ;
-    rdfs:label "Temperature",
-        "Temperature"^^xsd:string,
+    rdfs:label "Temperature"^^xsd:string,
+        "Temperature",
         "Temperature"@en ;
-    rdfs:comment "A saref:Property related to some measurements that are characterized by a certain value that is measured in a temperature unit (degree_Celsius, degree_Fahrenheit, or degree_kelvin)"^^xsd:string,
-        "A saref:Property related to some measurements that are characterized by a certain value that is measured in a temperature unit (degree_Celsius, degree_Fahrenheit, or degree_kelvin)" ;
+    rdfs:comment "A saref:Property related to some measurements that are characterized by a certain value that is measured in a temperature unit (degree_Celsius, degree_Fahrenheit, or degree_kelvin)",
+        "A saref:Property related to some measurements that are characterized by a certain value that is measured in a temperature unit (degree_Celsius, degree_Fahrenheit, or degree_kelvin)"^^xsd:string ;
     rdfs:isDefinedBy saref: ;
     rdfs:subClassOf saref:Property ;
     owl:equivalentClass dim:Temperature .
@@ -854,4 +855,6 @@ saref:Property a owl:Class ;
         qu:QuantityKind .
 
 saref:hasValue owl:equivalentProperty sosa:hasSimpleResult .
+
+[] ns1:dummy.fix [ ] .
 
